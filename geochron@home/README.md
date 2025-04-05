@@ -10,4 +10,6 @@ This repository contains the following folders:
 
 4. `output`: the output of the `main.R` script in `R`
 
+5. `manuscript`: the LaTeX code for the *Geochronology* manuscript.
+
 To reproduce the figures in the paper (and more), simply download this repository on your computer, navigate the the `R` folder and run `main.R`.
