@@ -2,7 +2,7 @@
 
 This repository contains the following folders:
 
-1. `json`: the raw fission track data from [geochron@home](https://isoplotr.es.ucl.ac.uk/geochrono@home/ftc)
+1. `json`: the raw fission track data from [geochron@home](https://isoplotr.es.ucl.ac.uk/geochron@home/ftc)
 
 2. `screenshots`: screen grabs from geochron@home. The actual raw imagery can be viewed on the [geochron@home archive](https://github.com/pvermees/GaHa)
 
