@@ -19,7 +19,7 @@ AndyResults <- parseJSON(Andy)
 grains <- intersect(names(PieterResults),names(AndyResults))
 
 #### 1. calculate the density ratios for PV and AC ####
-PAsPA1 <- PAsPA2 <- NULL
+PAsPA1 <- PAsPA2 <- PAsPA3 <- NULL
 for (i in seq_along(grains)){
     grain <- grains[i]
     PieterNsA <- grain2NsA(PieterResults[[grain]])
@@ -29,15 +29,23 @@ for (i in seq_along(grains)){
     # optimistic scenario: Rex Galbraith formula
     PA <- (PieterNsA[1]*AndyNsA[2])/(PieterNsA[2]*AndyNsA[1])
     # pessimistic scenario: assuming independence
-    sPA1 <- PA * sqrt(1/PieterNsA[1] + 1/AndyNsA[1])
+    N1 <- PieterNsA[1]
+    N2 <- AndyNsA[1]
+    sPA1 <- PA * sqrt(1/N1 + 1/N2)
     PAsPA1 <- rbind(PAsPA1,c(PA,sPA1))
-    rho <- (PieterNsA[1]+AndyNsA[1])/(PieterNsA[2]+AndyNsA[2])
+    rho <- (N1+N2)/(PieterNsA[2]+AndyNsA[2])
     sPA2 <- PA * sqrt(1/(rho*PieterNsA[2]) +
                       1/(rho*AndyNsA[2]) -
                       2*A0/(rho*PieterNsA[2]*AndyNsA[2]))
     PAsPA2 <- rbind(PAsPA2,c(PA,sPA2))
+    # realistic scenario: Rex Galbraith formula 2
+    xyP <- PieterResults[[grain]]$counts
+    xyA <- AndyResults[[grain]]$counts
+    N00 <- count(xyP,xyA)
+    sPA3 <- PA * sqrt(1/N1+1/N2-2*N00/(N1*N2))
+    PAsPA3 <- rbind(PAsPA3,c(PA,sPA3))
 }
-colnames(PAsPA1) <- colnames(PAsPA2) <- c('PA','sPA')
+colnames(PAsPA1) <- colnames(PAsPA2) <- colnames(PAsPA3) <- c('PA','sPA')
 
 #### 2. Plot all the superimposed ROIs and counts for PV and AC ####
 pdf(file='../output/AvProis.pdf',width=6,height=6,onefile=TRUE)
@@ -51,13 +59,15 @@ dev.off()
 
 #### 3. Compare PV and AC's results for grain 4648 ####
 pdf(file='../output/AvP.pdf',width=9,height=3)
-op <- par(mar=c(4,4,3,1),mfrow=c(1,3),mgp=c(2.5,1,0))
+op <- par(mar=c(4,4,3,1),mfrow=c(2,2),mgp=c(2.5,1,0))
 plotROIs(PieterResults[['4648']],AndyResults[['4648']])
 legend('topleft','a)',bty='n')
 PAradial(PAsPA1,cex=0.7,spacing=1.2)
 legend('topleft','b)',bty='n')
 PAradial(PAsPA2,cex=0.7,spacing=1.2)
 legend('topleft','c)',bty='n')
+PAradial(PAsPA3,cex=0.7,spacing=1.2)
+legend('topleft','d)',bty='n')
 par(op)
 dev.off()
 

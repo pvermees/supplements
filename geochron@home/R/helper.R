@@ -16,8 +16,9 @@ parseJSON <- function(json,defaultrois){
         out[[grain]]$ROI <- matrix(roi,ncol=2,byrow=TRUE)
         colnames(out[[grain]]$ROI) <- c('x','y')
         cnts <- unlist(analysis$grainpoints)
-        out[[grain]]$counts <- cbind(x=as.numeric(cnts[names(cnts) == 'x_pixels']),
-                                     y=as.numeric(cnts[names(cnts) == 'y_pixels']))
+        x <- as.numeric(cnts[names(cnts) == 'x_pixels'])
+        y <- as.numeric(cnts[names(cnts) == 'y_pixels'])
+        out[[grain]]$counts <- cbind(x=x,y=y)
         rownames(out[[grain]]$counts) <- NULL
         out[[grain]]$id <- analysis$id
     }
@@ -26,7 +27,8 @@ parseJSON <- function(json,defaultrois){
 
 # Plots ROIs for PV and AC
 plotROIs <- function(Pgrain,Agrain){
-    plot(rbind(Pgrain$ROI,Agrain$ROI),type='n',bty='n',xlab='x',ylab='y',asp=1)
+    plot(rbind(Pgrain$ROI,Agrain$ROI),
+         type='n',bty='n',xlab='x',ylab='y',asp=1)
     polygon(Pgrain$ROI,border='blue')
     polygon(Agrain$ROI,border='red')
     points(Pgrain$counts,pch=22,bg='blue')
@@ -36,7 +38,8 @@ plotROIs <- function(Pgrain,Agrain){
            xpd=NA,bty='n',horiz=TRUE,inset=-0.05)
 }
 
-# estimate track count and counting area from list of track coordinates and vertices
+# estimate track count and counting area from a
+# list of track coordinates and vertices
 grain2NsA <- function(lst,pix2mm2=1){
     Ns <- nrow(lst$counts)
     x <- lst$ROI[,'x']
@@ -51,7 +54,9 @@ PAradial <- function(PAsPA,cex=1.0,spacing=1.0){
                                 xlab='precision',z0=1)
     tst <- IsoplotR:::roundit(fit$age)
     maintit <- substitute(
-        paste("central ",rho[PV],"/",rho[AC],"-ratio" == a%+-%b, " (", n == c, ")"),
+        paste("central ",rho[PV],"/",rho[AC],
+              "-ratio" == a%+-%b,
+              " (", n == c, ")"),
         list(a = tst[1], b = tst[2], c = nrow(PAsPA))
     )
     mswdtit <- substitute(
@@ -165,4 +170,21 @@ list2table <- function(lst){
         }
     }
     data.frame(index=index,grain=grains,worker=workers,Ns=Ns,A=A)
+}
+
+count <- function(xyP,xyA,i=0,cutoff=20){
+    nP <- nrow(xyP)
+    nA <- nrow(xyA)
+    xy <- rbind(xyP,xyA)
+    d <- dist(xy)
+    dPA <- as.matrix(d)[1:nP,(nP+1):(nP+nA)]
+    j <- which.min(dPA)
+    if (dPA[j]<cutoff & nP>1 & nA>1){
+        rP <- row(dPA)[j]
+        rA <- col(dPA)[j]
+        i <- count(xyP=xyP[-rP,,drop=FALSE],
+                   xyA=xyA[-rA,,drop=FALSE],
+                   i=i+1,cutoff=cutoff)
+    }
+    i
 }
