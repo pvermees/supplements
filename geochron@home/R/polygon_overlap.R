@@ -5,13 +5,18 @@ polygon_area <- function(vertices) {
   n <- nrow(vertices)
   area <- 0
   for (i in 1:(n-1)) {
-    area <- area + (vertices[i,1] * vertices[i+1,2]) - (vertices[i+1,1] * vertices[i,2])
+      area <- area +
+          (vertices[i,1] * vertices[i+1,2]) -
+          (vertices[i+1,1] * vertices[i,2])
   }
-  area <- area + (vertices[n,1] * vertices[1,2]) - (vertices[1,1] * vertices[n,2])
+  area <- area +
+      (vertices[n,1] * vertices[1,2]) -
+      (vertices[1,1] * vertices[n,2])
   return(abs(area) / 2)
 }
 
-# Function to check if a point is inside a polygon using the ray-casting algorithm
+# Function to check if a point is inside
+# a polygon using the ray-casting algorithm
 point_in_polygon <- function(point, polygon) {
   n <- nrow(polygon)
   x <- point[1]
@@ -104,7 +109,8 @@ polygon_intersection <- function(poly1, poly2) {
     
     # Sort points counterclockwise using centroid
     centroid <- colMeans(intersection_points)
-    angles <- atan2(intersection_points[,2] - centroid[2], intersection_points[,1] - centroid[1])
+    angles <- atan2(intersection_points[,2] - centroid[2],
+                    intersection_points[,1] - centroid[1])
     intersection_points <- intersection_points[order(angles), ]
     
     return(intersection_points)
@@ -121,4 +127,14 @@ polygon_overlap_area <- function(poly1, poly2) {
   } else {
     return(0)
   }
+}
+
+polygon_test <- function(poly1,poly2){
+    poly3 <- polygon_intersection(poly1,poly2)
+    xlim <- range(c(poly1[,1],poly2[,1]))
+    ylim <- range(c(poly1[,2],poly2[,2]))
+    plot(xlim,ylim,type='n')
+    polygon(poly1,col='red')
+    polygon(poly2,col='blue')
+    polygon(poly3,col='green')
 }

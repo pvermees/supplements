@@ -172,7 +172,8 @@ list2table <- function(lst){
     data.frame(index=index,grain=grains,worker=workers,Ns=Ns,A=A)
 }
 
-count <- function(xyP,xyA,i=0,cutoff=20){
+# counts tracks identified by analysts P and A within a cutoff distance
+getN00 <- function(xyP,xyA,i=0,cutoff=20){
     nP <- nrow(xyP)
     nA <- nrow(xyA)
     xy <- rbind(xyP,xyA)
@@ -182,9 +183,11 @@ count <- function(xyP,xyA,i=0,cutoff=20){
     if (dPA[j]<cutoff & nP>1 & nA>1){
         rP <- row(dPA)[j]
         rA <- col(dPA)[j]
-        i <- count(xyP=xyP[-rP,,drop=FALSE],
-                   xyA=xyA[-rA,,drop=FALSE],
-                   i=i+1,cutoff=cutoff)
+        iPA <- getN00(xyP=xyP[-rP,,drop=FALSE],
+                      xyA=xyA[-rA,,drop=FALSE],
+                      i=i+1,cutoff=cutoff)
+    } else {
+        iPA <- c(N00=i,nP=nP,nA=nA)
     }
-    i
+    return(iPA)
 }
