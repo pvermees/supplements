@@ -50,10 +50,10 @@ track data, by serving randomly selected selections of images to
 citizen scientists. We illustrate these four applications with
 examples that demonstrate (1) geochron@home's ability to compare and
 combine fission track counts for multiple users within a lab group;
-(2) the use of the geochron@home archive in the peer review system;
-(3) the effectiveness of even simple tutorials in teaching novice
-users how to count fission tracks; and (4) the `wisdom of crowds' in
-fission track identification.\medskip
+(2) the value of the geochron@home archive in the peer review system;
+(3) the use of simple tutorials in teaching novice users how to count
+fission tracks; and (4) the `wisdom of crowds' in fission track
+identification.\medskip
 
 geochron@home was written in Python and Javascript. Its code is freely
 available for inspection and modification, allowing users to set up
@@ -177,30 +177,31 @@ broken down into five steps.
   translate those results into an equivalent \texttt{.json} format.
 
 \item Upload the data to the geochron@home platform. geochron@home is
-  a Django web-app featuring a user interface powered by the Leaflet
-  library (JavaScript).  The database can be accessed via a Python API
-  and a (more limited) web-based GUI. Accessing the API requires
-  administrator privileges. Administrators can create projects,
-  samples and grains; download data; and set the access rights of
-  `ordinary' users.  Projects can be private or public. The source
-  code and installation instructions for geochron@home are freely
-  available over GitHub (see the Data Availability statement at the
-  end of this paper). This allows fission track users to set up their
-  own server. Alternatively, fission track labs can upload their data
-  to the UCL server by contacting the corresponding author.
+  a Django web-app with a PostgreSQL database.  The database can be
+  accessed via a Python API and a (more limited) web-based
+  GUI. Accessing the API requires administrator
+  privileges. Administrators can create projects, samples and grains;
+  download data; and set the access rights of `ordinary' users.
+  Projects can be private or public. The source code and installation
+  instructions for geochron@home are freely available over GitHub (see
+  the Data Availability statement at the end of this paper). This
+  allows fission track users to set up their own
+  server. Alternatively, fission track labs can upload their data to
+  the UCL server by contacting the corresponding author.
 
 \item Analyse the images with a browser-based `virtual fission track
-  microscope'. This virtual instrument has a simple user interface
-  with controls to zoom, pan and focus in or out of the digital image
-  stack. Depending on the permissions granted to the user by the
-  administrator, the virtual microsocope offers a number of different
-  options.  Entry level `ordinary' users are only allowed to count
-  tracks by clicking within a pre-defined `region of interest'. In
-  contrast, `superusers' are allowed to define their own regions of
-  interest. Once the user is satisfied that they have counted all the
-  fission tracks in a particular grain, they can submit the results to
-  the server. They are then presented with a new set of images until
-  all grains are counted.
+  microscope' powered by the Leaflet library (JavaScript). This
+  virtual instrument acts as a front-end to geochron@home. It has a
+  simple user interface with controls to zoom, pan and focus in or out
+  of the digital image stack. Depending on the permissions granted to
+  the user by the administrator, the virtual microsocope offers a
+  number of different options.  Entry level `ordinary' users are only
+  allowed to count tracks by clicking within a pre-defined `region of
+  interest'. In contrast, `superusers' are allowed to define their own
+  regions of interest. Once the user is satisfied that they have
+  counted all the fission tracks in a particular grain, they can
+  submit the results to the server. They are then presented with a new
+  set of images until all grains are counted.
 
 \item Post-processing. The fission track data can either be downloaded
   as a flat data table of counts and area, or as a \texttt{.json} file
@@ -360,21 +361,21 @@ of fission track analysis. The tutorial pages are in their infancy,
 and offer only a limited degree of interactivity. Users can click on
 features to read the annotations. The tutorial will grow with input
 from experienced analysts and future plans include the addition of
-fully interactive `quizzes' (Section~\ref{sec:conclusions}). Despite
-the simplicity of the current tutorials, they are already quite
-effective, as demonstrated by the crowd-sourcing experiment described
-in the next section of this paper.
+fully interactive `quizzes' (Section~\ref{sec:conclusions}). The
+limitations of the current tutorials are apparent in the results of
+the crowd-sourcing experiment described in the next section of this
+paper.
 
 \section{Crowd-sourcing fission track data}\label{sec:crowdsourcing}
 
 %\begin{figure}[!ht]
-{ \centering \includegraphics[width=15cm]{radialcrowd.pdf}
+{ \centering \includegraphics[width=\linewidth]{radialcrowd.pdf}
   \captionof{figure}{a) box plots of 25 crowd-sourced sets of fission
-    track counts for first-time student 70 analysts using ROIs defined
-    by PV. b) radial plot comparing 44 paired track counts for the
-    first two grains in the dataset (4649 and 4673). The estimate of
-    user PV is shown in blue. Analyst AC used a different ROI and is
-    not shown.\medskip}
+    track counts for 69 analysts; b) comparison of grains~23 and 25,
+    which were chosen because of their high counts and variability; c)
+    radial plot of the pairwise ratios of the fission track counts for
+    grains~23 and 25. The results of analyst PV are shown in
+    blue.\medskip}
   \label{fig:radialcrowd}
 }%\end{figure}
 
@@ -396,7 +397,7 @@ analysis to a proverbial `county fair' of citizen scientists.\medskip
 
 Figure~\ref{fig:radialcrowd} presents the results of a crowd-sourcing
 experiment that was carried out at UCL as part of an undergraduate
-course in isotope geology. 70~students were asked to create an account
+course in isotope geology. 68~students were asked to create an account
 on the geochron@home server by selecting a unique username and
 password. After spending a few minutes to complete the compulsory
 tutorial (Section~\ref{sec:tutorial}), the students were asked to
@@ -418,9 +419,21 @@ grains. The inter-student variability is caused by observer bias. This
 phenomenon was previously discussed in
 Section~\ref{sec:private}. However, the bias is much stronger for the
 crowd-sourced dataset than it was for the two `expert' analysts of
-Section~\ref{sec:private}. Figure~\ref{fig:radialcrowd}b compares the
-42 raw fission track counts of the first two grains on a radial plot,
-where
+Section~\ref{sec:private}. The majority of the student analysts
+undercounted the fission tracks by up to a factor of five compared to
+the `expert' analyst (PV, shown in blue). The poor consistency of the
+results reflects the very limited training received by the
+students.\medskip
+
+Grains 23 and 25 have greater than average track densities, and are
+particularly dispersed. Plotting the 37 paired counts for each user on
+a scatter plot reveals a strong correlation
+(Figure~\ref{fig:radialcrowd}b). This means that students who over- or
+undercount the first grain, also tend to over- or undercount the
+second grain. Even though most students count fewer fission tracks
+than PV, the ratio of their counts are similar.
+Figure~\ref{fig:radialcrowd}c compares grains 23 and 25 on a radial
+plot, where
 \begin{equation}
   \frac{\mbox{se}(N_1/N_2)}{N_1/N_2}
   \approx
@@ -430,19 +443,14 @@ where
   \label{eq:N12}
 \end{equation}
 
-The pairwise ratios of the counts for each analyst are more consistent
-than the raw counts of Figure~\ref{fig:crowdsourcing}a.  Students who
-over- or undercount the first grain, tend to over- or undercount the
-second grain as well. Nevertheless, the results are overdispersed with
-respect to the counting uncertainties. The overdispersion is
-particularly bad considering that Equation~\ref{eq:N12} ignores the
-systematic uncertainty caused by the fact that all analysts counted
-exactly the same grains.  The poor consistency of the results reflects
-the very limited training received by the students. But despite these
-inconsistencies, the opinion of an `expert' (PV, shown in blue) falls
-the middle of the estimates obtained by the citizen scientists. This
-suggests that the collective wisdom of the entire group of students is
-greater than that of any individual analyst.\medskip
+The tight clustering of the data within the 2-se band confirms that
+the pairwise ratios of the counts for each analyst are more consistent
+than the raw counts of Figure~\ref{fig:crowdsourcing}a.  Despite the
+tremendous scatter of the raw track counts obtained by the citizen
+scientists, their pairwise ratio estimates scatter evenly around the
+expert opinion. This suggests that the collective wisdom of the entire
+group of students is greater than that of any individual
+analyst.\medskip
 
 As mentioned in Section~\ref{sec:architecture}, geochron@home stores
 the actual track positions marked by the users. This raw data can be

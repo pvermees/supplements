@@ -191,3 +191,66 @@ getN00 <- function(xyP,xyA,i=0,cutoff=20){
     }
     return(iPA)
 }
+
+clean_results <- function(results,ACgrains){
+    time_obj <- sapply(results$create_date,
+                       FUN=as.POSIXct,
+                       format = "%Y-%m-%d %H:%M:%OS",
+                       tz = "UTC")
+    timely_submission <- time_obj < as.POSIXct("2025-02-11 00:00:00.00+00:00",
+                                               format = "%Y-%m-%d %H:%M:%OS", tz = "UTC")
+    is_trustworthy <- !(results$user_id %in% c(237,238)) # non UCL students
+    uses_default_roi <- !(results$user_id %in% c(292,2)) # AC and PV
+    is_admin <- results$user_id == 1
+    AC_ids <- unique(results$index[results$user_id==292])
+    good_grains <- results$index %in% AC_ids
+    good_counts <- (timely_submission & is_trustworthy & uses_default_roi) | is_admin
+    keep <- good_grains & good_counts
+    results[keep,]
+}
+
+add_admin_count_to_boxplot <- function(trustworthy_results,grouped_list){
+    admin_results <- trustworthy_results[trustworthy_results$user_id == 1,]
+    ACids <- as.numeric(names(grouped_list))
+    admin_counts <- admin_results$count[match(ACids,admin_results$index)]
+    points(admin_counts,1:length(ACids),pch=21,bg='blue')
+}
+
+compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
+    results1 <- results[results$index == grain1,]
+    results2 <- results[results$index == grain2,]
+    users <- intersect(results1$user_id,
+                       results2$user_id)
+    i1 <- match(users,results1$user_id)
+    i2 <- match(users,results2$user_id)
+    out <- list(name=paste0(grain1,' vs ',grain2))
+    class(out) <- 'counts'
+    out$x <- cbind(results1$count[i1],
+                   results2$count[i2])
+    colnames(out$x) <- c(paste0('Ns(',grain1,')'),
+                         paste0('Ns(',grain2,')'))
+    ns <- nrow(out$x)
+    if (plot){
+        bg <- rep(NA,ns)
+        iadmin <- which(users==1)
+        bg[iadmin] <- 'blue'
+        plot(out$x,
+             xlab=paste0('grain ',grain1),
+             ylab=paste0('grain ',grain2),
+             pch=21,bg=bg,...)
+    }
+    out
+}
+
+radialcrowd <- function(results,grain1,grain2,from=NA,to=NA,t0=NA,...){
+    radialdat <- compare_grains(results,grain1,grain2,plot=FALSE)
+    provenance:::radialplot.counts(radialdat,title=FALSE,from=from,to=to,t0=t0,...)
+    pooledratio <- sum(radialdat$x[,1])/sum(radialdat$x[,2])
+    admincount1 <- results$count[results$user_id==1 & results$index==grain1]
+    admincount2 <- results$count[results$user_id==1 & results$index==grain2]
+    adminratio <- admincount1/admincount2
+    graphics::mtext(paste0('pooled ratio = ',signif(pooledratio,3)),line=-1,cex=0.8)
+    graphics::mtext(paste0('PV ratio = ',signif(adminratio,3)),line=-2,cex=0.8)
+    zs_admin <- provenance:::x2zs(tail(radialdat$x,1),from=from,to=to,t0=t0)
+    IsoplotR:::plot_radial_points(zs_admin,pch=21,bg='blue')
+}

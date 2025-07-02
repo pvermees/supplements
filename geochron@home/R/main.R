@@ -11,10 +11,11 @@ library(gridExtra)
 source("helper.R")
 source("polygon_overlap.R")
 
-json <- IsoplotR:::fromJSON(file='../json/results.json')
-roiss <- IsoplotR:::fromJSON(file='../json/roiss.json')
-Pieter <- IsoplotR:::fromJSON(file='../json/Pieter.json')
-Andy <- IsoplotR:::fromJSON(file='../json/Andy.json')
+results <- read.csv('../data/results.csv')
+json <- IsoplotR:::fromJSON(file='../data/results.json')
+roiss <- IsoplotR:::fromJSON(file='../data/roiss.json')
+Pieter <- IsoplotR:::fromJSON(file='../data/Pieter.json')
+Andy <- IsoplotR:::fromJSON(file='../data/Andy.json')
 
 PieterResults <- parseJSON(Pieter,defaultrois=roiss)
 AndyResults <- parseJSON(Andy)
@@ -121,33 +122,31 @@ grid.arrange(
 par(op)
 dev.off()
 
-#### 6. Create a boxplot of all the crowdsourcing results ####
-####    and a radial plot of the two grains in part 5.    ####
-pdf(file='../output/radialcrowd.pdf',width=10,height=5)
-op <- par(mfrow=c(1,2))
-tab <- list2table(allgrains[grains])
-# remove Andy Carter, who used a different count area:
-dat <- tab[tab[,'worker'] != 292,]
-ip <- par(mar=c(4,4,1,1))
-boxplot(Ns ~ index,data=dat,col=NA)
-legend('topleft',legend="a)",bty='n')
-par(ip)
-hasgrain1 <- which(dat[,'grain'] == grain1)
-hasgrain2 <- which(dat[,'grain'] == grain2)
-userswithgrains12 <- intersect(dat[hasgrain1,'worker'],dat[hasgrain2,'worker'])
-inum <- which(dat[hasgrain1,'worker'] %in%  userswithgrains12)
-iden <- which(dat[hasgrain2,'worker'] %in%  userswithgrains12)
-num <- dat[hasgrain1[inum],'Ns']
-den <- dat[hasgrain2[iden],'Ns']
-numden <- cbind(num,den)
-index1 <- which(unique(dat[,'grain']) %in% grain1)
-index2 <- which(unique(dat[,'grain']) %in% grain2)
-colnames(numden) <- c(paste0('Ns(',index1,')'),
-                      paste0('Ns(',index2,')'))
-counts <- provenance:::as.counts(numden)
-bg <- rep('white',length(userswithgrains12))
-bg[userswithgrains12 == 2] <- 'blue'
-provenance:::radialplot.counts(counts,bg=bg)
-legend('topleft',legend="b)",bty='n')
-par(op)
+#### 6. Boxplot, scatter plot and radial plot of crowdsourcing results ####
+grain1 <- 23
+grain2 <- 25
+trustworthy_results <- clean_results(results)
+pdf(file='../output/radialcrowd.pdf',width=12,height=4)
+p1 <- par(mfrow=c(1,3),mar=c(3,3,1,1),mgp=c(2,1,0))
+# box plot
+grouped_list <- split(trustworthy_results$count, trustworthy_results$index)
+boxplot(grouped_list,horizontal=TRUE,
+        xlab='Ns',ylab='grain number',
+        xaxt='n',las=2,col=NA)
+add_admin_count_to_boxplot(trustworthy_results,grouped_list)
+axis(1)
+legend('topleft',legend='a)',bty='n',cex=1.5,adj=c(1,0))
+# scatter plot
+p2 <- par(cex=0.8,mar=c(3,2.5,1,1),xpd=NA)
+compare_grains(trustworthy_results,grain1,grain2)
+legend('topleft',legend='b)',bty='n',cex=1.2,adj=c(1,0))
+# radial plot
+radialcrowd(trustworthy_results,grain1,grain2,from=0.4,to=2.5,t0=1)
+legend('topleft',legend='c)',bty='n',cex=1.2,adj=c(1,0))
+par(p2)
+par(p1)
 dev.off()
+
+# generalised linear fit to crowd-sourced data
+fit <- glm(count ~ index + user_id, data=trustworthy_results, family="poisson")
+mswd <- summary(fit)$deviance/summary(fit)$df.residual
