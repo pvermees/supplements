@@ -238,9 +238,9 @@ compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
              xlab=paste0('grain ',grain1),
              ylab=paste0('grain ',grain2),
              pch=21,bg=bg,...)
+        rho <- format(round(cor(out$x)[1,2],2),nsmall=2)
+        mtext(line=-1,text=paste0('correlation=',rho),cex=0.7)
     }
-    rho <- cor(out$x)[1,2]
-    mtext(line=-1,text=paste0('correlation=',format(round(rho,2),nsmall=2)))
     out
 }
 
@@ -251,23 +251,20 @@ radialcrowd <- function(results,grain1,grain2,from=NA,to=NA,t0=NA,...){
     admincount1 <- results$count[results$user_id==1 & results$index==grain1]
     admincount2 <- results$count[results$user_id==1 & results$index==grain2]
     adminratio <- admincount1/admincount2
-    graphics::mtext(paste0('pooled ratio = ',signif(pooledratio,3)),line=-1,cex=0.8)
-    graphics::mtext(paste0('PV ratio = ',signif(adminratio,3)),line=-2,cex=0.8)
+    graphics::mtext(paste0('pooled ratio = ',signif(pooledratio,3)),line=-1,cex=0.7)
+    graphics::mtext(paste0('PV ratio = ',signif(adminratio,3)),line=-2,cex=0.7)
     zs_admin <- provenance:::x2zs(tail(radialdat$x,1),from=from,to=to,t0=t0)
     IsoplotR:::plot_radial_points(zs_admin,pch=21,bg='blue')
 }
 
-add_table <- function(grouped_list,sigdig=1,nsmall=1){
-    x1 <- 73
-    x2 <- 78
-    x3 <- 87
+add_table <- function(grouped_list,sigdig=1,nsmall=1,x=c(70,75,85)){
     y <- length(grouped_list)+1
-    text(x=x1,y=y,labels='n',xpd=NA,pos=4)
-    text(x=x2,y=y,labels='mean',xpd=NA,pos=4)
-    text(x=x3,y=y,labels='s.d',xpd=NA,pos=4)
+    text(x=x[1],y=y,labels='n',xpd=NA,pos=4)
+    text(x=x[2],y=y,labels='mean',xpd=NA,pos=4)
+    text(x=x[3],y=y,labels='s.d',xpd=NA,pos=4)
     for (i in seq_along(grouped_list)){
-        text(x=x1,y=i,labels=length(grouped_list[[i]]),xpd=NA,pos=4)
-        text(x=x2,y=i,labels=format(round(mean(grouped_list[[i]]),sigdig),nsmall=nsmall),xpd=NA,pos=4)
-        text(x=x3,y=i,labels=format(round(sd(grouped_list[[i]]),sigdig),nsmall=nsmall),xpd=NA,pos=4)
+        text(x=x[1],y=i,labels=length(grouped_list[[i]]),xpd=NA,pos=4)
+        text(x=x[2],y=i,labels=format(round(mean(grouped_list[[i]]),sigdig),nsmall=nsmall),xpd=NA,pos=4)
+        text(x=x[3],y=i,labels=format(round(sd(grouped_list[[i]]),sigdig),nsmall=nsmall),xpd=NA,pos=4)
     }
 }
