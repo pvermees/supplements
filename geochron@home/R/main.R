@@ -142,8 +142,10 @@ dev.off()
 grain1 <- 23
 grain2 <- 25
 trustworthy_results <- clean_results(results)
-pdf(file='../output/radialcrowd.pdf',width=12,height=4)
-p1 <- par(mfrow=c(1,3),mar=c(3,3,1,1),mgp=c(2,1,0))
+pdf(file='../output/radialcrowd.pdf',width=8,height=5)
+layout(rbind(c(1,1,2),
+             c(1,1,3)))
+p1 <- par(mar=c(3,3,1,10),mgp=c(2,1,0))
 # box plot
 grouped_list <- split(trustworthy_results$count, trustworthy_results$index)
 boxplot(grouped_list,horizontal=TRUE,
@@ -152,8 +154,10 @@ boxplot(grouped_list,horizontal=TRUE,
 add_admin_count_to_boxplot(trustworthy_results,grouped_list)
 axis(1)
 legend('topleft',legend='a)',bty='n',cex=1.5,adj=c(1,0))
+# table
+add_table(grouped_list)
 # scatter plot
-p2 <- par(cex=0.8,mar=c(3,2.5,1,1),xpd=NA)
+p2 <- par(cex=0.8,mar=c(3,2.5,1,1),xpd=NA,bty='n')
 compare_grains(trustworthy_results,grain1,grain2)
 legend('topleft',legend='b)',bty='n',cex=1.2,adj=c(1,0))
 # radial plot

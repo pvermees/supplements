@@ -239,6 +239,8 @@ compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
              ylab=paste0('grain ',grain2),
              pch=21,bg=bg,...)
     }
+    rho <- cor(out$x)[1,2]
+    mtext(line=-1,text=paste0('correlation=',format(round(rho,2),nsmall=2)))
     out
 }
 
@@ -253,4 +255,19 @@ radialcrowd <- function(results,grain1,grain2,from=NA,to=NA,t0=NA,...){
     graphics::mtext(paste0('PV ratio = ',signif(adminratio,3)),line=-2,cex=0.8)
     zs_admin <- provenance:::x2zs(tail(radialdat$x,1),from=from,to=to,t0=t0)
     IsoplotR:::plot_radial_points(zs_admin,pch=21,bg='blue')
+}
+
+add_table <- function(grouped_list,sigdig=1,nsmall=1){
+    x1 <- 73
+    x2 <- 78
+    x3 <- 87
+    y <- length(grouped_list)+1
+    text(x=x1,y=y,labels='n',xpd=NA,pos=4)
+    text(x=x2,y=y,labels='mean',xpd=NA,pos=4)
+    text(x=x3,y=y,labels='s.d',xpd=NA,pos=4)
+    for (i in seq_along(grouped_list)){
+        text(x=x1,y=i,labels=length(grouped_list[[i]]),xpd=NA,pos=4)
+        text(x=x2,y=i,labels=format(round(mean(grouped_list[[i]]),sigdig),nsmall=nsmall),xpd=NA,pos=4)
+        text(x=x3,y=i,labels=format(round(sd(grouped_list[[i]]),sigdig),nsmall=nsmall),xpd=NA,pos=4)
+    }
 }
