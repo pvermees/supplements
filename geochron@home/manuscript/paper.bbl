@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -17,10 +17,6 @@ Abbott, B.~P., Abbott, R., Abbott, T.~D., Abernathy, M.~R., Acernese, F.,
 \bibitem[{Donelick(1993)}]{donelick1993}
 Donelick, R.~A.: Method of fission track analysis utilizing bulk chemical
   etching of apatite, uS Patent 5,267,274, 1993.
-
-\bibitem[{Galbraith(1990)}]{galbraith1990a}
-Galbraith, R.~F.: The radial plot: graphical assessment of spread in ages,
-  Nuclear Tracks and Radiation Measurements, 17, 207--214, 1990.
 
 \bibitem[{Galton(1907)}]{galton1907a}
 Galton, F.: Vox Populi, Nature, 75, 450--451, 1907.

@@ -249,37 +249,27 @@ track density estimates (in tracks per \textmu{m}\textsuperscript{2})
 for the same sample of Mount Dromedary apatite \citep{green1985b},
 analysed by two users (PV and AC).\medskip
 
-The two analysts defined their own ROIs, resulting in slightly
-different density estimates (Figure~\ref{fig:AvP}a) for 25 apatite
-grains.  Let $N_{PV}$ and $N_{AC}$ be the number of spontaneous tracks
-counted by PV and AC over areas $A_{PV}$ and $A_{AC}$,
-respectively. Then the ratio of the estimated track densities are
-given by $\hat{\rho}_{PV} = N_{PV}/A_{PV}$ and $\hat{\rho}_{AC} =
-N_{AC}/A_{AC}$. The uncertainties of these density ratios are strongly
-correlated due to the significant overlap between the counting areas
-chosen by the two analysts:
+Let $N_1$ and $N_2$ be the numbers of spontaneous tracks counted by PV
+and AC over areas $A_1$ and $A_2$, respectively. Then their estimated
+track densities are give by $\hat{\rho}_1 = N_1/A_1$ and $\hat{\rho}_2
+= N_2/A_2$. In this situation when the two areas overlap, $N_1$ and
+$N_2$ cannot be treated as independent Poisson counts because the two
+analysts will count some of the same tracks. It can be shown that,
+under simple (ideal) assumptions, the uncertainty of the ratio of the
+estimated track densities is given approximately by
 \begin{equation}
-  \frac{\mbox{se}(\hat{\rho}_{PV}/\hat{\rho}_{AC})}{\hat{\rho}_{PV}/\hat{\rho}_{AC}}
-  \approx
-  \sqrt{
-    \frac{1}{N_{PV}} + \frac{1}{N_{AC}} - \frac{2\,N_{0}}{N_{PV}\,N_{AC}}
-  }
+  \frac{\mbox{se}(\hat{\rho}_1/\hat{\rho}_2)}{\hat{\rho}_1/\hat{\rho}_2} \approx
+  \sqrt{ \frac{1}{N_1} + \frac{1}{N_2} - \frac{2\,N_0}{N_1\,N_2} }
   \label{eq:NO}
 \end{equation}
 
-\noindent where $N_{0}$ is the number of tracks counted by both
+\noindent where $N_0$ is the number of tracks counted by both
 observers in the area of overlap ($A_0$, say) between their respective
-ROIs.  If there is no overlap between the two counting areas (i.e., if
-$A_0=0$), then Equation~\ref{eq:NO} reduces to the conventional
-coefficient of variation for the ratio of two independent Poisson
-variables \citep{galbraith1990a}.  Conversely, if the counting areas
-are identical (i.e., if $A_{PV}=A_{AC}=A_0$), and if the two analysts
-produce perfectly consistent counts (i.e. if $N_{PV} = N_{AC} =
-N_{0}$), then Equation~\ref{eq:NO} returns a zero value.\medskip
+ROIs.\medskip 
 
 The radial plot of Figure~\ref{fig:AvP}b contains two sets of counts,
-with $\sum N_{PV} = 686$ and $\sum N_{AC} = 679$, and a weighted mean
-track density ratio $\hat{\rho}_{PV}/\hat{\rho}_{PV} = 0.94$ with
+with $\sum N_{1} = 686$ and $\sum N_{2} = 679$, and a weighted mean
+track density ratio $\hat{\rho}_{1}/\hat{\rho}_{1} = 0.94$ with
 relative standard error 0.013. PV counted 600 tracks in those common
 areas $A_0$, of which 549 were also counted by AC. Conversely, AC
 counted 622 tracks of which 549 were also counted by PV. The ratio of
@@ -295,14 +285,15 @@ does not have to be a problem provided that it is consistent between
 grains, and between samples.\medskip
 
 %\begin{figure}[!ht]
-{ \centering \includegraphics[width=12cm]{AvP.pdf}
+{ \centering \includegraphics[width=\linewidth]{AvP.pdf}
   \captionof{figure}{Comparison of fission track data for Mount
     Dromedary apatite by two analysts (PV = Pieter Vermeesch and AC =
     Andrew Carter). a) the track counts and ROIs of both users for
-    grain 4648, shown in blue (PV) and red (AC); b) radial plot for
-    the ratio of the track densities of both users for all 25 grains
-    analysed by the two analysts, using Equation~\ref{eq:NO}.
-    \medskip}
+    grain 4648, shown in blue (PV) and red (AC); b) comparison of the
+    track densities for PV and AC for all 25 grains analysed by the
+    two analysts with a reference line for
+    $\hat{\rho}_\text{PV}=\hat{\rho}_\text{AC}$; c) radial plot of the
+    same data, using Equation~\ref{eq:NO}.}
   \label{fig:AvP}
 }%\end{figure}
 
@@ -395,45 +386,38 @@ by multiple analysts is prohibitively expensive in a normal laboratory
 environment. geochron@home changes this, by bringing fission track
 analysis to a proverbial `county fair' of citizen scientists.\medskip
 
-Figure~\ref{fig:radialcrowd} presents the results of a crowd-sourcing
-experiment that was carried out at UCL as part of an undergraduate
-course in isotope geology. 68~students were asked to create an account
-on the geochron@home server by selecting a unique username and
-password. After spending a few minutes to complete the compulsory
-tutorial (Section~\ref{sec:tutorial}), the students were asked to
-count fission tracks in randomly assigned image stacks of Mount
-Dromedary apatite. Each student was required to analyse at least 15
-grains, using pre-defined ROIs. In a matter of hours, the students
-amassed a dataset of 37,331 fission track counts in 34 grains. This
-large dataset was parsed into separate data files --one for each
-student-- which they processed during an assessed practical
-exercise.\medskip
+Figure~\ref{fig:radialcrowd}a shows box plots and summary statistics
+for the raw counts made by 68 students (two of the students were
+unable to complete the assignment) for the same selection of 25 grains
+that were analysed by AC and PV in Section~\ref{sec:private}. Everyone
+counted tracks in the same ROIs, and counts made by PV for those ROIs
+have been added as blue dots.  Variation between the mean values is to
+be expected because of the differing numbers of tracks due to varying
+areas and uranium contents of the grains. But the variation between
+counts within grains (shown by the standard deviations) is due
+entirely to differences between the students' recognising and counting
+exactly the same tracks. These standard deviations increase with the
+mean number of tracks and are considerable in size, being on average
+about 40\% of the mean.  Also, the vast majority of students counted
+fewer tracks than PV did, often many fewer. In 21 of the 25 grains,
+PV's count is above the upper quartile of the students', and on 2
+occasions someone counted no tracks at all.  With expert trained
+counters one would expect much smaller differences between counts.
+Nevertheless there are many repeated counts also.\medskip
 
-The raw counts are shown as a series of box plots in
-Figure~\ref{fig:radialcrowd}a for the same selection of 25 grains that
-were analysed by AC and PV in Section~\ref{sec:private}. The box plots
-exhibit significant variability between the grains and between the
-students. The inter-grain variability is expected. It reflects the
-different sizes of the ROIs, and the variable U-content of the
-grains. The inter-student variability is caused by observer bias. This
-phenomenon was previously discussed in
-Section~\ref{sec:private}. However, the bias is much stronger for the
-crowd-sourced dataset than it was for the two `expert' analysts of
-Section~\ref{sec:private}. The majority of the student analysts
-undercounted the fission tracks by up to a factor of five compared to
-the `expert' analyst (PV, shown in blue). The poor consistency of the
-results reflects the very limited training received by the
-students.\medskip
-
-Grains 23 and 25 have greater than average track densities, and are
-particularly dispersed. Plotting the 37 paired counts for each user on
-a scatter plot reveals a strong correlation
-(Figure~\ref{fig:radialcrowd}b). This means that students who over- or
-undercount the first grain, also tend to over- or undercount the
-second grain. Even though most students count fewer fission tracks
-than PV, the ratio of their counts are similar.
-Figure~\ref{fig:radialcrowd}c compares grains 23 and 25 on a radial
-plot, where
+Figure~\ref{fig:radialcrowd}b shows a scatter plot of pairs of counts
+for two grains made by 33 students who counted both of them. They
+average around 23 and 30 tracks per grain compared with PV's pair of
+44 and 63, which is highlighted in blue. There is a positive
+correlation between the pairs, consistent with systematic observer
+effects (i.e., people who count a low value in one grain tend to count
+similarly low in the other, and vice versa).  Comparing other pairs of
+grains shows similar results, with correlations varying between 0.3
+and 0.9. In all cases we have looked at, the residual variation, after
+allowing for systematic differences between students, is consistent
+with Poisson variation.  Figure~\ref{fig:radialcrowd}c shows a radial
+plot of the ratios of the counts in Panel b, using the precisions
+given by
 \begin{equation}
   \frac{\mbox{se}(N_1/N_2)}{N_1/N_2}
   \approx
@@ -443,14 +427,21 @@ plot, where
   \label{eq:N12}
 \end{equation}
 
-The tight clustering of the data within the 2-se band confirms that
-the pairwise ratios of the counts for each analyst are more consistent
-than the raw counts of Figure~\ref{fig:crowdsourcing}a.  Despite the
-tremendous scatter of the raw track counts obtained by the citizen
-scientists, their pairwise ratio estimates scatter evenly around the
-expert opinion. This suggests that the collective wisdom of the entire
-group of students is greater than that of any individual
-analyst.\medskip
+The context here is rather different from that in
+Figure~\ref{fig:AvP}b, where we were comparing the ratios of counts
+made by 2 analysts on each of 25 grains. Here we are comparing the
+ratios of counts for the same 2 grains made by each of 33
+analysts. There is no theoretical justification for
+Equation~\ref{eq:N12} here, but it still provides a useful benchmark
+for assessing variation between the ratios. In
+Figure~\ref{fig:radialcrowd}c, that variation is consistent with
+Poisson variation (as it is for most other pairs of grains) but with
+expert counters one would expect less variation than that. However, in
+spite of the under-counting by the students, the pooled the students'
+ratio of 0.76 is quite close to PV's ratio of 0.70. This happens quite
+often in this data set, but not always, and there are some pairs of
+grains where the students' pooled ratio differs somewhat from
+PV's.\medskip
 
 As mentioned in Section~\ref{sec:architecture}, geochron@home stores
 the actual track positions marked by the users. This raw data can be
@@ -469,7 +460,7 @@ Figure~\ref{fig:crowdsourcing} also shows that some students counted
 the tails of the fission tracks rather than their etch pits, despite
 being told the opposite in the tutorial. Fixing this issue will
 require some improvements to the tutorial pages
-(Section~\ref{sec:outlook}).
+(Section~\ref{sec:outlook}).\medskip
 
 %\begin{figure}[!ht]
 {  \centering
@@ -493,7 +484,14 @@ remains a work in progress. Planned improvements include:
   count the tails but the etch pits of fission tracks, we will add a
   `quiz' to the tutorial pages. Only users who click on the `correct'
   features in an unlabelled set of images will be allowed to count new
-  samples.
+  samples. The pilot data of the crowd-sourcing experiment show that,
+  despite the large scatter of the raw track counts obtained by the
+  citizen scientists, their pairwise ratio estimates scatter evenly
+  around the expert opinion. This suggests that the collective wisdom
+  of the entire group of students is greater than that of the
+  individual analysts. When applied to a group that has achieved a
+  good level of training and experience, crowd sourcing should improve
+  the precision and accuracy of fission track data.
 \item Length measurements. The geochron@home archive already
   contains horizontally confined fission track measurements
   \citep{tamer2025}.  However, these results must be generated

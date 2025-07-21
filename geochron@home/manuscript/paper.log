@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  2 JUL 2025 17:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  21 JUL 2025 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3082,66 +3082,67 @@ t or edit the fis-sion track co-or-di-nates of any grain in a geochron@home
  []
 
 [4 <./EDM.jpg>]
-<AvP.pdf, id=97, 650.43pt x 361.35pt>
+<AvP.pdf, id=92, 1084.05pt x 361.35pt>
 File: AvP.pdf Graphic file (type pdf)
 <use AvP.pdf>
-Package pdftex.def Info: AvP.pdf  used on input line 298.
-(pdftex.def)             Requested size: 341.43306pt x 189.68953pt.
+Package pdftex.def Info: AvP.pdf  used on input line 288.
+(pdftex.def)             Requested size: 503.61377pt x 167.87163pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 305.
+(caption)                particular \caption on input line 296.
 See the caption package documentation for explanation.
 
 [5 <./AvP.pdf>]
-<radialcrowd.pdf, id=123, 867.24pt x 289.08pt>
+<radialcrowd.pdf, id=118, 867.24pt x 289.08pt>
 File: radialcrowd.pdf Graphic file (type pdf)
 <use radialcrowd.pdf>
-Package pdftex.def Info: radialcrowd.pdf  used on input line 372.
+Package pdftex.def Info: radialcrowd.pdf  used on input line 363.
 (pdftex.def)             Requested size: 503.61377pt x 167.87383pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 378.
+(caption)                particular \caption on input line 369.
 See the caption package documentation for explanation.
 
 [6] [7 <./radialcrowd.pdf>]
-<4649vs4673.pdf, id=163, 505.48547pt x 437.3439pt>
+<4649vs4673.pdf, id=156, 505.48547pt x 437.3439pt>
 File: 4649vs4673.pdf Graphic file (type pdf)
 <use 4649vs4673.pdf>
-Package pdftex.def Info: 4649vs4673.pdf  used on input line 476.
+Package pdftex.def Info: 4649vs4673.pdf  used on input line 467.
 (pdftex.def)             Requested size: 256.0748pt x 221.56094pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 482.
+(caption)                particular \caption on input line 473.
 See the caption package documentation for explanation.
 
-[8 <./4649vs4673.pdf>] [9] [10] (./paper.bbl [11]) [12] (./paper.aux) ) 
+[8] [9 <./4649vs4673.pdf>] [10] (./paper.bbl [11]) [12] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 18664 strings out of 478287
- 272092 string characters out of 5849289
- 616784 words of memory out of 5000000
- 36508 multiletter control sequences out of 15000+600000
- 512512 words of font info for 92 fonts, out of 8000000 for 9000
+ 18663 strings out of 478287
+ 272037 string characters out of 5849289
+ 616821 words of memory out of 5000000
+ 36507 multiletter control sequences out of 15000+600000
+ 516878 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,77p,750b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,7n,77p,750b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/sh
 are/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+e1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on paper.pdf (12 pages, 4651742 bytes).
+cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on paper.pdf (12 pages, 4661105 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 338 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

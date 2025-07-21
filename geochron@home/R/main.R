@@ -26,14 +26,18 @@ PAsPA <- NULL
 total_counts_in_A0 <- c(N00=0,nP=0,nA=0)
 total_counts <- c(N1=0,N2=0)
 total_area <- c(A0=0,A1=0,A2=0)
+px2um2 <- mean(results[,'area_pixels']/results[,'area_mm2'])/1e6
+PAsPA <- matrix(NA,nrow=length(grains),ncol=2)
+colnames(PAsPA) <- c('PA','sPA')
+rhoP <- rhoA <- rep(NA,length(grains))
 for (i in seq_along(grains)){
     grain <- grains[i]
     ROIP <- PieterResults[[grain]]$ROI
     ROIA <- AndyResults[[grain]]$ROI
     ROI0 <- polygon_intersection(ROIP,ROIA)
-    A1 <- polygon_area(ROIP)
-    A2 <- polygon_area(ROIA)
-    A0 <- polygon_area(ROI0)
+    A1 <- polygon_area(ROIP,px2um2=px2um2)
+    A2 <- polygon_area(ROIA,px2um2=px2um2)
+    A0 <- polygon_area(ROI0,px2um2=px2um2)
     total_area <- total_area + c(A0,A1,A2)
     xyP <- PieterResults[[grain]]$counts
     xyA <- AndyResults[[grain]]$counts
@@ -45,11 +49,11 @@ for (i in seq_along(grains)){
     counts_in_A0 <- getN00(xyPinA0,xyAinA0)
     N00 <- counts_in_A0['N00']
     total_counts_in_A0 <- total_counts_in_A0 + counts_in_A0
-    PA <- (N1*A2)/(N2*A1)
-    sPA <- PA * sqrt(1/N1+1/N2-2*N00/(N1*N2))
-    PAsPA <- rbind(PAsPA,c(PA,sPA))
+    rhoP[i] <- 100*N1/A1 # x 1e-6 cm-2
+    rhoA[i] <- 100*N2/A2 # x 1e-6 cm-2
+    PAsPA[i,'PA'] <- rhoP[i]/rhoA[i]
+    PAsPA[i,'sPA'] <- PAsPA[i,'PA'] * sqrt(1/N1+1/N2-2*N00/(N1*N2))
 }
-colnames(PAsPA) <- c('PA','sPA')
 
 #### 2. Plot all the superimposed ROIs and counts for PV and AC ####
 pdf(file='../output/AvProis.pdf',width=6,height=6,onefile=TRUE)
@@ -62,12 +66,24 @@ par(op)
 dev.off()
 
 #### 3. Compare PV and AC's results for grain 4648 ####
-pdf(file='../output/AvP.pdf',width=9,height=5)
-op <- par(mar=c(4,4,3,1),mfrow=c(1,2),mgp=c(2.5,1,0))
+pdf(file='../output/AvP.pdf',width=15,height=5)
+op <- par(mar=c(4,4,.5,.5),mfrow=c(1,3),mgp=c(2.5,1,0),cex=1.0)
 plotROIs(PieterResults[['4648']],AndyResults[['4648']])
 legend('topleft','a)',bty='n')
-PAradial(PAsPA,cex=1.0,spacing=1.2)
+plot(rhoA,rhoP,type='n',
+     xlab=expression(hat(rho)[AC]*"(cm"^2%*%"10"^-6*")"),
+     ylab=expression(hat(rho)[PV]*"(cm"^2%*%"10"^-6*")"),
+     bty='n',log='xy',xlim=c(0.1,2),ylim=c(0.1,2))
+abline(a=0,b=1)
+points(rhoA,rhoP,type='p')
 legend('topleft','b)',bty='n')
+mtext(text='log ratios PV/AC',line=-1)
+mtext(text=paste0('mean = ',signif(mean(log(PAsPA[,'PA'])),3)),line=-2)
+mtext(text=paste0('st.dev = ',signif(sd(log(PAsPA[,'PA'])),3)),line=-3)
+mtext(text=paste0('n = ',nrow(PAsPA)),line=-4)
+par(mar=c(4,4,3,1))
+PAradial(PAsPA,cex=1.0,spacing=1.2)
+legend('topleft','c)',bty='n')
 par(op)
 dev.off()
 

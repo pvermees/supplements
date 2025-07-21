@@ -1,7 +1,7 @@
 # This set of functions was written by ChatGPT!
 
 # Function to compute the area of a polygon using the Shoelace formula
-polygon_area <- function(vertices) {
+polygon_area <- function(vertices,px2um2=1) {
   n <- nrow(vertices)
   area <- 0
   for (i in 1:(n-1)) {
@@ -12,7 +12,7 @@ polygon_area <- function(vertices) {
   area <- area +
       (vertices[n,1] * vertices[1,2]) -
       (vertices[1,1] * vertices[n,2])
-  return(abs(area) / 2)
+  return(abs(area) / 2 / px2um2)
 }
 
 # Function to check if a point is inside
