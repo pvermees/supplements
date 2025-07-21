@@ -71,15 +71,15 @@ op <- par(mar=c(4,4,.5,.5),mfrow=c(1,3),mgp=c(2.5,1,0),cex=1.0)
 plotROIs(PieterResults[['4648']],AndyResults[['4648']])
 legend('topleft','a)',bty='n')
 plot(rhoA,rhoP,type='n',
-     xlab=expression(hat(rho)[AC]*"(cm"^2%*%"10"^-6*")"),
-     ylab=expression(hat(rho)[PV]*"(cm"^2%*%"10"^-6*")"),
+     xlab=expression(hat(rho)[AC]*"(cm"^-2%*%"10"^-6*")"),
+     ylab=expression(hat(rho)[PV]*"(cm"^-2%*%"10"^-6*")"),
      bty='n',log='xy',xlim=c(0.1,2),ylim=c(0.1,2))
 abline(a=0,b=1)
 points(rhoA,rhoP,type='p')
 legend('topleft','b)',bty='n')
 mtext(text='log ratios PV/AC',line=-1)
 mtext(text=paste0('mean = ',signif(mean(log(PAsPA[,'PA'])),3)),line=-2)
-mtext(text=paste0('st.dev = ',signif(sd(log(PAsPA[,'PA'])),3)),line=-3)
+mtext(text=paste0('s.d = ',signif(sd(log(PAsPA[,'PA'])),3)),line=-3)
 mtext(text=paste0('n = ',nrow(PAsPA)),line=-4)
 par(mar=c(4,4,3,1))
 PAradial(PAsPA,cex=1.0,spacing=1.2)

@@ -31,9 +31,9 @@
 \maketitle
 
 \begin{abstract}
-Fission track geochronology is based on the visual analysis of optical
-images. This visual process is prone to observer bias. Fission track
-datasets are currently reported as small data tables. The
+Fission track thermochronology is based on the visual analysis of
+optical images. This visual process is prone to observer bias. Fission
+track datasets are currently reported as small data tables. The
 interpretation of these tables requires a high degree of trust between
 the fission track analyst and the user of the data. geochron@home is
 software that removes this requirement of trust. It combines a
@@ -70,10 +70,10 @@ fission track data more accurate and more future proof. Storing
 fission track data online will benefit future developments in fission
 track thermochronology. For example, archival datasets of peer
 reviewed fission track counts can be used to train and improve machine
-learning algorithms for automated fission track analysis. We hope that
-other geochronological methods will follow the fission track
-community's lead in FAIR data processing. This would benefit all the
-other Earth Science disciplines that depend on geochronological data.
+learning algorithms for automated fission track analysis. We invite
+other geochronological methods to follow the fission track community's
+lead in FAIR data processing. This would benefit all the other Earth
+Science disciplines that depend on geochronological data.
 \end{abstract}
 
 \introduction\label{sec:intro}
@@ -204,11 +204,11 @@ broken down into five steps.
   set of images until all grains are counted.
 
 \item Post-processing. The fission track data can either be downloaded
-  as a flat data table of counts and area, or as a \texttt{.json} file
-  containing the locations of all the counted tracks. geochron@home
-  does not provide any tools to post-process these files. They are
-  meant to be passed on to other tools such as spreadsheet
-  applications or IsoplotR \citep{vermeesch2018c}.
+  as a flat data table of counts and areas, or as a \texttt{.json}
+  file containing the locations of all the counted
+  tracks. geochron@home does not provide any tools to post-process
+  these files. They are meant to be passed on to other tools such as
+  spreadsheet applications or IsoplotR \citep{vermeesch2018c}.
   
 \end{enumerate}
   
@@ -216,7 +216,7 @@ The five-step workflow can be used for several applications, including
 (1) conventional fission track analysis; (2) archiving published
 fission track results; (3) building tutorials; and (4) crowd-sourcing
 fission track data. The next sections of this paper will illustrate
-these four different applications with real world examples.\medskip
+these applications with real world examples.\medskip
 
 %\begin{figure}[!ht]
 { \centering \includegraphics[width=12cm]{EDM.jpg}
@@ -245,18 +245,18 @@ their own ROIs, whilst requiring members of another group to count
 fission tracks in predefined ROIs.  Groups provide a mechanism to
 compare and combine the results of multiple analysts of the same
 sample. Figure~\ref{fig:AvP} illustrates this with two sets of fission
-track density estimates (in tracks per \textmu{m}\textsuperscript{2})
-for the same sample of Mount Dromedary apatite \citep{green1985b},
-analysed by two users (PV and AC).\medskip
+track density estimates for the same sample of Mount Dromedary apatite
+\citep{green1985b}, analysed by two users (PV and AC).\medskip
 
-Let $N_1$ and $N_2$ be the numbers of spontaneous tracks counted by PV
-and AC over areas $A_1$ and $A_2$, respectively. Then their estimated
-track densities are give by $\hat{\rho}_1 = N_1/A_1$ and $\hat{\rho}_2
-= N_2/A_2$. In this situation when the two areas overlap, $N_1$ and
-$N_2$ cannot be treated as independent Poisson counts because the two
-analysts will count some of the same tracks. It can be shown that,
-under simple (ideal) assumptions, the uncertainty of the ratio of the
-estimated track densities is given approximately by
+Let $N_1$ and $N_2$ be the numbers of spontaneous tracks counted by
+the two users over areas $A_1$ and $A_2$, respectively. Then their
+estimated track densities are given by $\hat{\rho}_1 = N_1/A_1$ and
+$\hat{\rho}_2 = N_2/A_2$. In this situation when the two areas
+overlap, $N_1$ and $N_2$ cannot be treated as independent Poisson
+counts because the two analysts will count some of the same tracks. It
+can be shown that, under simple (ideal) assumptions, the uncertainty
+of the ratio of the estimated track densities is given approximately
+by
 \begin{equation}
   \frac{\mbox{se}(\hat{\rho}_1/\hat{\rho}_2)}{\hat{\rho}_1/\hat{\rho}_2} \approx
   \sqrt{ \frac{1}{N_1} + \frac{1}{N_2} - \frac{2\,N_0}{N_1\,N_2} }
@@ -267,22 +267,22 @@ estimated track densities is given approximately by
 observers in the area of overlap ($A_0$, say) between their respective
 ROIs.\medskip 
 
-The radial plot of Figure~\ref{fig:AvP}b contains two sets of counts,
-with $\sum N_{1} = 686$ and $\sum N_{2} = 679$, and a weighted mean
-track density ratio $\hat{\rho}_{1}/\hat{\rho}_{1} = 0.94$ with
-relative standard error 0.013. PV counted 600 tracks in those common
-areas $A_0$, of which 549 were also counted by AC. Conversely, AC
-counted 622 tracks of which 549 were also counted by PV. The ratio of
-the two analysts' track density estimates based just on the common
-area is therefore 600/622 = 0.965 with relative standard error 0.016,
-calculated from Equation~\ref{eq:NO}. This is close to the weighted
-mean ratio of 0.94 (Figure~\ref{fig:AvP}b), and is slightly nearer to
-1. It indicates that PV under-counts the Mount Dromedary apatite by
-3.5\% relative to AC.  The existence of `observer bias' is well
-documented \citep{tamer2025}.  It is one of the reasons why fission
-track analysis is often done relative to age standards: observer bias
-does not have to be a problem provided that it is consistent between
-grains, and between samples.\medskip
+The combined data plots of Figures~\ref{fig:AvP}b and c contain two
+sets of counts, with $\sum N_{1} = 686$ and $\sum N_{2} = 679$, and a
+weighted mean track density ratio $\hat{\rho}_{1}/\hat{\rho}_{1} =
+0.94$ with relative standard error 0.013. PV counted 600 tracks in
+those common areas $A_0$, of which 549 were also counted by
+AC. Conversely, AC counted 622 tracks of which 549 were also counted
+by PV. The ratio of the two analysts' track density estimates based
+just on the common area is therefore 600/622 = 0.965 with relative
+standard error 0.016, calculated from Equation~\ref{eq:NO}. This is
+close to the weighted mean ratio of 0.94 (Figure~\ref{fig:AvP}c), and
+is slightly nearer to 1. It indicates that PV under-counts the Mount
+Dromedary apatite by 3.5\% relative to AC.  The existence of `observer
+bias' is well documented \citep{tamer2025}.  It is one of the reasons
+why fission track analysis is often done relative to age standards:
+observer bias does not have to be a problem provided that it is
+consistent between grains, and between samples.\medskip
 
 %\begin{figure}[!ht]
 { \centering \includegraphics[width=\linewidth]{AvP.pdf}
@@ -348,7 +348,7 @@ geochron@home landing page.\medskip
 The annotations in the current tutorial pages were made by an
 experienced fission track analyst (Andrew Carter). This basic tutorial
 provides a quick and easy mechanism to train novice users in the art
-of fission track analysis. The tutorial pages are in their infancy,
+of fission track analysis. The tutorial pages are in their infancy
 and offer only a limited degree of interactivity. Users can click on
 features to read the annotations. The tutorial will grow with input
 from experienced analysts and future plans include the addition of
@@ -365,7 +365,7 @@ paper.
     spontaneous fission tracks counted in each of 25 grains by 68
     novice counters (geology students) all using the same ROIs. Each
     student counted tracks in a subset of the grains. b) The track
-    counts for Grain 23 plotted against those for Grain 25 for 37
+    counts for Grain 25 plotted against those for Grain 23 for 37
     students who counted both of those grains. c) Radial plot of the
     ratios of the counts in panel b) using the precisions given by
     Equation~\ref{eq:N12}. In each panel, the counts made by PV are
@@ -381,12 +381,12 @@ of the individual estimates. Such is the `wisdom of crowds'
 \citep{galton1907a}. Similar effects are seen in fission track
 geochronology.\medskip
 
-A 1984 interlaboratory comparison study \citep{miller1985} showed that
+An interlaboratory comparison study by \citet{miller1985} showed that
 the average of several fission track age estimates is closer to the
 known age of mineral standards than the age obtained by any individual
-observer. Unfortunately, routine measurement of fission track samples
-by multiple analysts is prohibitively expensive in a normal laboratory
-environment. geochron@home changes this, by bringing fission track
+observer. Routine measurement of fission track samples by multiple
+analysts is prohibitively expensive in a normal laboratory
+environment. geochron@home changes this by bringing fission track
 analysis to a proverbial `county fair' of citizen scientists.\medskip
 
 Figure~\ref{fig:radialcrowd}a shows box plots and summary statistics
@@ -396,22 +396,22 @@ that were analysed by AC and PV in Section~\ref{sec:private}. Everyone
 counted tracks in the same ROIs, and counts made by PV for those ROIs
 have been added as blue dots.  Variation between the mean values is to
 be expected because of the differing numbers of tracks due to varying
-areas and uranium contents of the grains. But the variation between
-counts within grains (shown by the standard deviations) is due
-entirely to differences between the students' recognising and counting
-exactly the same tracks. These standard deviations increase with the
-mean number of tracks and are considerable in size, being on average
-about 40\% of the mean.  Also, the vast majority of students counted
-fewer tracks than PV did, often many fewer. In 21 of the 25 grains,
-PV's count is above the upper quartile of the students', and on 2
-occasions someone counted no tracks at all.  With expert trained
-counters one would expect much smaller differences between counts.
-Nevertheless there are many repeated counts also.\medskip
+areas and U contents of the grains. But the variation between counts
+within grains (shown by the standard deviations) is due entirely to
+differences between the students' recognising and counting exactly the
+same tracks. These standard deviations increase with the mean number
+of tracks and are considerable in size, being on average about 40\% of
+the mean.  Also, the vast majority of students counted fewer tracks
+than PV did, often many fewer. In 21 of the 25 grains, PV's count is
+above the upper quartile of the students', and on two occasions
+someone counted no tracks at all.  With expert trained counters one
+would expect much smaller differences between counts.  Nevertheless
+there are many repeated counts also.\medskip
 
 Figure~\ref{fig:radialcrowd}b shows a scatter plot of pairs of counts
-for two grains made by 33 students who counted both of them. They
-average around 23 and 30 tracks per grain compared with PV's pair of
-44 and 63, which is highlighted in blue. There is a positive
+for two grains made by 37 students who counted both of them. They
+average around 29 and 30 tracks per grain compared with PV's pair of
+52 and 50, which is highlighted in blue. There is a positive
 correlation between the pairs, consistent with systematic observer
 effects (i.e., people who count a low value in one grain tend to count
 similarly low in the other, and vice versa).  Comparing other pairs of
@@ -419,7 +419,7 @@ grains shows similar results, with correlations varying between 0.3
 and 0.9. In all cases we have looked at, the residual variation, after
 allowing for systematic differences between students, is consistent
 with Poisson variation.  Figure~\ref{fig:radialcrowd}c shows a radial
-plot of the ratios of the counts in Panel b, using the precisions
+plot of the ratios of the counts in Panel~b, using the precisions
 given by
 \begin{equation}
   \frac{\mbox{se}(N_1/N_2)}{N_1/N_2}
@@ -432,16 +432,16 @@ given by
 
 The context here is rather different from that in
 Figure~\ref{fig:AvP}b, where we were comparing the ratios of counts
-made by 2 analysts on each of 25 grains. Here we are comparing the
-ratios of counts for the same 2 grains made by each of 33
+made by two analysts on each of 25 grains. Here we are comparing the
+ratios of counts for the same two grains made by each of 37
 analysts. There is no theoretical justification for
 Equation~\ref{eq:N12} here, but it still provides a useful benchmark
 for assessing variation between the ratios. In
 Figure~\ref{fig:radialcrowd}c, that variation is consistent with
 Poisson variation (as it is for most other pairs of grains) but with
 expert counters one would expect less variation than that. However, in
-spite of the under-counting by the students, the pooled the students'
-ratio of 0.76 is quite close to PV's ratio of 0.70. This happens quite
+spite of the under-counting by the students, the pooled students'
+ratio of 0.76 is close to PV's ratio of 0.70. This happens quite
 often in this data set, but not always, and there are some pairs of
 grains where the students' pooled ratio differs somewhat from
 PV's.\medskip
@@ -479,22 +479,22 @@ require some improvements to the tutorial pages
 
 \section{Outlook}\label{sec:outlook}
 
-geochron@home has been in development for 10 years and
-remains a work in progress. Planned improvements include:
+geochron@home has been in development for a decade and remains a work
+in progress. Planned improvements include:
 
 \begin{enumerate}
 \item Interactive tutorial pages. To ensure that novice users do not
   count the tails but the etch pits of fission tracks, we will add a
   `quiz' to the tutorial pages. Only users who click on the `correct'
   features in an unlabelled set of images will be allowed to count new
-  samples. The pilot data of the crowd-sourcing experiment show that,
-  despite the large scatter of the raw track counts obtained by the
-  citizen scientists, their pairwise ratio estimates scatter evenly
-  around the expert opinion. This suggests that the collective wisdom
-  of the entire group of students is greater than that of the
-  individual analysts. When applied to a group that has achieved a
-  good level of training and experience, crowd sourcing should improve
-  the precision and accuracy of fission track data.
+  samples. Section~\ref{sec:crowdsourcing} shows that, despite the
+  large scatter of the raw track counts obtained by the citizen
+  scientists, their pairwise ratio estimates scatter evenly around the
+  expert opinion. This suggests that the collective wisdom of the
+  entire group of students is greater than that of the individual
+  analysts. When applied to a group that has achieved a good level of
+  training and experience, crowd sourcing should improve the precision
+  and accuracy of fission track data.
 \item Length measurements. The geochron@home archive already
   contains horizontally confined fission track measurements
   \citep{tamer2025}.  However, these results must be generated
@@ -507,8 +507,8 @@ remains a work in progress. Planned improvements include:
   x- and y-coordinates.  In reality, etch pits have a finite length
   (`Dpar') and width (`Dper'), which serve as useful indicators for
   the horizontal etch rates along the c-axis and parallel to it
-  \citep{donelick1993}. Functions will be added measure and visualise
-  these type of data in geochron@home.
+  \citep{donelick1993}. Functions will be added to measure and
+  visualise this type of data in geochron@home.
 \item Machine learning. Data science is experiencing an artificial
   intelligence revolution that has already started to transform the
   fission track method \citep{nachtergaele2020}.  Convolutional neural
@@ -541,14 +541,14 @@ our code.
 
 \section{Conclusions}\label{sec:conclusions}
 
-This paper introduced geochron@home, a software platform for
-FAIR fission track analysis. We demonstrated four different
-applications of this platform using real data. Putting the FAIR data
-paradigm into practice, all the imagery, counts and source code for
-this paper are publicly available. Using these resources, the reader
-can reproduce all the results that were presented in this publication.
-We hope that other geochronologists will follow this example.  FAIR
-data promises to address the reproducibility crisis in science
+This paper introduced geochron@home, a software platform for FAIR
+fission track analysis. We demonstrated four different applications of
+this platform using real data. Putting the FAIR data paradigm into
+practice, all the imagery, counts and source code for this paper are
+publicly available. Using these resources, the reader can reproduce
+all the results that were presented in this publication.  We encourage
+other geochronologists to follow this example.  FAIR data promises to
+address the reproducibility crisis in science
 \citep{miyakawa2020}.\medskip
 
 geochron@home's rich archive of raw data can be reanalysed in
@@ -558,7 +558,7 @@ archived pairs of peer-reviewed fission track images and counts could
 be used to train the next generation of automated machine learning
 algorithms. Conversely, it is also possible that future improvements
 in fission track images analysis will be used to update the count data
-for published datasets, improved their accuracy.\medskip
+for published datasets, improving their accuracy.\medskip
 
 Another advantage of the geochron@home wokflow is the separation of
 image acquisition and image analysis. This separation reduces the
@@ -581,8 +581,8 @@ to organise inter-laboratory comparisons and round-robin studies long
 before other geochronological communities
 \citep{miller1985,tamer2025}.\medskip
 
-With the development of geochron@home, fission track geochronology is
-once again ahead of the pack in terms of FAIR data analysis.
+With the development of geochron@home, fission track thermochronology
+is once again ahead of the pack in terms of FAIR data analysis.
 geochron@home currently only stores images and counts. This is enough
 to reproduce the results of fission track studies using the external
 detector method, but not for LA-ICP-MS based data. FAIR data
@@ -599,12 +599,12 @@ of science.
 \codedataavailability{geochron@home is free software released under
   the GPL-3 license. The package and its source code are available
   from \url{https://github.com/pvermees/geochron-at-home} (last
-  access: April~2, 2025).  The raw data (imagery) are available at the
+  access: July~21, 2025).  The raw data (imagery) are available at the
   geochron@home archive (\url{https://github.com/pvermees/GaHa}, last
-  access: April~3, 2025).  R-scripts to reproduce the figures are
+  access: July~21, 2025).  R-scripts to reproduce the figures are
   provided in the supplementary information
   (\url{https://github.com/pvermees/supplements}, last access:
-  April~3, 2025).}
+  July~21, 2025).}
 
 %\appendix
 %\section{}
@@ -618,7 +618,8 @@ of science.
   created geochron@home. Tim Band expanded geochron@home and wrote the
   accompanying microscope image acquisition software. Andrew Carter
   provided the samples, prepared the training data and counted fission
-  tracks. Rex Galbraith derived Equation~\ref{eq:NO}.}
+  tracks. Rex Galbraith derived Equation~\ref{eq:NO} and verified all
+  the other calculations.}
 
 \competinginterests{PV is an Associate Editor of \emph{Geochronology}.}
 
