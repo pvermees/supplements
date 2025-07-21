@@ -30,7 +30,7 @@ text(tt[last]-0.1,terr[last]+5,label,pos=3,xpd=NA)
 
 # panel b)
 
-maxerr <- 140 # y axis limit
+maxerr <- 500 # y axis limit
 plot(range(tt),c(1,maxerr),type='n',xlab=expression("t"[c]*"(Ma)"),
      ylab=expression("Uncertainty of the correction ([t"[u]*"-t"[l]*"]/t"[c]*", %)"),bty='n',log='y')
 legend('topright','b)',bty='n')
@@ -63,7 +63,6 @@ for (i in seq_along(U48i)){
         label <- U48i[i]
     }
     text(tt[last],terr[last],label,pos=2)
-
 }
 
 # worst case scenario envelope

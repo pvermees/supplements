@@ -1,8 +1,10 @@
 library(IsoplotR)
 
-source("plot.R")
+source('plot.R')
 
-source("MonteCarlo.R")
+source('MonteCarlo.R')
+
+source('tables.R')
 
 source('Fig1.R')
 
