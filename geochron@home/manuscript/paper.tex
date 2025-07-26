@@ -53,7 +53,7 @@ combine fission track counts for multiple users within a lab group;
 (2) the value of the geochron@home archive in the peer review system;
 (3) the use of simple tutorials in teaching novice users how to count
 fission tracks; and (4) the `wisdom of crowds' in fission track
-identification.\medskip
+ratio estimation.\medskip
 
 geochron@home was written in Python and Javascript. Its code is freely
 available for inspection and modification, allowing users to set up
@@ -72,8 +72,8 @@ track thermochronology. For example, archival datasets of peer
 reviewed fission track counts can be used to train and improve machine
 learning algorithms for automated fission track analysis. We invite
 other geochronological methods to follow the fission track community's
-lead in FAIR data processing. This would benefit all the other Earth
-Science disciplines that depend on geochronological data.
+lead in FAIR data processing. This would benefit all the Earth Science
+disciplines that depend on geochronological data.
 \end{abstract}
 
 \introduction\label{sec:intro}
@@ -275,7 +275,7 @@ those common areas $A_0$, of which 549 were also counted by
 AC. Conversely, AC counted 622 tracks of which 549 were also counted
 by PV. The ratio of the two analysts' track density estimates based
 just on the common area is therefore 600/622 = 0.965 with relative
-standard error 0.016, calculated from Equation~\ref{eq:NO}. This is
+standard error 0.018, calculated from Equation~\ref{eq:NO}. This is
 close to the weighted mean ratio of 0.94 (Figure~\ref{fig:AvP}c), and
 is slightly nearer to 1. It indicates that PV under-counts the Mount
 Dromedary apatite by 3.5\% relative to AC.  The existence of `observer
@@ -389,33 +389,50 @@ analysts is prohibitively expensive in a normal laboratory
 environment. geochron@home changes this by bringing fission track
 analysis to a proverbial `county fair' of citizen scientists.\medskip
 
+We here present the results of a type of `crowd-sourcing' experiment
+that was carried out at UCL as part of an undergraduate course in
+isotope geology. 70 students were asked to create an account on the
+geochron@home server by selecting a unique username and
+password. After spending a few minutes to complete the compulsory
+tutorial (Section~\ref{sec:tutorial}), the students were asked to
+count fission tracks in randomly assigned image stacks of Mount
+Dromedary apatite. Each student was required to analyse at least 15
+grains, using pre-defined ROIs. In a matter of hours, the students
+amassed a dataset of 37,331 fission track counts in 34 grains.  This
+large dataset was parsed into separate data files --- one for each
+student --- which they processed during an assessed practical
+exercise.\medskip
+
+The raw counts for 68 students (two of the students were unable to
+complete the exercise) are given in Table~\ref{tab:crowdtable} of the
+Appendix, for the same selection of 25 grains that were analysed by AC
+and PV in Section~\ref{sec:private}, along with corresponding counts
+made by PV. Everyone counted tracks in the same ROIs.
 Figure~\ref{fig:radialcrowd}a shows box plots and summary statistics
-for the raw counts made by 68 students (two of the students were
-unable to complete the assignment) for the same selection of 25 grains
-that were analysed by AC and PV in Section~\ref{sec:private}. Everyone
-counted tracks in the same ROIs, and counts made by PV for those ROIs
-have been added as blue dots.  Variation between the mean values is to
-be expected because of the differing numbers of tracks due to varying
-areas and U contents of the grains. But the variation between counts
-within grains (shown by the standard deviations) is due entirely to
-differences between the students' recognising and counting exactly the
-same tracks. These standard deviations increase with the mean number
-of tracks and are considerable in size, being on average about 40\% of
-the mean.  Also, the vast majority of students counted fewer tracks
-than PV did, often many fewer. In 21 of the 25 grains, PV's count is
-above the upper quartile of the students', and on two occasions
-someone counted no tracks at all.  With expert trained counters one
-would expect much smaller differences between counts.  Nevertheless
-there are many repeated counts also.\medskip
+of these counts for each grain.  Variation between the mean values is
+to be expected because of the differing numbers of tracks due to
+varying areas and U contents of the grains. But the variation between
+counts within grains (shown by the standard deviations) is due
+entirely to differences between the students’ recognising and counting
+exactly the same tracks. These standard deviations increase with the
+mean number of tracks and are considerable in size, being on average
+about 40\% of the mean. With expert trained counters one would expect
+much smaller differences between counts.  Furthermore, the vast
+majority of students counted fewer tracks than PV did, often many
+fewer, and on two occasions someone counted no tracks at all. PV's
+count is always above the students' median and nearly always above the
+upper quartile.  Table~\ref{tab:crowdtable} (looking along rows) shows
+just 7 students with average counts within 10\% of PV's, and 19 with
+average counts less than half of his.\medskip
 
 Figure~\ref{fig:radialcrowd}b shows a scatter plot of pairs of counts
-for two grains made by 37 students who counted both of them. They
+for two grains made by 36 students who counted both of them. They
 average around 29 and 30 tracks per grain compared with PV's pair of
 52 and 50, which is highlighted in blue. There is a positive
 correlation between the pairs, consistent with systematic observer
 effects (i.e., people who count a low value in one grain tend to count
 similarly low in the other, and vice versa).  Comparing other pairs of
-grains shows similar results, with correlations varying between 0.3
+grains shows similar results, with correlations varying between 0.4
 and 0.9. In all cases we have looked at, the residual variation, after
 allowing for systematic differences between students, is consistent
 with Poisson variation.  Figure~\ref{fig:radialcrowd}c shows a radial
@@ -441,10 +458,15 @@ Figure~\ref{fig:radialcrowd}c, that variation is consistent with
 Poisson variation (as it is for most other pairs of grains) but with
 expert counters one would expect less variation than that. However, in
 spite of the under-counting by the students, the pooled students'
-ratio of 0.76 is close to PV's ratio of 0.70. This happens quite
-often in this data set, but not always, and there are some pairs of
-grains where the students' pooled ratio differs somewhat from
-PV's.\medskip
+ratio of 0.97 is close to PV's ratio of 1.04. This happens quite often
+in this data set, but not always, and there are some pairs of grains
+where the students' pooled ratio differs somewhat from PV's.  The
+logcontrast between the student ratios and PV's ratios for all 300
+pairs of grains follows a normal distribution with a mean of 0.0 and
+standard deviation 0.23 (Table~\ref{tab:logcontrasts}). This indicates
+that, on the whole, the student estimates of the (log)ratios are
+unbiassed with respect to the expert opinion of PV.
+\medskip
 
 As mentioned in Section~\ref{sec:architecture}, geochron@home stores
 the actual track positions marked by the users. This raw data can be
@@ -457,12 +479,10 @@ most obvious semitracks, which contain a clearly visible etch pit and
 tail. Shorter and fainter tracks received fewer clicks. Datasets like
 this can be used to replace integer counts of fission tracks with
 probabilities, reflecting the ambiguity of some fission track
-datasets.\medskip
-
-Figure~\ref{fig:crowdsourcing} also shows that some students counted
-the tails of the fission tracks rather than their etch pits, despite
-being told the opposite in the tutorial. Fixing this issue will
-require some improvements to the tutorial pages
+datasets. Figure~\ref{fig:crowdsourcing} also shows that some students
+counted the tails of the fission tracks rather than their etch pits,
+despite being told the opposite in the tutorial. Fixing this issue
+will require some improvements to the tutorial pages
 (Section~\ref{sec:outlook}).\medskip
 
 %\begin{figure}[!ht]
@@ -606,10 +626,37 @@ of science.
   (\url{https://github.com/pvermees/supplements}, last access:
   July~21, 2025).}
 
-%\appendix
-%\section{}
+\appendix
+\section{Summary tables for the crowd-sourcing experiment}
 
-%\appendix{}
+\begingroup
+\captionof{table}{ Summary table of the crowd sourcing results for the
+  different users (rows) and grains (columns).  The last row is the
+  ratio of the median count to PV's count (user~1) for each grain.
+  The last column is the ratio of the weighted mean count over grains
+  compared with PV for the same grains.
+}
+\label{tab:crowdtable}
+\renewcommand{\arraystretch}{0.7}
+\begin{scriptsize}
+  \input{../output/crowdtable.txt}
+\end{scriptsize}
+\endgroup
+
+\clearpage
+
+\begingroup
+\captionof{table}{
+  Logcontrasts between the pooled count ratio of the
+  students and PV for each pair of 25 grains in
+  Table~\ref{tab:crowdtable}.
+}
+\label{tab:logcontrasts}\medskip
+\renewcommand{\arraystretch}{0.7}
+\begin{scriptsize}
+  \input{../output/logcontrasts.txt}
+\end{scriptsize}
+\endgroup
 
 %\noappendix
 

@@ -76,6 +76,7 @@ PAradial <- function(PAsPA,cex=1.0,spacing=1.0){
     if (fit$p.value<0.05){
         mtext(text=disptit,line=-spacing,cex=cex)
     }
+    invisible(fit)
 }
 
 # gets ROI from rois.json
@@ -246,6 +247,8 @@ compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
 
 radialcrowd <- function(results,grain1,grain2,from=NA,to=NA,t0=NA,...){
     radialdat <- compare_grains(results,grain1,grain2,plot=FALSE)
+    duplicates <- duplicated(radialdat)
+    radialdat$x[duplicates,] <- jitter(radialdat$x[duplicates,])
     provenance:::radialplot.counts(radialdat,title=FALSE,from=from,to=to,t0=t0,...)
     pooledratio <- sum(radialdat$x[,1])/sum(radialdat$x[,2])
     admincount1 <- results$count[results$user_id==1 & results$index==grain1]
@@ -255,6 +258,7 @@ radialcrowd <- function(results,grain1,grain2,from=NA,to=NA,t0=NA,...){
     graphics::mtext(paste0('PV ratio = ',signif(adminratio,3)),line=-2,cex=0.7)
     zs_admin <- provenance:::x2zs(tail(radialdat$x,1),from=from,to=to,t0=t0)
     IsoplotR:::plot_radial_points(zs_admin,pch=21,bg='blue')
+    invisible(radialdat)
 }
 
 add_table <- function(grouped_list,sigdig=1,nsmall=1,x=c(70,75,85)){
@@ -267,4 +271,86 @@ add_table <- function(grouped_list,sigdig=1,nsmall=1,x=c(70,75,85)){
         text(x=x[2],y=i,labels=format(round(mean(grouped_list[[i]]),sigdig),nsmall=nsmall),xpd=NA,pos=4)
         text(x=x[3],y=i,labels=format(round(sd(grouped_list[[i]]),sigdig),nsmall=nsmall),xpd=NA,pos=4)
     }
+}
+
+crowdtable <- function(trustworthy_results){
+    count_table <- reshape(
+        trustworthy_results[,c('user_id','index','count')],
+        direction = "wide",
+        idvar = "user_id",
+        timevar = "index",
+        sep = ""
+    )
+    area_table <- reshape(
+        trustworthy_results[,c('user_id','index','area_pixels')],
+        direction = "wide",
+        idvar = "user_id",
+        timevar = "index",
+        sep = ""
+    )
+    order_table <- function(unordered_table,first){
+        res <- data.matrix(subset(unordered_table,select=-user_id))
+        rownames(res) <- unordered_table$user_id
+        colnames(res) <- substring(colnames(res),first=first)
+        res[order(as.integer(rownames(res))),
+            order(as.integer(colnames(res)))]
+    }
+    ordered_counts <- order_table(count_table,first=6) # 6 characters in "count."
+    ordered_areas <- order_table(area_table,first=12) # 12 characters in "area_pixels."
+    rowratio <- rep(NA,nrow(ordered_counts)-1)
+    for (i in 2:nrow(ordered_counts)){
+        good <- !is.na(ordered_counts[i,])
+        rowratio[i-1] <-
+            sum(ordered_counts[i,good]/ordered_areas[i,good])/
+            sum(ordered_counts[1,good]/ordered_areas[1,good])
+    }
+    colmedians <- apply(ordered_counts[-1,],2,'median',na.rm=TRUE)
+    colratio <- colmedians/ordered_counts[1,]
+    list(tab=ordered_counts,rowratio=rowratio,colratio=colratio)
+}
+
+counts2latex <- function(lst,destination){
+    rowratio <- sprintf('%.2f',lst$rowratio)
+    shortrowratio <- gsub('0\\.', '.', rowratio)
+    colratio <- sprintf('%.2f',lst$colratio)
+    shortcolratio <- gsub('0\\.', '.', colratio)
+    out <- rbind(c('user',colnames(lst$tab),'ratio'),
+                 cbind(rownames(lst$tab),lst$tab,c(NA,shortrowratio)),
+                 c('ratio',shortcolratio,''))
+    nr <- nrow(out)
+    nc <- ncol(out)
+    file_conn <- file(destination, open = "w")
+    cat('\\begin{tabular}{',file=file_conn)
+    cat(paste0(rep('r@{~}',nc),collapse=''),file=file_conn)
+    cat('}\n',file=file_conn)
+    for (i in 1:nr){
+        values <- out[i,]
+        values[is.na(values)] <- ''
+        cat(paste0(values,collapse=' & '),file = file_conn)
+        cat(' \\cr\n',file = file_conn)
+    }
+    cat('\\end{tabular}\n',file=file_conn)
+    close(file_conn)    
+}
+
+dist2latex <- function(d,destination){
+    file_conn <- file(destination, open = "w")
+    cat('\\begin{tabular}{',file=file_conn)
+    n <- attr(d,"Size")
+    cat(paste0(rep('r@{~}',n),collapse=''),file=file_conn)
+    cat('}\n',file=file_conn)
+    dmat <- as.matrix(d)
+    labels <- attr(d,"Labels")
+    cat(paste0(c('',labels[-n]),collapse=' & '), file = file_conn)
+    cat(' \\cr\n',file=file_conn)
+    for (i in 2:n){
+        cat(paste0(labels[i],' & ',collapse=''),file = file_conn)
+        values <- sprintf('%.2f',dmat[i,1:(i-1)])
+        shortvals <- gsub('0\\.', '.', values)
+        cat(paste0(shortvals,collapse=' & '),file = file_conn)
+        cat(paste0(rep('',n-i),collapse=' & '),file = file_conn)
+        cat(' \\cr\n',file = file_conn)
+    }
+    cat('\\end{tabular}\n',file=file_conn)
+    close(file_conn)
 }

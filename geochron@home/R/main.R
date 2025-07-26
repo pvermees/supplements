@@ -161,7 +161,10 @@ p2 <- par(mar=c(3,2.5,1,1),xpd=NA,bty='n')
 compare_grains(trustworthy_results,grain1,grain2)
 legend('topleft',legend='b)',bty='n',cex=1.0,adj=c(1,0))
 # radial plot
-radialcrowd(trustworthy_results,grain1,grain2,from=0.4,to=3.0,t0=1)
+radialgrain12 <- radialcrowd(trustworthy_results,grain1,grain2,from=0.4,to=3.0,t0=1)
+ng <- nrow(radialgrain12$x)
+pooledratio12crowd <- sum(radialgrain12$x[-ng,1])/sum(radialgrain12$x[-ng,2])
+pooledratio12PV <- radialgrain12$x[ng,1]/radialgrain12$x[ng,2]
 legend('topleft',legend='c)',bty='n',cex=1.0,adj=c(1,0))
 par(p2)
 par(p1)
@@ -170,3 +173,30 @@ dev.off()
 # generalised linear fit to crowd-sourced data
 fit <- glm(count ~ index + user_id, data=trustworthy_results, family="poisson")
 mswd <- summary(fit)$deviance/summary(fit)$df.residual
+
+# summary tables
+lst <- crowdtable(trustworthy_results)
+counts2latex(lst,destination='../output/crowdtable.txt')
+
+ordered_counts <- lst$tab
+indices <- colnames(ordered_counts)
+ni <- length(indices)
+crowdratios <- matrix(0,nrow=ni,ncol=ni,dimnames=list(indices,indices))
+PVratios <- matrix(0,nrow=ni,ncol=ni,dimnames=list(indices,indices))
+for (i1 in indices){
+    for (i2 in indices){
+        paired <- which(!(is.na(ordered_counts[,i1]) | is.na(ordered_counts[,i2])))[-1]
+        crowdratios[i1,i2] <- sum(ordered_counts[paired,i1])/sum(ordered_counts[paired,i2])
+        PVratios[i1,i2] <- ordered_counts[1,i1]/ordered_counts[1,i2]
+    }
+}
+logcontrast <- log(crowdratios)-log(PVratios)
+formatted <- as.dist(apply(logcontrast, MARGIN = c(1, 2), FUN = function(x) sprintf("%.2f", x)))
+
+pdf(file='../output/logcontrasts.pdf',width=4.5,height=4.5)
+op <- par(mar=c(5,5,0,0))
+hist(logcontrast,main='',col='white')
+par(op)
+dev.off()
+
+dist2latex(formatted,destination='../output/logcontrasts.txt')
