@@ -207,7 +207,10 @@ clean_results <- function(results,ACgrains){
     good_grains <- results$index %in% AC_ids
     good_counts <- (timely_submission & is_trustworthy & uses_default_roi) | is_admin
     keep <- good_grains & good_counts
-    results[keep,]
+    out <- results[keep,]
+    out$index <- as.factor(out$index)
+    out$user_id <- as.factor(out$user_id)
+    out
 }
 
 add_admin_count_to_boxplot <- function(trustworthy_results,grouped_list){
@@ -331,26 +334,4 @@ counts2latex <- function(lst,destination){
     }
     cat('\\end{tabular}\n',file=file_conn)
     close(file_conn)    
-}
-
-dist2latex <- function(d,destination){
-    file_conn <- file(destination, open = "w")
-    cat('\\begin{tabular}{',file=file_conn)
-    n <- attr(d,"Size")
-    cat(paste0(rep('r@{~}',n),collapse=''),file=file_conn)
-    cat('}\n',file=file_conn)
-    dmat <- as.matrix(d)
-    labels <- attr(d,"Labels")
-    cat(paste0(c('',labels[-n]),collapse=' & '), file = file_conn)
-    cat(' \\cr\n',file=file_conn)
-    for (i in 2:n){
-        cat(paste0(labels[i],' & ',collapse=''),file = file_conn)
-        values <- sprintf('%.2f',dmat[i,1:(i-1)])
-        shortvals <- gsub('0\\.', '.', values)
-        cat(paste0(shortvals,collapse=' & '),file = file_conn)
-        cat(paste0(rep('',n-i),collapse=' & '),file = file_conn)
-        cat(' \\cr\n',file = file_conn)
-    }
-    cat('\\end{tabular}\n',file=file_conn)
-    close(file_conn)
 }

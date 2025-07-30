@@ -171,32 +171,9 @@ par(p1)
 dev.off()
 
 # generalised linear fit to crowd-sourced data
-fit <- glm(count ~ index + user_id, data=trustworthy_results, family="poisson")
+fit <- glm(count ~ user_id + index, data=trustworthy_results, family="poisson")
 mswd <- summary(fit)$deviance/summary(fit)$df.residual
 
 # summary tables
 lst <- crowdtable(trustworthy_results)
 counts2latex(lst,destination='../output/crowdtable.txt')
-
-ordered_counts <- lst$tab
-indices <- colnames(ordered_counts)
-ni <- length(indices)
-crowdratios <- matrix(0,nrow=ni,ncol=ni,dimnames=list(indices,indices))
-PVratios <- matrix(0,nrow=ni,ncol=ni,dimnames=list(indices,indices))
-for (i1 in indices){
-    for (i2 in indices){
-        paired <- which(!(is.na(ordered_counts[,i1]) | is.na(ordered_counts[,i2])))[-1]
-        crowdratios[i1,i2] <- sum(ordered_counts[paired,i1])/sum(ordered_counts[paired,i2])
-        PVratios[i1,i2] <- ordered_counts[1,i1]/ordered_counts[1,i2]
-    }
-}
-logcontrast <- log(crowdratios)-log(PVratios)
-formatted <- as.dist(apply(logcontrast, MARGIN = c(1, 2), FUN = function(x) sprintf("%.2f", x)))
-
-pdf(file='../output/logcontrasts.pdf',width=4.5,height=4.5)
-op <- par(mar=c(5,5,0,0))
-hist(logcontrast,main='',col='white')
-par(op)
-dev.off()
-
-dist2latex(formatted,destination='../output/logcontrasts.txt')
