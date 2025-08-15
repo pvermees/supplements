@@ -22,14 +22,16 @@ AndyResults <- parseJSON(Andy)
 grains <- intersect(names(PieterResults),names(AndyResults))
 
 #### 1. calculate the density ratios for PV and AC ####
-PAsPA <- NULL
 total_counts_in_A0 <- c(N00=0,nP=0,nA=0)
 total_counts <- c(N1=0,N2=0)
 total_area <- c(A0=0,A1=0,A2=0)
 px2um2 <- mean(results[,'area_pixels']/results[,'area_mm2'])/1e6
-PAsPA <- matrix(NA,nrow=length(grains),ncol=2)
-colnames(PAsPA) <- c('PA','sPA')
-rhoP <- rhoA <- rep(NA,length(grains))
+ng <- length(grains)
+PAsPA <- matrix(NA,nrow=ng,ncol=2,
+                dimnames=list(grains,c('PA','sPA')))
+NA120 <- matrix(NA,nrow=ng,ncol=7,
+                dimnames=list(1:ng,c('grain','N1','A1','N2','A2','N0','A0')))
+rhoP <- rhoA <- rep(NA,ng)
 for (i in seq_along(grains)){
     grain <- grains[i]
     ROIP <- PieterResults[[grain]]$ROI
@@ -53,7 +55,10 @@ for (i in seq_along(grains)){
     rhoA[i] <- 100*N2/A2 # x 1e-6 cm-2
     PAsPA[i,'PA'] <- rhoP[i]/rhoA[i]
     PAsPA[i,'sPA'] <- PAsPA[i,'PA'] * sqrt(1/N1+1/N2-2*N00/(N1*N2))
+    NA120[i,] <- c(grain,N1,A1,N2,A2,N00,A0)
 }
+
+write.table(NA120,file='../output/PA.csv',sep=',')
 
 #### 2. Plot all the superimposed ROIs and counts for PV and AC ####
 pdf(file='../output/AvProis.pdf',width=6,height=6,onefile=TRUE)
@@ -158,7 +163,8 @@ legend('topleft',legend='a)',bty='n',cex=1.5,adj=c(1,0))
 add_table(grouped_list)
 # scatter plot
 p2 <- par(mar=c(3,2.5,1,1),xpd=NA,bty='n')
-compare_grains(trustworthy_results,grain1,grain2)
+compare_grains(trustworthy_results,grain1,grain2,
+               xlim=c(0,70),ylim=c(0,60))
 legend('topleft',legend='b)',bty='n',cex=1.0,adj=c(1,0))
 # radial plot
 radialgrain12 <- radialcrowd(trustworthy_results,grain1,grain2,from=0.4,to=3.0,t0=1)

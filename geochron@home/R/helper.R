@@ -187,6 +187,8 @@ getN00 <- function(xyP,xyA,i=0,cutoff=20){
         iPA <- getN00(xyP=xyP[-rP,,drop=FALSE],
                       xyA=xyA[-rA,,drop=FALSE],
                       i=i+1,cutoff=cutoff)
+    } else if (dPA[j]<cutoff){
+        iPA <- c(N00=i+1,nP=nP,nA=nA)
     } else {
         iPA <- c(N00=i,nP=nP,nA=nA)
     }
@@ -242,6 +244,13 @@ compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
              xlab=paste0('grain ',grain1),
              ylab=paste0('grain ',grain2),
              pch=21,bg=bg,...)
+        h1 <- poisson.test(out$x[iadmin,1])
+        h2 <- poisson.test(out$x[iadmin,2])
+        arrows(x0=c(out$x[iadmin,1],h1$conf.int[1]),
+               x1=c(out$x[iadmin,1],h1$conf.int[2]),
+               y0=c(h2$conf.int[1],out$x[iadmin,2]),
+               y1=c(h2$conf.int[2],out$x[iadmin,2]),
+               angle=90,length=0.05,code=3)
         rho <- format(round(cor(out$x)[1,2],2),nsmall=2)
         mtext(line=-1,text=paste0('correlation=',rho),cex=0.7)
     }
@@ -298,18 +307,19 @@ crowdtable <- function(trustworthy_results){
         res[order(as.integer(rownames(res))),
             order(as.integer(colnames(res)))]
     }
-    ordered_counts <- order_table(count_table,first=6) # 6 characters in "count."
-    ordered_areas <- order_table(area_table,first=12) # 12 characters in "area_pixels."
-    rowratio <- rep(NA,nrow(ordered_counts)-1)
-    for (i in 2:nrow(ordered_counts)){
+    ordered_counts <- order_table(count_table,first=6) # 6 characters in "count."    
+    rowratio <- rep(NA,nrow(ordered_counts))
+    for (i in 1:nrow(ordered_counts)){
         good <- !is.na(ordered_counts[i,])
-        rowratio[i-1] <-
-            sum(ordered_counts[i,good]/ordered_areas[i,good])/
-            sum(ordered_counts[1,good]/ordered_areas[1,good])
+        rowratio[i] <- sum(ordered_counts[i,good])/sum(ordered_counts[1,good])
     }
     colmedians <- apply(ordered_counts[-1,],2,'median',na.rm=TRUE)
     colratio <- colmedians/ordered_counts[1,]
-    list(tab=ordered_counts,rowratio=rowratio,colratio=colratio)
+    roworder <- c(1,1+order(rowratio[-1],decreasing=TRUE))
+    colorder <- order(ordered_counts[1,])
+    list(tab=ordered_counts[roworder,colorder],
+         rowratio=rowratio[roworder],
+         colratio=colratio[colorder])
 }
 
 counts2latex <- function(lst,destination){
@@ -317,19 +327,36 @@ counts2latex <- function(lst,destination){
     shortrowratio <- gsub('0\\.', '.', rowratio)
     colratio <- sprintf('%.2f',lst$colratio)
     shortcolratio <- gsub('0\\.', '.', colratio)
-    out <- rbind(c('user',colnames(lst$tab),'ratio'),
-                 cbind(rownames(lst$tab),lst$tab,c(NA,shortrowratio)),
-                 c('ratio',shortcolratio,''))
+    medians <- apply(lst$tab,2,median,na.rm=TRUE)
+    out <- rbind(c('user','~',colnames(lst$tab),'~','ratio'),
+                 c('~','~',rep(NA,ncol(lst$tab)),'~',''),
+                 c('PV',NA,lst$tab[1,],NA,shortrowratio[1]),
+                 NA,
+                 cbind(rownames(lst$tab)[-1],NA,lst$tab[-1,],NA,shortrowratio[-1]),
+                 NA,
+                 c('ratio','~',shortcolratio,'~','~'))
     nr <- nrow(out)
     nc <- ncol(out)
     file_conn <- file(destination, open = "w")
     cat('\\begin{tabular}{',file=file_conn)
     cat(paste0(rep('r@{~}',nc),collapse=''),file=file_conn)
     cat('}\n',file=file_conn)
+    cat(paste0('\\multicolumn{',nc,'}{c}{grain}\\cr\n'),file=file_conn)
     for (i in 1:nr){
         values <- out[i,]
         values[is.na(values)] <- ''
-        cat(paste0(values,collapse=' & '),file = file_conn)
+        cat(paste0(values[1:2],collapse=' & '),file = file_conn)
+        cat(' & ',file = file_conn)
+        for (j in 3:(nc-2)){
+            needle <- round(as.numeric(values[j]),digits=1)
+            haystack <- round(medians[j-2]+c(-0.5,0,0.5),digits=1)
+            if (any(haystack == needle,na.rm=TRUE)){
+                cat('\\bf ',file = file_conn)
+            }
+            cat(values[j],file = file_conn)
+            cat(' & ',file = file_conn)
+        }
+        cat(paste0(tail(values,2),collapse=' & '),file = file_conn)
         cat(' \\cr\n',file = file_conn)
     }
     cat('\\end{tabular}\n',file=file_conn)
