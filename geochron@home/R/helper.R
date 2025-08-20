@@ -244,15 +244,8 @@ compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
              xlab=paste0('grain ',grain1),
              ylab=paste0('grain ',grain2),
              pch=21,bg=bg,...)
-        h1 <- poisson.test(out$x[iadmin,1])
-        h2 <- poisson.test(out$x[iadmin,2])
-        arrows(x0=c(out$x[iadmin,1],h1$conf.int[1]),
-               x1=c(out$x[iadmin,1],h1$conf.int[2]),
-               y0=c(h2$conf.int[1],out$x[iadmin,2]),
-               y1=c(h2$conf.int[2],out$x[iadmin,2]),
-               angle=90,length=0.05,code=3)
         rho <- format(round(cor(out$x)[1,2],2),nsmall=2)
-        mtext(line=-1,text=paste0('correlation=',rho),cex=0.7)
+        mtext(line=-1,text=paste0('correlation=',rho),cex=1.0)
     }
     out
 }

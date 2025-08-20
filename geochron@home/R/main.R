@@ -70,7 +70,7 @@ for (grain in grains){
 par(op)
 dev.off()
 
-#### 3. Compare PV and AC's results for grain 4648 ####
+#### 3. Compare PV and AC's results for grain 3 (a.k.a. 4648) ####
 pdf(file='../output/AvP.pdf',width=15,height=5)
 op <- par(mar=c(4,4,.5,.5),mfrow=c(1,3),mgp=c(2.5,1,0),cex=1.0)
 plotROIs(PieterResults[['4648']],AndyResults[['4648']])
@@ -109,29 +109,27 @@ for (grain in grains){
 dev.off()
 
 #### 5. Show crowdsourcing results for two selected grains ####
-grain1 <- '4649'
-grain2 <- '4673'
-pdf(file="../output/4649vs4673.pdf",onefile=FALSE)
+grain1 <- list(number='4685',index=23) # list(number='4682',index=39)
+grain2 <- list(number='4674',index=25) # list(number='4680',index=43)
+pdf(file="../output/23vs25.pdf",onefile=FALSE)
 op <- par(mar=c(4,4,0,1))
 image1 <- plotimage(idir='../screenshots',
-                    grain=allgrains[[grain1]]$grain) +
-    labs(tag = "a)") +
+                    grain=allgrains[[grain1$number]]$grain) +
+    labs(tag = grain1$index) +
     theme(legend.position="right",
           legend.direction="vertical",
           legend.key.height=unit(1.0, "cm"))
-counts1 <- plotcounts(allgrains[[grain1]],roiss) +
-    labs(tag = "c)") +
+counts1 <- plotcounts(allgrains[[grain1$number]],roiss) +
     theme(legend.position="bottom",
           legend.direction="horizontal",
           legend.key.width=unit(1.0, "cm"))
 image2 <- plotimage(idir='../screenshots',
-                    grain=allgrains[[grain2]]$grain) +
-    labs(tag = "b)") +
+                    grain=allgrains[[grain2$number]]$grain) +
+    labs(tag = grain2$index) +
     theme(legend.position="right",
           legend.direction="vertical",
           legend.key.height=unit(1.0, "cm"))
-counts2 <- plotcounts(allgrains[[grain2]],roiss) +
-    labs(tag = "d)") +
+counts2 <- plotcounts(allgrains[[grain2$number]],roiss) +
     theme(legend.position="right",
           legend.direction="vertical",
           legend.key.height=unit(1.0, "cm"))
@@ -143,14 +141,18 @@ grid.arrange(
 par(op)
 dev.off()
 
-#### 6. Boxplot, scatter plot and radial plot of crowdsourcing results ####
-grain1 <- 23
-grain2 <- 25
 trustworthy_results <- clean_results(results)
-pdf(file='../output/radialcrowd.pdf',width=7,height=5)
-layout(rbind(c(1,1,1,2,2),
-             c(1,1,1,3,3)))
-p1 <- par(mar=c(3,3,1,8),mgp=c(2,1,0))
+
+#### 6. Scatter plot of crowdsourcing results ####
+pdf(file='../output/crowd-correlation.pdf',width=5,height=5)
+op <- par(mar=c(3,3,1,1),mgp=c(2,1,0),xpd=NA,bty='n')
+compare_grains(trustworthy_results,grain2$index,grain1$index)#,xlim=c(0,60),ylim=c(0,70))
+par(op)
+dev.off()
+
+#### 6. Boxplot of crowdsourcing results ####
+pdf(file='../output/boxplots.pdf',width=6,height=5)
+op <- par(mar=c(3,3,1,8),mgp=c(2,1,0))
 # box plot
 grouped_list <- split(trustworthy_results$count, trustworthy_results$index)
 boxplot(grouped_list,horizontal=TRUE,
@@ -158,22 +160,9 @@ boxplot(grouped_list,horizontal=TRUE,
         xaxt='n',las=2,col=NA)
 add_admin_count_to_boxplot(trustworthy_results,grouped_list)
 axis(1)
-legend('topleft',legend='a)',bty='n',cex=1.5,adj=c(1,0))
 # table
 add_table(grouped_list)
-# scatter plot
-p2 <- par(mar=c(3,2.5,1,1),xpd=NA,bty='n')
-compare_grains(trustworthy_results,grain1,grain2,
-               xlim=c(0,70),ylim=c(0,60))
-legend('topleft',legend='b)',bty='n',cex=1.0,adj=c(1,0))
-# radial plot
-radialgrain12 <- radialcrowd(trustworthy_results,grain1,grain2,from=0.4,to=3.0,t0=1)
-ng <- nrow(radialgrain12$x)
-pooledratio12crowd <- sum(radialgrain12$x[-ng,1])/sum(radialgrain12$x[-ng,2])
-pooledratio12PV <- radialgrain12$x[ng,1]/radialgrain12$x[ng,2]
-legend('topleft',legend='c)',bty='n',cex=1.0,adj=c(1,0))
-par(p2)
-par(p1)
+par(op)
 dev.off()
 
 # generalised linear fit to crowd-sourced data

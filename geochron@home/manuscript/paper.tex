@@ -289,7 +289,7 @@ consistent between grains, and between samples.\medskip
   \captionof{figure}{Comparison of fission track data for Mount
     Dromedary apatite by two analysts (PV = Pieter Vermeesch and AC =
     Andrew Carter). a) the track counts and ROIs of both users for
-    grain 4648, shown in blue (PV) and red (AC); b) comparison of the
+    grain~3, shown in blue (PV) and red (AC); b) comparison of the
     track densities for PV and AC for all 25 grains analysed by the
     two analysts with a reference line for
     $\hat{\rho}_\text{PV}=\hat{\rho}_\text{AC}$; c) radial plot of the
@@ -359,19 +359,19 @@ paper.
 
 \section{Crowd-sourcing fission track data}\label{sec:crowdsourcing}
 
-%\begin{figure}[!ht]
-{ \centering \includegraphics[width=15cm]{radialcrowd.pdf}
-  \captionof{figure}{a) Box plots and summary statistics of numbers of
-    spontaneous fission tracks counted in each of 25 grains by 68
-    novice counters (geology students) all using the same ROIs. Each
-    student counted tracks in a subset of the grains. b) The track
-    counts for Grain 25 plotted against those for Grain 23 for 37
-    students who counted both of those grains. c) Radial plot of the
-    ratios of the counts in panel b) using the precisions given by
-    Equation~\ref{eq:N12}. In each panel, the counts made by PV are
-    added as blue dots.\medskip}
-  \label{fig:radialcrowd}
-}%\end{figure}
+\begingroup
+\captionof{table}{ Summary table of the crowd sourcing results for the
+  different users (rows) and grains (columns).  The last row is the
+  ratio of the median count to PV's count (user~1) for each grain.
+  The last column is the ratio of the weighted mean count over grains
+  compared with PV for the same grains.
+}
+\label{tab:crowdtable}
+\renewcommand{\arraystretch}{0.7}
+\begin{scriptsize}
+  \input{../output/crowdtable.txt}
+\end{scriptsize}
+\endgroup
 
 In 1906, Sir Francis Galton visited a county fair in which a contest
 was held to guess the weight of an ox. 787 people participated in the
@@ -379,15 +379,12 @@ event. Galton discovered that the median of all their estimates was
 within 0.8\% of the true weight of the ox and more accurate than 90\%
 of the individual estimates. Such is the `wisdom of crowds'
 \citep{galton1907a}. Similar effects are seen in fission track
-geochronology.\medskip
-
-An interlaboratory comparison study by \citet{miller1985} showed that
-the average of several fission track age estimates is closer to the
-known age of mineral standards than the age obtained by any individual
-observer. Routine measurement of fission track samples by multiple
-analysts is prohibitively expensive in a normal laboratory
-environment. geochron@home changes this by bringing fission track
-analysis to a proverbial `county fair' of citizen scientists.\medskip
+geochronology. An interlaboratory comparison study by
+\citet{miller1985} showed that the average of several fission track
+age estimates is closer to the known age of mineral standards than the
+age obtained by any individual observer. Inspired by these previous
+experiments, we used geochron@home to bring fission track analysis to
+a proverbial `county fair' of citizen scientists.\medskip
 
 We here present the results of a type of `crowd-sourcing' experiment
 that was carried out at UCL as part of an undergraduate course in
@@ -400,96 +397,65 @@ Dromedary apatite. Each student was required to analyse at least 15
 grains, using pre-defined ROIs. In a matter of hours, the students
 amassed a dataset of 37,331 fission track counts in 34 grains.  This
 large dataset was parsed into separate data files --- one for each
-student --- which they processed during an assessed practical
+student --- which they processed during an assessed programming
 exercise.\medskip
 
 The raw counts for 68 students (two of the students were unable to
-complete the exercise) are given in Table~\ref{tab:crowdtable} of the
-Appendix, for the same selection of 25 grains that were analysed by AC
-and PV in Section~\ref{sec:private}, along with corresponding counts
-made by PV. Everyone counted tracks in the same ROIs.
-Figure~\ref{fig:radialcrowd}a shows box plots and summary statistics
-of these counts for each grain.  Variation between the mean values is
-to be expected because of the differing numbers of tracks due to
-varying areas and U contents of the grains. But the variation between
-counts within grains (shown by the standard deviations) is due
-entirely to differences between the students’ recognising and counting
-exactly the same tracks. These standard deviations increase with the
-mean number of tracks and are considerable in size, being on average
-about 40\% of the mean. With expert trained counters one would expect
-much smaller differences between counts.  Furthermore, the vast
-majority of students counted fewer tracks than PV did, often many
-fewer, and on two occasions someone counted no tracks at all. PV's
-count is always above the students' median and nearly always above the
-upper quartile.  Table~\ref{tab:crowdtable} (looking along rows) shows
-just 7 students with average counts within 10\% of PV's, and 19 with
-average counts less than half of his.\medskip
+complete the exercise) are given in Table~\ref{tab:crowdtable}, for
+the same selection of 25 grains that were analysed by AC and PV in
+Section~\ref{sec:private}, along with corresponding counts made by
+PV. Everyone counted tracks in the same ROIs. The vast majority of
+students counted fewer tracks than PV did, often many fewer, and on
+two occasions someone counted no tracks at all. PV's count is always
+above the students' median and nearly always above the upper quartile.
+Table~\ref{tab:crowdtable} (looking along rows) shows just 7 students
+with average counts within 10\% of PV's, and 18 with average counts
+less than half of his.\medskip
 
-Figure~\ref{fig:radialcrowd}b shows a scatter plot of pairs of counts
-for two grains made by 36 students who counted both of them. They
-average around 29 and 30 tracks per grain compared with PV's pair of
-52 and 50, which is highlighted in blue. There is a positive
-correlation between the pairs, consistent with systematic observer
-effects (i.e., people who count a low value in one grain tend to count
-similarly low in the other, and vice versa).  Comparing other pairs of
-grains shows similar results, with correlations varying between 0.4
-and 0.9. In all cases we have looked at, the residual variation, after
-allowing for systematic differences between students, is consistent
-with Poisson variation.  Figure~\ref{fig:radialcrowd}c shows a radial
-plot of the ratios of the counts in Panel~b, using the precisions
-given by
-\begin{equation}
-  \frac{\mbox{se}(N_1/N_2)}{N_1/N_2}
-  \approx
-  \sqrt{
-    \frac{1}{N_1} + \frac{1}{N_2}
-  }
-  \label{eq:N12}
-\end{equation}
-
-The context here is rather different from that in
-Figure~\ref{fig:AvP}b, where we were comparing the ratios of counts
-made by two analysts on each of 25 grains. Here we are comparing the
-ratios of counts for the same two grains made by each of 37
-analysts. There is no theoretical justification for
-Equation~\ref{eq:N12} here, but it still provides a useful benchmark
-for assessing variation between the ratios. In
-Figure~\ref{fig:radialcrowd}c, that variation is consistent with
-Poisson variation (as it is for most other pairs of grains) but with
-expert counters one would expect less variation than that. However, in
-spite of the under-counting by the students, the pooled students'
-ratio of 0.97 is close to PV's ratio of 1.04. This happens quite often
-in this data set, but not always, and there are some pairs of grains
-where the students' pooled ratio differs somewhat from PV's.
-\medskip
+However, in spite of the under-counting by the students, the
+\emph{ratios} of the track counts between different grains are
+generally quite close to PV's ratios, especially when comparing grains
+with similar track densities. This is apparent from
+Table~\ref{tab:crowdtable} (looking along columns).
+Figure~\ref{fig:23vs25}b shows a scatter plot of pairs of counts for
+two grains (23 and 25) made by 36 students who counted both of
+them. They average around 29 and 30 tracks per grain compared with
+PV's pair of 52 and 50, which is highlighted in blue. There is a
+positive correlation between the pairs, consistent with systematic
+observer effects (i.e., people who count a low value in one grain tend
+to count similarly low in the other, and vice versa).  Comparing other
+pairs of grains shows similar results, with correlations varying
+between 0.4 and 0.9. In all cases we have looked at, the residual
+variation, after allowing for systematic differences between students,
+is consistent with Poisson variation.
 
 As mentioned in Section~\ref{sec:architecture}, geochron@home stores
 the actual track positions marked by the users. This raw data can be
 downloaded as a \texttt{.json} file and inspected in detail.
-Figure~\ref{fig:crowdsourcing} is a two-dimensional histogram for the
-x-y positions of all the track positions generated by the students in
-the two apatite crystals. Visual comparison of the histogram with the
+Figure~\ref{fig:23vs25}b) shows two-dimensional histograms for the x-y
+positions of all the track positions generated by the students in the
+two apatite crystals. Visual comparison of the histogram with the
 optical image confirms that the students unanimously identified the
 most obvious semitracks, which contain a clearly visible etch pit and
 tail. Shorter and fainter tracks received fewer clicks. Datasets like
 this can be used to replace integer counts of fission tracks with
 probabilities, reflecting the ambiguity of some fission track
-datasets. Figure~\ref{fig:crowdsourcing} also shows that some students
+datasets. Figure~\ref{fig:23vs25} also shows that some students
 counted the tails of the fission tracks rather than their etch pits,
 despite being told the opposite in the tutorial. Fixing this issue
 will require some improvements to the tutorial pages
 (Section~\ref{sec:outlook}).\medskip
 
 %\begin{figure}[!ht]
-{  \centering
-  \includegraphics[width=9cm]{4649vs4673.pdf}
-  \captionof{figure}{
-    a,b) Optical images in transmitted light of 
-    Mount Dromedary apatites 4649 and 4673 in the crowd-sourcing experiment.
-    c,d) Two-dimensional histogram of the track locations for the
-    two grains, as identified by the citizen scientists.
+{ \centering \includegraphics[width=9cm]{23vs25.pdf}
+  \captionof{figure}{ a) The track counts for grain~25 plotted against
+    those for grain~23 for 37 students who counted both of those
+    grains. b) Optical images in transmitted light of Mount Dromedary
+    apatites 23 and 25 in the crowd-sourcing experiment.  c,d)
+    Two-dimensional histogram of the track locations for the two
+    grains, as identified by the citizen scientists.
     \medskip}
-  \label{fig:crowdsourcing}
+  \label{fig:23vs25}
 }%\end{figure}
 
 \section{Outlook}\label{sec:outlook}
@@ -620,23 +586,6 @@ of science.
   provided in the supplementary information
   (\url{https://github.com/pvermees/supplements}, last access:
   July~21, 2025).}
-
-\appendix
-\section{Summary tables for the crowd-sourcing experiment}
-
-\begingroup
-\captionof{table}{ Summary table of the crowd sourcing results for the
-  different users (rows) and grains (columns).  The last row is the
-  ratio of the median count to PV's count (user~1) for each grain.
-  The last column is the ratio of the weighted mean count over grains
-  compared with PV for the same grains.
-}
-\label{tab:crowdtable}
-\renewcommand{\arraystretch}{0.7}
-\begin{scriptsize}
-  \input{../output/crowdtable.txt}
-\end{scriptsize}
-\endgroup
 
 %\noappendix
 
