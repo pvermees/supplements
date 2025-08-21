@@ -360,12 +360,11 @@ paper.
 \section{Crowd-sourcing fission track data}\label{sec:crowdsourcing}
 
 \begingroup
-\captionof{table}{ Summary table of the crowd sourcing results for the
+\captionof{table}{Summary table of the crowd sourcing results for the
   different users (rows) and grains (columns).  The last row is the
-  ratio of the median count to PV's count (user~1) for each grain.
-  The last column is the ratio of the weighted mean count over grains
-  compared with PV for the same grains.
-}
+  ratio of the median count to PV's count for each grain.  The last
+  column is the ratio of the pooled count over grains compared with PV
+  for the same grains.}
 \label{tab:crowdtable}
 \renewcommand{\arraystretch}{0.7}
 \begin{scriptsize}
@@ -382,7 +381,7 @@ of the individual estimates. Such is the `wisdom of crowds'
 geochronology. An interlaboratory comparison study by
 \citet{miller1985} showed that the average of several fission track
 age estimates is closer to the known age of mineral standards than the
-age obtained by any individual observer. Inspired by these previous
+age obtained by individual observers. Inspired by these previous
 experiments, we used geochron@home to bring fission track analysis to
 a proverbial `county fair' of citizen scientists.\medskip
 
@@ -391,13 +390,13 @@ that was carried out at UCL as part of an undergraduate course in
 isotope geology. 70 students were asked to create an account on the
 geochron@home server by selecting a unique username and
 password. After spending a few minutes to complete the compulsory
-tutorial (Section~\ref{sec:tutorial}), the students were asked to
-count fission tracks in randomly assigned image stacks of Mount
-Dromedary apatite. Each student was required to analyse at least 15
-grains, using pre-defined ROIs. In a matter of hours, the students
-amassed a dataset of 37,331 fission track counts in 34 grains.  This
-large dataset was parsed into separate data files --- one for each
-student --- which they processed during an assessed programming
+tutorial (Section~\ref{sec:tutorial}), they were asked to count
+fission tracks in randomly assigned image stacks of Mount Dromedary
+apatite. Each student was required to analyse at least 15 grains,
+using pre-defined ROIs. In a matter of hours, the students amassed a
+dataset of 37,331 fission track counts in 34 grains.  This large
+dataset was parsed into separate data files --- one for each student
+--- which they processed during an assessed programming
 exercise.\medskip
 
 The raw counts for 68 students (two of the students were unable to
@@ -415,28 +414,34 @@ less than half of his.\medskip
 However, in spite of the under-counting by the students, the
 \emph{ratios} of the track counts between different grains are
 generally quite close to PV's ratios, especially when comparing grains
-with similar track densities. This is apparent from
-Table~\ref{tab:crowdtable} (looking along columns).
-Figure~\ref{fig:23vs25}b shows a scatter plot of pairs of counts for
-two grains (23 and 25) made by 36 students who counted both of
-them. They average around 29 and 30 tracks per grain compared with
-PV's pair of 52 and 50, which is highlighted in blue. There is a
-positive correlation between the pairs, consistent with systematic
-observer effects (i.e., people who count a low value in one grain tend
-to count similarly low in the other, and vice versa).  Comparing other
-pairs of grains shows similar results, with correlations varying
-between 0.4 and 0.9. In all cases we have looked at, the residual
-variation, after allowing for systematic differences between students,
-is consistent with Poisson variation.
+with similar track densities.  This is apparent from
+Table~\ref{tab:crowdtable} (looking along columns).  In grains
+containing few tracks (left hand side of the table), the median of the
+student counts is within 20\% of PV's counts.  However, this gradually
+levels off to 50\% at higher track densities (right hand side of the
+table). Figure~\ref{fig:23vs25}b shows a scatter plot of pairs of
+counts for two grains (23 and 25) made by 36 students who counted both
+of them. The two grains were chosen because they have similar track
+counts for both PV and the median student. They both have a median of
+28 tracks per grain compared with PV's pair of 52 and 50, which is
+highlighted in blue. There is a positive correlation between the
+pairs, consistent with systematic observer effects (i.e., people who
+count a low value in one grain tend to count similarly low in the
+other, and vice versa).  Comparing other pairs of grains shows similar
+results, with correlations varying between 0.4 and 0.9. Pairs of
+grains with similar track densities are more strongly correlated than
+those with dissimilar track densities. In all cases we have looked at,
+the residual variation, after allowing for systematic differences
+between students, is consistent with Poisson variation.\medskip
 
 As mentioned in Section~\ref{sec:architecture}, geochron@home stores
 the actual track positions marked by the users. This raw data can be
 downloaded as a \texttt{.json} file and inspected in detail.
 Figure~\ref{fig:23vs25}b) shows two-dimensional histograms for the x-y
-positions of all the track positions generated by the students in the
-two apatite crystals. Visual comparison of the histogram with the
-optical image confirms that the students unanimously identified the
-most obvious semitracks, which contain a clearly visible etch pit and
+positions of all the track positions generated by the students in
+grains~23 and 25. Visual comparison of the histogram with the optical
+image confirms that the students unanimously identified the most
+obvious semitracks, which contain a clearly visible etch pit and
 tail. Shorter and fainter tracks received fewer clicks. Datasets like
 this can be used to replace integer counts of fission tracks with
 probabilities, reflecting the ambiguity of some fission track
@@ -447,12 +452,12 @@ will require some improvements to the tutorial pages
 (Section~\ref{sec:outlook}).\medskip
 
 %\begin{figure}[!ht]
-{ \centering \includegraphics[width=9cm]{23vs25.pdf}
+{ \centering \includegraphics[width=15cm]{23vs25.pdf}
   \captionof{figure}{ a) The track counts for grain~25 plotted against
     those for grain~23 for 37 students who counted both of those
     grains. b) Optical images in transmitted light of Mount Dromedary
-    apatites 23 and 25 in the crowd-sourcing experiment.  c,d)
-    Two-dimensional histogram of the track locations for the two
+    apatites 23 and 25 in the crowd-sourcing experiment, along with
+    two-dimensional histogram of the track locations for the two
     grains, as identified by the citizen scientists.
     \medskip}
   \label{fig:23vs25}
@@ -464,18 +469,6 @@ geochron@home has been in development for a decade and remains a work
 in progress. Planned improvements include:
 
 \begin{enumerate}
-\item Interactive tutorial pages. To ensure that novice users do not
-  count the tails but the etch pits of fission tracks, we will add a
-  `quiz' to the tutorial pages. Only users who click on the `correct'
-  features in an unlabelled set of images will be allowed to count new
-  samples. Section~\ref{sec:crowdsourcing} shows that, despite the
-  large scatter of the raw track counts obtained by the citizen
-  scientists, their pairwise ratio estimates scatter evenly around the
-  expert opinion. This suggests that the collective wisdom of the
-  entire group of students is greater than that of the individual
-  analysts. When applied to a group that has achieved a good level of
-  training and experience, crowd sourcing should improve the precision
-  and accuracy of fission track data.
 \item Length measurements. The geochron@home archive already
   contains horizontally confined fission track measurements
   \citep{tamer2025}.  However, these results must be generated
@@ -490,6 +483,18 @@ in progress. Planned improvements include:
   the horizontal etch rates along the c-axis and parallel to it
   \citep{donelick1993}. Functions will be added to measure and
   visualise this type of data in geochron@home.
+\item Interactive tutorial pages and embedded quality
+  control. Section~\ref{sec:crowdsourcing} shows that the
+  crowd-sourcing idea is not yet ready for general use. Two
+  improvements will be made to make its results more reliable. First,
+  a `quiz' to the tutorial pages to ensure that novice users do not
+  count the tails but the etch pits of fission tracks. Only users who
+  click on the `correct' features in an unlabelled set of images will
+  be allowed to count new samples. Second, future citizen scientists
+  will occasionally be served reference images of known track
+  density. Their counts for these `test' images will be used to
+  identify trustworthy analysts (top of Table~\ref{tab:crowdtable}),
+  and flag unreliable ones (bottom of Table~\ref{tab:crowdtable}).
 \item Machine learning. Data science is experiencing an artificial
   intelligence revolution that has already started to transform the
   fission track method \citep{nachtergaele2020}.  Convolutional neural
@@ -498,24 +503,22 @@ in progress. Planned improvements include:
   showed how the collective wisdom of multiple fission track analysts
   can label fission track images with probabilities rather than
   counts. This data format is close to the form in which data are
-  treated within an AI algorithm.\medskip
-
-  Once trained on historical data, AI algorithms can be used to count
-  fission tracks automatically. Following the model of Fission Track
-  Studio \citep{gleadow2009, gleadow2019}, machine learning can be
-  used to reverse the fission track counting process. Instead of
-  asking users to count the fission tracks in a sample, the software
-  can ask them to check the results proposed by an AI algorithm, and
-  to remove any features that are \emph{not} fission tracks.\medskip
-
-  Regardless of whether fission tracks were counted manually or with a
-  machine, the value of the geochron@home archive remains the
-  same. It is important to document data so that samples can be
-  reanalysed in the future, for example when a new and improved
+  treated within an AI algorithm.
+\item Inverse counting. Once trained on historical data, AI algorithms
+  can be used to count fission tracks automatically. Following the
+  model of Fission Track Studio \citep{gleadow2009, gleadow2019},
+  machine learning can be used to reverse the fission track counting
+  process. Instead of asking users to count the fission tracks in a
+  sample, the software can ask them to check the results proposed by
+  an AI algorithm, and to remove any features that are \emph{not}
+  fission tracks.  Regardless of whether fission tracks were counted
+  manually or with a machine, the value of the geochron@home archive
+  remains the same. It is important to document data so that samples
+  can be reanalysed in the future, for example when a new and improved
   generation of machine learning algorithms becomes available.
 \end{enumerate}
 
-These four improvements will be made by ourselves pending additional
+These improvements will be made by ourselves pending additional
 funding. However, because geochron@home is free and open software, we
 invite any interested parties to join the effort and extend or improve
 our code.
@@ -541,7 +544,7 @@ algorithms. Conversely, it is also possible that future improvements
 in fission track images analysis will be used to update the count data
 for published datasets, improving their accuracy.\medskip
 
-Another advantage of the geochron@home wokflow is the separation of
+Another advantage of the geochron@home workflow is the separation of
 image acquisition and image analysis. This separation reduces the
 hardware requirements for fission track geochronology. It opens up the
 possibility to share resources. State-of-the-art digital microscopes
