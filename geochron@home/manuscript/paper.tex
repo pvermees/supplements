@@ -45,15 +45,14 @@ geochron@home serves four different purposes. It can be used (1) to
 count fission tracks in `private mode', i.e. hidden from other users
 on the internet; (2) to archive fission track images and counts for
 inspection by other users; (3) to create tutorials for new students of
-the fission track method; and (4) to generate crowd-sourced fission
-track data, by serving randomly selected selections of images to
-citizen scientists. We illustrate these four applications with
-examples that demonstrate (1) geochron@home's ability to compare and
-combine fission track counts for multiple users within a lab group;
-(2) the value of the geochron@home archive in the peer review system;
-(3) the use of simple tutorials in teaching novice users how to count
-fission tracks; and (4) the `wisdom of crowds' in fission track
-ratio estimation.\medskip
+the fission track method; and (4) to serve randomly selected
+selections of images to citizen scientists. We illustrate these four
+applications with examples that demonstrate (1) geochron@home's
+ability to compare and combine fission track counts for multiple users
+within a lab group; (2) the value of the geochron@home archive in the
+peer review system; (3) the use of simple tutorials in teaching novice
+users how to count fission tracks; and (4) the opportunities and
+challenges of crowd-sourced fission track analysis.\medskip
 
 geochron@home was written in Python and Javascript. Its code is freely
 available for inspection and modification, allowing users to set up
@@ -96,7 +95,7 @@ Unlike most other geochronometers, which require mass spectrometers to
 estimate parent-daughter ratios, fission tracks are observed under an
 optical microscope and counted by a human observer.  In recent years,
 digital microscopy has moved fission track data acquisition from the
-objective lens of a microscope to the computer screen
+ocular lenses of a microscope to the computer screen
 \citep{gleadow2009, vanranst2019, gleadow2019}. Ongoing developments
 in artificial intelligence generate further opportunities to improve
 the throughput and accuracy of fission track data
@@ -173,7 +172,7 @@ broken down into five steps.
   fission tracks in Fission Track Studio, then they can store those
   results in a \texttt{.json} file at the `sample' level
   directory. Because Fission Track Studio stores its results in an
-  \texttt{.xml} format, a second conversion script is needed to
+  \texttt{.xml} format, a second conversion script was created to
   translate those results into an equivalent \texttt{.json} format.
 
 \item Upload the data to the geochron@home platform. geochron@home is
@@ -359,19 +358,6 @@ paper.
 
 \section{Crowd-sourcing fission track data}\label{sec:crowdsourcing}
 
-\begingroup
-\captionof{table}{Summary table of the crowd sourcing results for the
-  different users (rows) and grains (columns).  The last row is the
-  ratio of the median count to PV's count for each grain.  The last
-  column is the ratio of the pooled count over grains compared with PV
-  for the same grains.}
-\label{tab:crowdtable}
-\renewcommand{\arraystretch}{0.7}
-\begin{scriptsize}
-  \input{../output/crowdtable.txt}
-\end{scriptsize}
-\endgroup
-
 In 1906, Sir Francis Galton visited a county fair in which a contest
 was held to guess the weight of an ox. 787 people participated in the
 event. Galton discovered that the median of all their estimates was
@@ -412,14 +398,14 @@ with average counts within 10\% of PV's, and 18 with average counts
 less than half of his.\medskip
 
 However, in spite of the under-counting by the students, the
-\emph{ratios} of the track counts between different grains are
-generally quite close to PV's ratios, especially when comparing grains
-with similar track densities.  This is apparent from
-Table~\ref{tab:crowdtable} (looking along columns).  In grains
-containing few tracks (left hand side of the table), the median of the
-student counts is within 20\% of PV's counts.  However, this gradually
-levels off to 50\% at higher track densities (right hand side of the
-table). Figure~\ref{fig:23vs25}b shows a scatter plot of pairs of
+\emph{ratios} of the track counts between different grains are often
+close to PV's ratios, especially when comparing grains with similar
+track densities.  This is apparent from Table~\ref{tab:crowdtable}
+(looking along columns).  In grains containing few tracks (left hand
+side of the table), the median of the student counts is within 20\% of
+PV's counts.  However, this gradually levels off to 50\% at higher
+track densities (right hand side of the
+table). Figure~\ref{fig:23vs25}a shows a scatter plot of pairs of
 counts for two grains (23 and 25) made by 36 students who counted both
 of them. The two grains were chosen because they have similar track
 counts for both PV and the median student. They both have a median of
@@ -428,19 +414,18 @@ highlighted in blue. There is a positive correlation between the
 pairs, consistent with systematic observer effects (i.e., people who
 count a low value in one grain tend to count similarly low in the
 other, and vice versa).  Comparing other pairs of grains shows similar
-results, with correlations varying between 0.4 and 0.9. Pairs of
-grains with similar track densities are more strongly correlated than
-those with dissimilar track densities. In all cases we have looked at,
-the residual variation, after allowing for systematic differences
-between students, is consistent with Poisson variation.\medskip
+results, with correlations varying between 0.4 and 0.9. In all cases
+we have looked at, the residual variation, after allowing for
+systematic differences between students, is consistent with Poisson
+variation.\medskip
 
 As mentioned in Section~\ref{sec:architecture}, geochron@home stores
 the actual track positions marked by the users. This raw data can be
 downloaded as a \texttt{.json} file and inspected in detail.
-Figure~\ref{fig:23vs25}b) shows two-dimensional histograms for the x-y
+Figure~\ref{fig:23vs25}b shows two-dimensional histograms for the x-y
 positions of all the track positions generated by the students in
-grains~23 and 25. Visual comparison of the histogram with the optical
-image confirms that the students unanimously identified the most
+grains~23 and 25. Visual comparison of the histograms with the optical
+images confirms that the students unanimously identified the most
 obvious semitracks, which contain a clearly visible etch pit and
 tail. Shorter and fainter tracks received fewer clicks. Datasets like
 this can be used to replace integer counts of fission tracks with
@@ -450,6 +435,21 @@ counted the tails of the fission tracks rather than their etch pits,
 despite being told the opposite in the tutorial. Fixing this issue
 will require some improvements to the tutorial pages
 (Section~\ref{sec:outlook}).\medskip
+
+\noindent\begin{minipage}{.65\linewidth}
+\renewcommand{\arraystretch}{0.7}
+\begin{scriptsize}
+  \input{../output/crowdtable.txt}
+\end{scriptsize}
+\end{minipage}
+\begin{minipage}{.35\linewidth}
+\captionof{table}{Summary table of the crowd sourcing results for the
+  different users (rows) and grains (columns).  The last row is the
+  ratio of the median count to PV's count for each grain.  The last
+  column is the ratio of the pooled count over grains compared with PV
+  for the same grains.}
+\label{tab:crowdtable}
+\end{minipage}
 
 %\begin{figure}[!ht]
 { \centering \includegraphics[width=15cm]{23vs25.pdf}
@@ -487,21 +487,22 @@ in progress. Planned improvements include:
   control. Section~\ref{sec:crowdsourcing} shows that the
   crowd-sourcing idea is not yet ready for general use. Two
   improvements will be made to make its results more reliable. First,
-  a `quiz' to the tutorial pages to ensure that novice users do not
-  count the tails but the etch pits of fission tracks. Only users who
-  click on the `correct' features in an unlabelled set of images will
-  be allowed to count new samples. Second, future citizen scientists
-  will occasionally be served reference images of known track
-  density. Their counts for these `test' images will be used to
-  identify trustworthy analysts (top of Table~\ref{tab:crowdtable}),
-  and flag unreliable ones (bottom of Table~\ref{tab:crowdtable}).
+  a `quiz' will be added to the tutorial pages to ensure that novice
+  users do not count the tails but the etch pits of fission
+  tracks. Only users who click on the `correct' features in an
+  unlabelled set of images will be allowed to count new
+  samples. Second, future citizen scientists will occasionally be
+  served reference images of known track density. Their counts for
+  these `test' images will be used to identify trustworthy analysts
+  (top of Table~\ref{tab:crowdtable}) and flag unreliable ones (bottom
+  of Table~\ref{tab:crowdtable}).
 \item Machine learning. Data science is experiencing an artificial
-  intelligence revolution that has already started to transform the
-  fission track method \citep{nachtergaele2020}.  Convolutional neural
-  networks must be trained with example data. geochron@home
-  is ideally suited for this task. Section~\ref{sec:crowdsourcing}
-  showed how the collective wisdom of multiple fission track analysts
-  can label fission track images with probabilities rather than
+  intelligence (AI) revolution that has already started to transform
+  the fission track method \citep{nachtergaele2020}.  Convolutional
+  neural networks must be trained with example data. geochron@home is
+  ideally suited for this task. Section~\ref{sec:crowdsourcing} showed
+  how the opinion of multiple fission track analysts can be combined
+  to label fission track images with probabilities rather than
   counts. This data format is close to the form in which data are
   treated within an AI algorithm.
 \item Inverse counting. Once trained on historical data, AI algorithms
@@ -529,11 +530,11 @@ This paper introduced geochron@home, a software platform for FAIR
 fission track analysis. We demonstrated four different applications of
 this platform using real data. Putting the FAIR data paradigm into
 practice, all the imagery, counts and source code for this paper are
-publicly available. Using these resources, the reader can reproduce
-all the results that were presented in this publication.  We encourage
-other geochronologists to follow this example.  FAIR data promises to
-address the reproducibility crisis in science
-\citep{miyakawa2020}.\medskip
+publicly available on the geochron@home archive. Using these
+resources, the reader can reproduce all the results that were
+presented in this publication.  We encourage other geochronologists to
+follow this example.  FAIR workflows promise to address the
+reproducibility crisis in science \citep{miyakawa2020}.\medskip
 
 geochron@home's rich archive of raw data can be reanalysed in
 the future. We anticipate that the adoption of FAIR data processing
@@ -583,22 +584,23 @@ of science.
 \codedataavailability{geochron@home is free software released under
   the GPL-3 license. The package and its source code are available
   from \url{https://github.com/pvermees/geochron-at-home} (last
-  access: July~21, 2025).  The raw data (imagery) are available at the
-  geochron@home archive (\url{https://github.com/pvermees/GaHa}, last
-  access: July~21, 2025).  R-scripts to reproduce the figures are
-  provided in the supplementary information
+  access: August~21, 2025).  The raw data (imagery) are available at
+  the geochron@home archive (\url{https://github.com/pvermees/GaHa},
+  last access: August~21, 2025).  R-scripts to reproduce the figures
+  are provided in the supplementary information
   (\url{https://github.com/pvermees/supplements}, last access:
-  July~21, 2025).}
+  August~21, 2025).}
 
 %\noappendix
 
 \authorcontribution{PV designed the study, acquired the funding and
   counted fission tracks. JH created geochron@home. TB expanded
   geochron@home and wrote the accompanying microscope image
-  acquisition software. RG derived Equation~\ref{eq:NO} and verified
-  the other calculations. AC provided the samples, prepared the
-  training data and counted fission tracks. PV and RG wrote the paper
-  with input from the other authors.}
+  acquisition software. RG derived Equation~\ref{eq:NO}, designed
+  Table~\ref{tab:crowdtable} and verified the other calculations. AC
+  provided the samples, prepared the training data and counted fission
+  tracks. PV and RG wrote the paper with input from the other
+  authors.}
 
 \competinginterests{PV is an Associate Editor of \emph{Geochronology}.}
 

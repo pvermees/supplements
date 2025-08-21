@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.26)  20 AUG 2025 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  21 AUG 2025 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2475,9 +2475,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language22). Reported on input line 105.
+(babel)             (\language59). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language22). Reported on input line 108.
+(babel)             (\language59). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
@@ -3048,12 +3048,12 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 15
-8.
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (1.93245pt too wide) in paragraph at lines 167--178
+Overfull \hbox (1.93245pt too wide) in paragraph at lines 166--177
 []\T1/ptm/m/n/10 In ad-di-tion to the se-quence of \T1/pcr/m/n/10 .jpeg \T1/ptm
 /m/n/10 im-ages, a low level `grain' folder can also in-clude an op-tional file
  called \T1/pcr/m/n/10 roi.json
@@ -3063,16 +3063,16 @@ Overfull \hbox (1.93245pt too wide) in paragraph at lines 167--178
 <EDM.jpg, id=73, 367.6134pt x 259.2084pt>
 File: EDM.jpg Graphic file (type jpg)
 <use EDM.jpg>
-Package pdftex.def Info: EDM.jpg  used on input line 222.
+Package pdftex.def Info: EDM.jpg  used on input line 221.
 (pdftex.def)             Requested size: 341.43306pt x 240.75674pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 232.
+(caption)                particular \caption on input line 231.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (11.69121pt too wide) in paragraph at lines 238--250
+Overfull \hbox (11.69121pt too wide) in paragraph at lines 237--249
 \T1/ptm/m/n/10 Administrators can de-fine re-gions of in-ter-est (ROI) and coun
 t or edit the fis-sion track co-or-di-nates of any grain in a geochron@home
  []
@@ -3081,22 +3081,27 @@ t or edit the fis-sion track co-or-di-nates of any grain in a geochron@home
 <AvP.pdf, id=92, 1084.05pt x 361.35pt>
 File: AvP.pdf Graphic file (type pdf)
 <use AvP.pdf>
-Package pdftex.def Info: AvP.pdf  used on input line 288.
+Package pdftex.def Info: AvP.pdf  used on input line 287.
 (pdftex.def)             Requested size: 503.61377pt x 167.87163pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 296.
+(caption)                particular \caption on input line 295.
 See the caption package documentation for explanation.
 
-[5 <./AvP.pdf>]
+[5 <./AvP.pdf>] [6] (../output/crowdtable.txt)
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 367.
+(caption)                particular \caption on input line 450.
 See the caption package documentation for explanation.
 
-(../output/crowdtable.txt) [6] [7] [8]
-<23vs25.pdf, id=154, 918.5531pt x 420.07918pt>
+
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 439--453
+$[]$ $[]$ 
+ []
+
+[7]
+<23vs25.pdf, id=150, 918.5531pt x 420.07918pt>
 File: 23vs25.pdf Graphic file (type pdf)
 <use 23vs25.pdf>
 Package pdftex.def Info: 23vs25.pdf  used on input line 455.
@@ -3107,31 +3112,31 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 462.
 See the caption package documentation for explanation.
 
-[9 <./23vs25.pdf>] [10] [11] (./paper.bbl [12]) [13] (./paper.aux) ) 
+[8] [9 <./23vs25.pdf>] [10] (./paper.bbl [11]) [12] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
  18641 strings out of 478287
  271658 string characters out of 5849289
- 734839 words of memory out of 5000000
+ 735836 words of memory out of 5000000
  36485 multiletter control sequences out of 15000+600000
  519367 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,77p,750b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share
-/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on paper.pdf (13 pages, 3450003 bytes).
+ 75i,9n,77p,750b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/
+texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on paper.pdf (12 pages, 3449839 bytes).
 PDF statistics:
- 415 PDF objects out of 1000 (max. 8388607)
+ 414 PDF objects out of 1000 (max. 8388607)
  326 compressed objects within 4 object streams
  63 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
