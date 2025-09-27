@@ -146,7 +146,9 @@ trustworthy_results <- clean_results(results)
 #### 6. Scatter plot of crowdsourcing results ####
 pdf(file='../output/crowd-correlation.pdf',width=5,height=5)
 op <- par(mar=c(3,3,1,1),mgp=c(2,1,0),xpd=NA,bty='n')
-compare_grains(trustworthy_results,grain2$index,grain1$index)#,xlim=c(0,60),ylim=c(0,70))
+lim <- c(0,70)
+compare_grains(trustworthy_results,grain2$index,grain1$index,xlim=lim,ylim=lim)
+lines(x=lim,y=lim,col='grey50',lwd=1.5)
 par(op)
 dev.off()
 
@@ -172,3 +174,5 @@ mswd <- summary(fit)$deviance/summary(fit)$df.residual
 # summary tables
 lst <- crowdtable(trustworthy_results)
 counts2latex(lst,destination='../output/crowdtable.txt')
+counts2latex(lst,destination='../output/shortcrowdtable.txt',short=TRUE)
+

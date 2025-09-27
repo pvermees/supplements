@@ -245,7 +245,17 @@ compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
              ylab=paste0('grain ',grain2),
              pch=21,bg=bg,...)
         rho <- format(round(cor(out$x)[1,2],2),nsmall=2)
-        mtext(line=-1,text=paste0('correlation=',rho),cex=1.0)
+        mtext(line=0,text=paste0('correlation=',rho),cex=1.0)
+        PVratio <- out$x[iadmin,1]/out$x[iadmin,2]
+        mtext(line=-2,
+              text=paste0("PV's ratio=",
+                          format(round(PVratio,2),nsmall=2)),
+              cex=1.0)
+        pooled_ratio <- sum(results1$count[i1])/sum(results2$count[i2])
+        mtext(line=-3,
+              text=paste0("pooled ratio=",
+                          format(round(pooled_ratio,2),nsmall=2)),
+              cex=1.0)
     }
     out
 }
@@ -300,39 +310,66 @@ crowdtable <- function(trustworthy_results){
         res[order(as.integer(rownames(res))),
             order(as.integer(colnames(res)))]
     }
-    ordered_counts <- order_table(count_table,first=6) # 6 characters in "count."    
-    rowratio <- rep(NA,nrow(ordered_counts))
+    ordered_counts <- order_table(count_table,first=6) # 6 characters in "count."
+    ng <- rp <- sp <- rep(NA,nrow(ordered_counts))
     for (i in 1:nrow(ordered_counts)){
         good <- !is.na(ordered_counts[i,])
-        rowratio[i] <- sum(ordered_counts[i,good])/sum(ordered_counts[1,good])
+        ng[i] <- sum(good)
+        w <- ordered_counts[1,good]
+        r <- ordered_counts[i,good]/ordered_counts[1,good]
+        rp[i] <- sum(w*r)/sum(w)
+        sp[i] <- sqrt(sum(w*(r-rp[i])^2)/(ng[i]-1))
     }
-    colmedians <- apply(ordered_counts[-1,],2,'median',na.rm=TRUE)
-    colratio <- colmedians/ordered_counts[1,]
-    roworder <- c(1,1+order(rowratio[-1],decreasing=TRUE))
+    n <- colSums(!is.na(ordered_counts))
+    ybar <- colMeans(ordered_counts,na.rm=TRUE)
+    sy <- apply(ordered_counts,2,sd,na.rm=TRUE)
+    roworder <- c(1,1+order(rp[-1],decreasing=TRUE))
     colorder <- order(ordered_counts[1,])
     list(tab=ordered_counts[roworder,colorder],
-         rowratio=rowratio[roworder],
-         colratio=colratio[colorder])
+         ng=ng[roworder],rp=rp[roworder],sp=sp[roworder],
+         n=n[colorder],ybar=ybar[colorder],sy=sy[colorder])
 }
 
-counts2latex <- function(lst,destination){
-    rowratio <- sprintf('%.2f',lst$rowratio)
-    shortrowratio <- gsub('0\\.', '.', rowratio)
-    colratio <- sprintf('%.2f',lst$colratio)
-    shortcolratio <- gsub('0\\.', '.', colratio)
+counts2latex <- function(lst,destination,short=FALSE){
+    ng <- lst$ng
+    rp <- sprintf('%.2f',lst$rp)
+    sp <- sprintf('%.2f',lst$sp)
+    short_rp <- gsub('0\\.', '.', rp)
+    short_sp <- gsub('0\\.', '.', sp)
+    n <- lst$n
+    ybar <- sprintf('%.1f',lst$ybar)
+    sy <- sprintf('%.1f',lst$sy)
+    short_ybar <- gsub('0\\.', '.', ybar)
+    short_sy <- gsub('0\\.', '.', sy)
     medians <- apply(lst$tab,2,median,na.rm=TRUE)
-    out <- rbind(c('user','~',colnames(lst$tab),'~','ratio'),
-                 c('~','~',rep(NA,ncol(lst$tab)),'~',''),
-                 c('PV',NA,lst$tab[1,],NA,shortrowratio[1]),
+    out <- rbind(c('user','~',colnames(lst$tab),'~','$n_g$','$r_p$','$s_p$'),
+                 c('~','~',rep(NA,ncol(lst$tab)),'~','~','~','~'),
+                 c('PV',NA,lst$tab[1,],NA,ng[1],short_rp[1],short_sp[1]),
                  NA,
-                 cbind(rownames(lst$tab)[-1],NA,lst$tab[-1,],NA,shortrowratio[-1]),
+                 cbind(rownames(lst$tab)[-1],NA,lst$tab[-1,],NA,
+                       ng[-1],short_rp[-1],short_sp[-1]),
                  NA,
-                 c('ratio','~',shortcolratio,'~','~'))
+                 c('$n$','~',n,NA,'~','~','~'),
+                 c('$\\bar{y}$','~',short_ybar,NA,'~','~','~'),
+                 c('$s_y$','~',short_sy,NA,'~','~','~'))
+    if (short){
+        out <- out[-(15:(nrow(out)-15)),-(13:(ncol(out)-15))]
+        out[,13] <- '$\\ldots$'
+        out[15,] <- '$\\vdots$'
+        out[c(2,4,15,15+11),13] <- '~'
+        out[15,c(2,13,13+11)] <- '~'
+        out[15,13] <- '$\\ddots$'
+    }
+    write2tabular(out,medians,destination,short)
+}
+
+write2tabular <- function(out,medians,destination,short=FALSE){
     nr <- nrow(out)
     nc <- ncol(out)
     file_conn <- file(destination, open = "w")
     cat('\\begin{tabular}{',file=file_conn)
-    cat(paste0(rep('r@{~}',nc),collapse=''),file=file_conn)
+    fmt <- c('c@{~}','c@{~~~}',rep('c@{~}',nc-6),'c@{~~~}',rep('c@{~}',3))
+    cat(paste0(fmt,collapse=''),file=file_conn)
     cat('}\n',file=file_conn)
     cat(paste0('\\multicolumn{',nc,'}{c}{grain}\\cr\n'),file=file_conn)
     for (i in 1:nr){
@@ -343,7 +380,7 @@ counts2latex <- function(lst,destination){
         for (j in 3:(nc-2)){
             needle <- round(as.numeric(values[j]),digits=1)
             haystack <- round(medians[j-2]+c(-0.5,0,0.5),digits=1)
-            if (any(haystack == needle,na.rm=TRUE)){
+            if (any(haystack == needle,na.rm=TRUE) && i>2 && i<(nr-2) && !short){
                 cat('\\bf ',file = file_conn)
             }
             cat(values[j],file = file_conn)

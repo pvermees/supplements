@@ -274,14 +274,15 @@ those common areas $A_0$, of which 549 were also counted by
 AC. Conversely, AC counted 622 tracks of which 549 were also counted
 by PV. The ratio of the two analysts' track density estimates based
 just on the common area is therefore 600/622 = 0.965 with relative
-standard error 0.018, calculated from Equation~\ref{eq:NO}. This is
-close to the weighted mean ratio of 0.94 (Figure~\ref{fig:AvP}c), and
-is slightly nearer to 1. It indicates that PV under-counts the Mount
-Dromedary apatite by 3.5\% relative to AC.  The existence of `observer
-bias' is well documented \citep{tamer2025}.  It is one of the reasons
-why fission track analysis is often done relative to age standards:
-observer bias does not have to be a problem provided that it is
-consistent between grains, and between samples.\medskip
+standard error 0.018, calculated from Equation~\ref{eq:NO}, with $N_1
+= 686$, $N_2 = 679$ and $N_0 = 549$.  This is close to the weighted
+mean ratio of 0.94 (Figure~\ref{fig:AvP}c), and is slightly nearer to
+1. It indicates that PV under-counts the Mount Dromedary apatite by
+3.5\% relative to AC.  The existence of `observer bias' is well
+documented \citep{tamer2025}.  It is one of the reasons why fission
+track analysis is often done relative to age standards: observer bias
+does not have to be a problem provided that it is consistent between
+grains, and between samples.\medskip
 
 %\begin{figure}[!ht]
 { \centering \includegraphics[width=\linewidth]{AvP.pdf}
@@ -436,29 +437,39 @@ despite being told the opposite in the tutorial. Fixing this issue
 will require some improvements to the tutorial pages
 (Section~\ref{sec:outlook}).\medskip
 
-\noindent\begin{minipage}{.65\linewidth}
-\renewcommand{\arraystretch}{0.7}
-\begin{scriptsize}
-  \input{../output/crowdtable.txt}
-\end{scriptsize}
-\end{minipage}
-\begin{minipage}{.35\linewidth}
-\captionof{table}{Summary table of the crowd sourcing results for the
-  different users (rows) and grains (columns).  The last row is the
-  ratio of the median count to PV's count for each grain.  The last
-  column is the ratio of the pooled count over grains compared with PV
-  for the same grains.}
+\begin{small}
+  \input{../output/shortcrowdtable.txt}\\
+\end{small}
+\captionof{table}{Counts of fission tracks in the same ROIs of 25
+  grains made by PV and 68 students. Only 20 grains and 20 students
+  are shown due to space constraints; the full table is provided in
+  the supplementary information.  Each student counted a subset of the
+  grains. The grains are listed in increasing order of PV's
+  counts. The last 3 columns give, for each student, the number of
+  grains counted $n_g$ and the weighted mean $r_p =
+  \sum\,w_i\,r_i/\sum\,w_i$ and standard deviation $s_p =
+  \sqrt{w_i\,(r_i-r_p)^2/(n_g − 1)}$ where $r_i$ is the ratio of the
+  student's count to PV's count for grain $i$ and $w_i$ is PV's count
+  for grain $i$. ($r_p$ is the same as the ratio of the student's
+  total count over the $n_g$ grains to PV's total count over the same
+  grains.)  The students are listed in decreasing order of $r_p$ . The
+  last 3 rows ($n$, $\bar{y}$ and $s_y$ ) give the sample size (number
+  of students), mean and standard deviation of the students' counts
+  for each grain.}
 \label{tab:crowdtable}
-\end{minipage}
+%\end{minipage}
 
 %\begin{figure}[!ht]
 { \centering \includegraphics[width=15cm]{23vs25.pdf}
-  \captionof{figure}{ a) The track counts for grain~25 plotted against
-    those for grain~23 for 37 students who counted both of those
-    grains. b) Optical images in transmitted light of Mount Dromedary
-    apatites 23 and 25 in the crowd-sourcing experiment, along with
-    two-dimensional histogram of the track locations for the two
-    grains, as identified by the citizen scientists.
+  \captionof{figure}{a) The track counts for grain~23 plotted against
+    those for grain 25 for 36 students who counted both of those
+    grains. The grey line through the origin has slope equal to the
+    ratio of the total counts for each grain. The blue dot shows PV's
+    counts for those two grains. b) Optical images in transmitted
+    light of Mount Dromedary apatites 23 and 25 in the crowd-sourcing
+    experiment, along with two-dimensional histogram of the track
+    locations for the two grains, as identified by the citizen
+    scientists.
     \medskip}
   \label{fig:23vs25}
 }%\end{figure}
