@@ -31,7 +31,7 @@ PAsPA <- matrix(NA,nrow=ng,ncol=2,
                 dimnames=list(grains,c('PA','sPA')))
 NA120 <- matrix(NA,nrow=ng,ncol=7,
                 dimnames=list(1:ng,c('grain','N1','A1','N2','A2','N0','A0')))
-rhoP <- rhoA <- rep(NA,ng)
+rhoP <- rhoA <- w <- r <- rep(NA,ng)
 for (i in seq_along(grains)){
     grain <- grains[i]
     ROIP <- PieterResults[[grain]]$ROI
@@ -45,6 +45,8 @@ for (i in seq_along(grains)){
     xyA <- AndyResults[[grain]]$counts
     xyPinA0 <- xyP[apply(xyP,1,point_in_polygon,ROI0),]
     xyAinA0 <- xyA[apply(xyA,1,point_in_polygon,ROI0),]
+    w[i] <- nrow(xyPinA0)
+    r[i] <- nrow(xyAinA0)/nrow(xyPinA0)
     N1 <- nrow(xyP)
     N2 <- nrow(xyA)
     total_counts <- total_counts + c(N1,N2)
@@ -57,6 +59,8 @@ for (i in seq_along(grains)){
     PAsPA[i,'sPA'] <- PAsPA[i,'PA'] * sqrt(1/N1+1/N2-2*N00/(N1*N2))
     NA120[i,] <- c(grain,N1,A1,N2,A2,N00,A0)
 }
+rp <- sum(w*r)/sum(w)
+sp <- sqrt(sum(w*(r-rp)^2/(ng-1)))
 
 write.table(NA120,file='../output/PA.csv',sep=',')
 
@@ -152,21 +156,6 @@ lines(x=lim,y=lim,col='grey50',lwd=1.5)
 par(op)
 dev.off()
 
-#### 6. Boxplot of crowdsourcing results ####
-pdf(file='../output/boxplots.pdf',width=6,height=5)
-op <- par(mar=c(3,3,1,8),mgp=c(2,1,0))
-# box plot
-grouped_list <- split(trustworthy_results$count, trustworthy_results$index)
-boxplot(grouped_list,horizontal=TRUE,
-        xlab='Ns',ylab='grain number',
-        xaxt='n',las=2,col=NA)
-add_admin_count_to_boxplot(trustworthy_results,grouped_list)
-axis(1)
-# table
-add_table(grouped_list)
-par(op)
-dev.off()
-
 # generalised linear fit to crowd-sourced data
 fit <- glm(count ~ user_id + index, data=trustworthy_results, family="poisson")
 mswd <- summary(fit)$deviance/summary(fit)$df.residual
@@ -176,3 +165,27 @@ lst <- crowdtable(trustworthy_results)
 counts2latex(lst,destination='../output/crowdtable.txt')
 counts2latex(lst,destination='../output/shortcrowdtable.txt',short=TRUE)
 
+# stripchart
+pdf(file='../output/stripchart.pdf',width=4,height=6,pointsize=7.5)
+op <- par(mar=c(4,3,0,9))
+grouped_list <- split(trustworthy_results$count, trustworthy_results$index)
+ordered_list <- grouped_list[colnames(lst$tab)]
+stripchart(ordered_list,method='stack',pch=16,cex=0.65,
+           offset=1/5,frame.plot=FALSE,axes=FALSE)
+ns <- length(ordered_list)
+axis(side=1)
+mtext(expression('Number of tracks counted'~'(N'[s]*')'),side=1,line=2.5)
+axis(side=2,lwd=0,at=1:ns,labels=names(ordered_list),line=-1,las=1)
+mtext("Grain ID in order of PV's counts",side=2,line=1.5)
+lines(x=c(0,0),y=c(1,ns))
+axis(side=4,lwd=0,at=1:ns,labels=lst$n,line=1,las=1)
+axis(side=4,lwd=0,at=1:ns,labels=format(round(lst$ybar,1),nsmall=1),line=3,las=1)
+axis(side=4,lwd=0,at=1:ns,labels=format(round(lst$sy,1),nsmall=1),line=5.5,las=1)
+axis(side=4,lwd=0,at=ns+1,labels="n",line=1,las=1)
+axis(side=4,lwd=0,at=ns+1,labels="mean",line=3,las=1)
+axis(side=4,lwd=0,at=ns+1,labels="s.d.",line=5.5,las=1)
+medians <- apply(lst$tab,2,median,na.rm=TRUE)
+points(x=medians,y=(1:ns)-0.2,pch=24,bg='yellow',cex=0.8)
+points(x=lst$tab[1,],y=(1:ns)-0.2,pch=24,bg='blue',cex=0.8)
+par(op)
+dev.off()

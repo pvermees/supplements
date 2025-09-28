@@ -240,7 +240,10 @@ compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
         bg <- rep(NA,ns)
         iadmin <- which(users==1)
         bg[iadmin] <- 'blue'
-        plot(out$x,
+        duplo <- duplicated(out$x)
+        X <- out$x
+        X[duplo,] <- jitter(X[duplo,])
+        plot(X,
              xlab=paste0('grain ',grain1),
              ylab=paste0('grain ',grain2),
              pch=21,bg=bg,...)
@@ -341,24 +344,22 @@ counts2latex <- function(lst,destination,short=FALSE){
     sy <- sprintf('%.1f',lst$sy)
     short_ybar <- gsub('0\\.', '.', ybar)
     short_sy <- gsub('0\\.', '.', sy)
-    medians <- apply(lst$tab,2,median,na.rm=TRUE)
+    medians <- apply(lst$tab[-1,],2,median,na.rm=TRUE)
+    r_m <- sprintf('%.2f',medians/lst$tab[1,])
+    short_rm <- gsub('0\\.', '.',r_m)
     out <- rbind(c('user','~',colnames(lst$tab),'~','$n_g$','$r_p$','$s_p$'),
                  c('~','~',rep(NA,ncol(lst$tab)),'~','~','~','~'),
                  c('PV',NA,lst$tab[1,],NA,ng[1],short_rp[1],short_sp[1]),
                  NA,
                  cbind(rownames(lst$tab)[-1],NA,lst$tab[-1,],NA,
                        ng[-1],short_rp[-1],short_sp[-1]),
-                 NA,
-                 c('$n$','~',n,NA,'~','~','~'),
-                 c('$\\bar{y}$','~',short_ybar,NA,'~','~','~'),
-                 c('$s_y$','~',short_sy,NA,'~','~','~'))
+                 c('$r_m$','~',short_rm,'~','~','~','~'))
     if (short){
-        out <- out[-(15:(nrow(out)-15)),-(13:(ncol(out)-15))]
-        out[,13] <- '$\\ldots$'
-        out[15,] <- '$\\vdots$'
-        out[c(2,4,15,15+11),13] <- '~'
-        out[15,c(2,13,13+11)] <- '~'
-        out[15,13] <- '$\\ddots$'
+        out <- out[-(15:(nrow(out)-11)),]
+        out[15,] <- '~'
+        out[15,1] <- "$\\vdots$"
+        out <- out[-c(2,4),]
+        out <- out[,-c(2,ncol(out)-3)]
     }
     write2tabular(out,medians,destination,short)
 }
@@ -368,10 +369,14 @@ write2tabular <- function(out,medians,destination,short=FALSE){
     nc <- ncol(out)
     file_conn <- file(destination, open = "w")
     cat('\\begin{tabular}{',file=file_conn)
-    fmt <- c('c@{~}','c@{~~~}',rep('c@{~}',nc-6),'c@{~~~}',rep('c@{~}',3))
+    if (short){
+        fmt <- c('c|',rep('c@{~}',nc-5),'c|',rep('c@{~}',3))
+    } else {
+        fmt <- c('c@{~}','c@{~~~}',rep('c@{~}',nc-6),'c@{~~~}',rep('c@{~}',3))
+    }
     cat(paste0(fmt,collapse=''),file=file_conn)
     cat('}\n',file=file_conn)
-    cat(paste0('\\multicolumn{',nc,'}{c}{grain}\\cr\n'),file=file_conn)
+    cat(paste0('\\multicolumn{',nc,'}{c}{grain ID}\\cr\n'),file=file_conn)
     for (i in 1:nr){
         values <- out[i,]
         values[is.na(values)] <- ''
@@ -387,7 +392,11 @@ write2tabular <- function(out,medians,destination,short=FALSE){
             cat(' & ',file = file_conn)
         }
         cat(paste0(tail(values,2),collapse=' & '),file = file_conn)
-        cat(' \\cr\n',file = file_conn)
+        if (i%in%c(1,2,nr-1)){
+            cat(' \\cr\\hline\n',file = file_conn)
+        } else {
+            cat(' \\cr\n',file = file_conn)
+        }
     }
     cat('\\end{tabular}\n',file=file_conn)
     close(file_conn)    

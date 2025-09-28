@@ -386,39 +386,92 @@ dataset was parsed into separate data files --- one for each student
 --- which they processed during an assessed programming
 exercise.\medskip
 
+\begin{small}
+  \input{../output/shortcrowdtable.txt}\\
+\end{small}
+\captionof{table}{Counts of fission tracks in the same ROIs of 25
+  grains made by PV and 68 students. Only 20 students are shown due to
+  space constraints; the full table is provided in the supplementary
+  information.  Each student counted a subset of the grains. The
+  grains are listed in increasing order of PV's counts. The last 3
+  columns give, for each student, the number of grains counted $n_g$
+  and the weighted mean $r_p = \sum\,w_i\,r_i/\sum\,w_i$ and standard
+  deviation $s_p = \sqrt{\sum w_i\,(r_i-r_p)^2/(n_g − 1)}$
+  where $r_i$ is the ratio of the student's count to PV's count for
+  grain $i$ and $w_i$ is PV's count for grain $i$. ($r_p$ is the same
+  as the ratio of the student's total count over the $n_g$ grains to
+  PV's total count over the same grains.)  The students are listed in
+  decreasing order of $r_p$. $r_m$ is the ratio of the students'
+  median count per grain to PV's count.}
+\label{tab:crowdtable}
+
 The raw counts for 68 students (two of the students were unable to
-complete the exercise) are given in Table~\ref{tab:crowdtable}, for
-the same selection of 25 grains that were analysed by AC and PV in
-Section~\ref{sec:private}, along with corresponding counts made by
-PV. Everyone counted tracks in the same ROIs. The vast majority of
-students counted fewer tracks than PV did, often many fewer, and on
-two occasions someone counted no tracks at all. PV's count is always
-above the students' median and nearly always above the upper quartile.
+complete the exercise) are given in Table~\ref{tab:crowdtable} and
+Figure~\ref{fig:stripchart}, for the same selection of 25 grains that
+were analysed by AC and PV in Section~\ref{sec:private}, along with
+corresponding counts made by PV. Everyone counted tracks in the same
+ROIs. Variation between the mean values is to be expected because of
+the differing numbers of tracks due to varying areas and U contents of
+the grains. But the variation between counts within grains (shown by
+the standard deviations in Figure~\ref{fig:stripchart}) is due
+entirely to differences between the students' recognising and counting
+exactly the same tracks. These standard deviations increase with the
+mean number of tracks and are considerable in size, being on average
+about 40\% of the mean. With expert trained counters one would expect
+much smaller differences between counts.  Furthermore, the vast
+majority of students counted fewer tracks than PV did, often many
+fewer, and on two occasions someone counted no tracks at all. PV's
+count is always above the students' median and nearly always above the
+upper quartile (Figure~\ref{fig:stripchart}).
 Table~\ref{tab:crowdtable} (looking along rows) shows just 7 students
 with average counts within 10\% of PV's, and 18 with average counts
 less than half of his.\medskip
 
-However, in spite of the under-counting by the students, the
-\emph{ratios} of the track counts between different grains are often
-close to PV's ratios, especially when comparing grains with similar
-track densities.  This is apparent from Table~\ref{tab:crowdtable}
-(looking along columns).  In grains containing few tracks (left hand
-side of the table), the median of the student counts is within 20\% of
-PV's counts.  However, this gradually levels off to 50\% at higher
-track densities (right hand side of the
-table). Figure~\ref{fig:23vs25}a shows a scatter plot of pairs of
-counts for two grains (23 and 25) made by 36 students who counted both
-of them. The two grains were chosen because they have similar track
-counts for both PV and the median student. They both have a median of
-28 tracks per grain compared with PV's pair of 52 and 50, which is
-highlighted in blue. There is a positive correlation between the
-pairs, consistent with systematic observer effects (i.e., people who
-count a low value in one grain tend to count similarly low in the
-other, and vice versa).  Comparing other pairs of grains shows similar
-results, with correlations varying between 0.4 and 0.9. In all cases
-we have looked at, the residual variation, after allowing for
-systematic differences between students, is consistent with Poisson
-variation.\medskip
+The rightmost three columns of Table~\ref{tab:crowdtable} contain
+summary statistics ($n_g$ , $r_p$ and $s_p$) giving, for each student,
+the number of grains counted and the weighted mean and standard
+deviation of the ratios of the student's count to PV's count for each
+grain (definitions provided in the caption). The true number of tracks
+in each ROI is unknown, so we are comparing the students with PV
+(remembering that PV's count is also subject to error, which is the
+same for each student). $r_p$ measures agreement with PV on average
+and $s_p$ measures consistency over grains. For good agreement $r_p$
+should be close to 1 and $s_p$ should be small.  Perfect agreement is
+$r_p = 1$ and $s_p = 0$. For comparison, an $r_p = 1.04$ and $s_p =
+0.69$ for PV and AC using just the counts in the common areas $A_0$
+from Section~\ref{sec:private}. With the caveat that the ROIs are
+different and PV's counts are different, this calculation shows that
+there is a group of 6 (possibly 9) students whose agreement with PV is
+comparable with AC's. This group does not include student 229 whose
+$r_p = 0.95$ but with a large $s_p = 1.62$.\medskip
+
+However, in spite of the under-counting by the students, the ratio of
+their pooled track counts ($r_p$) for two different grains is often
+close to PV's ratio, especially when comparing grains with similar
+track densities. This is illustrated in Figure~\ref{fig:23vs25}a for
+grains~23 and 25.  For any point, the ratio of the two counts is given
+by the slope of a line from the origin to that point. Although the
+individual slopes vary considerably, the line with slope equal to the
+ratio of the total counts for all students (which is 0.96) passes
+close to PV's pair of counts (52,50) shown by the blue dot (with ratio
+1.03). It is interesting that the students with lower counts are
+mostly above this line and those with higher counts are all below it.
+There is a positive correlation between the pairs of counts,
+consistent with systematic observer effects (i.e., people who count a
+low value in one grain tend to count similarly low in the other, and
+vice versa). Comparing other pairs of grains shows similar results,
+with correlations varying between 0.4 and 0.9.\medskip
+
+\noindent\begin{minipage}{.55\linewidth}
+  \includegraphics[width=\linewidth]{stripchart.pdf}\medskip
+\end{minipage}
+\begin{minipage}{.45\linewidth}
+\captionof{figure}{ Dot plot of the data shown in
+  Table~\ref{tab:crowdtable}, with the students' medians and PV's
+  counts shown as yellow and blue triangles, respectively.
+  \medskip}
+  \label{fig:stripchart}
+\end{minipage}
 
 As mentioned in Section~\ref{sec:architecture}, geochron@home stores
 the actual track positions marked by the users. This raw data can be
@@ -436,28 +489,6 @@ counted the tails of the fission tracks rather than their etch pits,
 despite being told the opposite in the tutorial. Fixing this issue
 will require some improvements to the tutorial pages
 (Section~\ref{sec:outlook}).\medskip
-
-\begin{small}
-  \input{../output/shortcrowdtable.txt}\\
-\end{small}
-\captionof{table}{Counts of fission tracks in the same ROIs of 25
-  grains made by PV and 68 students. Only 20 grains and 20 students
-  are shown due to space constraints; the full table is provided in
-  the supplementary information.  Each student counted a subset of the
-  grains. The grains are listed in increasing order of PV's
-  counts. The last 3 columns give, for each student, the number of
-  grains counted $n_g$ and the weighted mean $r_p =
-  \sum\,w_i\,r_i/\sum\,w_i$ and standard deviation $s_p =
-  \sqrt{w_i\,(r_i-r_p)^2/(n_g − 1)}$ where $r_i$ is the ratio of the
-  student's count to PV's count for grain $i$ and $w_i$ is PV's count
-  for grain $i$. ($r_p$ is the same as the ratio of the student's
-  total count over the $n_g$ grains to PV's total count over the same
-  grains.)  The students are listed in decreasing order of $r_p$ . The
-  last 3 rows ($n$, $\bar{y}$ and $s_y$ ) give the sample size (number
-  of students), mean and standard deviation of the students' counts
-  for each grain.}
-\label{tab:crowdtable}
-%\end{minipage}
 
 %\begin{figure}[!ht]
 { \centering \includegraphics[width=15cm]{23vs25.pdf}
