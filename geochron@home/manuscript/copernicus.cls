@@ -16,10 +16,11 @@
 %% -----------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{copernicus}
-    [2023/12/15 10.1.12 Copernicus papers]
+    [2025/03/03 10.1.26 Copernicus papers]
 \frenchspacing
 \clubpenalty10000
 \widowpenalty10000
+\RequirePackage{etoolbox}%
 \RequirePackage{iftex}
 %% protrudechars, \adjustspacing \hypenationmin,
 %% lccode, \hjcode ???, exhyphenchar,\automatichyphenmode, hyphenchar
@@ -140,6 +141,7 @@
 \newif\if@bar            %only used under \if@stage@final and \@cop@hometrue; for modern layout as well as for the classically layouted sub-journal "angeocom"
 \newif\if@firstbar       %only used under \if@stage@final and \@cop@hometrue; for modern layout as well as for the classically layouted sub-journal "angeocom"
 \newif\if@hvmath         \DeclareOption{hvmath}{\@hvmathtrue}%only used for discussions and only under \@cop@hometrue
+\newif\ifproofreadingchanges
 \InputIfFileExists{copernicus.cfg}%
   {\typeout{Additional configuration file copernicus.cfg used}}%
   {\CopernicusError{No additional configuration file copernicus.cfg}
@@ -157,7 +159,7 @@
   \@abstractcenteredfalse
   \@abstractindentedfalse
 \fi
-\AtEndOfClass{\ifcopyediting\let\@msnumber\relax\fi}
+\AtEndOfClass{\ifcopyediting\let\@msnumber\relax\fi\ifproofreadingchanges\let\@msnumber\relax\fi}
 \LoadClass[fleqn]{article}
 \AtBeginDocument{\mathindent\z@}
 \if@stage@final
@@ -332,7 +334,7 @@
     \fi
   \fi
   \@journalnameabbreviation
-  \ifcopyediting\else\if@noref,\space\@msnumber\else,\space\@pvol, \@fpage\if@nolastpage\else{--\@lpage}\fi\fi, \@pyear\fi}
+  \ifcopyediting\else\ifproofreadingchanges\else\if@noref,\space\@msnumber\else,\space\@pvol, \@fpage\if@nolastpage\else{--\@lpage}\fi\fi, \@pyear\fi\fi}
 \def\@journalurlInfo{%
   %% URL raus, DOI rein; 2020-05-15
   \if@preface
@@ -463,46 +465,57 @@
             {{\runningheaderfont\@sentence}\\
              \color[gray]{0.55}\put(0.7,0){\rule[1mm]{\textwidth}{0.1mm}}\\
              \textcolor[gray]{0.55}{Your manuscript was typeset and received English language copy-editing.\\
-             The resulting file is available for proof-reading in the final journal style.\\
+             The resulting file is available for proofreading in the final journal style.\\
              The present document is only to review the language changes.}}%
              \if@bar\@titlebar\fi}
       \else
-        \def\@oddhead{%
-          \parbox[t]
-            {0.6\textwidth}
-            {\if@sansserifheader\leavevmode\runningheaderfont\fi
-             \if@preface
-               doi:10.5194/\preface@abbrev%
-             \else
-               \@journalInfo\\
-               %\@journalurlInfo\\ %raus laut Ticket 4529
-               https://doi.org/10.5194/%
-               \if@noref
-                 \@msnumber
+        \ifproofreadingchanges
+          \def\@oddhead{%
+            \parbox[t]
+            {\textwidth}
+            {{\runningheaderfont\@sentence}\\
+              \color[gray]{0.55}\put(0.7,0){\rule[1mm]{\textwidth}{0.1mm}}\\
+              \textcolor[gray]{0.55}{The present document only highlights changes made by Copernicus Publications\\
+                based on your comments.\\
+                Please do not include your further comments in this PDF file.}}%
+            \if@bar\@titlebar\fi}
+        \else
+          \def\@oddhead{%
+            \parbox[t]
+              {0.6\textwidth}
+              {\if@sansserifheader\leavevmode\runningheaderfont\fi
+               \if@preface
+                 doi:10.5194/\preface@abbrev%
                \else
-                 \@journalnameshortlower
-                 -\@pvol-\@fpage-\@pyear
+                 \@journalInfo\\
+                 %\@journalurlInfo\\ %raus laut Ticket 4529
+                 https://doi.org/10.5194/%
+                 \if@noref
+                   \@msnumber
+                 \else
+                   \@journalnameshortlower
+                   -\@pvol-\@fpage-\@pyear
+                 \fi
                \fi
-             \fi
-             \ifx\specialp@perstring\@undefined\else-\def\1{Corrigendum}\ifx\specialp@perstring\1corrigendum\else editorial-note\fi\fi
-             \\
-             \@journalcopyright
-             %\includegraphics[width=1.5cm]{CreativeCommons_Attribution_License.png}%
-           }%
-          \hfill
-          \setbox\z@\hbox{\@journallogo}%
-          \@tempdima\ht\z@\advance\@tempdima-8\p@\lower\@tempdima\box\z@\\
-          \ifangeocom
-            \textcolor{barcol}{\@ddsidemarginbar}%
-            %\textcolor{textcol}{\@ddsidemarginrule}%
-            \textcolor{rulecol}{\@ddsidemarginrule}%
-              \rlap{\kern9mm\smash{%
-                \@tempdimc\headsep\advance\@tempdimc\textheight\advance\@tempdimc\footskip
-                \lower\@tempdimc\hbox{\rotatebox[origin=lB]{90}{\fontsize{15}{15}\usefont{T1}{ma1}{m}{n}AnGeo Communicates}}}}%
-          \else
-            \if@bar\@titlebar\fi
-          \fi}
-      \fi
+               \ifx\specialp@perstring\@undefined\else-\def\1{Corrigendum}\ifx\specialp@perstring\1corrigendum\else editorial-note\fi\fi
+               \\
+               \@journalcopyright
+               %\includegraphics[width=1.5cm]{CreativeCommons_Attribution_License.png}%
+             }%
+            \hfill
+            \setbox\z@\hbox{\@journallogo}%
+            \@tempdima\ht\z@\advance\@tempdima-8\p@\lower\@tempdima\box\z@\\
+            \ifangeocom
+              \textcolor{barcol}{\@ddsidemarginbar}%
+              %\textcolor{textcol}{\@ddsidemarginrule}%
+              \textcolor{rulecol}{\@ddsidemarginrule}%
+                \rlap{\kern9mm\smash{%
+                  \@tempdimc\headsep\advance\@tempdimc\textheight\advance\@tempdimc\footskip
+                  \lower\@tempdimc\hbox{\rotatebox[origin=lB]{90}{\fontsize{15}{15}\usefont{T1}{ma1}{m}{n}AnGeo Communicates}}}}%
+            \else
+              \if@bar\@titlebar\fi
+            \fi}
+      \fi\fi
       \def\@oddfoot{\edit@rnotereminder\runningheaderfont\@sentence\hfil}
     \else
       \def\@oddhead{\parbox[t]{0.6\textwidth}{\@manuscriptInfo}}
@@ -537,16 +550,23 @@
 \ifx\xmltexversion\@undefined
   \ifcopyediting
     \let\title\ltx@title
-  \else
-    \def\title#1{\ltx@title{#1}\hypersetup{pdftitle=\@title}\xmp@title{#1}}
-  \fi
+    \else
+      \ifproofreadingchanges
+        \let\title\ltx@title
+      \else
+        \def\title#1{\ltx@title{#1}\hypersetup{pdftitle=\@title}\xmp@title{#1}}
+  \fi\fi
 \else
   \def\title#1{\ltx@title{#1}\xmp@title{#1}}
 \fi
 \def\maketitle{%
   \gdef\supplement##1{%
-    \href{https://doi.org/10.5194/\@journalnameshortlower-\@pvol-\@fpage-\@pyear-supplement}%
-         {https://doi.org/10.5194/\@journalnameshortlower-\@pvol-\@fpage-\@pyear-supplement}}%
+    \if@proof
+      [the link will be implemented upon publication]%
+    \else
+      \href{https://doi.org/10.5194/\@journalnameshortlower-\@pvol-\@fpage-\@pyear-supplement}%
+           {https://doi.org/10.5194/\@journalnameshortlower-\@pvol-\@fpage-\@pyear-supplement}%
+    \fi}%
   \ifnum\@fpage<0
     \CopernicusError{No article number given but citation by article number required}
                     {Please provide \string\articlenumber.}
@@ -743,6 +763,7 @@
                  \parskip\z@
                  \trivlist\item\relax
                    \textcolor{textcol}{\reset@font\normalsize\if@sansserifface\sffamily\fi\bfseries\abstractname.}%
+                   \subpdfbookmark{\abstractname}{abstract}%
                    \enspace\ignorespaces\@abstr
                    \ifx\second@bstract\@undefined\else\par\vspace{1.7mm}\noindent
                      \second@bstract
@@ -795,7 +816,7 @@
                         \labelsep\z@
                         \xdef\@indescription{}%
                         \def\makelabel##1{\labelfont##1\hss}}%
-               \ifnum\corr@cnt=\z@\relax\else\item[{Correspondence:}]\@corresp\fi
+               \ifnum\corr@cnt=\z@\relax\else\item[{Correspondence:}]\bgroup\hyphenpenalty=\@M\raggedright\@corresp\par\egroup\fi
                \ifnum\ifx\@published\@undefined\ifx\specialp@perstring\@undefined\if!\@recvd!0\else1\fi\else0\fi\else1\fi=1\relax
                  \item[{Relevant dates:}]%
                \fi
@@ -823,7 +844,7 @@
                \ifx\@howtocite\@empty\else\item[{How to cite:}]\@howtocite\fi
                \ifx\abstractexists\@undefined
                \else
-                 \item[\abstractname:]\@abstr%
+                 \item[\abstractname:]\subpdfbookmark{\abstractname}{abstract}\@abstr%
                    \ifx\second@bstract\@undefined\else\item[\secabstractname:]\second@bstract\fi
                    \if!\@keyw!\else\item[Keywords:]\@keyw\fi
                \fi
@@ -1153,7 +1174,6 @@
     \long\def\abstract{%
       \immediate\write\@auxout{\string\gdef\string\abstractexists{true}}%
       \iflanguage{ngerman}{\@abslang}{\iflanguage{german}{\@abslang}{}}%
-      \subpdfbookmark{\abstractname}{abstract}%
       \edef\ABS@{\@currenvir}%
       \toks@{}\ABS@get@body}
     \let\endabstract\relax
@@ -1297,8 +1317,8 @@
   \fi
 \fi
 \RequirePackage[normalem]{ulem}%
-\RequirePackage[T1]{fontenc}
-\RequirePackage{textcomp}
+\RequirePackage[T5,T3,T1]{fontenc}
+\RequirePackage[warn]{textcomp}
 \if@cop@home
     \RequirePackage{fontawesome5}
     \ifluatex
@@ -1359,7 +1379,10 @@
 \fi
 \def\cmrng{{\fontfamily{cmr}\selectfont\ng}}
 \let\old@classoptionslist\@classoptionslist
-\edef\@classoptionslist{english,\old@classoptionslist}
+\preto\@classoptionslist{english,}
+\ifdefined\@raw@classoptionslist
+  \preto\@raw@classoptionslist{english,}
+\fi
 \RequirePackage{babel}
 \let\@classoptionslist\old@classoptionslist
 \ifx\StandardLayout\@undefined\let\StandardLayout\relax\fi
@@ -1562,11 +1585,12 @@
           \xdef\AB@thenote{\arabic{affil}}%
        \fi
        \ifcopyediting\else
+         \ifproofreadingchanges\else
          \xmp@author{#2}%
-       \fi
+       \fi\fi
        \global\advance\c@authnum\@ne
        \if@cop@home
-         \expandafter\ifx\csname deceased@\the\c@authnum\endcsname\true\relax\def\@@deceased{$^{,\text{\faCross}}$}\fi
+         \expandafter\ifx\csname deceased@\the\c@authnum\endcsname\true\relax\def\@@deceased{$^{,\text{\faRibbon}}$}\fi
          \expandafter\ifx\csname econtrib@\the\c@authnum\endcsname\true\relax\def\@@econtrib{$^{,\text{\faStar}}$}\fi
        \fi
        \def\@tempa{#1}\ifx\@tempa\@empty\def\AB@note{\AB@thenote}\else\def\AB@note{#1}%
@@ -1648,7 +1672,7 @@
    \deceased@sep#1,\@nil
    \@temptokena=\expandafter{\AB@affillist}%
    \protected@xdef\AB@affillist{\the\@temptokena \AB@affilsep
-     \AB@affilnote{\faCross}\protect\Affilfont\@deceasedNote}%
+     \AB@affilnote{\faRibbon}\protect\Affilfont\@deceasedNote}%
   }
 \newcommand\equalcontrib[1]{%
   \gdef\@econtribNote{These authors contributed equally to this work.}%
@@ -1680,10 +1704,10 @@
   \let\curr@corr\relax
   \@parse@corr#1,,\@nil
   \ifnum\curr@corr@cnt=\@ne\relax
-    \edef\curr@corr{\csname curr@corr@1\endcsname}%
+    \protected@edef\curr@corr{\csname curr@corr@1\endcsname}%
   \else
     \ifnum\curr@corr@cnt=\tw@\relax
-      \edef\curr@corr{%
+      \protected@edef\curr@corr{%
         \csname curr@corr@1\endcsname\Authsep
         \csname curr@corr@2\endcsname}%
     \else
@@ -1691,11 +1715,11 @@
       \let\curr@corr\@empty%
       \loop
         \advance\@tempcntb\@ne
-        \expandafter\edef\expandafter\curr@corr\expandafter{\curr@corr\csname curr@corr@\the\@tempcntb\endcsname}%
+        \expandafter\protected@edef\expandafter\curr@corr\expandafter{\curr@corr\csname curr@corr@\the\@tempcntb\endcsname}%
       \ifnum\@tempcntb<\numexpr\curr@corr@cnt+\m@ne\relax\relax
-        \expandafter\edef\expandafter\curr@corr\expandafter{\curr@corr\Authsep}%
+        \expandafter\protected@edef\expandafter\curr@corr\expandafter{\curr@corr\Authsep}%
       \repeat
-      \expandafter\edef\expandafter\curr@corr\expandafter{\curr@corr\Authands\csname curr@corr@\the\curr@corr@cnt\endcsname}%
+      \expandafter\protected@edef\expandafter\curr@corr\expandafter{\curr@corr\Authands\csname curr@corr@\the\curr@corr@cnt\endcsname}%
     \fi
   \fi
 }
@@ -1719,7 +1743,7 @@
      #3%
      \ifx\@tempc\@empty\else\noexpand\nobreakspace\@tempc\fi}%
    \ifx\curr@corr\@empty\else
-     \expandafter\expandafter\expandafter\xdef\csname corresp-\the\corr@cnt\expandafter\endcsname\expandafter{\@tempd\noexpand\space(\curr@corr)}%
+     \expandafter\expandafter\expandafter\protected@xdef\csname corresp-\the\corr@cnt\expandafter\endcsname\expandafter{\@tempd\noexpand\space(\curr@corr)}%
    \fi
   \expandafter\expandafter\expandafter\author\expandafter\expandafter\expandafter
     [\expandafter\@tempa\expandafter]\expandafter{\@tempd}}
@@ -2144,7 +2168,6 @@
     \provide@orig@symbol{Phi}
     \provide@orig@symbol{Psi}
     \provide@orig@symbol{Omega}
-    \usepackage{etoolbox}%
     \ifluatex\else
       %% Fix fuer #6924, vgl https://tex.stackexchange.com/questions/561236/setmathalphabet-messes-with-rm
       \@iflatexlater{2020/10/01}{}{\patchcmd\document@select@group{#1{#4}}{\expandafter#1\ifx\math@bgroup\bgroup{#4}\else#4\fi}{}{}}%
@@ -2237,8 +2260,19 @@
 \fi
 \DeclareMathAlphabet{\mathbbs}{U}{BOONDOX-ds}{m}{n}
 \DeclareMathAlphabet{\mathblackbold}{U}{dsrom}{m}{n}
-\let\ltx@mathbb\mathbb
 
+\def\cop@zavm@symb#1{%
+  \mathord{\mathchoice
+    {\mbox{\fontsize{\tf@size}{\tf@size}\usefont{U}{zavm}{m}{it}\symbol{#1}}}
+    {\mbox{\fontsize{\tf@size}{\tf@size}\usefont{U}{zavm}{m}{it}\symbol{#1}}}
+    {\mbox{\fontsize{\sf@size}{\sf@size}\usefont{U}{zavm}{m}{it}\symbol{#1}}}
+    {\mbox{\fontsize{\ssf@size}{\ssf@size}\usefont{U}{zavm}{m}{it}\symbol{#1}}}%
+  }}
+\def\coppa{\cop@zavm@symb{162}}
+\def\Koppa{\cop@zavm@symb{163}}
+\def\koppa{\cop@zavm@symb{164}}
+
+\let\ltx@mathbb\mathbb
 \def\mathbb#1{%
   \sbox\z@{\@tempcnta 0#1}%
   \ifdim\wd\z@>\z@\relax
@@ -2265,7 +2299,7 @@
       \hypersetup{anchorcolor=black,citecolor=black,filecolor=black,linkcolor=black,unicode,%
         menucolor=black,urlcolor=black}%%
     }{%
-      \usepackage[\ifcopyediting bookmarks=false\else bookmarks=true\fi,colorlinks]{hyperref}
+      \usepackage[bookmarks=\ifcopyediting false\else\ifproofreadingchanges false\else true\fi\fi,colorlinks]{hyperref}%
       \hypersetup{anchorcolor=black,citecolor=black,filecolor=black,linkcolor=black,%
         menucolor=black,pagecolor=black,urlcolor=black}
     }%
@@ -2577,9 +2611,12 @@
   \else
     \ifcopyediting
       \gdef\@howtocite{}%
-    \else
-      \gdef\@howtocite{#1, \@journalnameabbreviation, \@pvol, \@fpage--\@lpage, \expandafter\url{\@@doi}, \@pyear.}%
-    \fi
+      \else
+        \ifproofreadingchanges
+          \gdef\@howtocite{}%
+        \else
+          \gdef\@howtocite{#1, \@journalnameabbreviation, \@pvol, \@fpage--\@lpage, \expandafter\url{\@@doi}, \@pyear.}%
+    \fi\fi
   \fi
 }\def\@howtocite{}%+1,+2,+d
 \def\msnumber#1{\if@cop@home\gdef\@msnumber{#1}\fi}
@@ -2614,13 +2651,13 @@
 \fi
 \if@stage@final
   \def\keywords#1{%
-    \ifcopyediting\else\xmp@keywords{#1}\fi%
+    \ifcopyediting\else\ifproofreadingchanges\else\xmp@keywords{#1}\fi\fi%
     \def\@keyw{#1}%
   }
   \def\@keyw{}
 \else
   \def\keywords#1{%
-    \ifcopyediting\else\xmp@keywords{#1}\fi%
+    \ifcopyediting\else\ifproofreadingchanges\else\xmp@keywords{#1}\fi\fi%
     \CopernicusWarningNoLine{Keywords are not supported.}%
     \vspace{1.7mm}\par\noindent\textbf{Keywords.}\enspace\ignorespaces#1}
 \fi
@@ -2759,7 +2796,7 @@
   \fi
   \let\do@skip\relax
   \def\@argi{#1}\ifx\@argi\@empty\else\let\do@skip\space\fi%
-  \item \dosupplement{#1\do@skip The supplement related to this article is available online at:
+  \item \dosupplement{#1\do@skip The supplement related to this article is available online at
     \if@stage@final\else\\\fi
     \supplement{#2}.}%
   \end{trivlist}%
@@ -3081,6 +3118,14 @@
     \DeclareUnicodeCharacter{200B}{{\unskip\;\color{red}\vrule \@width1ex \@height1ex}}
   \fi
 \fi
+
+\def\invbreve#1{\def\x##1{\fontencoding{T3}\selectfont\textroundcap{{\fontencoding{T1}\selectfont##1}}}\ifmmode \x{$#1$}\else\x{#1}\fi}
+\let\texthookabove\h
+\let\textdotbelow\d
+\def\h#1{{\fontencoding{T5}\selectfont\texthookabove{#1}}}
+\def\d#1{{\fontencoding{T5}\selectfont\textdotbelow{#1}}}
+\hypersetup{pdfencoding=auto}
+
 \endinput
 %%
 %% End of file `copernicus.cls'.

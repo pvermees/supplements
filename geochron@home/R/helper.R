@@ -355,7 +355,7 @@ counts2latex <- function(lst,destination,short=FALSE){
                        ng[-1],short_rp[-1],short_sp[-1]),
                  c('$r_m$','~',short_rm,'~','~','~','~'))
     if (short){
-        out <- out[-(15:(nrow(out)-11)),]
+        out <- out[-(15:(nrow(out)-12)),]
         out[15,] <- '~'
         out[15,1] <- "$\\vdots$"
         out <- out[-c(2,4),]
