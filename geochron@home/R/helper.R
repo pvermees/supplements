@@ -222,19 +222,19 @@ add_admin_count_to_boxplot <- function(trustworthy_results,grouped_list){
     points(admin_counts,1:length(ACids),pch=21,bg='blue')
 }
 
-compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
-    results1 <- results[results$index == grain1,]
-    results2 <- results[results$index == grain2,]
-    users <- intersect(results1$user_id,
-                       results2$user_id)
-    i1 <- match(users,results1$user_id)
-    i2 <- match(users,results2$user_id)
-    out <- list(name=paste0(grain1,' vs ',grain2))
+compare_grains <- function(results,grain_x,grain_y,plot=TRUE,...){
+    results_x <- results[results$index == grain_x,]
+    results_y <- results[results$index == grain_y,]
+    users <- intersect(results_x$user_id,
+                       results_y$user_id)
+    i_x <- match(users,results_x$user_id)
+    i_y <- match(users,results_y$user_id)
+    out <- list(name=paste0(grain_x,' vs ',grain_y))
     class(out) <- 'counts'
-    out$x <- cbind(results1$count[i1],
-                   results2$count[i2])
-    colnames(out$x) <- c(paste0('Ns(',grain1,')'),
-                         paste0('Ns(',grain2,')'))
+    out$x <- cbind(results_x$count[i_x],
+                   results_y$count[i_y])
+    colnames(out$x) <- c(paste0('Ns(',grain_x,')'),
+                         paste0('Ns(',grain_y,')'))
     ns <- nrow(out$x)
     if (plot){
         bg <- rep(NA,ns)
@@ -244,17 +244,17 @@ compare_grains <- function(results,grain1,grain2,plot=TRUE,...){
         X <- out$x
         X[duplo,] <- jitter(X[duplo,])
         plot(X,
-             xlab=paste0('grain ',grain1),
-             ylab=paste0('grain ',grain2),
+             xlab=paste0('grain ',grain_x),
+             ylab=paste0('grain ',grain_y),
              pch=21,bg=bg,...)
         rho <- format(round(cor(out$x)[1,2],2),nsmall=2)
         mtext(line=0,text=paste0('correlation=',rho),cex=1.0)
-        PVratio <- out$x[iadmin,1]/out$x[iadmin,2]
+        PVratio <- out$x[iadmin,2]/out$x[iadmin,1]
         mtext(line=-2,
               text=paste0("PV's ratio=",
                           format(round(PVratio,2),nsmall=2)),
               cex=1.0)
-        pooled_ratio <- sum(results1$count[i1])/sum(results2$count[i2])
+        pooled_ratio <- sum(results_y$count[i_y])/sum(results_x$count[i_x])
         mtext(line=-3,
               text=paste0("pooled ratio=",
                           format(round(pooled_ratio,2),nsmall=2)),
