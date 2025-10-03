@@ -74,7 +74,7 @@ for (grain in grains){
 par(op)
 dev.off()
 
-#### 3. Compare PV and AC's results for grain 3 (a.k.a. 4648) ####
+#### 3. Fig 2: Compare PV and AC's results for grain 3 (a.k.a. 4648) ####
 pdf(file='../output/AvP.pdf',width=15,height=5)
 op <- par(mar=c(4,4,.5,.5),mfrow=c(1,3),mgp=c(2.5,1,0),cex=1.0)
 plotROIs(PieterResults[['4648']],AndyResults[['4648']])
@@ -112,9 +112,9 @@ for (grain in grains){
 }
 dev.off()
 
-#### 5. Show crowdsourcing results for two selected grains ####
-grain1 <- list(number='4685',index=23) # list(number='4682',index=39)
-grain2 <- list(number='4674',index=25) # list(number='4680',index=43)
+#### 5. Fig. 4b: Show crowdsourcing results for two selected grains ####
+grain1 <- list(number='4685',index=23)
+grain2 <- list(number='4674',index=25)
 pdf(file="../output/23vs25.pdf",onefile=FALSE)
 op <- par(mar=c(4,4,0,1))
 image1 <- plotimage(idir='../screenshots',
@@ -145,27 +145,22 @@ grid.arrange(
 par(op)
 dev.off()
 
-trustworthy_results <- clean_results(results)
-
-#### 6. Scatter plot of crowdsourcing results ####
+#### 6. Fig. 4a: Scatter plot of crowdsourcing results ####
 pdf(file='../output/crowd-correlation.pdf',width=5,height=5)
 op <- par(mar=c(3,3,1,1),mgp=c(2,1,0),xpd=NA,bty='n')
 lim <- c(0,70)
+trustworthy_results <- clean_results(results)
 compare_grains(trustworthy_results,grain_x=grain2$index,grain_y=grain1$index,xlim=lim,ylim=lim)
 lines(x=lim,y=lim,col='grey50',lwd=1.5)
 par(op)
 dev.off()
 
-# generalised linear fit to crowd-sourced data
-fit <- glm(count ~ user_id + index, data=trustworthy_results, family="poisson")
-mswd <- summary(fit)$deviance/summary(fit)$df.residual
-
-# summary tables
+#### 7. Tab. 1: summary tables ####
 lst <- crowdtable(trustworthy_results)
 counts2latex(lst,destination='../output/crowdtable.txt')
 counts2latex(lst,destination='../output/shortcrowdtable.txt',short=TRUE)
 
-# stripchart
+#### 8. Fig. 3: stripchart ####
 pdf(file='../output/stripchart.pdf',width=4,height=6,pointsize=7.5)
 op <- par(mar=c(4,3,0,9))
 grouped_list <- split(trustworthy_results$count, trustworthy_results$index)
@@ -189,3 +184,7 @@ points(x=medians,y=(1:ns)-0.2,pch=24,bg='yellow',cex=0.8)
 points(x=lst$tab[1,],y=(1:ns)-0.2,pch=24,bg='blue',cex=0.8)
 par(op)
 dev.off()
+
+#### extra: generalised linear fit to crowd-sourced data ####
+fit <- glm(count ~ user_id + index, data=trustworthy_results, family="poisson")
+mswd <- summary(fit)$deviance/summary(fit)$df.residual
