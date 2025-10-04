@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.9.27)  3 OCT 2025 22:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.9.27)  4 OCT 2025 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3285,12 +3285,12 @@ t or edit the fis-sion track co-or-di-nates of any grain in a geochron@home
 <AvP.pdf, id=92, 1084.05pt x 361.35pt>
 File: AvP.pdf Graphic file (type pdf)
 <use AvP.pdf>
-Package pdftex.def Info: AvP.pdf  used on input line 288.
+Package pdftex.def Info: AvP.pdf  used on input line 289.
 (pdftex.def)             Requested size: 503.61377pt x 167.87163pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 296.
+(caption)                particular \caption on input line 297.
 See the caption package documentation for explanation.
 
 
@@ -3300,16 +3300,16 @@ See the caption package documentation for explanation.
 [6] (../output/shortcrowdtable.txt)
 
 Package caption Warning: \setcaptiontype
-(caption)                outside box or environment on input line 392.
+(caption)                outside box or environment on input line 393.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 405.
+(caption)                particular \caption on input line 406.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--405
+Underfull \hbox (badness 10000) in paragraph at lines 1--406
 
  []
 
@@ -3319,16 +3319,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--405
 <stripchart.pdf, id=153, 289.08pt x 433.62pt>
 File: stripchart.pdf Graphic file (type pdf)
 <use stripchart.pdf>
-Package pdftex.def Info: stripchart.pdf  used on input line 467.
+Package pdftex.def Info: stripchart.pdf  used on input line 468.
 (pdftex.def)             Requested size: 276.9891pt x 415.50296pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 473.
+(caption)                particular \caption on input line 474.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 466--476
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 467--477
 $[]$ $[]$ 
  []
 
@@ -3338,12 +3338,12 @@ $[]$ $[]$
 <23vs25.pdf, id=167, 902.61955pt x 420.96396pt>
 File: 23vs25.pdf Graphic file (type pdf)
 <use 23vs25.pdf>
-Package pdftex.def Info: 23vs25.pdf  used on input line 495.
+Package pdftex.def Info: 23vs25.pdf  used on input line 496.
 (pdftex.def)             Requested size: 426.79134pt x 199.04784pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 505.
+(caption)                particular \caption on input line 506.
 See the caption package documentation for explanation.
 
 
@@ -3365,7 +3365,7 @@ L3 programming layer <2021/03/21>
 Here is how much of TeX's memory you used:
  20151 strings out of 473197
  289978 string characters out of 5718605
- 794690 words of memory out of 5000000
+ 795690 words of memory out of 5000000
  43030 multiletter control sequences out of 15000+600000
  607454 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3386,7 +3386,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on paper.pdf (13 pages, 4040201 bytes).
+Output written on paper.pdf (13 pages, 4040284 bytes).
 PDF statistics:
  6924 PDF objects out of 7423 (max. 8388607)
  4639 compressed objects within 47 object streams
