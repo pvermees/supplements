@@ -1,7 +1,7 @@
 rm(list=ls())
 graphics.off()
 
-## Figure 1 ##
+## Figure 1a ##
 
 nr <- 3
 nc <- 4
@@ -54,7 +54,7 @@ for (i in 1:nr){
 }
 dev.copy2pdf(file='output/type1.pdf',width=6,height=4)
 
-## Figure 2 ##
+## Figure 1b ##
 
 graphics.off()
 
@@ -101,7 +101,7 @@ legend('topleft',legend='(b)',bty='n',xpd=NA,cex=1.7,inset=c(-0.14,-0.02))
 par(op)
 dev.copy2pdf(file='output/type2.pdf',width=6,height=4)
 
-## Figure 3 ##
+## Figure 2a ##
 
 set.seed(1)
 op <- par(mar=c(3.5,3,0.2,0.2),mgp=c(2,1,0),cex=0.8)
@@ -138,7 +138,7 @@ par(op)
 
 dev.copy2pdf(file='output/synthetic-ecdf.pdf',width=4,height=4)
 
-## Figure 4 ##
+## Figure 2b ##
 
 graphics.off()
 
