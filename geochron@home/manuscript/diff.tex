@@ -1,6 +1,51 @@
 \documentclass[gchron, manuscript]{copernicus}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL paper.tex      Sun Dec 14 17:58:32 2025
+%DIF ADD revision.tex   Sun Dec 14 18:02:08 2025
 
-\usepackage{hyperref,caption}
+%DIF < \usepackage{hyperref,caption}
+%DIF -------
+\usepackage{hyperref,caption,dirtree} %DIF > 
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
 
@@ -33,7 +78,7 @@
 \begin{abstract}
 Fission track thermochronology is based on the visual analysis of
 optical images. This visual process is prone to observer bias. Fission
-track datasets are currently reported as small data tables. The
+track datasets are currently reported as \DIFdelbegin \DIFdel{small data }\DIFdelend \DIFaddbegin \DIFadd{numerical summary }\DIFaddend tables. The
 interpretation of these tables requires a high degree of trust between
 the fission track analyst and the user of the data. geochron@home is
 software that removes this requirement of trust. It combines a
@@ -99,11 +144,15 @@ ocular lenses of a microscope to the computer screen
 \citep{gleadow2009, vanranst2019, gleadow2019}. Ongoing developments
 in artificial intelligence generate further opportunities to improve
 the throughput and accuracy of fission track data
-\citep{nachtergaele2020}. But despite the richness of the digital
-datasets produced by these novel tools, fission track data are still
-reported as small summary tables. These tables require an unnecessary
-degree of trust between the `producer' and `consumer' of the
-data.\medskip
+\DIFdelbegin \DIFdel{\mbox{%DIFAUXCMD
+\citep{nachtergaele2020}}\hskip0pt%DIFAUXCMD
+}\DIFdelend \DIFaddbegin \DIFadd{\mbox{%DIFAUXCMD
+\citep{nachtergaele2020,li2022,ren2023,boone2025}}\hskip0pt%DIFAUXCMD
+}\DIFaddend . But despite the
+richness of the digital datasets produced by these novel tools,
+fission track data are still reported as \DIFdelbegin \DIFdel{small }\DIFdelend \DIFaddbegin \DIFadd{numerical }\DIFaddend summary
+tables. These tables require an unnecessary degree of trust between
+the `producer' and `consumer' of the data.\medskip
 
 geochron@home is a free and open software platform that allows
 geochronologists to share their raw fission track data over the
@@ -158,7 +207,7 @@ broken down into five steps.
   each layer of the z-stack. Note that the raw microscope images are
   generally not stored as \texttt{.jpeg} files but in uncompressed
   \texttt{.czi} (for Zen Blue), \texttt{.tif} (for Fission Track
-  Studio) or \texttt{.nd2} (for Nikon/Track\emph{Flow})
+  Studio \DIFaddbegin \DIFadd{1 and 2}\DIFaddend ) or \texttt{.nd2} (for Nikon/Track\emph{Flow})
   formats. Conversion from these raw images to sequences of
   \texttt{.jpeg} files is done with a shell script using Imagemagick
   \citep{still2006}.\medskip
@@ -174,6 +223,39 @@ broken down into five steps.
   directory. Because Fission Track Studio stores its results in an
   \texttt{.xml} format, a second conversion script was created to
   translate those results into an equivalent \texttt{.json} format.
+  \DIFaddbegin \DIFadd{Both }\texttt{\DIFadd{.xml}} \DIFadd{and }\texttt{\DIFadd{.json}} \DIFadd{are extensible, providing a
+  mechanism to accommodate future updates of the metadata
+  (Section~\ref{sec:outlook}).}\medskip
+
+  \DIFadd{The directory structure can be summarised as follows:
+  }
+
+\dirtree{}
+\dirtree{%
+.1 geochron@home.
+.2 Project~1.
+.3 Sample~1.
+.4 Grain01.
+.5 rois.json.
+.5 Stack01.jpeg.
+.5 $\ldots$. 
+.5 StackNN.jpeg.
+.4 $\ldots$.
+.4 GrainMM.
+.5 rois.json.
+.5 Stack01.jpeg.
+.5 $\ldots$.
+.5 StackNN.jpeg.
+.3 $\ldots$.
+.3 Sample~n.
+.2 Project~2.
+.3 Sample~n+1.
+.3 $\ldots$.
+.3 Sample~n+k.
+.2 $\ldots$.
+.2 Project~m.
+}
+  \DIFaddend 
 
 \item Upload the data to the geochron@home platform. geochron@home is
   a Django web-app with a PostgreSQL database.  The database can be
@@ -193,7 +275,7 @@ broken down into five steps.
   virtual instrument acts as a front-end to geochron@home. It has a
   simple user interface with controls to zoom, pan and focus in or out
   of the digital image stack. Depending on the permissions granted to
-  the user by the administrator, the virtual microsocope offers a
+  the user by the administrator, the virtual \DIFdelbegin \DIFdel{microsocope }\DIFdelend \DIFaddbegin \DIFadd{microscope }\DIFaddend offers a
   number of different options.  Entry level `ordinary' users are only
   allowed to count tracks by clicking within a pre-defined `region of
   interest'. In contrast, `superusers' are allowed to define their own
@@ -202,15 +284,22 @@ broken down into five steps.
   submit the results to the server. They are then presented with a new
   set of images until all grains are counted.
 
-\item Post-processing. The fission track data can either be downloaded
+  \DIFaddbegin \DIFadd{The determination of who qualifies as a `superuser' is made by the
+  administrator of each geochron@home server. For the UCL server, this
+  role is held by the first author of this paper. Because the
+  geochron@home source code is free and open, anyone may set up and
+  administer their own server independently of the development team.
+}
+
+\DIFaddend \item Post-processing. The fission track data can either be downloaded
   as a flat data table of counts and areas, or as a \texttt{.json}
   file containing the locations of all the counted
   tracks. geochron@home does not provide any tools to post-process
   these files. They are meant to be passed on to other tools such as
   spreadsheet applications or IsoplotR \citep{vermeesch2018c}.
-  
+
 \end{enumerate}
-  
+
 The five-step workflow can be used for several applications, including
 (1) conventional fission track analysis; (2) archiving published
 fission track results; (3) building tutorials; and (4) crowd-sourcing
@@ -269,7 +358,7 @@ ROIs.\medskip
 The combined data plots of Figures~\ref{fig:AvP}b and c contain two
 sets of counts for 25 grains, with $\sum N_{1} = 686$ (PV) and $\sum
 N_{2} = 679$ (AC), and a weighted mean track density ratio
-$\hat{\rho}_{1}/\hat{\rho}_{1} = 0.94$ with relative standard error
+\DIFdelbegin \DIFdel{$\hat{\rho}_{1}/\hat{\rho}_{1} = 0.94$ }\DIFdelend \DIFaddbegin \DIFadd{$\hat{\rho}_{1}/\hat{\rho}_{2} = 0.94$ }\DIFaddend with relative standard error
 0.013. PV counted 600 tracks in those common areas $A_0$, of which 549
 were also counted by AC. Conversely, AC counted 622 tracks of which
 549 were also counted by PV. The ratio of the two analysts' track
@@ -283,7 +372,7 @@ AC.  The existence of `observer bias' is well documented
 \citep{tamer2025}.  It is one of the reasons why fission track
 analysis is often done relative to age standards: observer bias does
 not have to be a problem provided that it is consistent between
-grains, and between samples.\medskip
+\DIFdelbegin \DIFdel{grains, and between samples }\DIFdelend \DIFaddbegin \DIFadd{samples and standards}\DIFaddend .\medskip
 
 %\begin{figure}[!ht]
 { \centering \includegraphics[width=\linewidth]{AvP.pdf}
@@ -410,19 +499,19 @@ The raw counts for the 68 students are given in
 Table~\ref{tab:crowdtable} and Figure~\ref{fig:stripchart}, for the
 same selection of 25 grains that were analysed by AC and PV in
 Section~\ref{sec:private}, along with corresponding counts made by
-PV. Everyone counted tracks in the same ROIs. Variation between the
-mean values is to be expected because of the differing numbers of
-tracks due to varying areas and U contents of the grains. But the
-variation between counts within grains (shown by the standard
-deviations in Figure~\ref{fig:stripchart}) is due entirely to
-differences between the students' recognising and counting exactly the
-same tracks. These standard deviations increase with the mean number
-of tracks and are considerable in size, being on average about 40\% of
-the mean. With expert trained counters one would expect much smaller
-differences between counts.  Furthermore, the vast majority of
-students counted fewer tracks than PV did, often many fewer, and on
-two occasions someone counted no tracks at all. PV's count is always
-above the students' median and nearly always above the upper quartile
+PV. Everyone \DIFdelbegin \DIFdel{counted tracks in }\DIFdelend \DIFaddbegin \DIFadd{analysed }\DIFaddend the same ROIs. Variation between the mean values
+is to be expected because of the differing numbers of tracks due to
+varying areas and U contents of the grains. But the variation between
+counts within grains (shown by the standard deviations in
+Figure~\ref{fig:stripchart}) is due entirely to differences between
+the students' recognising and counting exactly the same tracks. These
+standard deviations increase with the mean number of tracks and are
+considerable in size, being on average about 40\% of the mean. With
+expert trained counters one would expect much smaller differences
+between counts.  Furthermore, the vast majority of students counted
+fewer tracks than PV did, often many fewer, and on two occasions
+someone counted no tracks at all. PV's count is always above the
+students' median and nearly always above the upper quartile
 (Figure~\ref{fig:stripchart}).\medskip
 
 The rightmost three columns of Table~\ref{tab:crowdtable} contain
@@ -580,7 +669,16 @@ presented in this publication.  We encourage other geochronologists to
 follow this example.  FAIR workflows promise to address the
 reproducibility crisis in science \citep{miyakawa2020}.\medskip
 
-geochron@home's rich archive of raw data can be reanalysed in
+\DIFaddbegin \DIFadd{Increased transparency will also introduce new challenges. As FAIR
+data practices become more widespread, the fission track community
+will need to define how extensively reviewers are expected to
+re-examine primary imagery and what level of discrepancy constitutes
+sufficient grounds for rejecting or disputing raw counts. Although
+these issues are beyond the scope of the present paper, they will
+require community-wide discussion as FAIR data reporting and review
+become more widely adopted.}\medskip
+
+\DIFaddend geochron@home's rich archive of raw data can be reanalysed in
 the future. We anticipate that the adoption of FAIR data processing
 workflows will open up new research opportunities. For example,
 archived pairs of peer-reviewed fission track images and counts could
@@ -589,13 +687,19 @@ algorithms. Conversely, it is also possible that future improvements
 in fission track images analysis will be used to update the count data
 for published datasets, improving their accuracy.\medskip
 
-Another advantage of the geochron@home workflow is the separation of
-image acquisition and image analysis. This separation reduces the
-hardware requirements for fission track geochronology. It opens up the
-possibility to share resources. State-of-the-art digital microscopes
-are expensive. Using geochron@home, a single microscope can serve
-multiple users and make fission track analysis more
-affordable.\medskip
+Another advantage of the geochron@home workflow is the \DIFdelbegin \DIFdel{separation of
+}\DIFdelend \DIFaddbegin \DIFadd{clear
+separation between }\DIFaddend image acquisition and image analysis. This
+separation \DIFdelbegin \DIFdel{reduces }\DIFdelend \DIFaddbegin \DIFadd{lowers }\DIFaddend the hardware requirements for fission track
+geochronology \DIFdelbegin \DIFdel{. It opens up the
+possibility to share resources. State-of-the-art }\DIFdelend \DIFaddbegin \DIFadd{and enables resource sharing. Because state-of-the-art
+}\DIFaddend digital microscopes are expensive\DIFdelbegin \DIFdel{. Using }\DIFdelend \DIFaddbegin \DIFadd{, }\DIFaddend geochron@home \DIFaddbegin \DIFadd{makes it possible to
+envision a model in which sample preparation and scanning are
+outsourced to a centralized facility, while individual scientists
+analyze their own data online. In this way}\DIFaddend , a single microscope \DIFdelbegin \DIFdel{can serve multiple users and make }\DIFdelend \DIFaddbegin \DIFadd{could
+serve multiple laboratories, making }\DIFaddend fission track analysis more
+\DIFaddbegin \DIFadd{accessible and }\DIFaddend affordable.
+\medskip
 
 The fission track method has always been a test bed for new
 geochronological developments.  Because fission track data are
@@ -650,13 +754,17 @@ of science.
 
 \begin{acknowledgements}
 This research has been supported by the Natural Environment Research
-Council (grant no. NE/T001518/1), awarded to Pieter Vermeesch. We would like
-to thank the students of GEOL0017 (`Isotope Geology') for their contribution
-to the crowd-sourcing experiment of Section~\ref{sec:crowdsourcing}.
+Council (grant no. NE/T001518/1), awarded to Pieter Vermeesch. We
+would like to thank \DIFaddbegin \DIFadd{Murat Tamer and Ling Cheung for their detailed and
+constructive reviews, and }\DIFaddend the students of GEOL0017 (`Isotope Geology')
+for their contribution to the crowd-sourcing experiment of
+Section~\ref{sec:crowdsourcing}.
 \end{acknowledgements}
 
-\begin{thebibliography}{17}
-\providecommand{\natexlab}[1]{#1}
+\DIFdelbegin %DIFDELCMD < \begin{thebibliography}{17}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{thebibliography}{20}
+\DIFaddend \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -671,9 +779,18 @@ Abbott, B.~P., Abbott, R., Abbott, T.~D., Abernathy, M.~R., Acernese, F.,
   Observation of gravitational waves from a binary black hole merger, {Physical
   Review Letters}, 116, 061\,102, 2016.
 
-\bibitem[{Donelick(1993)}]{donelick1993}
+\DIFaddbegin \bibitem[{Boone et~al.(2025)Boone, Chung, Faux, Nattala, Church, Jiang,
+  McMillan, Jones, Liu, Jiang et~al.}]{boone2025}
+\DIFadd{Boone, S., Chung, L., Faux, N., Nattala, U., Church, T., Jiang, C., McMillan,
+  M., Jones, S., Liu, D., Jiang, H., et~al.: }{\DIFadd{PREPRINT: AI-based approach for
+  constraining the thermal evolution of Earth's upper crust through automated
+  digital fission-track analysis}}\DIFadd{, under consideration by Computers \&
+  Geosciences, 2025.
+}
+
+\DIFaddend \bibitem[{Donelick(1993)}]{donelick1993}
 Donelick, R.~A.: Method of fission track analysis utilizing bulk chemical
-  etching of apatite, uS Patent 5,267,274, 1993.
+  etching of apatite, \DIFdelbegin \DIFdel{uS }\DIFdelend \DIFaddbegin {\DIFadd{US }\DIFaddend Patent 5,267,274\DIFaddbegin }\DIFaddend , 1993.
 
 \bibitem[{Galton(1907)}]{galton1907a}
 Galton, F.: Vox Populi, Nature, 75, 450--451, 1907.
@@ -703,7 +820,13 @@ Guo, C., Zhang, Z., Lease, R., Malus{\`a}, M.~G., Chew, D., Lu, H., Wu, L.,
   northeastern Tibetan Plateau}, Geophysical Research Letters, 52,
   e2024GL113\,157, 2025.
 
-\bibitem[{Miller et~al.(1985)Miller, Duddy, Green, Hurford, and
+\DIFaddbegin \bibitem[{Li et~al.(2022)Li, Xu, Su, and Yang}]{li2022}
+\DIFadd{Li, R., Xu, Z., Su, C., and Yang, R.: Automatic identification of semi-tracks
+  on apatite and mica using a deep learning method, Computers \& Geosciences,
+  162, 105\,081, 2022.
+}
+
+\DIFaddend \bibitem[{Miller et~al.(1985)Miller, Duddy, Green, Hurford, and
   Naeser}]{miller1985}
 Miller, D.~S., Duddy, I.~R., Green, P.~F., Hurford, A.~J., and Naeser, C.~W.:
   Results of interlaboratory comparison of fission-track age standards:
@@ -719,7 +842,13 @@ Nachtergaele, S. and De~Grave, J.: {AI-Track-tive: automated fission track
   recognition using computer vision (Artificial Intelligence)}, Geochronology
   Discussions, 2020, 1--12, 2020.
 
-\bibitem[{Still(2006)}]{still2006}
+\DIFaddbegin \bibitem[{Ren et~al.(2023)Ren, Li, Xiao, Yang, and Wang}]{ren2023}
+\DIFadd{Ren, Z., Li, S., Xiao, P., Yang, X., and Wang, H.: Artificial intelligent
+  identification of apatite fission tracks based on machine learning, Machine
+  Learning: Science and Technology, 4, 045\,039, 2023.
+}
+
+\DIFaddend \bibitem[{Still(2006)}]{still2006}
 Still, M.: The Definitive Guide to ImageMagick, Definitive Guide Series,
   Springer, 1st edn., ISBN 978-1-59059-590-9,
   \urlprefix\url{https://www.apress.com/gp/book/9781590595909}, a comprehensive
@@ -760,6 +889,7 @@ Wilkinson, M.~D., Dumontier, M., Aalbersberg, I.~J., Appleton, G., Axton, M.,
 \end{thebibliography}
 
 %\bibliographystyle{copernicus}
-%\bibliography{biblio.bib}
+%DIF < \bibliography{biblio.bib}
+%DIF > \bibliography{/home/pvermees/Dropbox/biblio.bib}
 
 \end{document}

@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2025/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: revision.aux
+The style file: copernicus.bst
+Database file #1: /home/pvermees/Dropbox/biblio.bib
+I was expecting a `,' or a `}'---line 1355 of file /home/pvermees/Dropbox/biblio.bib
+ :   
+ :   doi={10.22541/au.175856991.11941871/v1}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 20 entries,
+            2932 wiz_defined-function locations,
+            1136 strings with 13166 characters,
+and the built_in function-call counts, 17931 in all, are:
+= -- 1839
+> -- 788
+< -- 12
++ -- 343
+- -- 251
+* -- 1127
+:= -- 1948
+add.period$ -- 20
+call.type$ -- 20
+change.case$ -- 126
+chr.to.int$ -- 21
+cite$ -- 60
+duplicate$ -- 1709
+empty$ -- 987
+format.name$ -- 294
+if$ -- 3535
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 220
+newline$ -- 69
+num.names$ -- 81
+pop$ -- 705
+preamble$ -- 1
+purify$ -- 123
+quote$ -- 0
+skip$ -- 1096
+stack$ -- 0
+substring$ -- 670
+swap$ -- 1378
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 177
+warning$ -- 0
+while$ -- 97
+width$ -- 0
+write$ -- 230
+(There was 1 error message)
