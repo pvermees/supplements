@@ -1,6 +1,6 @@
 \documentclass[gchron, manuscript]{copernicus}
 
-\usepackage{hyperref,caption,dirtree}
+\usepackage{hyperref,caption}
 
 \begin{document}
 
@@ -96,10 +96,10 @@ estimate parent-daughter ratios, fission tracks are observed under an
 optical microscope and counted by a human observer.  In recent years,
 digital microscopy has moved fission track data acquisition from the
 ocular lenses of a microscope to the computer screen
-\citep{gleadow2009, vanranst2019, gleadow2019}. Ongoing developments
+\citep{gleadow2009, gleadow2019, vanranst2020}. Ongoing developments
 in artificial intelligence generate further opportunities to improve
 the throughput and accuracy of fission track data
-\citep{nachtergaele2020,li2022,ren2023,boone2025}. But despite the
+\citep{nachtergaele2021,li2022,ren2023,boone2025}. But despite the
 richness of the digital datasets produced by these novel tools,
 fission track data are still reported as numerical summary
 tables. These tables require an unnecessary degree of trust between
@@ -148,7 +148,7 @@ broken down into five steps.
   Blue software.  However, geochron@home can also accommodate imagery
   from other platforms, such as Fission Track Studio
   \citep[Zeiss;][]{gleadow2009} and Track\emph{Flow}
-  \citep[Nikon;][]{vanranst2019}.
+  \citep[Nikon;][]{vanranst2020}.
 
 \item Prepare the z-stacks for uploading to the geochron@home
   database. This database requires that the images are organised as a
@@ -177,34 +177,6 @@ broken down into five steps.
   Both \texttt{.xml} and \texttt{.json} are extensible, providing a
   mechanism to accommodate future updates of the metadata
   (Section~\ref{sec:outlook}).\medskip
-
-  The directory structure can be summarised as follows:
-  
-\dirtree{}
-\dirtree{%
-.1 geochron@home.
-.2 Project~1.
-.3 Sample~1.
-.4 Grain01.
-.5 rois.json.
-.5 Stack01.jpeg.
-.5 $\ldots$. 
-.5 StackNN.jpeg.
-.4 $\ldots$.
-.4 GrainMM.
-.5 rois.json.
-.5 Stack01.jpeg.
-.5 $\ldots$.
-.5 StackNN.jpeg.
-.3 $\ldots$.
-.3 Sample~n.
-.2 Project~2.
-.3 Sample~n+1.
-.3 $\ldots$.
-.3 Sample~n+k.
-.2 $\ldots$.
-.2 Project~m.
-}
   
 \item Upload the data to the geochron@home platform. geochron@home is
   a Django web-app with a PostgreSQL database.  The database can be
@@ -425,7 +397,33 @@ dataset was parsed into separate data files --- one for each student
 exercise.\medskip
 
 \begin{small}
-  \input{../output/shortcrowdtable.txt}\\
+\begin{tabular}{c|c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c|c@{~}c@{~}c@{~}}
+\multicolumn{29}{c}{grain ID}\cr
+user & 1 & 41 & 32 & 3 & 4 & 10 & 28 & 31 & 11 & 30 & 22 & 34 & 12 & 36 & 27 & 6 & 2 & 15 & 8 & 38 & 7 & 25 & 23 & 39 & 43 & $n_g$ & $r_p$ & $s_p$ \cr\hline
+PV & 9 & 10 & 11 & 12 & 14 & 14 & 18 & 19 & 21 & 21 & 22 & 22 & 25 & 25 & 27 & 28 & 32 & 35 & 37 & 44 & 46 & 50 & 52 & 63 & 66 & 25 & 1.00 & .00 \cr\hline
+255 &  &  & 15 & 16 & 18 & 17 & 25 & 22 &  &  & 23 & 26 &  & 25 & 31 &  & 31 & 39 & 40 &  & 37 & 63 & 48 & 65 & 67 & 18 & 1.08 & .84 \cr
+271 & 9 & 11 & 14 & 14 & 16 & 15 & 23 & 18 & 22 & 22 & 23 & 19 & 28 & 22 & 27 & 29 & 31 & 35 & 34 & 41 & 46 & 56 & 54 & 52 & 56 & 25 & .99 & .61 \cr
+215 & 10 & 10 & 12 &  & 9 &  & 25 & 20 & 19 & 23 & 22 & 22 &  &  &  & 35 & 30 & 34 & 36 & 34 & 56 &  & 44 & 62 & 62 & 19 & .99 & .85 \cr
+236 & 9 & 9 &  &  &  &  & 18 &  & 19 & 18 & 21 & 20 & 27 & 23 & 28 & 30 &  & 38 &  & 41 & 39 & 55 &  &  &  & 15 & .98 & .49 \cr
+229 & 8 &  &  & 15 & 11 & 17 & 26 &  & 21 &  & 30 &  & 36 & 24 & 35 &  & 31 &  & 30 & 29 &  & 55 & 50 & 55 & 30 & 17 & .95 & 1.62 \cr
+278 & 11 & 9 & 13 &  & 9 & 17 &  & 20 & 19 & 27 &  & 20 &  & 22 & 28 &  &  &  & 37 &  & 39 & 44 &  & 52 &  & 15 & .94 & .77 \cr
+216 & 8 & 11 &  &  &  & 15 &  & 20 & 22 &  & 20 & 17 &  & 20 & 27 &  & 31 &  & 34 & 39 & 36 &  &  & 57 &  & 14 & .91 & .51 \cr
+249 & 7 & 10 & 11 & 9 & 14 & 15 & 21 & 18 &  & 19 & 21 & 21 & 27 & 27 & 26 &  & 26 & 27 & 34 & 41 & 35 & 45 & 42 & 42 & 54 & 23 & .88 & .68 \cr
+246 & 9 & 10 & 10 & 16 & 10 & 15 & 18 & 16 & 21 & 17 & 22 & 20 & 24 & 21 & 28 & 29 & 25 & 30 & 37 & 36 & 29 & 46 & 42 & 46 & 58 & 25 & .88 & .70 \cr
+241 & 7 & 10 &  &  &  & 16 & 17 & 19 &  &  &  &  &  & 26 & 27 & 26 & 28 & 30 &  & 32 & 36 &  & 36 &  & 58 & 14 & .87 & .67 \cr
+$\vdots$ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \cr
+262 & 6 & 7 & 7 & 8 & 4 & 15 & 7 & 9 & 12 & 14 & 8 & 17 & 9 & 13 & 3 & 17 & 11 & 18 & 14 & 17 & 7 & 15 & 23 & 6 & 15 & 25 & .39 & 1.13 \cr
+266 &  &  & 5 & 6 &  & 9 &  &  &  & 8 &  &  & 10 &  & 14 & 11 & 13 & 11 & 14 &  & 13 &  &  & 14 & 24 & 13 & .36 & .56 \cr
+275 & 4 & 7 & 12 & 8 & 2 & 7 & 5 & 12 & 12 & 10 & 15 & 15 & 2 & 9 & 13 & 5 & 8 & 9 & 6 & 12 & 4 & 6 & 26 & 17 & 32 & 25 & .36 & 1.14 \cr
+268 & 2 & 4 & 6 & 4 & 3 & 8 & 4 & 4 & 7 & 5 & 5 & 8 & 9 & 6 & 13 & 10 & 13 & 12 & 16 & 16 & 6 & 17 & 19 & 20 & 12 & 25 & .32 & .55 \cr
+244 &  & 5 & 3 &  & 4 &  &  &  & 6 & 12 & 6 &  &  & 4 &  & 13 &  &  &  &  & 10 & 9 &  & 23 & 17 & 12 & .30 & .65 \cr
+232 & 4 & 4 & 5 & 6 & 2 & 6 & 4 & 4 & 6 & 8 & 7 & 6 & 8 & 10 & 10 & 13 & 8 & 10 & 7 & 7 & 14 & 12 & 18 & 17 & 17 & 25 & .29 & .46 \cr
+283 & 3 & 5 & 5 & 6 & 0 & 15 & 8 & 5 & 6 & 5 & 6 & 5 & 5 & 8 & 5 & 4 & 10 & 6 & 5 & 5 & 5 & 8 & 6 & 9 & 6 & 25 & .21 & .88 \cr
+228 &  &  & 3 & 2 &  & 4 & 4 & 3 & 4 & 4 &  & 6 & 4 & 4 &  & 6 & 4 &  & 8 & 8 & 12 & 8 & 8 &  & 6 & 18 & .18 & .30 \cr
+253 & 1 & 1 &  &  & 2 & 5 & 2 &  &  & 6 & 4 & 2 & 3 & 3 & 3 &  & 4 & 3 &  & 7 & 5 &  & 5 &  &  & 16 & .13 & .32 \cr
+245 & 1 & 1 &  &  & 3 & 2 & 2 & 3 & 2 & 4 &  & 1 & 4 & 0 &  & 4 & 6 & 3 & 4 & 3 & 3 & 7 &  & 4 & 5 & 20 & .10 & .28 \cr\hline
+$r_m$ & .89 & .80 & .82 & .75 & .57 & .86 & .78 & .79 & .62 & .71 & .73 & .68 & .64 & .62 & .70 & .64 & .61 & .63 & .64 & .50 & .43 & .56 & .54 & .44 & .57 & ~ & ~ & ~ \cr
+\end{tabular}\\
 \end{small}
 \captionof{table}{Counts of fission tracks in the same ROIs of 25
   grains made by PV and 68 students. Only 20 students are shown due to
@@ -578,7 +576,7 @@ in progress. Planned improvements include:
   of Table~\ref{tab:crowdtable}).
 \item Machine learning. Data science is experiencing an artificial
   intelligence (AI) revolution that has already started to transform
-  the fission track method \citep{nachtergaele2020}.  Convolutional
+  the fission track method \citep{nachtergaele2021}.  Convolutional
   neural networks must be trained with example data. geochron@home is
   ideally suited for this task. Section~\ref{sec:crowdsourcing} showed
   how the opinion of multiple fission track analysts can be combined
@@ -665,10 +663,10 @@ geochron@home currently only stores images and counts. This is enough
 to reproduce the results of fission track studies using the external
 detector method, but not for LA-ICP-MS based data. FAIR data
 processing of LA-ICP-MS data requires a new generation of mass
-spectrometer data reduction software. We are currently working on this
-\citep{vermeesch2025b}. The development of FAIR ICP-MS data pipelines
-will not only benefit fission track analysis but other chronometers as
-well, such as in-situ U--Pb, Rb--Sr and Lu--Hf.\medskip
+spectrometer data reduction software.  The development of such FAIR
+ICP-MS data pipelines will not only benefit fission track analysis but
+other chronometers as well, such as in-situ U--Pb, Rb--Sr and
+Lu--Hf.\medskip
 
 With the establishment of FAIR data, geochronology will be well placed
 to avoid the reproducibility problems that have plagued other fields
@@ -706,7 +704,7 @@ for their contribution to the crowd-sourcing experiment of
 Section~\ref{sec:crowdsourcing}.
 \end{acknowledgements}
 
-\begin{thebibliography}{20}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -715,115 +713,114 @@ Section~\ref{sec:crowdsourcing}.
   \providecommand{\doi}{https://doi.org/\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
-\bibitem[{Abbott et~al.(2016)Abbott, Abbott, Abbott, Abernathy, Acernese,
-  Ackley, Adams, Adams, Addesso, Adhikari et~al.}]{abbott2016}
-Abbott, B.~P., Abbott, R., Abbott, T.~D., Abernathy, M.~R., Acernese, F.,
-  Ackley, K., Adams, C., Adams, T., Addesso, P., Adhikari, R.~X., et~al.:
+\bibitem[{Abbott and {LIGO Scientific Collaboration and Virgo
+  Collaboration}(2016)}]{abbott2016}
+Abbott, B.~P. and {LIGO Scientific Collaboration and Virgo Collaboration}:
   Observation of gravitational waves from a binary black hole merger, {Physical
-  Review Letters}, 116, 061\,102, 2016.
+  Review Letters}, 116, 061\,102, \doi{10.1103/PhysRevLett.116.061102}, 2016.
 
 \bibitem[{Boone et~al.(2025)Boone, Chung, Faux, Nattala, Church, Jiang,
-  McMillan, Jones, Liu, Jiang et~al.}]{boone2025}
+  McMillan, Jones, Liu, Jiang, Ehinger, Drummond, Kohn, and
+  Gleadow}]{boone2025}
 Boone, S.~C., Chung, L., Faux, N., Nattala, U., Church, T., Jiang, C.,
-  McMillan, M., Jones, S., Liu, D., Jiang, H., et~al.: Raising the Bar: Deep
-  Learning on Comprehensive Database Sets New Benchmark for Automated
-  Fission-Track Detection, Computers \& Geosciences, p. 106096, 2025.
+  McMillan, M., Jones, S., Liu, D., Jiang, H., Ehinger, K., Drummond, T., Kohn,
+  B., and Gleadow, A.: Raising the Bar: Deep Learning on Comprehensive Database
+  Sets New Benchmark for Automated Fission-Track Detection, Computers \&
+  Geosciences, p. 106096, \doi{10.1016/j.cageo.2025.106096}, 2025.
 
 \bibitem[{Donelick(1993)}]{donelick1993}
 Donelick, R.~A.: Method of fission track analysis utilizing bulk chemical
   etching of apatite, {US Patent 5,267,274}, 1993.
 
 \bibitem[{Galton(1907)}]{galton1907a}
-Galton, F.: Vox Populi, Nature, 75, 450--451, 1907.
+Galton, F.: Vox Populi, Nature, 75, 450--451, \doi{10.1038/075450a0}, 1907.
 
 \bibitem[{Gleadow(2019)}]{gleadow2019}
 Gleadow, A.: {Future developments in fission track thermochronology}, in:
   {Fission track thermochronology and its application to geology}, edited by
-  {Malus\`{a}, Marco and Fitzgerald, P.}, chap.~4, {Springer}, 2019.
+  {Malus\`{a}, Marco and Fitzgerald, P.}, chap.~4, {Springer},
+  \doi{10.1007/978-3-319-89421-8_4}, 2019.
 
 \bibitem[{Gleadow et~al.(2009)Gleadow, Gleadow, Belton, Kohn, Krochmal, and
   Brown}]{gleadow2009}
 Gleadow, A.~J., Gleadow, S.~J., Belton, D.~X., Kohn, B.~P., Krochmal, M.~S.,
   and Brown, R.~W.: Coincidence mapping -- a key strategy for the automatic
   counting of fission tracks in natural minerals, Geological Society, London,
-  Special Publications, 324, 25--36, 2009.
+  Special Publications, 324, 25--36, \doi{10.1144/SP324.2}, 2009.
 
 \bibitem[{Green(1985)}]{green1985b}
 Green, P.: Comparison of zeta calibration baselines for fission-track dating of
   apatite, zircon and sphene, Chemical Geology: Isotope Geoscience Section, 58,
-  1--22, 1985.
+  1--22, \doi{10.1016/0168-9622(85)90023-5}, 1985.
 
 \bibitem[{Guo et~al.(2025)Guo, Zhang, Lease, Malus{\`a}, Chew, Lu, Wu, Xiang,
-  Wang, Grasemann et~al.}]{guo2025}
+  Wang, Grasemann, and Xiao}]{guo2025}
 Guo, C., Zhang, Z., Lease, R., Malus{\`a}, M.~G., Chew, D., Lu, H., Wu, L.,
-  Xiang, D., Wang, N., Grasemann, B., et~al.: {Apatite geo-thermochronology and
-  geochemistry constrain oligocene-miocene growth and geodynamics of the
-  northeastern Tibetan Plateau}, Geophysical Research Letters, 52,
-  e2024GL113\,157, 2025.
+  Xiang, D., Wang, N., Grasemann, B., and Xiao, W.: {Apatite
+  geo-thermochronology and geochemistry constrain oligocene-miocene growth and
+  geodynamics of the northeastern Tibetan Plateau}, Geophysical Research
+  Letters, 52, e2024GL113\,157, \doi{https://doi.org/10.1029/2024GL113157},
+  2025.
 
 \bibitem[{Li et~al.(2022)Li, Xu, Su, and Yang}]{li2022}
 Li, R., Xu, Z., Su, C., and Yang, R.: Automatic identification of semi-tracks
   on apatite and mica using a deep learning method, Computers \& Geosciences,
-  162, 105\,081, 2022.
+  162, 105\,081, \doi{10.1016/j.cageo.2022.105081}, 2022.
 
 \bibitem[{Miller et~al.(1985)Miller, Duddy, Green, Hurford, and
   Naeser}]{miller1985}
 Miller, D.~S., Duddy, I.~R., Green, P.~F., Hurford, A.~J., and Naeser, C.~W.:
   Results of interlaboratory comparison of fission-track age standards:
   fission-track workshop -- 1984, Nuclear Tracks and Radiation Measurements,
-  10, 383--391, 1985.
+  10, 383--391, \doi{10.1016/0735-245X(85)90127-9}, 1985.
 
 \bibitem[{Miyakawa(2020)}]{miyakawa2020}
 Miyakawa, T.: No raw data, no science: another possible source of the
-  reproducibility crisis, 2020.
+  reproducibility crisis, \doi{10.1186/s13041-020-0552-2}, 2020.
 
-\bibitem[{Nachtergaele and De~Grave(2020)}]{nachtergaele2020}
-Nachtergaele, S. and De~Grave, J.: {AI-Track-tive: automated fission track
-  recognition using computer vision (Artificial Intelligence)}, Geochronology
-  Discussions, 2020, 1--12, 2020.
+\bibitem[{Nachtergaele and De~Grave(2021)}]{nachtergaele2021}
+Nachtergaele, S. and De~Grave, J.: {AI-Track-tive: open-source software for
+  automated recognition and counting of surface semi-tracks using computer
+  vision (artificial intelligence)}, Geochronology, 3, 383--394,
+  \doi{10.5194/gchron-3-383-2021}, 2021.
 
 \bibitem[{Ren et~al.(2023)Ren, Li, Xiao, Yang, and Wang}]{ren2023}
 Ren, Z., Li, S., Xiao, P., Yang, X., and Wang, H.: Artificial intelligent
   identification of apatite fission tracks based on machine learning, Machine
-  Learning: Science and Technology, 4, 045\,039, 2023.
+  Learning: Science and Technology, 4, 045\,039,
+  \doi{10.1088/2632-2153/ad0e17}, 2023.
 
 \bibitem[{Still(2006)}]{still2006}
 Still, M.: The Definitive Guide to ImageMagick, Definitive Guide Series,
-  Springer, 1st edn., ISBN 978-1-59059-590-9,
-  \urlprefix\url{https://www.apress.com/gp/book/9781590595909}, a comprehensive
-  guide to ImageMagick, covering installation, usage, and scripting., 2006.
+  Springer, 1st edn., ISBN 978-1-59059-590-9, a comprehensive guide to
+  ImageMagick, covering installation, usage, and scripting., 2006.
 
 \bibitem[{Tamer et~al.(2025)Tamer, Chung, Ketcham, and Gleadow}]{tamer2025}
 Tamer, M.~T., Chung, L., Ketcham, R.~A., and Gleadow, A. J.~W.: The need for
   fission-track data transparency and sharing, Geochronology, 7, 45--58,
   \doi{10.5194/gchron-7-45-2025}, 2025.
 
-\bibitem[{Van~Ranst et~al.(2019)Van~Ranst, Baert, Fernandes, and
-  De~Grave}]{vanranst2019}
-Van~Ranst, G., Baert, P., Fernandes, A.~C., and De~Grave, J.: Technical note:
-  TRACK\textit{Flow}, a new versatile microscope system for fission track
-  analysis, Geochronology Discussions, 2019, 1--25,
-  \doi{10.5194/gchron-2019-13}, 2019.
+\bibitem[{Van~Ranst et~al.(2020)Van~Ranst, Baert, Fernandes, and
+  De~Grave}]{vanranst2020}
+Van~Ranst, G., Baert, P., Fernandes, A.~C., and De~Grave, J.: Nikon--TRACKFlow,
+  a new versatile microscope system for fission track analysis, Geochronology,
+  2, 93--99, \doi{10.5194/gchron-2019-13}, 2020.
 
-\bibitem[{Vermeesch(2018)}]{vermeesch2018c}
+\bibitem[{Vermeesch(2018{\natexlab{a}})}]{vermeesch2018c}
 Vermeesch, P.: {\texttt{IsoplotR}: a free and open toolbox for geochronology},
-  Geoscience Frontiers, 9, 1479--1493, 2018.
+  Geoscience Frontiers, 9, 1479--1493, \doi{10.1016/j.gsf.2018.04.001},
+  2018{\natexlab{a}}.
 
-\bibitem[{Vermeesch(2019)}]{vermeesch2019b}
-Vermeesch, P.: Statistics for fission-track thermochronology, Fission-track
-  thermochronology and its application to geology, pp. 109--122, 2019.
+\bibitem[{Vermeesch(2018{\natexlab{b}})}]{vermeesch2019b}
+Vermeesch, P.: Statistics for fission-track thermochronology, in: Fission track
+  thermochronology and its application to geology, edited by Malus\'{a}, M. and
+  Fitzgerald, P., chap.~6, Springer, \doi{10.1007/978-3-319-89421-8_6},
+  2018{\natexlab{b}}.
 
-\bibitem[{Vermeesch(2025)}]{vermeesch2025b}
-Vermeesch, P.: {KJ: A Julia package for physics-based LA-ICP-MS data
-  processing}, in: Goldschmidt Conference, Prague, 2025.
-
-\bibitem[{Wilkinson et~al.(2016)Wilkinson, Dumontier, Aalbersberg, Appleton,
-  Axton, Baak, Blomberg, Boiten, da~Silva~Santos, Bourne
-  et~al.}]{wilkinson2016}
-Wilkinson, M.~D., Dumontier, M., Aalbersberg, I.~J., Appleton, G., Axton, M.,
-  Baak, A., Blomberg, N., Boiten, J.-W., da~Silva~Santos, L.~B., Bourne, P.~E.,
-  et~al.: {The FAIR Guiding Principles for scientific data management and
-  stewardship}, Scientific data, 3, 1--9, 2016.
+\bibitem[{Wilkinson and {52 others}(2016)}]{wilkinson2016}
+Wilkinson, M.~D. and {52 others}: {The FAIR Guiding Principles for scientific
+  data management and stewardship}, Scientific data, 3, 1--9,
+  \doi{10.1038/sdata.2016.18}, 2016.
 
 \end{thebibliography}
 
