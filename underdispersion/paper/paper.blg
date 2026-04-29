@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper.aux
+The style file: abbrvplainnat.bst
+Database file #1: biblio.bib
+Warning--empty journal in vermeesch2026b
+You've used 46 entries,
+            2761 wiz_defined-function locations,
+            902 strings with 13737 characters,
+and the built_in function-call counts, 23057 in all, are:
+= -- 2056
+> -- 1473
+< -- 29
++ -- 503
+- -- 457
+* -- 1998
+:= -- 3640
+add.period$ -- 155
+call.type$ -- 46
+change.case$ -- 241
+chr.to.int$ -- 46
+cite$ -- 93
+duplicate$ -- 963
+empty$ -- 1741
+format.name$ -- 521
+if$ -- 4727
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 50
+newline$ -- 254
+num.names$ -- 186
+pop$ -- 516
+preamble$ -- 1
+purify$ -- 241
+quote$ -- 0
+skip$ -- 750
+stack$ -- 0
+substring$ -- 968
+swap$ -- 71
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 486
+warning$ -- 1
+while$ -- 208
+width$ -- 0
+write$ -- 632
+(There was 1 warning)
