@@ -1,0 +1,427 @@
+gts2020_id,ref,age_type,comment,MSWD,df,comment
+Pg36,Sahy et al. (2017),206Pb/238U,wtd mean,0.29,4,
+Pg35,Sahy et al. (2017),206Pb/238U,wtd mean,0.7,5,
+Pg34,Sahy et al. (2017),206Pb/238U,wtd mean,0.45,3,
+Pg33,Sahy et al. (2017),206Pb/238U,wtd mean,0.49,2,
+Pg32,Sahy et al. (2017),206Pb/238U,wtd mean,1.58,2,
+Pg31,Sahy et al. (2017),206Pb/238U,wtd mean,0.41,6,
+Pg30,Sahy et al. (2017),206Pb/238U,wtd mean,0.93,6,
+Pg29,Sahy et al. (2017),206Pb/238U,wtd mean,1.05,4,
+Pg28,Sahy et al. (2017),206Pb/238U,wtd mean,1.09,5,
+Pg27,Sahy et al. (2017),206Pb/238U,wtd mean,0.86,5,
+Pg26,Walsh et al. (1996),40Ar/39Ar,,,,No data available
+Pg25,Berggren et al. (1995),40Ar/39Ar,,,,Paywall
+Pg24,Hiza (1999),40Ar/39Ar,,,,Unpublished PhD thesis
+Pg23,Smith et al. (2008),40Ar/39Ar,wtd mean,0.29,11,
+Pg22,Machlus et al. (2015),206Pb/238U,wtd mean,0.59,5,
+Pg21,Smith et al. (2004),40Ar/39Ar,wtd mean,0.74,15,
+Pg20,Storey et al. (2007),40Ar/39Ar,wtd mean,0.72,37,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg19,Charles et al. (2011),206Pb/238U,wtd mean,0.45,4,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg18,Secord et al. (2006),40Ar/39Ar,wtd mean,0.36,22,
+Pg17,Clyde et al. (2016),206Pb/238U,wtd mean,0.73,7,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg16,Clyde et al. (2016),206Pb/238U,wtd mean,0.54,5,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg15,Sprain et al. (2015),40Ar/39Ar,wtd mean,0.86,172,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg14,Sprain et al. (2015),40Ar/39Ar,wtd mean,1.2,174,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg13,Sprain et al. (2015),40Ar/39Ar,wtd mean,0.94,67,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg12,Sprain et al. (2015),40Ar/39Ar,wtd mean,1.3,51,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg11,Sprain et al. (2018),40Ar/39Ar,wtd mean,0.063,1,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg10,Clyde et al. (2016),206Pb/238U,wtd mean,0.93,7,
+Pg9,Renne et al. (2013),40Ar/39Ar,,,,Unclear how the calculation was done.
+Pg8,Sprain et al. (2018),40Ar/39Ar,wtd mean,0.45,4,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg7,Sprain et al. (2018),40Ar/39Ar,wtd mean,0.48,10,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg6,Renne et al. (2013),40Ar/39Ar,wtd mean,0.31,13,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg5,Dalrymple et al. (1993),40Ar/39Ar,wtd mean,0.86,51,No MSWD reported in original publication. Calculated from tabulated dates.
+Pg4,Swisher et al. (1992),40Ar/39Ar,wtd mean,,,Paper contains insufficient data to calculate an MSWD
+Pg3,Swisher et al. (1992),40Ar/39Ar,wtd mean,,,Paper contains insufficient data to calculate an MSWD
+Pg2,Clyde et al. (2016),206Pb/238U,wtd mean,1.1,10,
+Pg1,Clyde et al. (2016),206Pb/238U,wtd mean,0.94,4,
+K88,Clyde et al. (2016),206Pb/238U,wtd mean,0.78,11,
+K87,Sprain et al. (2015),40Ar/39Ar,wtd mean,1,53,No MSWD reported in original publication. Calculated from tabulated dates.
+K86,Sprain et al. (2018),40Ar/39Ar,wtd mean,0.779,53,
+K85,Clyde et al. (2016),206Pb/238U,wtd mean,0.58,5,
+K84,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K83,Hicks et al. (1999),40Ar/39Ar,wtd mean,0.87,4,No MSWD reported in original publication. Calculated from tabulated dates.
+K82,Hicks et al. (1999),40Ar/39Ar,wtd mean,0.23,3,No MSWD reported in original publication. Calculated from tabulated dates.
+K81,Baadsgaard et al. (1993),40Ar/39Ar,,,,Paywall
+K80,Hicks et al. (1999),40Ar/39Ar,wtd mean,0.37,4,No MSWD reported in original publication. Calculated from tabulated dates.
+K79,Hicks et al. (1999),40Ar/39Ar,wtd mean,1.1,5,No MSWD reported in original publication. Calculated from tabulated dates.
+K78,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K77,Hicks et al. (1999),40Ar/39Ar,wtd mean,0.72,4,No MSWD reported in original publication. Calculated from tabulated dates.
+K76,Hicks et al. (1995),40Ar/39Ar,,,,Paywall
+K75,Hicks et al. (1999),40Ar/39Ar,wtd mean,1.8,5,No MSWD reported in original publication. Calculated from tabulated dates.
+K74,Hicks et al. (1995),40Ar/39Ar,,,,Paywall
+K73,Bernoulli et al. (2004),206Pb/238U,wtd mean,0.48,3,No MSWD reported in original publication. Calculated from tabulated dates.
+K72,Sageman et al. (2014),40Ar/39Ar,wtd mean,0.65,15,First of two MSWDs
+,,40Ar/39Ar,,0.97,26,Second of two MSWDs
+K71,Wang et al. (2016),206Pb/238U,wtd mean,1.1,5,
+K70,Quidelleur et al. (2011),206Pb/238U,wtd mean,1.5,4,
+K69,Sageman et al. (2014),40Ar/39Ar,wtd mean,0.37,31,First of two MSWDs
+,,40Ar/39Ar,,0.68,31,Second of two MSWDs
+K68,Sageman et al. (2014),206Pb/238U,wtd mean,1.5,3,
+K67,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K66,Sageman et al. (2014),40Ar/39Ar,wtd mean,1,21,
+K65,Sageman et al. (2014),40Ar/39Ar,wtd mean,0.97,10,First of three MSWDs
+,,40Ar/39Ar,,0.94,27,Second of three MSWDs
+,,40Ar/39Ar,,0.69,5,Third of three MSWDs
+K64,Sageman et al. (2014),40Ar/39Ar,wtd mean,0.86,18,
+K63,Sageman et al. (2014),40Ar/39Ar,wtd mean,0.99,24,First of four MSWDs
+,,40Ar/39Ar,,0.31,19,Second of four MSWDs
+,,40Ar/39Ar,,0.65,27,Third of four MSWDs
+,,40Ar/39Ar,,0.43,25,Fourth of four MSWDs
+K62,Sageman et al. (2014),206Pb/238U,wtd mean,1.8,6,
+K61,Sageman et al. (2014),40Ar/39Ar,wtd mean,0.83,42,First of two MSWDs
+,,40Ar/39Ar,,0.96,25,Second of two MSWDs
+K60,Sageman et al. (2014),206Pb/238U,wtd mean,2.3,3,
+K59,Sageman et al. (2014),40Ar/39Ar,wtd mean,0.86,49,First of two MSWDs
+,,40Ar/39Ar,,0.97,7,Second of two MSWDs
+K58,Sageman et al. (2014),40Ar/39Ar,wtd mean,1.03,43,
+K57,Sageman et al. (2014),206Pb/238U,wtd mean,1.3,4,
+K56,Siewert (2011),40Ar/39Ar,,,,Unpublished MSc thesis
+K55,Meyers et al. (2012),40Ar/39Ar,wtd mean,0.59,32,
+K54,Meyers et al. (2012),206Pb/238U,wtd mean,0.18,1,No MSWD reported in original publication. Calculated from tabulated dates.
+K53,Meyers et al. (2012),40Ar/39Ar,wtd mean,0.084,2,
+K52,Meyers et al. (2012),206Pb/238U,wtd mean,0.32,4,No MSWD reported in original publication. Calculated from tabulated dates.
+K51,Quidelleur et al. (2011),206Pb/238U,wtd mean,1.5,4,
+K50,Meyers et al. (2012),40Ar/39Ar,wtd mean,0.09,3,
+K49,Meyers et al. (2012),206Pb/238U,wtd mean,0.48,5,
+K48,Barker et al. (2011),206Pb/238U,,,,Paywall
+K47,Meyers et al. (2012),40Ar/39Ar,wtd mean,0.84,1,
+K46,Meyers et al. (2012),40Ar/39Ar,wtd mean,0.22,41,
+K45,Meyers et al. (2012),206Pb/238U,wtd mean,0.26,1,
+K44,Quidelleur et al. (2011),40Ar/39Ar,plateau,0.22,3,No MSWD reported in original publication. Calculated from tabulated dates.
+K43,Ma et al. (2014),40Ar/39Ar,wtd mean,0.69,24,
+K42,Siewert (2011),40Ar/39Ar,,,,Unpublished MSc thesis
+K41,Barker et al. (2011),206Pb/238U,,,,Paywall
+K40,Siewert (2011),40Ar/39Ar,,,,Unpublished MSc thesis
+K39,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K38,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K37,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K36,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K35,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K34,Quidelleur et al. (2011),206Pb/238U,wtd mean,1.16,3,
+K33,Quidelleur et al. (2011),206Pb/238U,wtd mean,1.3,10,No MSWD reported in original publication. Calculated from tabulated dates.
+K32,Obradovich et al. (2002),40Ar/39Ar,,,,Paper contains insufficient data to calculate an MSWD
+K31,Quidelleur et al. (2011),206Pb/238U,wtd mean,0.3,4,
+K30,Obradovich et al. (2002),40Ar/39Ar,,,,Paper contains insufficient data to calculate an MSWD
+K29,Quidelleur et al. (2011),206Pb/238U,wtd mean,2.3,6,No MSWD reported in original publication. Calculated from tabulated dates.
+K28,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K27,Selby et al. (2009),206Pb/238U,wtd mean,1.7,4,
+K26,Obradovich (1993),40Ar/39Ar,,,,No analytical data published
+K25,Suarez et al. (2010),206Pb/238U,wtd mean,2,14,No MSWD reported in original publication. Calculated from tabulated dates.
+K24,Suarez et al. (2010),40Ar/39Ar,wtd mean,0.82,6,First of three MSWDs
+,,40Ar/39Ar,,0.27,7,Second of three MSWDs
+,,40Ar/39Ar,,0.41,6,Third of three MSWDs
+K23,He et al. (2008),40Ar/39Ar,wtd mean,1.05,4,First of three MSWDs
+,,40Ar/39Ar,,2.04,4,Second of three MSWDs
+,,40Ar/39Ar,,0.96,8,Third of three MSWDs
+K22,Pringle and Duncan (1995),40Ar/39Ar,isochron,0.07,2,First of three isochron MSWDs
+,,40Ar/39Ar,,0.65,3,Second of three isochron MSWDs
+,,40Ar/39Ar,,0.63,2,Third of three isochron MSWDs
+K21,Shimokawa (2010),206Pb/238U,,,,Unpublished PhD thesis
+K20,Chambers et al. (2004),40Ar/39Ar,,,,Paywall
+K19,Tejada et al. (2002),40Ar/39Ar,,,,Paper contains insufficient data to calculate an MSWD
+K18,Midtkanal et al. (2016),206Pb/238U,wtd mean,1.3,9,
+K17,Pringle and Duncan (1995),40Ar/39Ar,isochron,1,3,First of two isochron MSWDs
+,,40Ar/39Ar,isochron,0,1,Second of two isochron MSWDs
+K16,Aguirre-Urreta et al. (2019),206Pb/238U,wtd mean,0.97,5,
+K15,Aguirre-Urreta et al. (2015),206Pb/238U,wtd mean,1.23,5,
+K14,Aguirre-Urreta et al. (2015),206Pb/238U,wtd mean,0.19,4,
+K13,Aguirre-Urreta et al. (2017),206Pb/238U,wtd mean,0.19,4,
+K12,Shimokawa (2010),206Pb/238U,,,,Unpublished PhD thesis
+K11,Wan et al. (2010),206Pb/238U,wtd mean,1.7,14,
+K10,Shimokawa (2010),206Pb/238U,,,,Unpublished PhD thesis
+K9,Suarez et al. (2009),206Pb/238U,wtd mean,1.3,13,
+K8,Shimokawa (2010),206Pb/238U,,,,Unpublished PhD thesis
+K7,Lena et al. (2019),206Pb/238U,wtd mean,0.56,3,
+K6,Vennari et al. (2014),206Pb/238U,wtd mean,0.46,4,
+K5,Lena et al. (2019),206Pb/238U,wtd mean,0.34,3,
+K4,Lena et al. (2019),206Pb/238U,wtd mean,1.1,3,
+K3,Lena et al. (2019),206Pb/238U,wtd mean,0.56,3,
+K2,Lena et al. (2019),206Pb/238U,wtd mean,3.5,2,
+K1,Mahoney et al. (2005),40Ar/39Ar,,,,Paper contains insufficient data to calculate an MSWD
+J40,Lena et al. (2019),206Pb/238U,wtd mean,0.81,3,
+J39,Selby et al. (2007),Re-Os,wtd mean,4.6,7,
+J38,Pellenard et al. (2013),40Ar/39Ar,wtd mean,0.7,8,
+J37,Evenchick et al. (2010),206Pb/238U,,,,Paywall
+J36,Kamo and Ricciardi (2009),206Pb/238U,wtd mean,2,5,
+J35,Koppers et al. (2003),40Ar/39Ar,wtd mean,0.4,17,
+J34,Kowallis et al. (2001),40Ar/39Ar,wtd mean,1.6,5,No MSWD reported in original publication. Calculated from tabulated dates.
+J33,Kowallis et al. (2001),40Ar/39Ar,wtd mean,0.8,7,No MSWD reported in original publication. Calculated from tabulated dates.
+J32,Childe (1996),206Pb/238U,wtd mean,250,4,
+J31,Sell et al. (2014),206Pb/238U,wtd mean,0.88,2,
+J30,Palfy et al. (1997),206Pb/238U,wtd mean,0.43,5,No MSWD reported in original publication. Calculated from tabulated dates.
+J29,Mazzini et al. (2010),206Pb/238U,concordia,0.1,15,
+J28,Mazzini et al. (2010),206Pb/238U,concordia,1.3,9,
+J27,Sell et al. (2014),206Pb/238U,wtd mean,0.74,5,MSWD of concordance + equivalence
+J26,Sell et al. (2014),206Pb/238U,wtd mean,0.064,2,MSWD of concordance + equivalence
+J25,Leanza et al. (2014),206Pb/238U,concordia,0.06,1,MSWD of concordance
+J24,van Acken et al. (2019),Re-Os,isochron,24,13,
+J23,Evenchick and McNicoll (1993),206Pb/238U,,,,Paywall
+J22,Sell et al. (2014),206Pb/238U,wtd mean,0.26,3,
+J21,De Lena et al. (2019),206Pb/238U,wtd mean,1.2,6,
+J20,De Lena et al. (2019),206Pb/238U,wtd mean,0.76,3,
+J19,De Lena et al. (2019),206Pb/238U,wtd mean,1.4,4,
+J18,De Lena et al. (2019),206Pb/238U,wtd mean,2.8,2,
+J17,De Lena et al. (2019),206Pb/238U,wtd mean,1.3,3,
+J16,Palfy et al. (2000),206Pb/238U,wtd mean,4.3,3,Calculated from tabulated dates
+J15,Johansson and McNicoll (1997),206Pb/238U,,,,Paywall
+J14,Them et al. (2017),206Pb/238U,wtd mean,1.17,2,
+J13,De Lena et al. (2019),206Pb/238U,wtd mean,0.53,4,
+J12,De Lena et al. (2019),206Pb/238U,wtd mean,1.2,2,
+J11,De Lena et al. (2019),206Pb/238U,wtd mean,0.52,4,
+J10,De Lena et al. (2019),206Pb/238U,wtd mean,0.67,3,
+J9,Them et al. (2017),206Pb/238U,wtd mean,0.89,2,
+J8,Leanza et al. (2014),206Pb/238U,concordia,0.08,1,MSWD of concordance
+J7,Leanza et al. (2014),206Pb/238U,concordia,2,1,MSWD of concordance
+J6,Palfy et al. (2000),206Pb/238U,wtd mean,2.6,2,Calculated from tabulated dates
+J5,Schaltegger et al. (2008),206Pb/238U,wtd mean,0.42,7,
+J4,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+J3,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+J2,Schoene et al. (2010),206Pb/238U,wtd mean,0.4,2,"Three data treatments in paper, picked the one used by the GTS"
+J1,Schoene et al. (2010),206Pb/238U,wtd mean,,,"Single grain, MSWD not defined"
+T39,Schoene et al. (2010),206Pb/238U,wtd mean,,,Unclear which age was chosen
+T38,Schaltegger et al. (2008),206Pb/238U,wtd mean,0.72,6,"Single grain, MSWD not defined"
+T37,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+T36,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+T35,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+T34,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+T33,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+T32,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+T31,Guex et al. (2012),206Pb/238U,,,,"Single grain, MSWD not defined"
+T30,Furin et al. (2006),206Pb/238U,wtd mean,1.1,7,
+T29,Mietto et al. (2012),206Pb/238U,wtd mean,1.6,6,
+T28,Bruhwiler et al. (2007),206Pb/238U,wtd mean,1.8,8,
+T27,Palfy et al. (2003),206Pb/238U,concordia,,,No MSWD reported in original publication. Insufficient information provided to calculate MSWD.
+T26,Wotzlaw et al. (2018),206Pb/238U,wtd mean,2.1,5,
+T25,Wotzlaw et al. (2018),206Pb/238U,wtd mean,1.9,7,
+T24,Wotzlaw et al. (2018),206Pb/238U,wtd mean,0.37,2,
+T23,Wotzlaw et al. (2018),206Pb/238U,wtd mean,0.81,5,
+T21,Wotzlaw et al. (2018),206Pb/238U,wtd mean,0.34,4,
+T20,Wotzlaw et al. (2018),206Pb/238U,wtd mean,0.62,5,
+T19,Mundil et al. (2010),206Pb/238U,wtd mean,1.5,5,
+T18,Mundil et al. (2003),206Pb/238U,wtd mean,2.6,5,
+T17,Mundil et al. (2003),206Pb/238U,wtd mean,2.5,6,
+T16,Ovtcharova et al. (2006),206Pb/238U,wtd mean,0.11,3,
+T15,Ovtcharova et al. (2006),206Pb/238U,wtd mean,0.25,5,
+T14,Ramezani et al. (2007),206Pb/238U,wtd mean,1.2,16,
+T13,Lehrmann et al. (2015),206Pb/238U,wtd mean,0.37,1,
+T12,Lehrmann et al. (2015),206Pb/238U,wtd mean,0.39,3,
+T11,Lehrmann et al. (2006),206Pb/238U,wtd mean,0.93,10,
+T10,Lehrmann et al. (2015),206Pb/238U,wtd mean,0.55,5,
+T9,Ovtcharova et al. (2006),206Pb/238U,wtd mean,0.13,5,
+T7,Ovtcharova et al. (2006),206Pb/238U,wtd mean,0.7,6,
+T6,Galfetti et al. (2007),206Pb/238U,,,,Could not find the reported sample in this paper
+T5,Burgess et al. (2014),206Pb/238U,wtd mean,0.24,10,
+T4,Burgess et al. (2014),206Pb/238U,wtd mean,0.86,8,
+T3,Baresel et al. (2017),206Pb/238U,wtd mean,0.1,7,
+T2,Baresel et al. (2017),206Pb/238U,wtd mean,0.26,7,
+T1,Burgess et al. (2014),206Pb/238U,wtd mean,0.76,12,
+P37,Burgess et al. (2014),206Pb/238U,wtd mean,1.3,15,
+P36,Burgess et al. (2014),206Pb/238U,wtd mean,0.5,11,
+P35,Baresel et al. (2017),206Pb/238U,wtd mean,0.49,6,
+P34,Baresel et al. (2017),206Pb/238U,wtd mean,0.59,6,
+P33,Baresel et al. (2017),206Pb/238U,wtd mean,0.13,2,
+P32,Baresel et al. (2017),206Pb/238U,wtd mean,0.96,10,
+P31,Baresel et al. (2017),206Pb/238U,wtd mean,0.66,8,
+P30,Baresel et al. (2017),206Pb/238U,wtd mean,0.67,6,
+P29,Baresel et al. (2017),206Pb/238U,wtd mean,1.04,7,
+P28,Baresel et al. (2017),206Pb/238U,wtd mean,1.18,6,
+P27,Shen et al. (2011),206Pb/238U,wtd mean,1.4,6,
+P26,Shen et al. (2011),206Pb/238U,wtd mean,0.5,6,
+P25,Shen et al. (2011),206Pb/238U,wtd mean,0.6,6,
+P24,Mundil et al. (2004),206Pb/238U,wtd mean,1.1,7,
+P23,Shen et al. (2011),206Pb/238U,wtd mean,0.3,5,
+P22,Shen et al. (2011),206Pb/238U,wtd mean,1,5,
+P21,Davydov et al. (2018a),206Pb/238U,wtd mean,2.78,1,
+P20,Davydov et al. (2018a),206Pb/238U,wtd mean,0.07,3,
+P19,Mundil et al. (2004),206Pb/238U,wtd mean,0.8,5,
+P18,Mundil et al. (2004),206Pb/238U,wtd mean,0.3,4,
+P17,Davydov et al. (2018b),206Pb/238U,wtd mean,0.12,4,
+P16,Davydov et al. (2016),206Pb/238U,wtd mean,1.3,3,
+P15,Nicklen (2011),206Pb/238U,wtd mean,2,3,
+P14,Ramezani and Bowring (2017),206Pb/238U,,,,Paywall
+P13,Nicklen (2011),206Pb/238U,wtd mean,1.5,7,
+P12,Wu et al. (2017),206Pb/238U,wtd mean,2.2,7,
+P11,Wu et al. (2017),206Pb/238U,wtd mean,1.9,6,
+P10,Davydov et al. (2018a),206Pb/238U,wtd mean,0.63,4,
+P9,Davydov et al. (2018a),206Pb/238U,wtd mean,0.71,2,
+P8,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.9,7,
+P7,Schmitz and Davydov (2012),206Pb/238U,wtd mean,0.9,7,
+P6,Schmitz and Davydov (2012),206Pb/238U,wtd mean,0.8,6,
+P5,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.5,7,
+P4,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.2,7,
+P3,Schmitz and Davydov (2012),206Pb/238U,wtd mean,2.5,8,
+P2,Ramezani et al. (2007),206Pb/238U,wtd mean,0.79,8,
+P1,Ramezani et al. (2007),206Pb/238U,wtd mean,1,18,
+Cb47,Ramezani et al. (2007),206Pb/238U,wtd mean,2.9,13,
+Cb46,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.2,6,
+Cb45,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.5,4,
+Cb44,Schmitz and Davydov (2012),206Pb/238U,wtd mean,0.4,4,
+Cb43,Schmitz and Davydov (2012),206Pb/238U,wtd mean,0.9,3,
+Cb42,Schmitz and Davydov (2012),206Pb/238U,wtd mean,2.5,4,
+Cb41,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.7,5,First of two MSWDs
+,,206Pb/238U,wtd mean,1.6,4,Second of two MSWDs
+Cb40,Schmitz and Davydov (2012),206Pb/238U,wtd mean,2.7,3,First of two MSWDs
+,,206Pb/238U,wtd mean,1.2,2,Second of two MSWDs
+Cb39,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.2,5,First of two MSWDs
+,,206Pb/238U,wtd mean,2.3,5,Second of two MSWDs
+Cb38,Schmitz and Davydov (2012),206Pb/238U,wtd mean,0.8,3,
+Cb37,Schmitz and Davydov (2012),206Pb/238U,wtd mean,0.5,2,
+Cb36,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.8,7,
+Cb35,Schmitz and Davydov (2012),206Pb/238U,wtd mean,2.1,6,
+Cb34,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.5,3,
+Cb33,Schmitz and Davydov (2012),206Pb/238U,wtd mean,2.6,5,
+Cb32,Schmitz and Davydov (2012),206Pb/238U,wtd mean,0.9,7,
+Cb31,Davydov et al. (2010),206Pb/238U,wtd mean,3.8,8,
+Cb30,Davydov et al. (2010),206Pb/238U,wtd mean,2.2,9,
+Cb29,Davydov et al. (2010),206Pb/238U,wtd mean,1.4,5,
+Cb28,Davydov et al. (2010),206Pb/238U,wtd mean,1.7,4,
+Cb27,Davydov et al. (2010),206Pb/238U,wtd mean,0.6,7,
+Cb26,Pointon et al. (2012),206Pb/238U,wtd mean,2.2,5,
+Cb25,Waters and Condon (2012),206Pb/238U,wtd mean,1.07,3,
+Cb24,Davydov et al. (2010),206Pb/238U,wtd mean,1.5,6,
+Cb23,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.6,3,
+Cb22,Pointon et al. (2012),206Pb/238U,wtd mean,0.7,4,
+Cb21,Schmitz and Davydov (2012),206Pb/238U,wtd mean,2.8,4,
+Cb20,Schmitz and Davydov (2012),206Pb/238U,wtd mean,2.3,3,
+Cb19,Pointon et al. (2012),206Pb/238U,wtd mean,0.94,3,
+Cb18,Jirasek et al. (2018),206Pb/238U,wtd mean,0.9,4,
+Cb17,Jirasek et al. (2018),206Pb/238U,wtd mean,2.87,3,
+Cb16,Jirasek et al. (2013),206Pb/238U,,,,Paper contains insufficient data to calculate an MSWD
+Cb15,Jirasek et al. (2013),206Pb/238U,wtd mean,0.39,4,
+Cb14,Davydov et al. (2010),206Pb/238U,wtd mean,2.6,7,
+Cb13,Waters and Condon (2012),206Pb/238U,wtd mean,2.2,10,
+Cb12,Gastaldo et al. (2009),206Pb/238U,wtd mean,1.4,4,
+Cb11,Pointon et al. (2014),206Pb/238U,wtd mean,2.4,4,
+Cb10,Schmitz and Davydov (2012),206Pb/238U,wtd mean,1.7,3,
+Cb9,Pointon et al. (2014),206Pb/238U,wtd mean,0.16,2,
+Cb8,Pointon et al. (2014),206Pb/238U,wtd mean,0.83,6,
+Cb7,Jirasek et al. (2014),206Pb/238U,wtd mean,2.76,4,
+Cb6,Davydov et al. (2010),206Pb/238U,wtd mean,1.9,6,
+Cb5,Davydov et al. (2010),206Pb/238U,wtd mean,0.9,5,
+Cb4,Davydov et al. (2010),206Pb/238U,wtd mean,1.2,5,
+Cb3,Davydov et al. (2010),206Pb/238U,wtd mean,0.7,7,
+Cb2,Davydov et al. (2011),206Pb/238U,,,,GSA abstract does not contain any actual data
+Cb1,Davydov et al. (2011),206Pb/238U,,,,GSA abstract does not contain any actual data
+D27,Myrow et al. (2014),206Pb/238U,wtd mean,0.35,5,
+D26,Myrow et al. (2014),206Pb/238U,wtd mean,0.5,5,
+D25,Davydov et al. (2011),206Pb/238U,,,,GSA abstract does not contain any actual data
+D24,Selby and Creaser (2005),Re-Os,isochron,1.2,5,
+D23,Tucker et al. (1998),206Pb/238U,wtd mean,1.23,4,
+D22,Tucker et al. (1998),206Pb/238U,wtd mean,0.788,3,
+D21,Turgeon et al. (2007),Re-Os,isochron,1.4,7,
+D20,Turgeon et al. (2007),Re-Os,isochron,0.51,6,
+D19,Percival et al. (2018),206Pb/238U,wtd mean,1.47,7,
+D18,Lanik et al. (2016),206Pb/238U,wtd mean,0.39,5,
+D17,Lanik et al. (2016),206Pb/238U,wtd mean,1.33,5,
+D16,Lanik et al. (2016),206Pb/238U,wtd mean,0.99,6,
+D15,Harrigan et al. (2022),206Pb/238U,wtd mean,3.1,7,
+D14,Harrigan et al. (2022),206Pb/238U,wtd mean,2.3,6,
+D13,Harrigan et al. (2022),206Pb/238U,wtd mean,1.6,8,
+D12,Kaufmann et al. (2005),206Pb/238U,wtd mean,1.07,9,
+D11,Bodorkos et al. (2017),206Pb/238U,,,,Paper contains insufficient data to calculate an MSWD
+D10,Parry et al. (2011),206Pb/238U,wtd mean,0.12,3,
+D9,Bodorkos et al. (2017),206Pb/238U,,,,Paper contains insufficient data to calculate an MSWD
+D8,Bodorkos et al. (2017),206Pb/238U,,,,Paper contains insufficient data to calculate an MSWD
+D7,Husson et al. (2016),206Pb/238U,,,,"Single grain, MSWD not defined"
+D6,McAdams et al. (2017),206Pb/238U,wtd mean,0.66,5,
+D5,Husson et al. (2016),206Pb/238U,,,,"Single grain, MSWD not defined"
+D4,Husson et al. (2016),206Pb/238U,,,,"Single grain, MSWD not defined"
+D3,Husson et al. (2016),206Pb/238U,,,,"Single grain, MSWD not defined"
+D2,Husson et al. (2016),206Pb/238U,,,,"Single grain, MSWD not defined"
+D1,Husson et al. (2016),206Pb/238U,,,,"Single grain, MSWD not defined"
+S8,Cramer et al. (2015),206Pb/238U,,1.74,7,
+S7,Cramer et al. (2015),206Pb/238U,,0.76,6,
+S6,Cramer et al. (2012),206Pb/238U,,3.2,6,
+S5,Cramer et al. (2012),206Pb/238U,,0.63,5,
+S4,Cramer et al. (2012),206Pb/238U,,2.2,4,
+S3,Cramer et al. (2012),206Pb/238U,,3.8,13,
+S2,Bergstrom et al. (2008),206Pb/238U,,0.2,3,
+S1,Tucker et al. (1990),206Pb/238U,wtd mean,1.28,5,
+O42,Hu et al. (2008),206Pb/238U,wtd mean,1.21,17,
+O41,Tucker et al. (1990),206Pb/238U,wtd mean,1.2,3,
+O40,MacDonald et al. (2017),206Pb/238U,wtd mean,1.7,5,
+O39,Taylor et al. (2015),206Pb/238U,wtd mean,1.4,7,
+O38,MacDonald et al. (2017),206Pb/238U,wtd mean,2,6,
+O37,MacDonald et al. (2017),206Pb/238U,wtd mean,1.1,5,
+O36,MacDonald et al. (2017),206Pb/238U,wtd mean,1.3,7,
+O35,MacDonald et al. (2017),206Pb/238U,wtd mean,1.7,4,
+O34,Sell et al. (2013),206Pb/238U,wtd mean,3.1,3,
+O33,Sell et al. (2013),206Pb/238U,wtd mean,1.3,9,
+O32,Oruche et al. (2018),206Pb/238U,wtd mean,,,Hidden behind paywall
+O31,,206Pb/238U,wtd mean,2.1,5,
+O30,Sell et al. (2013),206Pb/238U,wtd mean,1.9,3,
+O29,Sell et al. (2013),206Pb/238U,,,,
+O28,Svensen et al. (2015),206Pb/238U,wtd mean,0.9,12,
+O27,Sell et al. (2013),206Pb/238U,wtd mean,1.3,7,
+O26,Sell et al. (2013),206Pb/238U,wtd mean,0.058,4,
+O25,Svensen et al. (2015),206Pb/238U,wtd mean,1.5,10,
+O24,Ballo et al. (2019),206Pb/238U,wtd mean,0.015,1,
+O23,Ballo et al. (2019),206Pb/238U,wtd mean,0.07,4,
+O22,Leslie et al. (2012),206Pb/238U,,,,No MSWD reported in original publication. 
+O21,Tucker and McKerrow (1995),206Pb/238U,,,,Hidden behind paywall
+O20,Tucker et al. (1990),206Pb/238U,wtd mean,0.487,2,"Uses 3 oldest grains out of 4, as this reproduces the age reported in GTS2020"
+O19,Tucker et al. (1990),206Pb/238U,wtd mean,0.635,1,"Uses 2 oldest out of 3 grains from Arenig Fawr data table, as this matches the value reported in GTS2020"
+O18,MacDonald et al. (2017),206Pb/238U,wtd mean,0.8,5,
+O17,Sell et al. (2011),206Pb/238U,wtd mean,1.5,4,
+O15,Sell et al. (2011),206Pb/238U,wtd mean,1.09,2,
+O14,Lindskog et al. (2017),206Pb/238U,wtd mean,1.4,8,
+O13,Huff et al. (1997),206Pb/238U,wtd mean,1.55,2,"Recalculated from paper, using instructions provided in GTS2020"
+O12,Thompson et al. (2012),206Pb/238U,wtd mean,1.2,5,
+O11,Thompson et al. (2012),206Pb/238U,wtd mean,0.97,4,
+O10,Thompson et al. (2012),206Pb/238U,wtd mean,1.4,3,
+O9,Normore et al. (2018),206Pb/238U,wtd mean,1.9,6,
+O8,Herrington et al. (2018),206Pb/238U,wtd mean,1.7,3,
+O7,Normore et al. (2018),206Pb/238U,wtd mean,1,6,
+O6,Normore et al. (2018),206Pb/238U,wtd mean,1.7,6,
+O5,Normore et al. (2018),206Pb/238U,wtd mean,0.6,5,
+O4,Thompson et al. (2012),206Pb/238U,wtd mean,0.65,3,
+O3,Normore et al. (2018),206Pb/238U,wtd mean,3.8,8,
+O2,Normore et al. (2018),207Pb/206Pb,wtd mean,1.4,7,
+O1,Normore et al. (2018),207Pb/206Pb,wtd mean,0.6,6,
+C16,Davidek et al. (1998),207Pb/206Pb,wtd mean,,,Hidden behind paywall
+C15,Encarnacion et al. (1999),207Pb/206Pb,wtd mean,1.2,1,"Recalculated from paper, using instructions provided in GTS2020"
+C14,Landing et al. (2014),206Pb/238U,wtd mean,0.74,4,
+C13,Harvey et al. (2011),206Pb/238U,wtd mean,0.51,6,
+C12,Landing et al. (2018),207Pb/206Pb,,,,Locked behind paywall
+C11,Landing et al. (2018),206Pb/238U,,,,Locked behind paywall
+C10,Harvey et al. (2011),206Pb/238U,wtd mean,2,1,
+C9,Williams et al. (2013),206Pb/238U,wtd mean,0.67,4,
+C8,Yang et al. (2018),206Pb/238U,wtd mean,,,No MSWD reported in original publication. 
+C7,Harvey et al. (2011),206Pb/238U,wtd mean,1.1,5,
+C6,Maloof et al. (2010),206Pb/238U,wtd mean,0.42,5,
+C5,Maloof et al. (2010),206Pb/238U,wtd mean,1.2,9,
+C4,Maloof et al. (2010),206Pb/238U,wtd mean,0.72,7,
+C3,Maloof et al. (2010),206Pb/238U,wtd mean,0.33,11,
+C2,Isachsen et al. (1994),206Pb/238U,wtd mean,2.197,2,"Recalculated from paper, using instructions provided in GTS2020"
+C1,Linnemann et al. (2019),206Pb/238U,wtd mean,0.1,2,
+E26,Linnemann et al. (2019),206Pb/238U,wtd mean,2.2,2,
+E25,Linnemann et al. (2019),206Pb/238U,wtd mean,1.4,4,
+E24,Linnemann et al. (2019),206Pb/238U,wtd mean,1.7,4,
+E23,Bowring et al. (2007),206Pb/238U,wtd mean,1,7,
+E22,Parry et al. (2017),206Pb/238U,wtd mean,3.3,4,
+E21,Parry et al. (2017),206Pb/238U,wtd mean,0.68,3,
+E20,Bowring et al. (2007),206Pb/238U,wtd mean,0.5,9,
+E19,Bowring et al. (2007),206Pb/238U,wtd mean,0.62,7,
+E18,Bowring et al. (2007),206Pb/238U,wtd mean,0.92,7,
+E17,Bowring et al. (2007),206Pb/238U,wtd mean,1.6,7,
+E16,Condon et al. (2005),206Pb/238U,wtd mean,0.48,1,
+E15,Martin et al. (2000),206Pb/238U,wtd mean,0.1,18,
+E14,Parry et al. (2017),206Pb/238U,wtd mean,1.6,7,
+E13,Noble et al. (2015),206Pb/238U,wtd mean,1.2,6,
+E12,Noble et al. (2015),206Pb/238U,wtd mean,0.42,1,
+E11,Noble et al. (2015),206Pb/238U,wtd mean,0.8,1,
+E10,Pu et al. (2016),206Pb/238U,wtd mean,1.3,4,
+E9,Pu et al. (2016),206Pb/238U,wtd mean,0.33,4,
+E8,Pu et al. (2016),206Pb/238U,wtd mean,1.1,8,
+E7,Pu et al. (2016),206Pb/238U,wtd mean,0.73,3,
+E6,Pu et al. (2016),206Pb/238U,wtd mean,0.018,5,
+E5,Pu et al. (2016),206Pb/238U,wtd mean,0.82,4,
+E4,Pu et al. (2016),206Pb/238U,wtd mean,1.1,8,
+E3,Pu et al. (2016),206Pb/238U,wtd mean,0.36,4,
+E2,Condon et al. (2005),206Pb/238U,wtd mean,0.36,2,
+E1,Condon et al. (2005),206Pb/238U,wtd mean,0.55,2,
+Cr4,Zhou et al. (2019),206Pb/238U,wtd mean,1.4,3,
+Cr3,Prave et al. (2016),206Pb/238U,wtd mean,3.4,4,
+Cr2,Calver et al. (2013),206Pb/238U,wtd mean,1.31,6,
+Cr1,Prave et al. (2016),206Pb/238U,wtd mean,2.6,8,

@@ -1,0 +1,320 @@
+\begin{thebibliography}{46}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Amrhein et~al.(2019)Amrhein, Greenland, and McShane]{amrhein2019}
+Amrhein, V., Greenland, S., and McShane, B.
+\newblock {Retire statistical significance}.
+\newblock \emph{Nature}, 567\penalty0 (7748):\penalty0 305--307, 2019.
+
+\bibitem[Boone et~al.(2025)Boone, Chung, Faux, Nattala, Church, Jiang,
+  McMillan, Jones, Liu, Jiang, Ehinger, Drummond, Kohn, and Gleadow]{boone2025}
+Boone, S.~C., Chung, L., Faux, N., Nattala, U., Church, T., Jiang, C.,
+  McMillan, M., Jones, S., Liu, D., Jiang, H., Ehinger, K., Drummond, T., Kohn,
+  B., and Gleadow, A.
+\newblock Raising the Bar: Deep Learning on Comprehensive Database Sets New
+  Benchmark for Automated Fission-Track Detection.
+\newblock \emph{Computers \& Geosciences}, page 106096, 2025.
+\newblock \doi{10.1016/j.cageo.2025.106096}.
+
+\bibitem[Brooks et~al.(1972)Brooks, Hart, and Wendt]{brooks1972}
+Brooks, C., Hart, S.~R., and Wendt, I.
+\newblock {Realistic use of two-error regression treatments as applied to
+  Rubidium-Strontium data}.
+\newblock \emph{Reviews of Geophysics}, 10\penalty0 (2):\penalty0 551--577,
+  1972.
+
+\bibitem[Chayes(1949)]{chayes1949}
+Chayes, F.
+\newblock On ratio correlation in petrography.
+\newblock \emph{The Journal of Geology}, 57\penalty0 (3):\penalty0 239--254,
+  1949.
+
+\bibitem[Dalrymple and Lanphere(1969)]{dalrymple1969}
+Dalrymple, G. and Lanphere, M.
+\newblock \emph{{Potassium-Argon Dating}}.
+\newblock Freeman, San Francisco, 1969.
+
+\bibitem[{Fisher}(1936)]{fisher1936}
+{Fisher}, R.
+\newblock {Has Mendel's work been rediscovered?}
+\newblock \emph{Annals of Science}, 1\penalty0 (2):\penalty0 115--137, 1936.
+
+\bibitem[Galbraith(1981)]{galbraith1981}
+Galbraith, R.~F.
+\newblock On statistical models for fission track counts.
+\newblock \emph{Journal of the International Association for Mathematical
+  Geology}, 13\penalty0 (6):\penalty0 471--478, 1981.
+
+\bibitem[Galbraith and Laslett(1993)]{galbraith1993}
+Galbraith, R.~F. and Laslett, G.~M.
+\newblock Statistical models for mixed fission track ages.
+\newblock \emph{Nuclear tracks and radiation measurements}, 21\penalty0
+  (4):\penalty0 459--470, 1993.
+
+\bibitem[Gradstein et~al.(2020)Gradstein, Ogg, Schmitz, and Ogg]{gradstein2020}
+Gradstein, F.~M., Ogg, J.~G., Schmitz, M.~D., and Ogg, G.
+\newblock \emph{The geologic time scale 2020}.
+\newblock Walthman: Elsevier, 2020.
+
+\bibitem[Green(1981)]{green1981b}
+Green, P.
+\newblock A new look at statistics in fission-track dating.
+\newblock \emph{Nuclear tracks}, 5\penalty0 (1-2):\penalty0 77--86, 1981.
+
+\bibitem[Harzing(2010)]{harzing2010}
+Harzing, A.-W.
+\newblock \emph{The publish or perish book}.
+\newblock Tarma Software Research, Melbourne, 2010.
+\newblock ISBN 0980848512.
+
+\bibitem[Holmes(1947)]{holmes1947}
+Holmes, A.
+\newblock {The Construction of a Geological Time-Scale}.
+\newblock \emph{Transactions of the Geological Society of Glasgow}, 21\penalty0
+  (1):\penalty0 117--152, 1947.
+
+\bibitem[Horstwood et~al.(2016)Horstwood, Ko{\v{s}}ler, Gehrels, Jackson,
+  McLean, Paton, Pearson, Sircombe, Sylvester, Vermeesch,
+  et~al.]{horstwood2016}
+Horstwood, M.~S., Ko{\v{s}}ler, J., Gehrels, G., Jackson, S.~E., McLean, N.~M.,
+  Paton, C., Pearson, N.~J., Sircombe, K., Sylvester, P., Vermeesch, P., et~al.
+\newblock {Community-Derived Standards for LA-ICP-MS U-(Th-) Pb
+  Geochronology--Uncertainty Propagation, Age Interpretation and Data
+  Reporting}.
+\newblock \emph{Geostandards and Geoanalytical Research}, 40\penalty0
+  (3):\penalty0 311--332, 2016.
+
+\bibitem[Hurford and Green(1983)]{hurford1983}
+Hurford, A.~J. and Green, P.~F.
+\newblock The zeta age calibration of fission-track dating.
+\newblock \emph{Chemical Geology}, 41:\penalty0 285 -- 317, 1983.
+\newblock ISSN 0009-2541.
+\newblock \doi{10.1016/S0009-2541(83)80026-6}.
+
+\bibitem[Ioannidis(2005)]{ioannidis2005}
+Ioannidis, J.~P.
+\newblock Why most published research findings are false.
+\newblock \emph{PLoS medicine}, 2\penalty0 (8):\penalty0 e124, 2005.
+
+\bibitem[Iwano et~al.(2018)Iwano, Danhara, and Hirata]{iwano2018}
+Iwano, H., Danhara, T., and Hirata, T.
+\newblock {Standardless fission-track ages of the IUGS age standards}.
+\newblock \emph{Chemical Geology}, 488:\penalty0 87--104, 2018.
+
+\bibitem[Jackson et~al.(2004)Jackson, Pearson, Griffin, and
+  Belousova]{jackson2004}
+Jackson, S.~E., Pearson, N.~J., Griffin, W.~L., and Belousova, E.~A.
+\newblock {The application of laser ablation-inductively coupled plasma-mass
+  spectrometry to in situ U--Pb zircon geochronology}.
+\newblock \emph{Chemical Geology}, 211\penalty0 (1-2):\penalty0 47--69,
+  November 2004.
+\newblock ISSN 00092541.
+\newblock \doi{10.1016/j.chemgeo.2004.06.017}.
+
+\bibitem[Jourdan et~al.(2009)Jourdan, Renne, and Reimold]{jourdan2009}
+Jourdan, F., Renne, P., and Reimold, W.
+\newblock An appraisal of the ages of terrestrial impact structures.
+\newblock \emph{Earth and Planetary Science Letters}, 286\penalty0
+  (1-2):\penalty0 1--13, 2009.
+
+\bibitem[Kalsbeek(1992)]{kalsbeek1992}
+Kalsbeek, F.
+\newblock {The statistical distribution of the mean squared weighted deviation
+  -- Comment: Isochrons, errorchrons, and the use of MSWD-values}.
+\newblock \emph{Chemical Geology}, 94\penalty0 (3):\penalty0 241--242, 1992.
+
+\bibitem[Keller et~al.(2018)Keller, Schoene, and Samperton]{keller2018}
+Keller, C.~B., Schoene, B., and Samperton, K.~M.
+\newblock A stochastic sampling approach to zircon eruption age interpretation.
+\newblock \emph{Geochemical Perspectives Letters}, 8\penalty0
+  (LLNL-JRNL-738859), 2018.
+
+\bibitem[Klein and Eddy(2024)]{klein2024}
+Klein, B.~Z. and Eddy, M.~P.
+\newblock {What's in an age? Calculation and interpretation of ages and
+  durations from U-Pb zircon geochronology of igneous rocks}.
+\newblock \emph{Bulletin}, 136\penalty0 (1-2):\penalty0 93--109, 2024.
+
+\bibitem[Li and Vermeesch(2021)]{li2021}
+Li, Y. and Vermeesch, P.
+\newblock {Inverse isochron regression for Re--Os, K--Ca and other
+  chronometers}.
+\newblock \emph{Geochronology}, 3\penalty0 (2):\penalty0 415--420, 2021.
+
+\bibitem[{Ludwig}(1998)]{ludwig1998}
+{Ludwig}, K.~R.
+\newblock {On the treatment of concordant uranium-lead ages}.
+\newblock \emph{Geochimica et Cosmochimica Acta}, 62:\penalty0 665--676, 1998.
+\newblock \doi{10.1016/S0016-7037(98)00059-3}.
+
+\bibitem[{McIntyre} et~al.(1966){McIntyre}, {Brooks}, {Compston}, and
+  {Turek}]{mcintyre1966}
+{McIntyre}, G.~A., {Brooks}, C., {Compston}, W., and {Turek}, A.
+\newblock {The Statistical Assessment of Rb-Sr Isochrons}.
+\newblock \emph{Journal of Geophysical Research}, 71:\penalty0 5459--5468,
+  1966.
+
+\bibitem[McLean et~al.(2016)McLean, Bowring, and Gehrels]{mclean2016}
+McLean, N.~M., Bowring, J.~F., and Gehrels, G.
+\newblock {Algorithms and software for U-Pb geochronology by LA-ICPMS}.
+\newblock \emph{Geochemistry, Geophysics, Geosystems}, 17\penalty0
+  (7):\penalty0 2480--2496, 2016.
+
+\bibitem[Mendel(1866)]{mendel1866}
+Mendel, G.
+\newblock {Versuche {\"u}ber Pflanzenhybriden}.
+\newblock \emph{Verhandlungen des naturforschenden Vereins in Br\"{u}nn},
+  10\penalty0 (1), 1866.
+
+\bibitem[Nachtergaele and De~Grave(2021)]{nachtergaele2021}
+Nachtergaele, S. and De~Grave, J.
+\newblock {AI-Track-tive: open-source software for automated recognition and
+  counting of surface semi-tracks using computer vision (artificial
+  intelligence)}.
+\newblock \emph{Geochronology}, 3\penalty0 (1):\penalty0 383--394, 2021.
+\newblock \doi{10.5194/gchron-3-383-2021}.
+
+\bibitem[Pearson(1896)]{pearson1896}
+Pearson, K.
+\newblock Mathematical contributions to the theory of evolution.--on a form of
+  spurious correlation which may arise when indices are used in the measurement
+  of organs.
+\newblock \emph{Proceedings of the Royal Society of London}, 60\penalty0
+  (359-367):\penalty0 489--498, 1896.
+
+\bibitem[Pearson(1900)]{pearson1900}
+Pearson, K.
+\newblock {On the criterion that a given system of deviations from the probable
+  in the case of a correlated system of variables is such that it can be
+  reasonably supposed to have arisen from random sampling}.
+\newblock \emph{The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 50\penalty0 (302):\penalty0 157--175, 1900.
+
+\bibitem[Petrus and Kamber(2012)]{petrus2012}
+Petrus, J.~A. and Kamber, B.~S.
+\newblock {VizualAge: A novel approach to laser ablation ICP-MS U-Pb
+  geochronology data reduction}.
+\newblock \emph{Geostandards and Geoanalytical Research}, 36\penalty0
+  (3):\penalty0 247--270, 2012.
+
+\bibitem[Phillips and Matchan(2013)]{phillips2013}
+Phillips, D. and Matchan, E.
+\newblock {Ultra-high precision $^{40}$Ar/$^{39}$Ar ages for Fish Canyon Tuff
+  and Alder Creek Rhyolite sanidine: new dating standards required?}
+\newblock \emph{Geochimica et Cosmochimica Acta}, 121:\penalty0 229--239, 2013.
+
+\bibitem[Popper(1959)]{popper1959}
+Popper, K.~R.
+\newblock \emph{The logic of scientific discovery}.
+\newblock London: Hutchinson, 1959.
+
+\bibitem[Radick(2015)]{radick2015}
+Radick, G.
+\newblock {Beyond the ``Mendel-Fisher controversy''}.
+\newblock \emph{Science}, 350\penalty0 (6257):\penalty0 159--160, 2015.
+
+\bibitem[Renne et~al.(1998)Renne, Swisher, Deino, Karner, Owens, and
+  DePaolo]{renne1998}
+Renne, P.~R., Swisher, C.~C., Deino, A.~L., Karner, D.~B., Owens, T.~L., and
+  DePaolo, D.~J.
+\newblock {Intercalibration of standards, absolute ages and uncertainties in
+  $^{40}$Ar/$^{39}$Ar dating}.
+\newblock \emph{Chemical Geology}, 145\penalty0 (1):\penalty0 117--152, 1998.
+
+\bibitem[Rioux et~al.(2012)Rioux, Lissenberg, McLean, Bowring, MacLeod,
+  Hellebrand, and Shimizu]{rioux2012}
+Rioux, M., Lissenberg, C.~J., McLean, N.~M., Bowring, S.~A., MacLeod, C.~J.,
+  Hellebrand, E., and Shimizu, N.
+\newblock {Protracted timescales of lower crustal growth at the fast-spreading
+  East Pacific Rise}.
+\newblock \emph{Nature Geoscience}, 5\penalty0 (4):\penalty0 275--278, 2012.
+
+\bibitem[Schmitz(2020)]{schmitz2020}
+Schmitz, M.
+\newblock Appendix 2 - Radioisotopic ages used in GTS2020.
+\newblock In Gradstein, F.~M., Ogg, J.~G., Schmitz, M.~D., and Ogg, G.~M.,
+  editors, \emph{Geologic Time Scale 2020}, pages 1285--1349. Elsevier, 2020.
+\newblock ISBN 978-0-12-824360-2.
+\newblock \doi{https://doi.org/10.1016/B978-0-12-824360-2.00046-2}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/B9780128243602000462}.
+
+\bibitem[Sl{\'{a}}ma et~al.(2008)Sl{\'{a}}ma, Ko{\v{s}}ler, Condon, Crowley,
+  Gerdes, Hanchar, Horstwood, Morris, Nasdala, Norberg, Schaltegger, Schoene,
+  Tubrett, and Whitehouse]{slama2008}
+Sl{\'{a}}ma, J., Ko{\v{s}}ler, J., Condon, D.~J., Crowley, J.~L., Gerdes, A.,
+  Hanchar, J.~M., Horstwood, M. S.~A., Morris, G.~A., Nasdala, L., Norberg, N.,
+  Schaltegger, U., Schoene, B., Tubrett, M.~N., and Whitehouse, M.~J.
+\newblock Ple{\v{s}}ovice zircon -- A new natural reference material for
+  {U}-{P}b and {H}f isotopic microanalysis.
+\newblock \emph{Chemical Geology}, 249:\penalty0 1--35, 2008.
+
+\bibitem[Tamer et~al.(2025)Tamer, Chung, Ketcham, and Gleadow]{tamer2025}
+Tamer, M.~T., Chung, L., Ketcham, R.~A., and Gleadow, A. J.~W.
+\newblock The need for fission-track data transparency and sharing.
+\newblock \emph{Geochronology}, 7\penalty0 (1):\penalty0 45--58, 2025.
+\newblock \doi{10.5194/gchron-7-45-2025}.
+
+\bibitem[Vermeesch(2018)]{vermeesch2018c}
+Vermeesch, P.
+\newblock {\texttt{IsoplotR}: a free and open toolbox for geochronology}.
+\newblock \emph{Geoscience Frontiers}, 9:\penalty0 1479--1493, 2018.
+\newblock \doi{10.1016/j.gsf.2018.04.001}.
+
+\bibitem[Vermeesch(2025)]{vermeesch2025c}
+Vermeesch, P.
+\newblock {High MSWDs are not the problem, low ones are}.
+\newblock \emph{Natl. Sci. Rev}, 10, 2025.
+\newblock \doi{10.1093/nsr/nwaf036}.
+
+\bibitem[Vermeesch(2026)]{vermeesch2026b}
+Vermeesch, P.
+\newblock KJ: a physics-based algorithm for geochronology by LA-ICP-MS.
+\newblock April 2026.
+\newblock \doi{10.5281/zenodo.19693372}.
+\newblock URL \url{https://doi.org/10.5281/zenodo.19693372}.
+
+\bibitem[Vermeesch et~al.(2026)Vermeesch, Band, He, Galbraith, and
+  Carter]{vermeesch2026}
+Vermeesch, P., Band, T., He, J., Galbraith, R., and Carter, A.
+\newblock {FAIR fission track analysis with geochron@ home}.
+\newblock \emph{Geochronology}, 8\penalty0 (1):\penalty0 109--118, 2026.
+
+\bibitem[Wendt and Carl(1991)]{wendt1991}
+Wendt, I. and Carl, C.
+\newblock The statistical distribution of the mean squared weighted deviation.
+\newblock \emph{Chemical Geology: Isotope Geoscience Section}, 86\penalty0
+  (4):\penalty0 275--285, 1991.
+
+\bibitem[Wiedenbeck et~al.(1995)Wiedenbeck, Alle, Corfu, Griffin, Meier,
+  Oberli, Quadt, Roddick, and Spiegel]{wiedenbeck1995}
+Wiedenbeck, M., Alle, P., Corfu, F., Griffin, W., Meier, M., Oberli, F.~v.,
+  Quadt, A.~v., Roddick, J., and Spiegel, W.
+\newblock {Three natural zircon standards for U-Th-Pb, Lu-Hf, trace element and
+  REE analyses}.
+\newblock \emph{Geostandards newsletter}, 19\penalty0 (1):\penalty0 1--23,
+  1995.
+
+\bibitem[Wilkinson et~al.(2016)Wilkinson, Dumontier, Aalbersberg, Appleton,
+  Axton, Baak, Blomberg, Boiten, da~Silva~Santos, Bourne,
+  et~al.]{wilkinson2016}
+Wilkinson, M.~D., Dumontier, M., Aalbersberg, I.~J., Appleton, G., Axton, M.,
+  Baak, A., Blomberg, N., Boiten, J.-W., da~Silva~Santos, L.~B., Bourne, P.~E.,
+  et~al.
+\newblock {The FAIR Guiding Principles for scientific data management and
+  stewardship}.
+\newblock \emph{Scientific data}, 3\penalty0 (1):\penalty0 1--9, 2016.
+
+\bibitem[York et~al.(2004)York, Evensen, Mart\'{i}nez, and
+  De~Basabe~Delgado]{york2004}
+York, D., Evensen, N.~M., Mart\'{i}nez, M.~L., and De~Basabe~Delgado, J.
+\newblock {Unified equations for the slope, intercept, and standard errors of
+  the best straight line}.
+\newblock \emph{American Journal of Physics}, 72\penalty0 (3):\penalty0
+  367--375, 2004.
+
+\end{thebibliography}

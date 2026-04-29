@@ -1,0 +1,435 @@
+"","IGSN","dosimeter","irradiation","p-value"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10770.xlsx","EVA00001K","IRMM 540","UC05a",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10771.xlsx","EVA00001L","IRMM 540","UC05a",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10772.xlsx","EVA00001M","IRMM 540","UC05a",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10773.xlsx","EVA00001N","IRMM 540","UC05a",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10774.xlsx","EVA00001O","IRMM 540","UC05a",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10775.xlsx","EVA00001P","IRMM 540","UC05a",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10776.xlsx","EVA00001Q","IRMM 540","UC05a",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10777.xlsx","EVA00001R","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10778.xlsx","EVA00001S","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10779.xlsx","EVA00001T","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10780.xlsx","EVA00001U","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10781.xlsx","EVA00001R","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10782.xlsx","EVA00001W","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10783.xlsx","EVA00001X","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10784.xlsx","EVA00001Y","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10785.xlsx","EVA00001Z","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10786.xlsx","EVA000020","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10787.xlsx","EVA000021","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10788.xlsx","EVA000023","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10789.xlsx","EVA000025","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10790.xlsx","EVA000026","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10791.xlsx","EVA000027","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10792.xlsx","EVA000022","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10793.xlsx","EVA000024","IRMM541","UC04z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10794.xlsx","EVA000028","IRMM541","TU11z","92.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10795.xlsx","EVA000029","IRMM541","TU11z","96.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10796.xlsx","EVA00002A","IRMM541","TU11z","63.6"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10797.xlsx","EVA00002B","IRMM541","TU11z","36.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10798.xlsx","EVA00002C","IRMM541","TU11z","59.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10799.xlsx","EVA00002D","IRMM541","TU11z","30.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10800.xlsx","EVA00002E","IRMM541","TU11z","57.5"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10801.xlsx","EVA00002F","IRMM541","TU11z","42.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10802.xlsx","EVA00002G","IRMM541","TU11z","30.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10803.xlsx","EVA00002I","IRMM541","TU11z","38.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10804.xlsx","EVA00002J","IRMM541","TU11z","37.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10805.xlsx","EVA00002K","IRMM541","TU11z","34.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10806.xlsx","EVA00002L","IRMM541","TU11z","81.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10807.xlsx","EVA00002M","IRMM541","TU11z","48.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10808.xlsx","EVA00002N","IRMM541","TU11z","61.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10809.xlsx","EVA00002O","IRMM541","TU11z","76.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10810.xlsx","EVA00002P","IRMM541","TU11z","96.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10811.xlsx","EVA00002Q","IRMM541","TU11z","23.9"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10812.xlsx","EVA00002R","IRMM541","TU11z","84.2"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10813.xlsx","EVA00002S","IRMM541","TU11z","5.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10814.xlsx","EVA00002T","IRMM541","TU11z","25.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10815.xlsx","EVA00002U","IRMM541","TU11z","83.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10816.xlsx","EVA00002V","IRMM541","TU11z","59.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/10817.xlsx","EVA00002W","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10818.xlsx","EVA00002X","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10819.xlsx","EVA00002Y","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10820.xlsx","EVA00002Z","IRMM541","UC2z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10821.xlsx","EVA000030","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10822.xlsx","EVA000031","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10823.xlsx","EVA000032","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10824.xlsx","EVA000033","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10825.xlsx","EVA000034","IRMM541","UC2z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10826.xlsx","EVA000035","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10827.xlsx","EVA000036","IRMM541","UC2z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10828.xlsx","EVA000037","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10829.xlsx","EVA000038","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10830.xlsx","EVA000039","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10831.xlsx","EVA00003A","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10832.xlsx","EVA00003B","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10833.xlsx","EVA00003C","IRMM541","UC2z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10834.xlsx","EVA00003D","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10835.xlsx","EVA00003E","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10836.xlsx","EVA00003F","IRMM541","TU11z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10837.xlsx","EVA00003G","IRMM541","UC2z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10838.xlsx","EVA00003H","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10839.xlsx","EVA00003I","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10840.xlsx","EVA00003J","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10841.xlsx","EVA00003K","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10842.xlsx","EVA00003L","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10843.xlsx","EVA00003M","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10844.xlsx","EVA00003N","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10845.xlsx","EVA00003O","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10846.xlsx","EVA00003P","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10847.xlsx","EVA00003Q","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10848.xlsx","EVA00003R","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10849.xlsx","EVA00003S","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10850.xlsx","EVA00003T","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10851.xlsx","EVA00003U","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/10852.xlsx","EVA00003V","IRMM540","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13860.xlsx","IESZH000S","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13861.xlsx","IESZH000T","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13862.xlsx","IESZH000U","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13863.xlsx","IESZH000V","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13864.xlsx","IESZH000W","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13865.xlsx","IESZH000X","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13866.xlsx","IESZH000Y","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13867.xlsx","IESZH000Z","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/13868.xlsx","IESZH0010","CN5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14011.xlsx","IEGTK0001","CN5","G1299","28.5"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14012.xlsx","IEGTK0002","CN5","G1299","97.9"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14013.xlsx","IEGTK0003","CN5","G1299","1.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14014.xlsx","IEGTK0004","CN5","G1299","37.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14015.xlsx","IEGTK0006","CN5","G1299","75.9"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14016.xlsx","IEGTK0007","CN5","G1299","50.6"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14017.xlsx","IEGTK0009","CN5","G1299","0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14018.xlsx","IEGTK000A","CN5","G1299","0.2"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14019.xlsx","IEGTK000B","CN5","G1299","63"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14020.xlsx","IEGTK000C","CN5","G1299","43.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14021.xlsx","IEGTK000D","CN5","G1299","63.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14022.xlsx","IEGTK000E","CN5","G1299","37.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14023.xlsx","IEGTK000F","CN5","G1299","67.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14024.xlsx","IEGTK000H","CN5","G1301","36.6"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14025.xlsx","IEGTK000I","CN5","G1301","0.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14026.xlsx","IEGTK000J","CN5","G1301","0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14027.xlsx","IEGTK000L","CN5","G1301","1.9"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14028.xlsx","IEGTK000O","CN5","G1306","80.2"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14029.xlsx","IEGTK000P","CN5","G1306","6.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14030.xlsx","IEGTK000Q","CN5","G1306","0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14031.xlsx","IEGTK000S","CN5","G1306","53.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14032.xlsx","IEGTK000T","CN5","G1306","60.2"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14033.xlsx","IEGTK000U","CN5","G1306","0.9"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14034.xlsx","IEGTK000X","CN5","G1306","92.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14035.xlsx","IEGTK000Y","SRM612","G108","65.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14036.xlsx","IEGTK000Z","SRM612","G108","6.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14037.xlsx","IEGTK0010","SRM612","G108","13.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/14074.xlsx","IEFCR13-17",NA,NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14075.xlsx","IEFCR13-15",NA,NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14079.xlsx","IEFCR13-14",NA,NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14080.xlsx","IEFCR13-16",NA,NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14759.xlsx","IESZH000D","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14760.xlsx","IESZH000E","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14761.xlsx","IESZH000F","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14762.xlsx","IESZH000G","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14763.xlsx","IESZH000N","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14764.xlsx","IESZH000M","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14765.xlsx","IESZH000L","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14766.xlsx","IESZH000K","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14767.xlsx","IESZH000J","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14768.xlsx","IESZH000I","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14769.xlsx","IESZH000H","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14770.xlsx","IESZH000P","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14771.xlsx","IESZH000O","CN5","UP 147",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14772.xlsx","IESZH0004","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14773.xlsx","IESZH0005","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14774.xlsx","IESZH0006","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14775.xlsx","IESZH0007","CN5","UP 149",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14776.xlsx","IESZH0008","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14777.xlsx","IESZH0001","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14778.xlsx","IESZH0002","CN5","UP 149",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14779.xlsx","IESZH0003","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14780.xlsx","IESZH000B","CN5","UP 150",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14781.xlsx","IESZH000C","CN5","UP 149",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14782.xlsx","IESZH000R","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14783.xlsx","IESZH0009","CN5","UP 148",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/14784.xlsx","IESZH000A","CN5","UP 150",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/15118.xlsx","IEPVB0001","IRMM541","IRR 12-2015",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/15119.xlsx","IEPVB0002","IRMM541",NA,"0.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/15120.xlsx","IEPVB0003","IRMM541",NA,"0.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/15121.xlsx","IEPVB0004","IRMM541",NA,"0.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/15122.xlsx","IEPVB0005","IRMM541",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/15123.xlsx","IEPVB0006","IRMM541",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/15124.xlsx","IEPVB0007","IRMM541",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/15125.xlsx","IEPVB0008","IRMM541","IRR 13-2014",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/15126.xlsx","IEPVB0009","IRMM541","IRR 13-2014",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/15127.xlsx","IEPVB000A","IRMM541","IRR 13-2014",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/16603.xlsx","IEARK0003",NA,NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/16852.xlsx","IEZUN0002","CN6","RR-8-14-07a3","52"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16853.xlsx","IEZUN0002","CN6","RR-8-14-07a3","58"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16854.xlsx","IEZUN0002","CN6","RR-8-14-07a3","95"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16856.xlsx","IEZUN0002","CN6","RR-2-19-03a1","99"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16857.xlsx","IEZUN0002","CN6","RR-2-19-03a1","14"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16858.xlsx","IEZUN0002","CN6","RR-2-19-03a1","99"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16859.xlsx","IEZUN0003","CN6","RR-2-19-03a1","87"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16860.xlsx","IEZUN0002","CN6","RR-2-19-03a1","82"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16861.xlsx","IEZUN0002","CN6","RR-2-19-03a1","89"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16862.xlsx","IEZUN0004","CN6","RR-2-19-03a1","98"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16864.xlsx","IEZUN0002","CN6","RR-2-19-03a1","70"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16865.xlsx","IEZUN0006","CN6","RR-2-19-03a1","77"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16866.xlsx","IEZUN0006","CN6","RR-2-19-03a1","97"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16916.xlsx","IESNS0004",NA,NA,"47.66"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16917.xlsx","IESNS0002",NA,NA,"99.81"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16918.xlsx","IESNS0003",NA,NA,"39.11"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16919.xlsx","IESNS0001",NA,NA,"93.72"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16920.xlsx","IESNS0008",NA,NA,"92.26"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16921.xlsx","IESNS0009",NA,NA,"10.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16995.xlsx","IEMNX0005","IRMM541","ISTerre-3-2017","0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16996.xlsx","IEMNX0004","IRMM541","ISTerre-3-2017","30"
+"/home/pvermees/Documents/cherrypicking/geochron.org/16997.xlsx","IEMNX0002","IRMM541","ISTerre-3-2017","3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17002.xlsx","IEMNX0003","IRMM541","ISTerre-3-2017","37"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17004.xlsx","IEMNX0001","IRMM540R","ISTerre-1-2017","22"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17005.xlsx","IEMNX0002","IRMM540R","ISTerre-1-2017","46"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17070.xlsx","IEATG1610","CN5","Radiation Center of Oregon State University",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17071.xlsx","IEATG1612","IRMM540","Atomic Center of Ezeiza (CNEA), Buenos Aires, Argentina",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17072.xlsx","IEATG1616","IRMM540","Atomic Center of Ezeiza (CNEA), Buenos Aires, Argentina",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17073.xlsx","IEATG1617","CN5","Radiation Center of Oregon State University",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17074.xlsx","IEATG1618","CN5","Radiation Center of Oregon State University",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17075.xlsx","IEATG1616","IRMM541","Atomic Center of Ezeiza (CNEA), Buenos Aires, Argentina",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17089.xlsx","IESAF0001","IRMM-540R","15-2013","26.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17090.xlsx","IESAF0002","IRMM-540R","14-2013","15.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17091.xlsx","IESAF0003","IRMM-540R","10-2014","29.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17092.xlsx","IESAF0004","IRMM-540R","8-2018","18.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17093.xlsx","IESAF0005","IRMM-540R","5-2018","39.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17094.xlsx","IESAF0006","IRMM-540R","5-2018","48.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17095.xlsx","IESAF0007","IRMM-540R","5-2018","11.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17096.xlsx","IESAF0008","IRMM-540R","5-2018","91.9"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17097.xlsx","IESAF0009","IRMM-540R","5-2018","28.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17098.xlsx","IESAF0010","IRMM-540R","5-2018","0.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17099.xlsx","IESAF0011","IRMM-540R","5-2018","99.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17100.xlsx","IESAF0012","IRMM-540R","5-2018","2.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17101.xlsx","IESAF0013","IRMM-540R","14-2013","34.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17102.xlsx","IESAF0014","IRMM-540R","14-2013","61.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17103.xlsx","IESAF0015","IRMM-540R","8-2018","68.6"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17104.xlsx","IESAF0016","IRMM-540R","8-2018","14.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17106.xlsx","IESAF0018",NA,"1-2014","0.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17107.xlsx","IESAF0019","CN1","9-2018","2.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17108.xlsx","IESAF0020","CN1","9-2018","36.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17109.xlsx","IESAF0021","CN1","9-2018","10.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17110.xlsx","IESAF0022","CN1","9-2018","2.6"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17111.xlsx","IESAF0023","CN1","9-2018","90.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17112.xlsx","IESAF0024","CN1","9-2018","95.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17113.xlsx","IESAF0025","CN1","9-2018","0.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17114.xlsx","IESAF0026","CN1","9-2018","11.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17115.xlsx","IESAF0027","CN1","9-2018","0.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17116.xlsx","IESAF0028","CN1","9-2018","48.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17117.xlsx","IESAF0029",NA,"1-2014","0.0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17118.xlsx","IESAF0030","CN1","1-2019","71.9"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17155.xlsx","IEMNX0003","IRMM540R","ISTerre-1-2017","78"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17156.xlsx","IEMNX0005","IRMM540R","ISTerre-1-2017","19"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17164.xlsx","IE0KL0001","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17165.xlsx","IE0KL0001","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17166.xlsx","IE0KL0002","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17167.xlsx","IE0KL0002","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17168.xlsx","IE0KL0003","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17169.xlsx","IE0KL0003","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17170.xlsx","IE0KL0004","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17171.xlsx","IE0KL0005","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17172.xlsx","IE0KL0005","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17173.xlsx","IE0KL0006","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17174.xlsx","IE0KL0007","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17175.xlsx","IE0KL0007","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17176.xlsx","IE0KL0008","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17177.xlsx","IE0KL0008","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17178.xlsx","IE0KL0009","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17179.xlsx","IE0KL0009","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17180.xlsx","IE0KL000A","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17181.xlsx","IE0KL000A","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17182.xlsx","IE0KL000B","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17183.xlsx","IE0KL000B","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17184.xlsx","IE0KL000C","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17185.xlsx","IE0KL000D","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17186.xlsx","IE0KL000D","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17187.xlsx","IE0KL000E","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17188.xlsx","IE0KL000F","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17189.xlsx","IE0KL000G","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17190.xlsx","IE0KL000H","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17191.xlsx","IE0KL000I","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17192.xlsx","IE0KL000I","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17193.xlsx","IE0KL000J","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17194.xlsx","IE0KL000K","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17195.xlsx","IE0KL000L","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17196.xlsx","IE0KL000L","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17197.xlsx","IE0KL000M","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17198.xlsx","IE0KL000M","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17199.xlsx","IERMT0031","IRMM-540R",NA,"0.307"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17200.xlsx","IERMT0029","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17201.xlsx","IERMT0027","IRMM-540R",NA,"0.42199999999999999"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17202.xlsx","IERMT0026","IRMM-540R",NA,"0.26900000000000002"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17203.xlsx","IERMT0023","IRMM-540R",NA,"89.616"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17204.xlsx","IERMT0022","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17205.xlsx","IERMT0021","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17206.xlsx","IERMT0020","IRMM-540R",NA,"1.3740000000000001"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17207.xlsx","IERMT0018","IRMM-540R",NA,"0.125"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17208.xlsx","IERMT0017","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17209.xlsx","IERMT0015","IRMM-540R",NA,"0.32800000000000001"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17210.xlsx","IERMT0016","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17211.xlsx","IERMT0014","IRMM-540R",NA,"2.681"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17212.xlsx","IERMT0013","IRMM-540R",NA,"17.59"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17213.xlsx","IERMT0012","IRMM-540R",NA,"75.932000000000002"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17214.xlsx","IERMT0011","IRMM-540R",NA,"29.98"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17215.xlsx","IERMT0010","IRMM-540R",NA,"28.387"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17216.xlsx","IERMT0009","IRMM-540R",NA,"9.7000000000000003E-2"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17217.xlsx","IERMT0008","IRMM-540R",NA,"19.562999999999999"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17218.xlsx","IERMT0007","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17219.xlsx","IERMT0006","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17220.xlsx","IERMT0005","IRMM-540R",NA,"0.316"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17221.xlsx","IERMT0003","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17222.xlsx","IERMT0002","IRMM-540R",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17223.xlsx","IERMT0001","IRMM-540R",NA,"66.808999999999997"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17224.xlsx","IE0KL000N","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17225.xlsx","IE0KL000O","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17226.xlsx","IE0KL000O","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17227.xlsx","IE0KL000P","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17228.xlsx","IE0KL000P","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17229.xlsx","IE0KL000Q","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17230.xlsx","IE0KL000R","IRMM540R","UC03A",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17231.xlsx","IE0KL000R","IRMM541","UC02",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/17704.xlsx","IEMIL000M","CN5","19IR1-C3","28.01"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17705.xlsx","IEMIL000L","CN5","19IR1-C3","17.14"
+"/home/pvermees/Documents/cherrypicking/geochron.org/17706.xlsx","IEMIL000F","CN5","19IR1-C3","67.37"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20549.xlsx","IEGMR0010","CN5",NA,"87"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20550.xlsx","IEGMR0011","CN5",NA,"90"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20551.xlsx","IEGMR0012","CN5",NA,"95"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20552.xlsx","IEGMR000A","CN5",NA,"92"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20553.xlsx","IEGMR000Y","CN5",NA,"99"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20554.xlsx","IEGMR000Z","CN5",NA,"98"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20555.xlsx","IEGMR000O","CN5",NA,"83"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20556.xlsx","IEGMR000T","CN5",NA,"78"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20557.xlsx","IEGMR000U","CN5",NA,"98"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20558.xlsx","IEGMR000V","CN5",NA,"99"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20559.xlsx","IEGMR000W","CN5",NA,"98"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20560.xlsx","IEGMR000X","CN5",NA,"93"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20561.xlsx","IEGMR000L","CN5",NA,"11"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20562.xlsx","IEGMR000M","CN5",NA,"0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20563.xlsx","IEGMR000F","CN5",NA,"14"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20564.xlsx","IEGMR0018","CN5",NA,"56"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20565.xlsx","IEGMR0019","CN5",NA,"87"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20566.xlsx","IEGMR001A","CN5",NA,"87"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20567.xlsx","IEGMR001B","CN5",NA,"91"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20889.xlsx","IE2320008","IRMM540R","5-2016","15"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20890.xlsx","IE2320002","IRMM 541","1-2016","3.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20891.xlsx","IE2320003","IRMM 541","1-2016","2.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20892.xlsx","IE2320004","IRMM 541","1-2016","9.5"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20893.xlsx","IE2320005","IRMM 541","1-2016","17.5"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20894.xlsx","IE2320006","IRMM 541","1-2016","22.6"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20895.xlsx","IE2320007","IRMM 541","1-2016","0.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20896.xlsx","IE2320009","IRMM 541","1-2016","9.5"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20901.xlsx","IE232000A","IRMM 541","1-2016","98.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20912.xlsx","IE232000G","IRMM 541","1-2016","10.6"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20913.xlsx","IE232000B","IRMM 541","1-2016","80.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20914.xlsx","IE232000C","IRMM 541","1-2016","72.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20915.xlsx","IE232000D","IRMM 541","1-2016","41.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20916.xlsx","IE232000E","IRMM 541","1-2016","50.7"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20917.xlsx","IE232000F","IRMM 541","1-2016","81.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20920.xlsx","IE232000H","IRMM 541","1-2016","60.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20922.xlsx","IE232000I","IRMM 541","1-2016","52.1"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20931.xlsx","IE232000J","IRMM540R","5-2016","89.6"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20933.xlsx","IE232000K","IRMM540R","5-2016","95.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20937.xlsx","IE232000L","IRMM540R","5-2016","98.2"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20938.xlsx","IE232000M","IRMM540R","5-2016","79.8"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20939.xlsx","IE232000N","IRMM540R","5-2016","87.3"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20940.xlsx","IE232000O","IRMM540R","5-2016","2"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20941.xlsx","IE232000P","IRMM540R","5-2016","40.2"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20942.xlsx","IE232000Q","IRMM540R","5-2016","29.9"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20948.xlsx","IE2320001","IRMM 541","1-2016","0"
+"/home/pvermees/Documents/cherrypicking/geochron.org/20996.xlsx","IEASG0001","CN2","UA-Z11","24.16"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21086.xlsx","IEASG0002","CN2","UA-Z11","22.15"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21087.xlsx","IEASG0004","CN2","UA-Z11","0.00"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21088.xlsx","IEASG0005","CN2","UA-Z11","0.00"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21089.xlsx","IEASG0006","CN2","UA-Z11","0.00"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21090.xlsx","IEASG0007","CN2","UA-Z11","0.00"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21091.xlsx","IEASG0008","CN2","UA-Z11","0.00"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21092.xlsx","IEASG0009","CN2","UA-Z11","0.81"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21093.xlsx","IEASG000A","CN2","UA-Z11","3.4"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21094.xlsx","IEASG000B","CN2","UA-Z11","0.08"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21095.xlsx","IEASG000C","CN2","UA-Z11","0.00"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21096.xlsx","IEASG000D","CN2","UA-Z11","88.57"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21097.xlsx","IEASG000E","CN2","UA-Z11","0.00"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21098.xlsx","IEASG000F","CN2","UA-Z1","58.88"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21204.xlsx","IELCD001Q","CN1","USP28",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21205.xlsx","IELCD001R","CN1","USP28",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21206.xlsx","IELCD001S","CN1","USP28",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21207.xlsx","IELCD001U","CN1","USP27",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21208.xlsx","IELCD001V","CN1","USP27",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21215.xlsx","IELCD001W","CN1","USP27",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21216.xlsx","IELCD001X","CN1","USP27",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21230.xlsx","IELCD001Y","CN1","USP27",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21465.xlsx","10.58052/IECJH0005","CN5","UA20-1","7.9363322143475346"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21505.xlsx","10.58052/IELCD002E","CN1","USP32",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21506.xlsx","10.58052/IELCD001Z","CN1","USP36",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21507.xlsx","10.58052/IELCD0026","CN1","USP36",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21508.xlsx","10.58052/IELCD0028","CN1","USP36",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21509.xlsx","10.58052/IELCD002D","CN1","USP36",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21635.xlsx","10.58052/IEPAK0004",NA,"UA-20-04","86.427007051226809"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21636.xlsx","10.58052/IEPAK0007",NA,"UA-20-04","57.177723278974078"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21637.xlsx","10.58052/IEPAK0008",NA,"UA-20-04","99.999998653068573"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21638.xlsx","10.58052/IEPAK0008",NA,"UA-20-04","99.289174495544756"
+"/home/pvermees/Documents/cherrypicking/geochron.org/21658.xlsx","10.58052/IEATB0002","cn5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21659.xlsx","10.58052/IEATB0003","cn5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21660.xlsx","10.58052/IEATB0004","cn5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21661.xlsx","10.58052/IEATB0005","cn5",NA,NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21849.xlsx","10.58052/IELCD002H","CN1","USP27",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21850.xlsx","10.58052/IELCD002I","CN1","USP36",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21851.xlsx","10.58052/IELCD002J","CN1","USP36",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21852.xlsx","10.58052/IELCD002K","CN1","USP36",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21854.xlsx","10.58052/IELCD002G","CN1","USP36",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/21914.xlsx","10.58052/IELCD002G","CN1","USP32",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9408.xlsx","EVA000007","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9417.xlsx","EVA000009","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9418.xlsx","EVA00000A","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9419.xlsx","EVA00000B","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9420.xlsx","EVA000001","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9421.xlsx","EVA000002","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9424.xlsx","EVA000004","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9425.xlsx","EVA000006","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9426.xlsx","EVA000003","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9427.xlsx","EVA000008","CN5","U39Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9429.xlsx","EVA00000S","CN5","U45Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9430.xlsx","EVA00000T","CN5","U45Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9431.xlsx","EVA00000O","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9432.xlsx","EVA00000R","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9433.xlsx","EVA00000Q","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9434.xlsx","EVA00000P","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9435.xlsx","EVA00000N","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9436.xlsx","EVA00000L","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9437.xlsx","EVA00000M","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9438.xlsx","EVA00000I","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9439.xlsx","EVA00000K","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9440.xlsx","EVA00000J","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9441.xlsx","EVA00000D","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9442.xlsx","EVA00000C","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9443.xlsx","EVA00000E","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9444.xlsx","EVA00000G","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9445.xlsx","EVA00000F","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9446.xlsx","EVA00000H","CN5","U41Z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9515.xlsx","EVA00000U","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9516.xlsx","EVA00000V","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9517.xlsx","EVA00000W","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9518.xlsx","EVA00000X","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9519.xlsx","EVA00000Y","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9520.xlsx","EVA00000Z","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9521.xlsx","EVA000010","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9522.xlsx","EVA000011","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9523.xlsx","EVA000012","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9524.xlsx","EVA000013","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9525.xlsx","EVA000014","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9526.xlsx","EVA000015","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9527.xlsx","EVA000016","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9528.xlsx","EVA000017","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9529.xlsx","EVA000018","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9530.xlsx","EVA000019","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9531.xlsx","EVA00001A","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9532.xlsx","EVA00001B","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9533.xlsx","EVA00001C","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9534.xlsx","EVA00001D","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9535.xlsx","EVA00001E","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9536.xlsx","EVA00001F","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9537.xlsx","EVA00001G","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9538.xlsx","EVA00001H","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9539.xlsx","EVA00001I","IRMM541","TU7z",NA
+"/home/pvermees/Documents/cherrypicking/geochron.org/9540.xlsx","EVA00001J","IRMM541","TU7z",NA
