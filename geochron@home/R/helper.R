@@ -244,8 +244,8 @@ compare_grains <- function(results,grain_x,grain_y,plot=TRUE,...){
         X <- out$x
         X[duplo,] <- jitter(X[duplo,])
         plot(X,
-             xlab=paste0('grain ',grain_x),
-             ylab=paste0('grain ',grain_y),
+             xlab=paste0('tracks counted in grain ',grain_x),
+             ylab=paste0('tracks counted in grain ',grain_y),
              pch=21,bg=bg,...)
         rho <- format(round(cor(out$x)[1,2],2),nsmall=2)
         mtext(line=0,text=paste0('correlation=',rho),cex=1.0)
