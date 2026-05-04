@@ -214,9 +214,9 @@ $H_a$, which can mean four things:
   sample-specific complexities that are not captured by the analytical
   uncertainties;
 \item The dataset has been cherry picked among a larger collection of
-  measurements to maximise the dispersion. This situation never occurs
-  in geochronology but is actually quite common in other fields of
-  science as detailed in the Appendix (`Type~I cherry picking').
+  measurements to maximise the dispersion. This situation may never
+  occur in geochronology but is actually quite common in other fields
+  of science as detailed in the Appendix (`Type~I cherry picking').
 \end{enumerate}
 
 Overdispersion carries a distinctly negative connotation in
@@ -238,8 +238,8 @@ xenocrysts or common Pb, and the occurrence of Pb-loss
 The statistical \emph{power} of the chi-squared test to detect
 overdispersion steadily grows with increasing analytical precision and
 sample size. Given a large enough sample with sufficiently small
-analytical uncertainties, even the smallest amounts of geological
-dispersion become discoverable.  Given the spectacular gains in
+analytical uncertainties, even the smallest amount of geological
+dispersion becomes discoverable.  Given the spectacular gains in
 precision and throughput that radiometric geochronology has witnessed
 over time, it is not surprising that overdispersed datasets become
 ever more prevalent. Therefore, overdispersed datasets should be
@@ -304,11 +304,12 @@ Assuming $n$ independent experiments, the probability that all $n$
 p-values are at least $\alpha$ is $(1-\alpha)^n$.  Consequently, the
 probability of making at least one Type~I error (i.e., incorrectly
 classifying a homogeneous sample as overdispersed) is $1 - (1 -
-\alpha)^n$. This probability increases from 5\% for $n = 1$, to 10\%
-for $n = 2$, 14\% for $n = 3$, and 51\% for $n = 14$. In other words,
-in geochronological studies of homogeneous samples reporting 14 or
-more MSWD values, it becomes more likely than not that at least one
-sample will be falsely identified as overdispersed.\medskip
+\alpha)^n$. For $\alpha=0.05$, this probability increases from 5\% for
+$n = 1$, to 10\% for $n = 2$, 14\% for $n = 3$, and 51\% for $n =
+14$. In other words, in geochronological studies of homogeneous
+samples reporting 14 or more MSWD values, it becomes more likely than
+not that at least one sample will be falsely identified as
+overdispersed.\medskip
 
 The same reasoning can be applied to the lower tail of the chi-squared
 distribution. For a non-dispersed sample, the probability of obtaining
@@ -1087,7 +1088,7 @@ Section~\ref{sec:real}.\medskip
 The synthetic examples of Section~\ref{sec:mixtures} showed that, in a
 meta-analysis that combines overdispersed datasets with underdispersed
 ones, it is not easy to pull the p-value distribution into the
-`forbidden zone'.  Doing so requires extremely levels of outlier
+`forbidden zone'.  Doing so requires extremely high levels of outlier
 rejection. All the case studies presented in this paper show evidence
 for such extreme outlier rejection in at least some of the
 samples.\medskip
@@ -1190,7 +1191,7 @@ distribution of the p-values for sample homogeneity may be negatively
 skewed with respect to a uniform distribution but must not be
 positively skewed. The area below the 1:1 line of a cumulative
 distribution plot marks a `forbidden zone', reflecting the presence of
-samples whose internal constency is unrealistically good.\medskip
+samples whose internal consistency is unrealistically good.\medskip
 
 Underdispersion can arise from incorrect error propagation, or from
 overzealous outlier rejection. Application of the p-value method to

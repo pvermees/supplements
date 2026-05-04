@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.4)  2 MAY 2026 09:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.4)  4 MAY 2026 01:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,17 +689,17 @@ ples and ap-plied to ex-ten-sive com-pi-la-tions of pub-lished geochrono-
 <../figures/synthetic-ECDF.pdf, id=134, 289.08pt x 289.08pt>
 File: ../figures/synthetic-ECDF.pdf Graphic file (type pdf)
 <use ../figures/synthetic-ECDF.pdf>
-Package pdftex.def Info: ../figures/synthetic-ECDF.pdf  used on input line 364.
+Package pdftex.def Info: ../figures/synthetic-ECDF.pdf  used on input line 365.
 
 (pdftex.def)             Requested size: 251.80688pt x 251.80634pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 373.
+(caption)                particular \caption on input line 374.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 363--376
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 364--377
 [] [] 
  []
 
@@ -707,16 +707,16 @@ Overfull \hbox (1.90002pt too wide) in paragraph at lines 363--376
 <../figures/FT.pdf, id=173, 325.215pt x 325.215pt>
 File: ../figures/FT.pdf Graphic file (type pdf)
 <use ../figures/FT.pdf>
-Package pdftex.def Info: ../figures/FT.pdf  used on input line 474.
+Package pdftex.def Info: ../figures/FT.pdf  used on input line 475.
 (pdftex.def)             Requested size: 251.80688pt x 251.81075pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 482.
+(caption)                particular \caption on input line 483.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 473--485
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 474--486
 [] [] 
  []
 
@@ -724,16 +724,16 @@ Overfull \hbox (1.90002pt too wide) in paragraph at lines 473--485
 <../figures/wtdmean.pdf, id=195, 650.43pt x 325.215pt>
 File: ../figures/wtdmean.pdf Graphic file (type pdf)
 <use ../figures/wtdmean.pdf>
-Package pdftex.def Info: ../figures/wtdmean.pdf  used on input line 539.
+Package pdftex.def Info: ../figures/wtdmean.pdf  used on input line 540.
 (pdftex.def)             Requested size: 302.17133pt x 151.08942pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 551.
+(caption)                particular \caption on input line 552.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 538--554
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 539--555
 [] [] 
  []
 
@@ -741,26 +741,26 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 538--554
 <../figures/isochron.pdf, id=226, 650.43pt x 325.215pt>
 File: ../figures/isochron.pdf Graphic file (type pdf)
 <use ../figures/isochron.pdf>
-Package pdftex.def Info: ../figures/isochron.pdf  used on input line 619.
+Package pdftex.def Info: ../figures/isochron.pdf  used on input line 620.
 (pdftex.def)             Requested size: 352.52809pt x 176.26851pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 628.
+(caption)                particular \caption on input line 629.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 628--628
+Underfull \hbox (badness 2012) in paragraph at lines 629--629
 []\T1/ptm/b/n/9 Figure 4. []\T1/ptm/m/n/9 Synthetic $[]$Ar--$[]$Ar dataset
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 628--628
+Underfull \hbox (badness 1769) in paragraph at lines 629--629
 \T1/ptm/m/n/9 (a) with-out and (b) with `out-lier' re-
  []
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 618--631
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 619--632
 [] [] 
  []
 
@@ -768,21 +768,21 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 618--631
 <../figures/concordia.pdf, id=250, 650.43pt x 325.215pt>
 File: ../figures/concordia.pdf Graphic file (type pdf)
 <use ../figures/concordia.pdf>
-Package pdftex.def Info: ../figures/concordia.pdf  used on input line 692.
+Package pdftex.def Info: ../figures/concordia.pdf  used on input line 693.
 (pdftex.def)             Requested size: 352.52809pt x 176.26851pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 701.
+(caption)                particular \caption on input line 702.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 701--701
+Underfull \hbox (badness 6001) in paragraph at lines 702--702
 []\T1/ptm/b/n/9 Figure 5. []\T1/ptm/m/n/9 a) syn-thetic time-resolved
  []
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 691--704
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 692--705
 [] [] 
  []
 
@@ -790,48 +790,48 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 691--704
 <../figures/synthetic_ecdfs.pdf, id=287, 650.43pt x 325.215pt>
 File: ../figures/synthetic_ecdfs.pdf Graphic file (type pdf)
 <use ../figures/synthetic_ecdfs.pdf>
-Package pdftex.def Info: ../figures/synthetic_ecdfs.pdf  used on input line 781
+Package pdftex.def Info: ../figures/synthetic_ecdfs.pdf  used on input line 782
 .
 (pdftex.def)             Requested size: 352.52809pt x 176.26851pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 791.
+(caption)                particular \caption on input line 792.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 791--791
+Underfull \hbox (badness 2111) in paragraph at lines 792--792
 []\T1/ptm/b/n/9 Figure 6. []\T1/ptm/m/n/9 p-value dis-tri-bu-tions for a)
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 791--791
+Underfull \hbox (badness 1769) in paragraph at lines 792--792
 \T1/ptm/m/n/9 sam-ples; and b) a col-lec-tion of sam-
  []
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 780--794
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 781--795
 [] [] 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 83
-9.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 84
+0.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [13 <../figures/synthetic_ecdfs.pdf>]
 <../figures/Iwano.pdf, id=322, 289.08pt x 289.08pt>
 File: ../figures/Iwano.pdf Graphic file (type pdf)
 <use ../figures/Iwano.pdf>
-Package pdftex.def Info: ../figures/Iwano.pdf  used on input line 853.
+Package pdftex.def Info: ../figures/Iwano.pdf  used on input line 854.
 (pdftex.def)             Requested size: 201.44243pt x 201.44153pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 861.
+(caption)                particular \caption on input line 862.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 852--864
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 853--865
 [] [] 
  []
 
@@ -839,26 +839,26 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 852--864
 <../figures/Nature.pdf, id=347, 578.16pt x 289.08pt>
 File: ../figures/Nature.pdf Graphic file (type pdf)
 <use ../figures/Nature.pdf>
-Package pdftex.def Info: ../figures/Nature.pdf  used on input line 938.
+Package pdftex.def Info: ../figures/Nature.pdf  used on input line 939.
 (pdftex.def)             Requested size: 352.52809pt x 176.26355pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 944.
+(caption)                particular \caption on input line 945.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 944--944
+Underfull \hbox (badness 1024) in paragraph at lines 945--945
 []\T1/ptm/b/n/9 Figure 8. []\T1/ptm/m/n/9 p-value dis-tri-bu-tions for the
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 944--944
+Underfull \hbox (badness 1210) in paragraph at lines 945--945
 \T1/ptm/m/n/9 black curves rep-re-sent the full dataset
  []
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 937--947
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 938--948
 [] [] 
  []
 
@@ -866,38 +866,38 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 937--947
 <../figures/GTS.pdf, id=368, 289.08pt x 289.08pt>
 File: ../figures/GTS.pdf Graphic file (type pdf)
 <use ../figures/GTS.pdf>
-Package pdftex.def Info: ../figures/GTS.pdf  used on input line 996.
+Package pdftex.def Info: ../figures/GTS.pdf  used on input line 997.
 (pdftex.def)             Requested size: 201.44243pt x 201.44153pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1004.
+(caption)                particular \caption on input line 1005.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 995--1007
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 996--1008
 [] [] 
  []
 
 [16]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-044.
+045.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [17 <../figures/GTS.pdf>]
 <../figures/Droellner.pdf, id=415, 507.74492pt x 288.54222pt>
 File: ../figures/Droellner.pdf Graphic file (type pdf)
 <use ../figures/Droellner.pdf>
-Package pdftex.def Info: ../figures/Droellner.pdf  used on input line 1066.
+Package pdftex.def Info: ../figures/Droellner.pdf  used on input line 1067.
 (pdftex.def)             Requested size: 352.52809pt x 200.34474pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1073.
+(caption)                particular \caption on input line 1074.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 1065--1076
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 1066--1077
 [] [] 
  []
 
@@ -906,22 +906,22 @@ n with the same identifier (name{appendix.A}) has been already used, duplicate
 ignored
 <to be read again> 
                    \relax 
-l.1327 \appendixfigures
+l.1328 \appendixfigures
                        
 <../figures/type1.pdf, id=563, 722.7pt x 361.35pt>
 File: ../figures/type1.pdf Graphic file (type pdf)
 <use ../figures/type1.pdf>
-Package pdftex.def Info: ../figures/type1.pdf  used on input line 1329.
+Package pdftex.def Info: ../figures/type1.pdf  used on input line 1330.
 (pdftex.def)             Requested size: 503.61377pt x 251.80745pt.
 
 
 Package caption Warning: \captionsetup{type*=...} or \captionof
-(caption)                outside box or environment on input line 1330.
+(caption)                outside box or environment on input line 1331.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1333.
+(caption)                particular \caption on input line 1334.
 See the caption package documentation for explanation.
 
 (./paper.bbl [22 <../figures/type1.pdf>]
@@ -975,7 +975,7 @@ texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (25 pages, 606311 bytes).
+Output written on paper.pdf (25 pages, 606364 bytes).
 PDF statistics:
  714 PDF objects out of 1000 (max. 8388607)
  596 compressed objects within 6 object streams
