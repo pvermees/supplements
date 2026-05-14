@@ -1,51 +1,49 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2025/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper.aux
 The style file: copernicus.bst
 Database file #1: /home/pvermees/Dropbox/biblio.bib
 Warning--entry type for "vermeesch2026b" isn't style-file defined
 --line 14294 of file /home/pvermees/Dropbox/biblio.bib
-Warning--entry type for "vermeesch2025z" isn't style-file defined
---line 14355 of file /home/pvermees/Dropbox/biblio.bib
-You've used 47 entries,
+You've used 46 entries,
             2932 wiz_defined-function locations,
-            1313 strings with 17804 characters,
-and the built_in function-call counts, 43320 in all, are:
-= -- 4895
-> -- 1484
-< -- 30
-+ -- 714
-- -- 461
-* -- 2497
-:= -- 4324
-add.period$ -- 47
-call.type$ -- 47
-change.case$ -- 246
-chr.to.int$ -- 48
-cite$ -- 141
-duplicate$ -- 4424
-empty$ -- 2351
-format.name$ -- 582
-if$ -- 8608
-int.to.chr$ -- 2
+            1309 strings with 17624 characters,
+and the built_in function-call counts, 43012 in all, are:
+= -- 4874
+> -- 1472
+< -- 29
++ -- 709
+- -- 458
+* -- 2473
+:= -- 4277
+add.period$ -- 46
+call.type$ -- 46
+change.case$ -- 243
+chr.to.int$ -- 47
+cite$ -- 138
+duplicate$ -- 4398
+empty$ -- 2326
+format.name$ -- 578
+if$ -- 8550
+int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 476
-newline$ -- 150
-num.names$ -- 189
-pop$ -- 1840
+missing$ -- 471
+newline$ -- 147
+num.names$ -- 185
+pop$ -- 1829
 preamble$ -- 1
-purify$ -- 246
+purify$ -- 243
 quote$ -- 0
-skip$ -- 2739
+skip$ -- 2730
 stack$ -- 0
-substring$ -- 1842
-swap$ -- 3743
+substring$ -- 1839
+swap$ -- 3731
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 411
+type$ -- 402
 warning$ -- 0
-while$ -- 248
+while$ -- 245
 width$ -- 0
-write$ -- 531
-(There were 2 warnings)
+write$ -- 521
+(There was 1 warning)

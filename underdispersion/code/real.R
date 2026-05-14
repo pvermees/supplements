@@ -20,7 +20,7 @@ fissiontracks <- function(){
                             'geochron.org'),
            lty=rep(1,2),pch=NA,col=colours,
            bty='n',y.intersp=rep(1,2),xpd=NA)
-    text(x=0.65,y=0.3,labels="'Forbidden zone'")
+    text(x=0.65,y=0.3,labels="'forbidden zone'")
     par(op)
     dev.off()
 
@@ -82,7 +82,7 @@ Nature <- function(){
         message(selector,': n=',np,', f=',1-which.min(cdf(sort(p))>sort(p))/np)
     }
     lines(ecdf(pvals_Nature),pch=NA,verticals=TRUE,col=colours[3])
-    text(x=0.65,y=0.3,labels="'Forbidden zone'")
+    text(x=0.65,y=0.3,labels="'forbidden zone'")
     leg <- c(expression(''^206*'Pb/'^238*'U'),
              expression(''^40*'Ar/'^39*'Ar'),
              'all')
@@ -102,7 +102,7 @@ Nature <- function(){
         message(selector,': n=',np,', f=',1-which.min(cdf(sort(p))>sort(p))/np)
     }
     lines(ecdf(pvals_Nature),pch=NA,verticals=TRUE,col=colours[4])
-    text(x=0.65,y=0.3,labels="'Forbidden zone'")
+    text(x=0.65,y=0.3,labels="'forbidden zone'")
     leg <- c('average','plateau','isochron','all')
     legend(x=0,y=1,legend=leg,lty=rep(1,4),pch=NA,
            col=colours,bty='n',y.intersp=rep(1,4),xpd=NA)
@@ -126,7 +126,7 @@ GTS <- function(){
     lines(ecdf(pvals_GTS[is.UPb]),verticals=TRUE,pch=NA,col='#E69F00')
     lines(ecdf(pvals_GTS[is.ArAr]),verticals=TRUE,pch=NA,col='#56B4E9')
     lines(ecdf(pvals_GTS),verticals=TRUE,pch=NA,col='black')
-    text(x=0.7,y=0.25,labels="'Forbidden zone'")
+    text(x=0.7,y=0.25,labels="'forbidden zone'")
     leg <- c(expression(''^206*'Pb/'^238*'U'),
              expression(''^40*'Ar/'^39*'Ar'),
              'all')

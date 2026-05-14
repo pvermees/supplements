@@ -1,4 +1,4 @@
-\begin{thebibliography}{47}
+\begin{thebibliography}{46}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -209,14 +209,9 @@ Tamer, M.~T., Chung, L., Ketcham, R.~A., and Gleadow, A. J.~W.: The need for
 Vermeesch, P.: {\texttt{IsoplotR}: a free and open toolbox for geochronology},
   Geoscience Frontiers, 9, 1479--1493, \doi{10.1016/j.gsf.2018.04.001}, 2018.
 
-\bibitem[{Vermeesch(2025{\natexlab{a}})}]{vermeesch2025c}
+\bibitem[{Vermeesch(2025)}]{vermeesch2025c}
 Vermeesch, P.: {High MSWDs are not the problem, low ones are}, Natl. Sci. Rev,
-  10, \doi{10.1093/nsr/nwaf036}, 2025{\natexlab{a}}.
-
-\bibitem[{Vermeesch(2025{\natexlab{b}})}]{vermeesch2025z}
-Vermeesch, P.: {Data and code for ``Carbonate $^{206}$Pb/$^{238}$U problems and
-  potential $^{207}$Pb/$^{235}$U fixes''}, \doi{10.5281/zenodo.16262131},
-  2025{\natexlab{b}}.
+  10, \doi{10.1093/nsr/nwaf036}, 2025.
 
 \bibitem[{Vermeesch(2026)}]{vermeesch2026b}
 Vermeesch, P.: KJ: a physics-based algorithm for geochronology by LA-ICP-MS,

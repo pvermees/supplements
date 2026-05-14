@@ -21,7 +21,7 @@ intro <- function(){
     arrows(x0=0.65,x1=0.95,y0=0.4,y1=0.4,length=0.05)
     text(x=0.8,y=0.45,labels='outlier removal')
     text(x=0.8,y=0.35,labels='Type II cherry picking')
-    text(x=0.65,y=0.2,labels="'Forbidden zone'")
+    text(x=0.65,y=0.2,labels="'forbidden zone'")
     nr <- 100
     x <- rchisq(nr,df=10,ncp=7)
     p1 <- 1-pchisq(x,df=10)
@@ -154,8 +154,10 @@ wtdmean_cherries <- function(seed=1,ng=20){
     pdf(file='../figures/wtdmean.pdf',width=9,height=4.5)
     op <- par(mfrow=c(1,2),mgp=c(2,1,0),mar=c(3.5,3.5,3.5,0.5))
     weightedmean(wtdmean_data,ranked=TRUE,detect.outliers=FALSE)
+    legend('topleft','a)',bty='n',adj=c(1,2))
     ch <- pick_cherries_wtdmean(wtdmean_data,alpha=0.05)
     weightedmean(wtdmean_data,ranked=TRUE,omit=ch$outliers)
+    legend('topleft','b)',bty='n',adj=c(1,2))
     par(op)
     dev.off()
 
@@ -226,6 +228,7 @@ isochron_cherries <- function(seed=1,ng=20){
     mtext(line=1,paste0("MSWD = ",signif(fit1$mswd,2),
                         ", p-value = ",signif(fit1$p.value,2),
                         " (",nrow(yd),"/",nrow(yd),")"))
+    legend('topright','a)',bty='n')
     omit <- pick_cherries_isochron(yd,alpha=0.05)
     fit2 <- york(yd[-omit,])
     scatterplot(yd,fit=fit2,xlim=xlim,ylim=ylim,
@@ -235,6 +238,7 @@ isochron_cherries <- function(seed=1,ng=20){
     mtext(line=1,paste0("MSWD = ",signif(fit2$mswd,2),
                         ", p-value = ",signif(fit2$p.value,2),
                         " (",nrow(yd)-length(omit),"/",nrow(yd),")"))
+    legend('topright','b)',bty='n')
     par(op)
 
     dev.off()
@@ -339,6 +343,7 @@ concordia_cherries <- function(seed=6){
     tt <- 1:(nblk+nsig)
     matplot(x=cbind(tt,tt,tt),y=cbind(sig06,sig07,sig38),col='black',
             type='b',pch=c(0,2,5),lty=1,xlab="t (s)",ylab="signal (counts)")
+    legend('topleft','a)',bty='n',adj=c(1,1))
     abline(v=c(nblk+buffer,nblk+nsig-buffer),lty=1)
     abline(v=c(nblk+buffer+min(selection),nblk+buffer+max(selection)),lty=2)
     usr <- par('usr')
@@ -357,6 +362,7 @@ concordia_cherries <- function(seed=6){
          y=usr[4]*1.05,
          labels='Window 2',pos=2,xpd=NA,col='red')
     concordia(tlim=c(700,1200))
+    legend('topleft','b)',bty='n',adj=c(1,1))
     points(x=X,y=Y,pch=21)
     polygon(ell,lwd=2,col=rgb(0,0,1,0.5))
     polygon(ell_cherries,lwd=2,col=rgb(1,0,0,0.5))
@@ -420,7 +426,7 @@ synthetic_ecdfs <- function(ns=100,seed=1){
     lines(ecdf(pval_alpha_picked),verticals=TRUE,pch=NA,col='blue')
     lines(ecdf(pval_MSWD_picked),verticals=TRUE,pch=NA,col='red')
     lines(x=c(0,1),y=c(0,1))
-    text(x=0.75,y=0.2,labels="'Forbidden zone'")
+    text(x=0.75,y=0.2,labels="'forbidden zone'")
     legend('topleft','a)',bty='n',adj=c(1,2))
 
     dispersed_data <- get_meta_data(ns=ns,maxdisp=0.03)
@@ -437,7 +443,7 @@ synthetic_ecdfs <- function(ns=100,seed=1){
                     sample(x=pval_dispersed_MSWD_picked,size=ns/2))
     lines(ecdf(pval_mixed),verticals=TRUE,pch=NA,col='orange')
     lines(x=c(0,1),y=c(0,1))
-    text(x=0.75,y=0.2,labels="'Forbidden zone'")
+    text(x=0.75,y=0.2,labels="'forbidden zone'")
     legend('topleft','b)',bty='n',adj=c(1,2))
     
     par(op)
@@ -464,7 +470,7 @@ detrital_cherries <- function(){
     legend('topleft',legend=c('default selection windows',
                               'cherry-picked'),
            col=c("#0000FF80","#FF000080"),bty='n',lty=rep(1,2))
-    text(x=0.55,y=0.2,labels="'Forbidden zone'")
+    text(x=0.55,y=0.2,labels="'forbidden zone'")
     par(op)
     dev.off()
 }
