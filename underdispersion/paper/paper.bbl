@@ -1,4 +1,4 @@
-\begin{thebibliography}{46}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -213,9 +213,13 @@ Vermeesch, P.: {\texttt{IsoplotR}: a free and open toolbox for geochronology},
 Vermeesch, P.: {High MSWDs are not the problem, low ones are}, Natl. Sci. Rev,
   10, \doi{10.1093/nsr/nwaf036}, 2025.
 
-\bibitem[{Vermeesch(2026)}]{vermeesch2026b}
+\bibitem[{Vermeesch(2026{\natexlab{a}})}]{vermeesch2026b}
 Vermeesch, P.: KJ: a physics-based algorithm for geochronology by LA-ICP-MS,
-  \doi{10.5281/zenodo.19693372}, 2026.
+  \doi{10.5281/zenodo.19693372}, 2026{\natexlab{a}}.
+
+\bibitem[{Vermeesch(2026{\natexlab{b}})}]{vermeesch2026c}
+Vermeesch, P.: FAIR code and data for "Too good to be true: underdispersion in
+  geochronology", \doi{10.5281/zenodo.20186900}, 2026{\natexlab{b}}.
 
 \bibitem[{Vermeesch et~al.(2026)Vermeesch, Band, He, Galbraith, and
   Carter}]{vermeesch2026}
