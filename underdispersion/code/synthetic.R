@@ -21,6 +21,7 @@ intro <- function(){
     arrows(x0=0.65,x1=0.95,y0=0.4,y1=0.4,length=0.05)
     text(x=0.8,y=0.45,labels='outlier removal')
     text(x=0.8,y=0.35,labels='Type II cherry picking')
+    text(x=0.65,y=0.2,labels="'Forbidden zone'")
     nr <- 100
     x <- rchisq(nr,df=10,ncp=7)
     p1 <- 1-pchisq(x,df=10)
@@ -419,7 +420,7 @@ synthetic_ecdfs <- function(ns=100,seed=1){
     lines(ecdf(pval_alpha_picked),verticals=TRUE,pch=NA,col='blue')
     lines(ecdf(pval_MSWD_picked),verticals=TRUE,pch=NA,col='red')
     lines(x=c(0,1),y=c(0,1))
-
+    text(x=0.75,y=0.2,labels="'Forbidden zone'")
     legend('topleft','a)',bty='n',adj=c(1,2))
 
     dispersed_data <- get_meta_data(ns=ns,maxdisp=0.03)
@@ -436,7 +437,7 @@ synthetic_ecdfs <- function(ns=100,seed=1){
                     sample(x=pval_dispersed_MSWD_picked,size=ns/2))
     lines(ecdf(pval_mixed),verticals=TRUE,pch=NA,col='orange')
     lines(x=c(0,1),y=c(0,1))
-
+    text(x=0.75,y=0.2,labels="'Forbidden zone'")
     legend('topleft','b)',bty='n',adj=c(1,2))
     
     par(op)
@@ -463,6 +464,7 @@ detrital_cherries <- function(){
     legend('topleft',legend=c('default selection windows',
                               'cherry-picked'),
            col=c("#0000FF80","#FF000080"),bty='n',lty=rep(1,2))
+    text(x=0.55,y=0.2,labels="'Forbidden zone'")
     par(op)
     dev.off()
 }
