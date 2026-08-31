@@ -38,16 +38,18 @@ Nature <- function(){
     tab <- read.delim('../data/Nature.csv',sep='\t',
                       check.names=FALSE,header=TRUE)
     ns <- nrow(tab)
-    titles <- authors <- sname <- MSWD <- method <- nn <- dof <- c()
+    titles <- authors <- years <- sname <- MSWD <- method <- nn <- dof <- c()
     for (i in 1:ns){
         entry <- tab[i,"(name,MSWD,type,n,df)"]
         title <- tab[i,'Title']
         author <- tab[i,'Authors']
+        year <- tab[i,'Year']
         if (!is.na(entry)){
             split <- splitter(entry)
             for (string in split){
                 titles <- append(titles,title)
                 authors <- append(authors,author)
+                years <- append(years,year)
                 vec <- strsplit(string,",")[[1]]
                 sname <- append(sname,vec[1])
                 MSWD <- append(MSWD,as.numeric(vec[2]))
@@ -68,7 +70,7 @@ Nature <- function(){
     pvals_Nature <- pchisq(X2,df=dof,lower.tail=FALSE)
 
     pdf(file='../figures/Nature.pdf',width=8,height=4)
-    op <- par(mfrow=c(1,2),mar=c(3,3,0.5,0.5),mgp=c(2,1,0))
+    oop <- par(mfrow=c(1,2),mar=c(3,3,0.5,0.5),mgp=c(2,1,0))
     # panel a
     plot(x=c(0,1),y=c(0,1),type='l',xlab='p',ylab='Fn(p)')
     selectors <- c('UPb','ArAr')
@@ -109,6 +111,16 @@ Nature <- function(){
     legend('bottomright','b)',bty='n')
     par(op)
     dev.off()
+
+    pdf(file='../figures/Nature_pre_vs_post_2018.pdf',width=5,height=5)
+    op <- par(mar=c(3,3,0.5,0.5), mgp=c(2,1,0))
+    plot(ecdf(pvals_Nature[years<=2018]),pch=NA,verticals=TRUE,
+         col='blue',xlab='p',ylab='Fn(p)',main='',col.01line = NA,bty='n')
+    lines(ecdf(pvals_Nature[years>2018]),pch=NA,verticals=TRUE,col='red',col.01line = NA)
+    legend('topleft',legend=c('1973-2018','2019-present'),lty=c(1,1),col=c('blue','red'))
+    par(op)
+    dev.off()
+
 }
 
 GTS <- function(){
