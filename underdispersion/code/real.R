@@ -70,7 +70,7 @@ Nature <- function(){
     pvals_Nature <- pchisq(X2,df=dof,lower.tail=FALSE)
 
     pdf(file='../figures/Nature.pdf',width=8,height=4)
-    oop <- par(mfrow=c(1,2),mar=c(3,3,0.5,0.5),mgp=c(2,1,0))
+    op <- par(mfrow=c(1,2),mar=c(3,3,0.5,0.5),mgp=c(2,1,0))
     # panel a
     plot(x=c(0,1),y=c(0,1),type='l',xlab='p',ylab='Fn(p)')
     selectors <- c('UPb','ArAr')
@@ -118,6 +118,7 @@ Nature <- function(){
          col='blue',xlab='p',ylab='Fn(p)',main='',col.01line = NA,bty='n')
     lines(ecdf(pvals_Nature[years>2018]),pch=NA,verticals=TRUE,col='red',col.01line = NA)
     legend('topleft',legend=c('1973-2018','2019-present'),lty=c(1,1),col=c('blue','red'))
+    lines(x=c(0,1),y=c(0,1))
     par(op)
     dev.off()
 
