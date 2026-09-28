@@ -4,4 +4,6 @@
 
 2. ["FAIR fission track analysis with geochron@home"](geochron@home) by Vermeesch, P., Band, T., He, J., Carter, A. and Galbraith, R. (2026) <i>Geochronology</i>, 8, 1, 109-118, doi::10.5194/gchron-8-109-2026.
 
-3. ["Too good to be true: underdispersion in geochronology"](underdispersion) by Vermeesch, P. (2026) <i>Geochronology</i> (in preparation).
+3. ["Too good to be true: underdispersion in geochronology"](underdispersion) by Vermeesch, P. (2026) <i>Geochronology</i> (in review).
+
+4. ["Statistical chronometry of meteorites revisited"](statistical_chronometry) by Vermeesch, P. and Desch, S.J. (2026) <i>Geochimica et Cosmochimica Acta</i> (in preparation).
