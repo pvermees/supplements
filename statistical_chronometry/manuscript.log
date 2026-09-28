@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.1.14)  28 SEP 2026 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.9.27)  28 SEP 2026 22:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -225,10 +225,10 @@ e
 <lambda_err.pdf, id=1, 325.215pt x 325.215pt>
 File: lambda_err.pdf Graphic file (type pdf)
 <use lambda_err.pdf>
-Package pdftex.def Info: lambda_err.pdf  used on input line 79.
+Package pdftex.def Info: lambda_err.pdf  used on input line 81.
 (pdftex.def)             Requested size: 187.89914pt x 187.90529pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 78--88
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 80--90
 $[]$ $[]$ 
  []
 
@@ -243,7 +243,7 @@ $[]$ $[]$
 [3]
 
 Package caption Warning: \setcaptiontype
-(caption)                outside box or environment on input line 264.
+(caption)                outside box or environment on input line 267.
 See the caption package documentation for explanation.
 
 
@@ -252,12 +252,12 @@ See the caption package documentation for explanation.
 <Desch2_original.pdf, id=42, 650.43pt x 252.945pt>
 File: Desch2_original.pdf Graphic file (type pdf)
 <use Desch2_original.pdf>
-Package pdftex.def Info: Desch2_original.pdf  used on input line 333.
+Package pdftex.def Info: Desch2_original.pdf  used on input line 335.
 (pdftex.def)             Requested size: 469.75502pt x 182.68762pt.
 <Desch2_adjusted.pdf, id=43, 650.43pt x 252.945pt>
 File: Desch2_adjusted.pdf Graphic file (type pdf)
 <use Desch2_adjusted.pdf>
-Package pdftex.def Info: Desch2_adjusted.pdf  used on input line 353.
+Package pdftex.def Info: Desch2_adjusted.pdf  used on input line 355.
 (pdftex.def)             Requested size: 469.75502pt x 182.68762pt.
 
 
@@ -276,7 +276,7 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  4804 strings out of 473197
  78007 string characters out of 5718605
- 490743 words of memory out of 5000000
+ 489743 words of memory out of 5000000
  28027 multiletter control sequences out of 15000+600000
  569432 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -301,7 +301,7 @@ s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000
 .pfb>
-Output written on manuscript.pdf (8 pages, 298659 bytes).
+Output written on manuscript.pdf (8 pages, 299557 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
