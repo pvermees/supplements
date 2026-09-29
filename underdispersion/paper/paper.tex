@@ -25,41 +25,44 @@
 \maketitle
 
 \begin{abstract}
-Statistical hypothesis testing is widely used in geochronology to
-assess whether multiple analyses of a sample are consistent with a
-single age. Failure of such tests is evidence for excess scatter
-(`overdispersion'), suggesting geological complexity or faulty
-data. In contrast, this paper highlights the opposite and largely
-overlooked problem of `underdispersion', in which datasets agree
-unrealistically well with the null hypothesis and appear `too good to
-be true'. Underdispersion can arise from incorrect propagation of
-analytical uncertainties or from over‑zealous outlier rejection that
-inflates p‑values and suppresses genuine geological variability. This
-paper introduces a simple graphical diagnostic for identifying
-systematic underdispersion across collections of geochronological
-studies, based on the empirical cumulative distribution of p‑values
-from chi‑squared tests of data homogeneity. While overdispersion
-shifts p‑value distributions above and to the left of the 1:1 line in
-cumulative probability space, there are no natural mechanisms that
-should produce an excess of very high p‑values.  The area below the
-1:1 line in a cumulative probability plot defines a `forbidden zone'
-and provides a meta-analytical signature of underdispersion.\medskip
+Statistical tests of data dispersion are widely used in geochronology
+to assess whether analytical uncertainties adequately explain the
+scatter of repeated measurements. Whereas excess scatter
+(overdispersion) is commonly regarded as a problem to be identified
+and removed, this paper draws attention to the opposite phenomenon:
+underdispersion, in which measurements cluster more closely than
+expected from their analytical uncertainties. Underdispersion may
+result from incorrectly estimated uncertainties, but can also arise
+from over-zealous outlier rejection, whereby measurements are
+selectively removed until the remaining data meet a predefined p-value
+cutoff or mean square weighted deviation (MSWD) target. Such practices
+can produce apparently precise but potentially inaccurate
+geochronological estimates.
 
-The proposed method is demonstrated using synthetic examples and
-applied to extensive compilations of published
-geo\-chro\-no\-lo\-gi\-cal data, including fission‑track analyses,
-mass‑spectrometer‑based chronometers reported in high‑profile
-journals, datasets underlying the geologic time scale, and detrital
-zircon U--Pb age spectra.  These case studies reveal widespread and
-sometimes extreme underdispersion, particularly in fission‑track data
-and $^{40}$Ar/$^{39}$Ar age plateaux, at levels that cannot be
-explained by chance alone.  Underdispersion matters because it creates
-unwarranted confidence in apparently precise ages at the expense of
-accuracy and obscures meaningful geological information carried by
-excess scatter.  The diagnostic plot introduced here provides a
-practical step towards recognising when data have been over‑processed,
-and towards restoring a more balanced treatment of dispersion in
-geochronology.
+This paper introduces a simple graphical method for detecting
+underdispersion in collections of geochronological data. The method is
+based on the empirical cumulative distribution function (ECDF) of
+p-values from chi-squared tests of sample homogeneity. Under the null
+hypothesis, p-values should be uniformly distributed. Although genuine
+geological complexity can shift the distribution towards low p-values,
+there is no natural mechanism that can produce an excess of high
+p-values. Consequently, the region below the 1:1 line of a p-value
+ECDF represents a ``forbidden zone'' that provides a diagnostic for
+excessive outlier rejection.
+
+Observer drift, iterative outlier removal and optimised LA-ICP-MS
+signal windows are mechanisms that can produce underdispersion.
+Applied to real data, underdispersion appears in every geochronometer
+examined. About one third of fission track p-values in the
+\texttt{geochron.org} database plot in the forbidden zone, where
+cherry picking is the only possible cause. So do 15\% of 650 p-values
+from \emph{Nature} journals (rising from 11.5\% before 2019 to 17.2\%
+since) and 25\% of those underlying the 2020 edition of the Geologic
+Time Scale, including 90\% of Ar--Ar constraints.  Addressing the
+problem requires greater emphasis on geological evidence when
+identifying outliers, preferably through procedures that are blind to
+statistical dispersion, and greater transparency through FAIR sharing
+of raw data and data-reduction workflows.
 \end{abstract}
 
 \introduction\label{sec:intro}
@@ -72,11 +75,12 @@ hypothesis is rejected; otherwise, it is retained
 (Section~\ref{sec:definitions}).  When used correctly, hypothesis
 tests are extremely valuable. For instance, powered tests in
 double-blind clinical trials form the foundation of the pharmaceutical
-drug approval process\footnote{A powered test specifies in advance the
-sample size needed to detect a particular effect -- for example, a
-50\% reduction in mortality.}.  In this way, hypothesis testing can
-literally save lives. However, unpowered tests are vulnerable to both
-conscious and unconscious misuse.\medskip
+drug approval process\footnote{Statistical power is defined as the
+probability of rejecting a false hypothesis. A powered test specifies
+in advance the sample size needed to detect a particular effect -- for
+example, a 50\% reduction in mortality.}.  In this way, hypothesis
+testing can literally save lives. However, unpowered tests are
+vulnerable to both conscious and unconscious misuse.\medskip
 
 Formalised hypothesis tests create an artificial dichotomy between
 results that support or reject scientific hypotheses. This binary
@@ -186,7 +190,8 @@ equivalent ways to evaluate $H_0$:
   distribution of the MSWD is approximately Gaussian with a mean of
   $\sim 1$ and a standard deviation $\sqrt{2/\nu}$. MSWD values fall
   outside the range of $1 \pm 2\,\sqrt{2/\nu}$ lead to the rejection
-  of $H_0$ \citep{wendt1991}.
+  of $H_0$ at (approximately) a 95\% confidence level
+  \citep{wendt1991}.
 \end{enumerate}
 
 Datasets for which $\chi^2 > X_c^2$, $p < \alpha$ or
@@ -278,7 +283,7 @@ may mean two things:
 In the case of Mendel's experiment, a single p-value sufficed to
 identify the cherry picking. Such extreme cases of underdispersion are
 rare in geochronology, although they do exist. In most cases,
-underdisperseion is more subtle, as an unintentional consequence of
+underdispersion is more subtle, as an unintentional consequence of
 outlier detection. For example, when constraining the eruption age of
 a volcanic tuff from zircon U--Pb dates, it is common practice to
 remove antecrystic `outliers' until the MSWD approaches unity. In the
@@ -306,18 +311,22 @@ $n = 1$, to 10\% for $n = 2$, 14\% for $n = 3$, and 51\% for $n =
 14$. In other words, in geochronological studies of homogeneous
 samples reporting 14 or more MSWD values, it becomes more likely than
 not that at least one sample will be falsely identified as
-overdispersed.\medskip
+overdispersed, resulting in a type-I error\footnote{In statistics, the
+increased occurrence of type-I errors caused by multi-testing is
+usually addressed by adjusting the cutoff limit, e.g. by reducing
+$\alpha$ to $\alpha/n$ (a Bonferroni correction).}.\medskip
 
 The same reasoning can be applied to the lower tail of the chi-squared
-distribution. For a non-dispersed sample, the probability of obtaining
-a p-value greater than 0.5 is 50\%. For $n$ independent samples, the
-probability that all p-values exceed 0.5 is $(0.5)^n =
-2^{-n}$. Section~\ref{sec:real} will show that some published datasets
-contain up to $n = 9$ p-values greater than 0.5. The probability of
-such an outcome is less than 0.2\%. While this could occur by chance
-within a large collection of studies, the repeated occurrence of such
-uniformly high p-values is unlikely to be coincidental and cannot
-reasonably be attributed to random variation alone.\medskip
+distribution. Under the null hypothesis of a non-dispersed sample, the
+probability of obtaining a p-value greater than 0.5 is 50\%. For $n$
+independent samples, the probability that all p-values exceed 0.5 is
+$(0.5)^n = 2^{-n}$. Section~\ref{sec:real} will show that some
+published datasets contain up to $n = 9$ p-values greater than
+0.5. The probability of such an outcome is less than 0.2\%. While this
+could occur by chance within a large collection of studies, the
+repeated occurrence of such uniformly high p-values is unlikely to be
+coincidental and cannot reasonably be attributed to random variation
+alone.\medskip
 
 These simple calculations are informative but have important
 limitations. They apply only to independent datasets evaluated at a
@@ -393,13 +402,14 @@ measurements of spontaneous ($N_s$) and induced ($N_i$) track counts,
 obtained by human observers \citep[or by computer algorithms trained
   by human observers;][]{nachtergaele2021,boone2025}. The precision of
 the fission track age estimates is entirely determined by these two
-values, so that $s[N_s/N_i] = (N_s/N_i) \sqrt{1/N_s+1/N_i}$
-\citep{galbraith1981}. Because $N_s$ and $N_i$ are typically small
-(generally fewer than 100 and often fewer than 10), the precision of
-single-grain fission track age estimates is usually low compared to
-that of other (mass spectrometer-based) geochronometers. To improve
-precision, it is customary to analyse multiple grains (typically
-$n=20$) per sample and to average or pool their counts.\medskip
+values, so that the uncertainty $s[N_s/N_i] = (N_s/N_i)
+\sqrt{1/N_s+1/N_i}$ \citep{galbraith1981}. Because $N_s$ and $N_i$ are
+typically small (generally fewer than 100 and often fewer than 10),
+the precision of single-grain fission track age estimates is usually
+low compared to that of other (mass spectrometer-based)
+geochronometers. To improve precision, it is customary to analyse
+multiple grains (typically $n=20$) per sample and to average or pool
+their counts.\medskip
 
 Before pooling multiple fission track measurements and treating them
 as single grain, it is important to verify that the data are
@@ -476,8 +486,10 @@ Section~\ref{sec:weighted-mean}.
     analysis. Circles are synthetic fission track ratios, drawn from a
     population with 20\% overdispersion. Black squares are adjusted
     values, ensuring that $p > 0.05$ for all counts up to and
-    including $j$ (with $1\leq{j}\leq{n=20}$). The black line shows
-    the pooled ratio for all counts up to and including $j$.}
+    including $j$ (with $1\leq{j}\leq{n=20}$). Arrows show the drift
+    occurring for ratios that failed the homogeneity test before being
+    adjusted. The black line shows the pooled ratio for all counts up
+    to and including $j$.}
   \label{fig:FT}
 \end{minipage}
 
@@ -546,7 +558,9 @@ both young and old tails.
     ages affected by Pb-loss, with mean $\mu_3 = \mu_1$ and standard
     deviation $\sigma_3 = 20$\,Ma. a) calculates the weighted mean
     including all aliquots; b) calculates the weighted mean with
-    `outliers' removed until $p(\chi^2) > \alpha$.}
+    `outliers' removed until $p(\chi^2) > \alpha$. Empty boxes were
+    removed from the weighted mean calculation; whereas green boxes
+    were retained.}
   \label{fig:synthetic_U-Pb}
 \end{minipage}
 
@@ -561,9 +575,8 @@ cogenetic aliquots and fitting a straight line through their isotopic
 ratios. The isochron is then defined as $y_i = a + b \, x_i$ where
 $y_i = P_i/d_i$ and $y_i = D_i/d_i$ for conventional isochrons, and
 $x_i = P_i/D_i$ and $y_i = d_i/D_i$ for `inverse isochrons'. The
-intercept ($a$) slope and intercept ($b$) are a function of the
-non-radiogenic $D/d$-ratio and the age of the sample
-\citep{li2021}.\medskip
+intercept ($a$) and slope ($b$) are a function of the non-radiogenic
+$D/d$-ratio and the age of the sample \citep{li2021}.\medskip
 
 $x_i$ and $y_i$ are associated with analytical uncertainties, which
 are correlated because they share a common denominator
@@ -597,9 +610,9 @@ $s[Y_i]^2$ and $s[X_i,Y_i]$:
     \right]
 \end{equation}
   
-\noindent where $\hat{a}$ and $\hat{b}$ are the best fit slope and
-intercept, and $\hat{x}_i$ are the fitted $x$-values, which are
-obtained by minimising $\chi^2$ with respect to $a$ and $b$. Under the
+\noindent where $\hat{a}$ and $\hat{b}$ are the best fit intercept and
+slope, and $\hat{x}_i$ are the fitted $x$-values, which are obtained
+by minimising $\chi^2$ with respect to $a$ and $b$. Under the
 hypothesis that the differences between the measured $\{X_i,Y_i\}$ and
 the fitted values $\{\hat{x}_i,\hat{a}+\hat{b}\,\hat{x}_i\}$ is purely
 caused by analytical uncertainty, $\chi^2$ follows a chi-squared
@@ -623,7 +636,9 @@ that result in the greatest reduction of $\chi^2$
     isochron with horizontal intercept $x_0=0.1$ and a vertical
     intercept $y_0=1/298.5$. Excess dispersion was added to both the
     \textsuperscript{36}Ar/\textsuperscript{40}Ar (10\%) and
-    \textsuperscript{39}Ar/\textsuperscript{40}Ar (5\%) ratios.}
+    \textsuperscript{39}Ar/\textsuperscript{40}Ar (5\%) ratios. Empty
+    ellipses were removed from the isochron regression; whereas green
+    boxes were retained.}
   \label{fig:synthetic_Ar-Ar}
 \end{minipage}
 
@@ -734,17 +749,19 @@ Sections~\ref{sec:synthetic-FT}--\ref{sec:concordia} reduce the
 proportion of Type~I errors to zero, causing the ECDF of the p-values
 to shift to the right and slightly below the 1:1 line (blue in
 Figure~\ref{fig:synthetic_ecdfs}a). This can be referred to as `mild'
-underdispersion. More extreme degrees of underdispersion require that
-the p-value cutoff is raised from the usual value of $\alpha = 0.05$
-to higher values (e.g., $\alpha=0.5$). Alternatively (and
+underdispersion. More extreme degrees of underdispersion imply that
+the analyst has used a higher p-value cutoff than usual (e.g.,
+$\alpha=0.5$ instead of $\alpha=0.05$). Alternatively (and
 equivalently), more extreme degrees of underdispersion can also arise
 from the use of MSWDs instead of p-values to identify
 `outliers'. Suppose that a collection of unequally sized samples was
 culled until MSWD\,$\leq$\,1. Then this MSWD-cutoff would be
-equivalent to $\alpha=0.59$ for $n=5$, to $\alpha=0.54$ for $n=20$ and
-$\alpha=0.51$ for $n=100$. The p-value distribution for these extreme
-levels of outlier rejection would fall further below the 1:1 line,
-providing the diagnostic signature of `severe' underdispersion (red in
+equivalent to $\alpha=P(\chi^2>4|\nu=4)=0.41$ for $n=5$, to
+$\alpha=P(\chi^2>19|\nu=19)=0.46$ for $n=20$,and to
+$\alpha=P(\chi^2>99|\nu=99)=0.49$ for $n=100$. The p-value
+distribution for these extreme levels of outlier rejection would fall
+further below the 1:1 line, providing the diagnostic signature of
+`severe' underdispersion (red in
 Figure~\ref{fig:synthetic_ecdfs}a).\medskip
 
 Having considered the effect of outlier rejection on `perfect'
@@ -848,7 +865,7 @@ database are too good to be true.
   \includegraphics[width=\linewidth]{../figures/Iwano.pdf}
 \end{minipage}
 \begin{minipage}[t][][t]{.6\linewidth}
-  \captionof{figure}{The red curve represents a fission track dataset
+  \captionof{figure}{The yellow curve represents a fission track dataset
     of reference materials \citep{iwano2018}, which shows no
     detectable evidence for cherry picking. In contrast, the blue curve
     corresponds to a compilation of fission track data in which 30\% of
@@ -888,14 +905,14 @@ database.
 
 The 100 publications contain 650 MSWD-values, 36.3\% of which are less
 than one. The ECDF of the corresponding p-values is shown in black on
-Figure~\ref{fig:ECDF}b. Only the bottom 85\% of this curve plots above
-the 1:1 line. The remaining 15\% of the p-value distribution falls in
-the forbidden zone of impossibly good results. 9\% of the p-values
-exceed 0.95. As mentioned before, there are two possible causes for
-this pattern.  One possibility is incorrect error propagation. Mass
-spectrometer data processing is complex and it is possible that some
-uncertainties in the geochronological literature have been
-overestimated. For example, this could happen by failure to
+Figure~\ref{fig:Droellner}b. Only the bottom 85\% of this curve plots
+above the 1:1 line. The remaining 15\% of the p-value distribution
+falls in the forbidden zone of impossibly good results. 9\% of the
+p-values exceed 0.95. As mentioned before, there are two possible
+causes for this pattern.  One possibility is incorrect error
+propagation. Mass spectrometer data processing is complex and it is
+possible that some uncertainties in the geochronological literature
+have been overestimated. For example, this could happen by failure to
 distinguish between systematic and random sources of uncertainty
 \citep{renne1998}.  A second possible cause of underdispersion is
 excessive outlier rejection.\medskip
@@ -922,7 +939,18 @@ for underdispersion, as the definition of a
 \textsuperscript{40}Ar/\textsuperscript{39}Ar plateau involves
 selecting measurements that overlap within analytical uncertainty
 \citep{dalrymple1969,jourdan2009}. Plateaux are, therefore, `cherry
-picked' by definition.
+picked' by definition.\medskip
+
+Finally, the large size of the \emph{Nature} database provides an
+opportunity to investigate the temporal evolution of the
+underdispersion problem. To this end, the database was divided into
+two approximately equal-sized subsets: 314 papers published before
+2019 and 336 papers published from 2019 onwards. The p-value
+distributions of the two subsets provide no evidence for an increased
+acceptance of overdispersion. On the contrary, the situation appears
+to be getting worse, with the fraction of impossibly good results
+increasing from 11.5\% among the older papers to 17.2\% among the more
+recent publications (Figure~\ref{fig:Nature}c).
 
 \noindent\begin{minipage}[t][][b]{.7\linewidth}
   \includegraphics[width=\linewidth]{../figures/Nature.pdf}
@@ -931,7 +959,7 @@ picked' by definition.
   \captionof{figure}{p-value distributions for the compilation of 100
     \emph{Nature} papers. The black curves represent the full dataset
     of 650 p-values. The colours group the dataset according to the
-    geochronometer (a) and plotting device (b).  }
+    geochronometer (a), plotting device (b) and publication year (c).}
   \label{fig:Nature}
 \end{minipage}
 
@@ -964,7 +992,7 @@ Section~\ref{sec:importance}), the p-value distribution of the GTS is
 of particular interest. The geochronological database underlying
 GTS2020 contains 407 entries.  It was not possible to obtain p-values
 for all these entries because (1) some dates were derived from
-unpublished sources; (2) some dates were locked behind unscaleable pay
+unpublished sources; (2) some dates were locked behind unscalable pay
 walls; and (3) seventeen age constraints were based on single grain
 analyses, for which it is not possible to calculate an
 MSWD\footnote{Note that selecting a single analysis out of a
@@ -1033,18 +1061,17 @@ The sample was analysed at University College London using an Agilent
 7900 ICP-MS coupled to a New Wave NWR193 excimer laser, operated at
 10\,Hz with a spot size of 25\,\textmu{m}, using a 5\,s warmup time,
 followed by 25\,s of ablation and 5\,s of washout.  Data reduction was
-performed with \texttt{KJ} \citep{vermeesch2026b}, using
-Ple{\v{s}}ovice and 91500 zircon \citep{slama2008,wiedenbeck1995} as
-primary reference materials and GJ-1 \citep{jackson2004} as a
-secondary standard. Raw data and FAIR data reduction procedures are
-provided in the supplementary information
-\citep{vermeesch2026c}.\medskip
+performed with \texttt{KJ} \citep{vermeeschKJ}, using Ple{\v{s}}ovice
+and 91500 zircon \citep{slama2008,wiedenbeck1995} as primary reference
+materials and GJ-1 \citep{jackson2004} as a secondary standard. Raw
+data and FAIR data reduction procedures are provided in the
+supplementary information \citep{vermeesch2026c}.\medskip
 
 The blue error ellipses in Figure~\ref{fig:Droellner}a) show the
 results obtained using \texttt{KJ}'s default selection windows,
 without manual adjustment and presented as a Wetherill concordia
 diagram generated in \texttt{IsoplotR 7.0} \citep{vermeesch2018c}.
-The blue ellipses show the same sample after `optimal' signal window
+The red ellipses show the same sample after `optimal' signal window
 adjustment, which was achieved by exploring all continuous sections of
 the signal of at least 50 integrations long, and selecting the window
 yielding the lowest MSWD using the definition of
@@ -1145,13 +1172,16 @@ reduces the precision) but reduces the bias (and increases the
 accuracy) of the estimate for $\sigma$.\medskip
 
 Underdispersion creates the opposite situation, whereby excessive
-outlier rejection artificially improves precision at the expense of
-accuracy. This is particularly pertinent for the Geologic Time Scale.
-As reviewed in Section~\ref{sec:GTS2020}, great efforts are made to
-improve the precision of the chronostratigraphic calibration that
-underlies the GTS. It would be unfortunate if this focus on precision
-came at the expense of accuracy, which is arguably more
-important. When accuracy is not guaranteed, precision loses its
+outlier rejection artificially improves precision\footnote{In theory,
+outlier rejection can also lower precision as it reduces sample
+size. However, in practice cherry picking nearly always improves
+precision as its main purpose is to reduce the scatter of the data.}
+at the expense of accuracy. This is particularly pertinent for the
+Geologic Time Scale.  As reviewed in Section~\ref{sec:GTS2020}, great
+efforts are made to improve the precision of the chronostratigraphic
+calibration that underlies the GTS. It would be unfortunate if this
+focus on precision came at the expense of accuracy, which is arguably
+more important. When accuracy is not guaranteed, precision loses its
 meaning. Fortunately, the overall degree of overdispersion of the GTS
 is relatively small compared to some of the other case
 studies. Nevertheless, the underdispersion of the Ar--Ar data is
@@ -1222,16 +1252,19 @@ less precise (but more accurate).\medskip
 Going forward, the p-value distribution can be used to help
 geochronologists identify when outlier rejection has gone too far.  An
 even better solution would be to abandon the misconception that
-overdispersion is inherently `bad'.  Overdispersed datasets are more
-likely to be rejected during peer review than tightly clustered ones,
-which directly and indirectly promotes underdispersion.  Poorly
-informed reviewers may reject such datasets outright, skewing the
-literature toward high p-values \citep[publication
-  bias;][]{ioannidis2005}.  In turn, the difficulty of publishing low
-p-value results incentivises aggressive outlier rejection.  Peer
-pressure to produce `perfect' data may partially or completely explain
-the prevalence of underdispersed geochronology data in high profile
-publications such as \emph{Nature}.\medskip
+overdispersion is inherently `bad'. In fact, a case could be made that
+the opposite is true, and that low MSWD values should be treated with
+suspicion, not praise \citep{vermeesch2025c}. However, in the author's
+experience, overdispersed datasets are currently more likely to be
+rejected during peer review than tightly clustered ones, which
+directly and indirectly promotes underdispersion.  Poorly informed
+reviewers may reject such datasets outright, skewing the literature
+toward high p-values \citep[publication bias;][]{ioannidis2005}.  In
+turn, the difficulty of publishing low p-value results incentivises
+aggressive outlier rejection.  Peer pressure to produce `perfect' data
+may partially or completely explain the prevalence of underdispersed
+geochronology data in high profile publications such as
+\emph{Nature}.\medskip
 
 In the case of LA-ICP-MS signal window selection, outlier rejection
 occurs in early stages of the data processing pipeline, before the
@@ -1246,7 +1279,19 @@ processing algorithms used to derive these results are rarely
 shared. This lack of transparency creates opportunities for
 underdispersion.  A new generation of data reduction software such as
 \texttt{geochron@home} \citep{vermeesch2026} and \texttt{KJ}
-\citep{vermeesch2026b} show that this is possible.
+\citep{vermeeschKJ} show that this is possible.\medskip
+
+Finally, it is important to emphasise that outlier rejection is not
+always bad. Indeed, it is often unavoidable when accounting for the
+geological complexities inherent in the analysis of natural
+materials. It is desirable for such outlier rejection to be guided by
+auxiliary information such as mineral textures, geochemical
+information, or geologic relationships, rather than by a hard p-value
+or MSWD cutoff \citep{schoene2013}.  Ideally, the assessment of such
+geological factors should be done blindly, without looking at the
+p-values. This is the only way to avoid human-induced biases. Such
+blind decision-making procedures are routinely enforced in the life
+sciences, but are difficult to enforce in the geosciences.
 
 \codedataavailability{\citet{vermeesch2026c} provides FAIR access to
   the data and code needed to reproduce all the results in this
@@ -1329,9 +1374,9 @@ detect Type~II cherry picking.\medskip
 
 \begin{acknowledgements}
 This research has been supported by the Natural Environment Research
-Council (grant no. NE/T001518/1). The author would like to thank Blair
-Schoene and Dan Condon for reviewing an earlier submission, and Murat
-Tamer for encouragement.
+Council (grant no. NE/T001518/1). This paper benefitted from
+constructive reviews by Marco Colombo and Blair Schoene, who also
+reviewed an earlier version of the paper, as did Dan Condon.
 \end{acknowledgements}
 
 \bibliographystyle{copernicus}

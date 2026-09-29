@@ -3,49 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper.aux
 The style file: copernicus.bst
 Database file #1: /home/pvermees/Dropbox/biblio.bib
-Warning--entry type for "vermeesch2026c" isn't style-file defined
---line 14294 of file /home/pvermees/Dropbox/biblio.bib
-Warning--entry type for "vermeesch2026b" isn't style-file defined
---line 14305 of file /home/pvermees/Dropbox/biblio.bib
-You've used 47 entries,
+Warning--I didn't find a database entry for "vermeesch2026b"
+You've used 48 entries,
             2932 wiz_defined-function locations,
-            1313 strings with 17778 characters,
-and the built_in function-call counts, 43320 in all, are:
-= -- 4895
-> -- 1484
+            1323 strings with 18002 characters,
+and the built_in function-call counts, 48189 in all, are:
+= -- 5661
+> -- 1523
 < -- 30
-+ -- 714
-- -- 461
-* -- 2497
-:= -- 4324
-add.period$ -- 47
-call.type$ -- 47
-change.case$ -- 246
-chr.to.int$ -- 48
-cite$ -- 141
-duplicate$ -- 4424
-empty$ -- 2351
-format.name$ -- 582
-if$ -- 8608
++ -- 759
+- -- 473
+* -- 2684
+:= -- 4605
+add.period$ -- 48
+call.type$ -- 48
+change.case$ -- 252
+chr.to.int$ -- 49
+cite$ -- 144
+duplicate$ -- 5030
+empty$ -- 2538
+format.name$ -- 597
+if$ -- 9600
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 476
-newline$ -- 150
-num.names$ -- 189
-pop$ -- 1840
+missing$ -- 493
+newline$ -- 153
+num.names$ -- 193
+pop$ -- 1983
 preamble$ -- 1
-purify$ -- 246
+purify$ -- 252
 quote$ -- 0
-skip$ -- 2739
+skip$ -- 3242
 stack$ -- 0
-substring$ -- 1842
-swap$ -- 3743
+substring$ -- 2222
+swap$ -- 4380
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 411
+type$ -- 420
 warning$ -- 0
-while$ -- 248
+while$ -- 258
 width$ -- 0
-write$ -- 531
-(There were 2 warnings)
+write$ -- 546
+(There was 1 warning)

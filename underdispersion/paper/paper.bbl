@@ -1,4 +1,4 @@
-\begin{thebibliography}{47}
+\begin{thebibliography}{48}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{}
@@ -191,6 +191,11 @@ Schmitz, M.: Appendix 2 - Radioisotopic ages used in GTS2020, in: Geologic Time
   G.~M., pp. 1285--1349, Elsevier, ISBN 978-0-12-824360-2,
   \doi{https://doi.org/10.1016/B978-0-12-824360-2.00046-2}, 2020.
 
+\bibitem[{Schoene et~al.(2013)Schoene, Condon, Morgan, and
+  McLean}]{schoene2013}
+Schoene, B., Condon, D.~J., Morgan, L., and McLean, N.: {Precision and accuracy
+  in geochronology}, Elements, 9, 19--24, 2013.
+
 \bibitem[{Sl{\'{a}}ma et~al.(2008)Sl{\'{a}}ma, Ko{\v{s}}ler, Condon, Crowley,
   Gerdes, Hanchar, Horstwood, Morris, Nasdala, Norberg, Schaltegger, Schoene,
   Tubrett, and Whitehouse}]{slama2008}
@@ -213,13 +218,15 @@ Vermeesch, P.: {\texttt{IsoplotR}: a free and open toolbox for geochronology},
 Vermeesch, P.: {High MSWDs are not the problem, low ones are}, Natl. Sci. Rev,
   10, \doi{10.1093/nsr/nwaf036}, 2025.
 
-\bibitem[{Vermeesch(2026{\natexlab{a}})}]{vermeesch2026b}
-Vermeesch, P.: KJ: a physics-based algorithm for geochronology by LA-ICP-MS,
-  \doi{10.5281/zenodo.19693372}, 2026{\natexlab{a}}.
+\bibitem[{Vermeesch(2026{\natexlab{a}})}]{vermeesch2026c}
+Vermeesch, P.: {FAIR} code and data for "{T}oo good to be true: underdispersion
+  in geochronology", Zenodo, 2.0, doi:10.5281/zenodo.20186\,900,
+  \urlprefix\url{https://doi.org/10.5281/zenodo.20186900}, 2026{\natexlab{a}}.
 
-\bibitem[{Vermeesch(2026{\natexlab{b}})}]{vermeesch2026c}
-Vermeesch, P.: FAIR code and data for "Too good to be true: underdispersion in
-  geochronology", \doi{10.5281/zenodo.20186900}, 2026{\natexlab{b}}.
+\bibitem[{Vermeesch(2026{\natexlab{b}})}]{vermeeschKJ}
+Vermeesch, P.: {\texttt{KJ}: a physics-based algorithm for geochronology by
+  LA-ICP-MS}, Zenodo, v0.8.2, doi:10.5281/zenodo.19693\,372,
+  \urlprefix\url{https://doi.org/10.5281/zenodo.19693372}, 2026{\natexlab{b}}.
 
 \bibitem[{Vermeesch et~al.(2026)Vermeesch, Band, He, Galbraith, and
   Carter}]{vermeesch2026}

@@ -69,21 +69,23 @@ Nature <- function(){
     X2 <- MSWD*dof
     pvals_Nature <- pchisq(X2,df=dof,lower.tail=FALSE)
 
-    pdf(file='../figures/Nature.pdf',width=8,height=4)
-    op <- par(mfrow=c(1,2),mar=c(3,3,0.5,0.5),mgp=c(2,1,0))
+    pdf(file='../figures/Nature.pdf',width=8,height=3)
+    op <- par(mfrow=c(1,3),mar=c(3,3,0.5,0.5),mgp=c(2,1,0))
     # panel a
-    plot(x=c(0,1),y=c(0,1),type='l',xlab='p',ylab='Fn(p)')
+    plot(x=c(0,1),y=c(0,1),type='l',xlab='p',ylab='Fn(p)',bty='n')
     selectors <- c('UPb','ArAr')
     colours <- c('#E69F00','#56B4E9','#000000')
     for (i in seq_along(selectors)){
         selector <- selectors[i]
         p <- pvals_Nature[get(paste0("is.",selector))]
         cdf <- ecdf(p)
-        lines(cdf,pch=NA,verticals=TRUE,col=colours[i])
+        lines(cdf,pch=NA,verticals=TRUE,
+              col.01line=NA,col=colours[i])
         np <- length(p)
         message(selector,': n=',np,', f=',1-which.min(cdf(sort(p))>sort(p))/np)
     }
-    lines(ecdf(pvals_Nature),pch=NA,verticals=TRUE,col=colours[3])
+    lines(ecdf(pvals_Nature),pch=NA,verticals=TRUE,
+          col.01line=NA,col=colours[3])
     text(x=0.65,y=0.3,labels="'forbidden zone'")
     leg <- c(expression(''^206*'Pb/'^238*'U'),
              expression(''^40*'Ar/'^39*'Ar'),
@@ -92,32 +94,33 @@ Nature <- function(){
            col=colours,bty='n',y.intersp=rep(1,2),xpd=NA)
     legend('bottomright','a)',bty='n')
     # panel b
-    plot(x=c(0,1),y=c(0,1),type='l',xlab='p',ylab='Fn(p)')
+    plot(x=c(0,1),y=c(0,1),type='l',xlab='p',ylab='Fn(p)',bty='n')
     selectors <- c('average','plateau','isochron')
     colours <- c('#E69F00','#56B4E9','#009E73','#000000')
     for (i in seq_along(selectors)){
         selector <- selectors[i]
         p <- pvals_Nature[get(paste0("is.",selector))]
         cdf <- ecdf(p)
-        lines(cdf,pch=NA,verticals=TRUE,col=colours[i])
+        lines(cdf,pch=NA,verticals=TRUE,
+              col.01line=NA,col=colours[i])
         np <- length(p)
         message(selector,': n=',np,', f=',1-which.min(cdf(sort(p))>sort(p))/np)
     }
-    lines(ecdf(pvals_Nature),pch=NA,verticals=TRUE,col=colours[4])
+    lines(ecdf(pvals_Nature),pch=NA,verticals=TRUE,
+          col.01line=NA,col=colours[4])
     text(x=0.65,y=0.3,labels="'forbidden zone'")
     leg <- c('average','plateau','isochron','all')
     legend(x=0,y=1,legend=leg,lty=rep(1,4),pch=NA,
            col=colours,bty='n',y.intersp=rep(1,4),xpd=NA)
     legend('bottomright','b)',bty='n')
-    par(op)
-    dev.off()
-
-    pdf(file='../figures/Nature_pre_vs_post_2018.pdf',width=5,height=5)
-    op <- par(mar=c(3,3,0.5,0.5), mgp=c(2,1,0))
-    plot(ecdf(pvals_Nature[years<=2018]),pch=NA,verticals=TRUE,
-         col='blue',xlab='p',ylab='Fn(p)',main='',col.01line = NA,bty='n')
-    lines(ecdf(pvals_Nature[years>2018]),pch=NA,verticals=TRUE,col='red',col.01line = NA)
-    legend('topleft',legend=c('1973-2018','2019-present'),lty=c(1,1),col=c('blue','red'))
+    plot(ecdf(pvals_Nature[years<2019]),pch=NA,verticals=TRUE,
+         col.01line=NA,col=colours[1],
+         xlab='p',ylab='Fn(p)',main='',bty='n')
+    lines(ecdf(pvals_Nature[years>2018]),pch=NA,verticals=TRUE,
+          col=colours[2],col.01line = NA)
+    legend('topleft',legend=c('1973-2018','2019-present'),
+           lty=c(1,1),col=colours[1:2],bty='n')
+    legend('bottomright','c)',bty='n')
     lines(x=c(0,1),y=c(0,1))
     par(op)
     dev.off()
