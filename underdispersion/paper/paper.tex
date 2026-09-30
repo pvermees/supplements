@@ -48,21 +48,21 @@ geological complexity can shift the distribution towards low p-values,
 there is no natural mechanism that can produce an excess of high
 p-values. Consequently, the region below the 1:1 line of a p-value
 ECDF represents a ``forbidden zone'' that provides a diagnostic for
-excessive outlier rejection.
+excessive outlier rejection (``Type-II cherry picking'').
 
 Observer drift, iterative outlier removal and optimised LA-ICP-MS
 signal windows are mechanisms that can produce underdispersion.
 Applied to real data, underdispersion appears in every geochronometer
-examined. About one third of fission track p-values in the
-\texttt{geochron.org} database plot in the forbidden zone, where
-cherry picking is the only possible cause. So do 15\% of 650 p-values
-from \emph{Nature} journals (rising from 11.5\% before 2019 to 17.2\%
-since) and 25\% of those underlying the 2020 edition of the Geologic
-Time Scale, including 90\% of Ar--Ar constraints.  Addressing the
-problem requires greater emphasis on geological evidence when
-identifying outliers, preferably through procedures that are blind to
-statistical dispersion, and greater transparency through FAIR sharing
-of raw data and data-reduction workflows.
+examined. For fission track analysis (where cherry picking is the only
+possible cause of underdispersion), about one third of p-values in the
+\texttt{geochron.org} database plot in the forbidden zone. So do 15\%
+of 650 p-values from \emph{Nature} journals (rising from 11.5\% before
+2019 to 17.2\% since) and 25\% of those underlying the 2020 edition of
+the Geologic Time Scale, including 90\% of Ar--Ar constraints.
+Addressing the problem requires greater emphasis on geological
+evidence when identifying outliers, preferably through procedures that
+are blind to statistical dispersion, and greater transparency through
+FAIR sharing of raw data and data-reduction workflows.
 \end{abstract}
 
 \introduction\label{sec:intro}
@@ -1376,7 +1376,8 @@ detect Type~II cherry picking.\medskip
 This research has been supported by the Natural Environment Research
 Council (grant no. NE/T001518/1). This paper benefitted from
 constructive reviews by Marco Colombo and Blair Schoene, who also
-reviewed an earlier version of the paper, as did Dan Condon.
+reviewed an earlier version of the paper, as did Dan Condon.  Murat
+Tamer is thanked for his encouragement to move this paper forward.
 \end{acknowledgements}
 
 \bibliographystyle{copernicus}
