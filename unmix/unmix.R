@@ -1,4 +1,4 @@
-setwd('/home/pvermees/Dropbox/unmix')
+setwd('/home/pvermees/git/supplements/unmix')
 library(IsoplotR)
 rm(list=ls())
 graphics.off()
