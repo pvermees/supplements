@@ -4,6 +4,6 @@
 
 2. ["FAIR fission track analysis with geochron@home"](geochron@home) by Vermeesch, P., Band, T., He, J., Carter, A. and Galbraith, R. (2026) <i>Geochronology</i>, 8, 1, 109-118, doi::10.5194/gchron-8-109-2026.
 
-3. ["Too good to be true: underdispersion in geochronology"](underdispersion) by Vermeesch, P. (2026) <i>Geochronology</i> (in review).
+3. ["Too good to be true: underdispersion in geochronology"](underdispersion) by Vermeesch, P. (2026) <i>Geochronology</i> (in press).
 
 4. ["Unmixing detrital age distributions: a direct solution"](unmix) by Vermeesch, P. (2026) <i>Earth and Planetary Science Letters</i> (in review).

@@ -757,7 +757,7 @@ from the use of MSWDs instead of p-values to identify
 `outliers'. Suppose that a collection of unequally sized samples was
 culled until MSWD\,$\leq$\,1. Then this MSWD-cutoff would be
 equivalent to $\alpha=P(\chi^2>4|\nu=4)=0.41$ for $n=5$, to
-$\alpha=P(\chi^2>19|\nu=19)=0.46$ for $n=20$,and to
+$\alpha=P(\chi^2>19|\nu=19)=0.46$ for $n=20$, and to
 $\alpha=P(\chi^2>99|\nu=99)=0.49$ for $n=100$. The p-value
 distribution for these extreme levels of outlier rejection would fall
 further below the 1:1 line, providing the diagnostic signature of
@@ -857,20 +857,17 @@ propagation is straightforward \citep{green1981b} and standardised.
 Instead of plotting towards the left of \citet{iwano2018}'s p-value
 distribution, the \texttt{geochron.org} data plot nearly completely to
 the right of the reference materials (Figure~\ref{fig:Iwano}). One
-third of the p-values plot in the `forbidden zone'. This means that
-one third of the fission track samples in the \texttt{geochron.org}
-database are too good to be true.
+third of the p-values plot below the 1:1 line.
 
 \noindent\begin{minipage}[t][][b]{.4\linewidth}
   \includegraphics[width=\linewidth]{../figures/Iwano.pdf}
 \end{minipage}
 \begin{minipage}[t][][t]{.6\linewidth}
-  \captionof{figure}{The yellow curve represents a fission track dataset
-    of reference materials \citep{iwano2018}, which shows no
-    detectable evidence for cherry picking. In contrast, the blue curve
-    corresponds to a compilation of fission track data in which 30\% of
-    the p-values are underdispersed to such a degree that they are
-    `too good to be true'.}
+  \captionof{figure}{The yellow curve represents a fission track
+    dataset of reference materials \citep{iwano2018}, which shows no
+    detectable evidence for cherry picking. In contrast, the blue
+    curve corresponds to a compilation of fission track data in which
+    30\% of the p-values plot in the `forbidden zone'.}
   \label{fig:Iwano}
 \end{minipage}
 
@@ -904,28 +901,39 @@ database.
 \medskip
 
 The 100 publications contain 650 MSWD-values, 36.3\% of which are less
-than one. The ECDF of the corresponding p-values is shown in black on
-Figure~\ref{fig:Droellner}b. Only the bottom 85\% of this curve plots
-above the 1:1 line. The remaining 15\% of the p-value distribution
-falls in the forbidden zone of impossibly good results. 9\% of the
-p-values exceed 0.95. As mentioned before, there are two possible
-causes for this pattern.  One possibility is incorrect error
-propagation. Mass spectrometer data processing is complex and it is
-possible that some uncertainties in the geochronological literature
-have been overestimated. For example, this could happen by failure to
+than one. The ECDF of the corresponding p-values is shown in black in
+Figure~\ref{fig:Nature}a. Only the bottom 85\% of the curve lies above
+the 1:1 line, while the remaining 15\% of the p-value distribution
+falls within the forbidden zone of impossibly good results. The
+right-hand tail of the distribution is distinctly concave upwards: 9\%
+of the p-values exceed 0.95; 5.5\% exceed 0.99; 3.1\% exceed 0.999;
+and 2.1\% exceed 0.9999. In other words, one in fifty samples exhibits
+`Mendel-levels' of underdispersion, a frequency 200 times higher than
+expected even under the most optimistic statistical scenario. Closer
+inspection reveals that the most extreme p-values are concentrated in
+a small subset of the publications, which consequently have a
+disproportionate influence on the fraction of the p-value distribution
+falling within the forbidden zone.\medskip
+
+As mentioned before, there are two possible causes for the observed
+underdispersion.  One possibility is incorrect error propagation. Mass
+spectrometer data processing is complex and it is possible that some
+uncertainties in the geochronological literature have been
+overestimated. For example, this could happen by failure to
 distinguish between systematic and random sources of uncertainty
 \citep{renne1998}.  A second possible cause of underdispersion is
 excessive outlier rejection.\medskip
 
 To distinguish between the two causes of underdispersion, it is useful
-to group the p-values for different chronometers. Note that the
-\emph{Nature} compilation does not contain any fission track data. The
-two largest groups are U--Pb (320 p-values) and Ar--Ar (119 p-values).
-Both have ECDFs with similar proportions of analyses falling in the
-forbidden zone, at 21\% and 18.5\% respectively. It seems unlikely
-that the data reduction software for both methods (which use different
-types of mass spectrometers) would be equally flawed. It is therefore
-also unlikely that incorrect error propagation is the sole cause of
+to group the p-values for different chronometers
+(Figure~\ref{fig:Nature}b). Note that the \emph{Nature} compilation
+does not contain any fission track data. The two largest groups are
+U--Pb (320 p-values) and Ar--Ar (119 p-values).  Both have ECDFs with
+similar proportions of analyses falling in the forbidden zone, at 21\%
+and 18.5\% respectively. It seems unlikely that the data reduction
+software for both methods (which use different types of mass
+spectrometers) would be equally flawed. It is therefore also unlikely
+that incorrect error propagation is the sole cause of
 underdispersion. Excessive outlier rejection is a more likely
 culprit. This conclusion is corroborated by grouping the collection of
 p-values according to the statistical method of analysis.\medskip
@@ -1374,10 +1382,11 @@ detect Type~II cherry picking.\medskip
 
 \begin{acknowledgements}
 This research has been supported by the Natural Environment Research
-Council (grant no. NE/T001518/1). This paper benefitted from
-constructive reviews by Marco Colombo and Blair Schoene, who also
-reviewed an earlier version of the paper, as did Dan Condon.  Murat
-Tamer is thanked for his encouragement to move this paper forward.
+Council (grant no. NE/T001518/1). The paper benefitted from informal
+feedback by Andy Carter and Birk H\"{a}rtel, and from constructive
+reviews by Marco Colombo and Blair Schoene, who also reviewed an
+earlier version of the paper, as did Dan Condon.  Murat Tamer is
+thanked for his encouragement to move this work forward.
 \end{acknowledgements}
 
 \bibliographystyle{copernicus}

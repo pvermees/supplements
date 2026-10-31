@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.9.27)  30 SEP 2026 10:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.9.27)  31 OCT 2026 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3701,16 +3701,16 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 792--806
 <../figures/Iwano.pdf, id=320, 289.08pt x 289.08pt>
 File: ../figures/Iwano.pdf Graphic file (type pdf)
 <use ../figures/Iwano.pdf>
-Package pdftex.def Info: ../figures/Iwano.pdf  used on input line 865.
+Package pdftex.def Info: ../figures/Iwano.pdf  used on input line 863.
 (pdftex.def)             Requested size: 201.44243pt x 201.44153pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 873.
+(caption)                particular \caption on input line 870.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 864--876
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 862--873
 [] [] 
  []
 
@@ -3722,68 +3722,70 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 864--876
 <../figures/Nature.pdf, id=359, 578.16pt x 216.81pt>
 File: ../figures/Nature.pdf Graphic file (type pdf)
 <use ../figures/Nature.pdf>
-Package pdftex.def Info: ../figures/Nature.pdf  used on input line 956.
+Package pdftex.def Info: ../figures/Nature.pdf  used on input line 964.
 (pdftex.def)             Requested size: 352.52809pt x 132.19766pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 962.
+(caption)                particular \caption on input line 970.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 962--962
+Underfull \hbox (badness 1024) in paragraph at lines 970--970
 []\T1/ptm/b/n/9 Figure 8. []\T1/ptm/m/n/9 p-value dis-tri-bu-tions for the
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 962--962
+Underfull \hbox (badness 1210) in paragraph at lines 970--970
 \T1/ptm/m/n/9 black curves rep-re-sent the full dataset
  []
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 955--965
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 963--973
 [] [] 
  []
 
 
 
 [16 <../figures/Nature.pdf>]
-<../figures/GTS.pdf, id=385, 289.08pt x 289.08pt>
+<../figures/GTS.pdf, id=384, 289.08pt x 289.08pt>
 File: ../figures/GTS.pdf Graphic file (type pdf)
 <use ../figures/GTS.pdf>
-Package pdftex.def Info: ../figures/GTS.pdf  used on input line 1014.
+Package pdftex.def Info: ../figures/GTS.pdf  used on input line 1022.
 (pdftex.def)             Requested size: 201.44243pt x 201.44153pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1022.
+(caption)                particular \caption on input line 1030.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 1013--1025
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 1021--1033
 [] [] 
  []
 
+
+
+[17 <../figures/GTS.pdf>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-062.
+070.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-
-[17 <../figures/GTS.pdf>]
 <../figures/Droellner.pdf, id=417, 507.74492pt x 288.54222pt>
 File: ../figures/Droellner.pdf Graphic file (type pdf)
 <use ../figures/Droellner.pdf>
-Package pdftex.def Info: ../figures/Droellner.pdf  used on input line 1083.
+Package pdftex.def Info: ../figures/Droellner.pdf  used on input line 1091.
 (pdftex.def)             Requested size: 352.52809pt x 200.34474pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1090.
+(caption)                particular \caption on input line 1098.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 1082--1093
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 1090--1101
 [] [] 
  []
 
@@ -3796,31 +3798,31 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 1082--1093
 [20]
 
 [21]
-pdfTeX warning (ext4): destination with the same identifier (name{appendix.A}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1360 \appendixfigures
-                       
 <../figures/type1.pdf, id=576, 722.7pt x 361.35pt>
 File: ../figures/type1.pdf Graphic file (type pdf)
 <use ../figures/type1.pdf>
-Package pdftex.def Info: ../figures/type1.pdf  used on input line 1362.
+Package pdftex.def Info: ../figures/type1.pdf  used on input line 1370.
 (pdftex.def)             Requested size: 503.61377pt x 251.80745pt.
 
 
 Package caption Warning: \setcaptiontype
-(caption)                outside box or environment on input line 1363.
+(caption)                outside box or environment on input line 1371.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 1366.
+(caption)                particular \caption on input line 1374.
 See the caption package documentation for explanation.
 
 
 
-[22] (./paper.bbl
+[22
+pdfTeX warning (ext4): destination with the same identifier (name{appendix.A}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1374   0.00063) is a Type~I error.}
+                                     ] (./paper.bbl
 
 [23 <../figures/type1.pdf>]
 Underfull \hbox (badness 4954) in paragraph at lines 75--78
@@ -3861,7 +3863,7 @@ L3 programming layer <2021/03/21>
 Here is how much of TeX's memory you used:
  34783 strings out of 473197
  600926 string characters out of 5718605
- 1005657 words of memory out of 5000000
+ 1005608 words of memory out of 5000000
  57352 multiletter control sequences out of 15000+600000
  608892 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3884,10 +3886,10 @@ fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi
 8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (26 pages, 627646 bytes).
+Output written on paper.pdf (26 pages, 627904 bytes).
 PDF statistics:
- 739 PDF objects out of 1000 (max. 8388607)
- 617 compressed objects within 7 object streams
+ 740 PDF objects out of 1000 (max. 8388607)
+ 618 compressed objects within 7 object streams
  141 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3,10 +3,9 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper.aux
 The style file: copernicus.bst
 Database file #1: /home/pvermees/Dropbox/biblio.bib
-Warning--I didn't find a database entry for "vermeesch2026b"
 You've used 48 entries,
             2932 wiz_defined-function locations,
-            1323 strings with 18002 characters,
+            1322 strings with 17988 characters,
 and the built_in function-call counts, 48189 in all, are:
 = -- 5661
 > -- 1523
@@ -45,4 +44,3 @@ warning$ -- 0
 while$ -- 258
 width$ -- 0
 write$ -- 546
-(There was 1 warning)
