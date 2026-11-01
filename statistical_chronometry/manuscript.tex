@@ -7,48 +7,72 @@ and\\Steven J. Desch\\\emph{Arizona State University, USA}}
 \linenumbers
 \maketitle
 
+\newcommand{\tSS}{\mbox{$t_{\rm SS}$}}
+\newcommand{\tAl}{\mbox{$t_{\rm Al}$}}
+\newcommand{\tMn}{\mbox{$t_{\rm Mn}$}}
+\newcommand{\tHf}{\mbox{$t_{\rm Hf}$}}
+\newcommand{\tPb}{\mbox{$t_{\rm Pb}$}}
+\newcommand{\alratio}{\mbox{${}^{26}{\rm Al}/{}^{27}{\rm Al}$}}
+\newcommand{\mnratio}{\mbox{${}^{53}{\rm Mn}/{}^{55}{\rm Mn}$}}
+\newcommand{\hfratio}{\mbox{${}^{182}{\rm Hf}/{}^{180}{\rm Hf}$}}
+
+
 \begin{abstract}
   The chronology of the early solar system rests on extinct
-  (\textsuperscript{26}Al/\textsuperscript{26}Mg,
-  \textsuperscript{53}Mn/\textsuperscript{53}Cr,
-  \textsuperscript{182}Hf/\textsuperscript{182}W) and extant
-  (\textsuperscript{207}Pb/\textsuperscript{206}Pb) chronometers,
-  which should agree for rapidly cooled meteorites from isotopically
-  homogeneous parts of the solar system. Testing this concordance
-  requires a statistical framework. Here we introduce two approaches
-  to establish a statistical chronometry of meteorites.  In a first
-  approach, we revisit the weighted-mean based method of Desch et
-  al. (2023, doi:10.1016/j.icarus.2023.115607 and
-  doi:10.1016/j.icarus.2023.115611), which tracks events forward in
-  time from the start of the solar system, $t_{\mathit{SS}}$. This
-  model was originally applied to a compilation of 38 multi-dated
-  meteorites whose Pb--Pb dates were adjusted for
-  \textsuperscript{238}U/\textsuperscript{235}U fractionation. After
-  fixing an error in the model's original formulation, we show that
-  the adjusted database still exhibits a small but statistically
-  significant degree of overdispersion with respect to the analytical
-  uncertainties.  A second approach is to build the statistical
-  chronology counting backward in time, starting from the present and
-  converting extinct-nuclide dates to `Pb--Pb time' through a single
-  offset parameter estimated by weighted regression with a fixed unit
-  slope. Applying the second algorithm to the 38-sample data
-  compilation yields the same conclusion of statistically significant
-  overdispersion. Extending the regression to a random-effects model
-  allows the excess scatter to be quantified. It shows that the
-  adjustment of the Pb--Pb dates lowers their overdispersion relative
-  to the extinct chronometers from 450--900\,kyr to 50--380\,kyr.
-  Alternatively, the overdispersion can be attributed to variability
-  in the initial \textsuperscript{26}Al/\textsuperscript{27}Al-ratio
-  of the solar system ($40-130\%$ for the original data and
-  $0.5-7.5\%$ for the adjusted database); of the initial
-  \textsuperscript{53}Mn/\textsuperscript{55}Mn-ratio ($5-22\%$ and
-  $2-7.5\%$), or of the initial
-  \textsuperscript{182}Hf/\textsuperscript{180}Hf-ratio ($3-10\%$ and
-  $1.4-6.8\%$).  Whether the cause of the excess dispersion is
-  astrophysical or analytical remains unresolved. Routine measurement
-  of \textsuperscript{238}U/\textsuperscript{235}U in Pb--Pb dated
-  mineral phases and more realistic statistical models for isochron
-  selection may help to separate these causes in the future.
+  (\textsuperscript{26}Al--\textsuperscript{26}Mg,
+  \textsuperscript{53}Mn--\textsuperscript{53}Cr,
+  \textsuperscript{182}Hf--\textsuperscript{182}W) and extant
+  (\textsuperscript{207}Pb--\textsuperscript{206}Pb) chronometers.
+  These should agree with each other if dating the same events, such
+  as isotopic closure of these systems in a rapidly cooled achondrite.
+  If multiple achondrites formed on different parent bodies, the
+  chronometers should be concordant across them, assuming isotopically
+  homogeneous values of ${}^{26}{\rm Al}/{}^{27}{\rm Al}$,
+  ${}^{53}{\rm Mn}/{}^{55}{\rm Mn}$ and ${}^{182}{\rm Hf}/{}^{180}{\rm
+    Hf}$.  Testing the homogeneity of these short-lived radionuclides
+  (SLRs) is often done by comparing a few samples, but really requires
+  a statistical framework considering many meteorites simultaneously.
+  Here we discuss two similar statistical approaches.  The first is
+  that of Desch et al. (2023a,b: doi:10.1016/j.icarus.2023.115607 and
+  doi:10.1016/j.icarus.2023.115611), which calculates the time of
+  formation of an achondrite after the start of the solar system
+  ($t=0$, which happened a time $t_{\rm SS}$ ago), in different
+  isotopic systems, and takes their weighted mean as the best estimate
+  of the formation time.  This model was applied to 38 dates across 14
+  multiply-dated achondrites, adjusting Pb--Pb ages for ${}^{238}{\rm
+    U}/{}^{235}{\rm U}$ fractionation during mineral formation.  We
+  correct an error in their calculation of the goodness-of-fit
+  parameter and demonstrate that the adjusted formation times show a
+  small but statistically significant degree of overdispersion with
+  respect to their analytical uncertainties.  We also introduce a
+  second approach to statistical chronometry, which is to calculate
+  times of formation before the present, essentially converting dates
+  into `Pb--Pb times', using a single offset parameter per isotopic
+  system, estimated by a weighted regression with a fixed unit slope.
+  Applying the second algorithm to the same data compilation yields
+  the same conclusion of statistically significant overdispersion.
+  Extending the regression to a random-effects model allows the excess
+  scatter to be quantified.  The overdispersion of the Pb--Pb ages
+  relative to the extinct chronometers is greatly reduced after the
+  corrections of Desch et al. (2023) for uranium isotopic
+  fractionation, from 450--900\,kyr to 50--380\,kyr.  Whether this
+  remaining overdispersion is astrophysical or analytical in origin is
+  unresolved.  One explanation for this remaining overdispersion might
+  be variability of SLR abundances.  If all variations are attributed
+  to this, it would require 0.5 to 7.5\% (or 40 to 130\%) variations
+  in the ${}^{26}{\rm Al}/{}^{27}{\rm Al}$ ratio, or 2 to 7.5\% (or 5
+  to 22\%) variations in the ${}^{53}{\rm Mn}/{}^{55}{\rm Mn}$ ratio,
+  or 1.4 to 6.8\% (or 3 to 10\%) variations in the ${}^{182}{\rm
+    Hf}/{}^{180}{\rm Hf}$ ratio (values in parentheses referring to
+  the uncorrected Pb--Pb ages).  These relatively small variations are
+  difficult to rule out on purely astrophysical grounds, but would not
+  explain the persistent overdispersion even among angrites, which
+  derive from the same parent body.  This suggests that systematic
+  variations in analysis are at least partly responsible for the
+  overdispersion of achondrite formation times.  Routine measurement
+  of ${}^{238}{\rm U}/{}^{235}{\rm U}$ in the mineral phases used for
+  Pb--Pb dating, and improvements in development of isochrons, would
+  test this interpretation.
 \end{abstract}
 
 \section{Introduction}
@@ -60,21 +84,25 @@ radiogenic decay products of extinct (\textsuperscript{26}Al,
 (\textsuperscript{235}U, \textsuperscript{238}U) nuclides in
 meteorites. The extinct nuclides form the basis of relative
 chronometers, which can be used to estimate the age difference between
-pairs of meteorites. In principle, the extant nuclides can be used to
+pairs of meteorites.  In principle, the extant nuclides can be used to
 anchor meteorites in absolute time, counting back from the present.
 However, in practice the precision of such absolute dates is limited
 by the analytical uncertainty of the decay constants
 \citep{ludwig2000}. For the
 \textsuperscript{207}Pb/\textsuperscript{206}Pb method, this
 uncertainty amounts to ca.~9\,Myr ($2\,\sigma$) at 4567\,Ma
-(Figure~\ref{fig:lambda_err}). The decay constant uncertainty is
+(Figure~\ref{fig:lambda_err}).  The decay constant uncertainty is
 greatly reduced when calculating the difference between two similar
 \textsuperscript{207}Pb/\textsuperscript{206}Pb dates
-(Figure~\ref{fig:lambda_err}). For example, a 10\,Myr age difference
+(Figure~\ref{fig:lambda_err}).  If a different value of the decay
+constant is assumed, the ages of both samples are increased or
+decreased by a similar amount.  The age difference is therefore much
+more certain than $\pm 9$ Myr.  For example, a 10\,Myr age difference
 near the onset of the solar system is associated with a decay constant
-uncertainty of only 7\,kyr.  Therefore, when comparing
+uncertainty of only 7\,kyr, as long as all the samples are dated
+assuming the same decay constants.  In that case, when comparing
 \textsuperscript{207}Pb/\textsuperscript{206}Pb dates within the
-4550-4568\,Ma age range, decay constant uncertainties can be safely
+4550--4568\,Ma age range, decay constant uncertainties can be safely
 ignored, turning the
 \textsuperscript{207}Pb/\textsuperscript{206}Pb-method into a relative
 chronometer with similar precision as the extinct
@@ -84,54 +112,77 @@ chronometers.\medskip
   \includegraphics[width=\linewidth]{lambda_err.pdf}
 \end{minipage}
 \begin{minipage}{.6\linewidth}
-\captionof{figure}{Decay constant uncertainty as a function of the
-  \textsuperscript{207}Pb/\textsuperscript{206}Pb age $t$ (blue); and
-  the difference between a meteorite of age $t$ and the start of the
-  solar system $t_{\mathit{SS}}$ (red).}
+\captionof{figure}{(blue) uncertainty in the inferred Pb--Pb age of a
+  sample with true age $t$, due to the uncertainty in the decay
+  constants of ${}^{238}{\rm U}$ and especially ${}^{235}{\rm U}$;
+  (red) uncertainty in the difference between the inferred Pb--Pb age
+  of a sample with true age $t$, and a second sample with age $t_{\rm
+    SS}$, Pb--Pb dated using identical decay constants which are
+  uncertain.  When used as a relative chronometer to date differences
+  in formation times between two objects, the $1\sigma$ uncertainty is
+  small (roughly 1\% of the age difference); but when used as an
+  absolute chronometer, the $2\,\sigma$ uncertainty is about 9 Myr.  }
 \label{fig:lambda_err}
 \end{minipage}
 
-For rapidly cooled meteorites in isotopically homogenised regions of
-the early solar system, extinct and extant chronometers should be
-concordant. Jointly considering a basket of such double-dated
-meteorites leads to the establishment of a `statistical chronology' of
-those meteorites. This paper presents two approaches to this
-problem. A first approach is to establish a chronology for the early
-solar system counting forward in time from the start of the solar
-system, $t_{\mathit{SS}}$, using the scatter of double-, triple- and
-quadruple-dated meteorites around their weighted means
-(Section~\ref{sec:means}).  A second approach is to build the
-statistical chronology counting backward in time, starting from the
-present and using linear regression instead of weighted means
+For a rapidly ($\ll 10^5$ yr) cooled achondrite in which all isotopic
+systems reached closure simultaneously, the ages or formation times
+derived from each system should agree, assuming the Pb--Pb age of the
+solar system, $t_{\rm SS}$, and a particular set of initial values of
+${}^{26}{\rm Al}/{}^{27}{\rm Al}$, ${}^{53}{\rm Mn}/{}^{55}{\rm Mn}$,
+and ${}^{182}{\rm Hf}/{}^{180}{\rm Hf}$.  The ages or formation times
+of a second rapidly cooled achondrite also should agree with each
+other.  If the short-lived radionuclides were uniformly distributed in
+the solar nebula, the ages of both achondrites would be
+self-concordant and concordant with each other, for the same set of
+assumed parameters.  The best tests of homogeneity extend this idea to
+a basket of achondrites date across multiple systems, comparing
+multiple samples simultaneously, using a `statisical chronometry'
+approach.\medskip
+
+This paper presents two approaches to this problem.  A first approach
+is to establish a chronology for the early solar system counting
+forward in time from the start of the solar system, a time $t_{\rm
+  SS}$ ago, using the scatter of double-, triple- and quadruple-dated
+meteorites around their weighted means (Section~\ref{sec:means}).  A
+second approach is to build the statistical chronology counting
+backward in time, starting from the present and using linear
+regression instead of weighted means
 (Section~\ref{sec:regression}).\medskip
 
-Section~\ref{sec:application} applies both approaches to a collection
-of 11 rapidly cooled meteorites compiled by
-\citet{desch2023a,desch2023b}. Previous statistical analysis of this
-database using the first approach suggested concordance of the
-Al--Mg, Mn--Cr, Hf--W and Pb--Pb methods. After
-fixing an error in \citet{desch2023a,desch2023b}'s calculations,
-we come to a different conclusion and find a small but statistically
-significant amount of excess dispersion in the data.
-Section~\ref{sec:discussion} quantifies this overdispersion
-by modifying the linear regression method.\medskip
+In Section~\ref{sec:application}, we apply both approaches to a
+dataset of Al--Mg, Mn--Cr, Hf--W and revised Pb--Pb ages across 14
+achondrites, compiled by \citet{desch2023a,desch2023b}. Previous
+statistical analysis of this database using the first approach
+suggested concordance of the Al--Mg, Mn--Cr, Hf--W and Pb--Pb systems.
+After fixing an error in the calculations of
+\citet{desch2023a,desch2023b}, we find that in fact the data show a
+small but statistically significant amount of excess dispersion.  In
+Section~\ref{sec:discussion}, we quantify this overdispersion by
+modifying the linear regression method, and discuss the possible
+causes of the overdispersion.
 
-This paper will use the following definitions:
+\section{Methods}
 
+Before discussing the methods, we define the following terms.
 \begin{description}
-\item{$t_{\mathit{SS}}:$} the start of the solar system, measured from the present;
-\item{$t_{\mathit{Al}}$, $t_{\mathit{Pb}}$, $t_{\mathit{Mn}}$, $t_{\mathit{Hf}}$:} the Al--Mg, Pb--Pb,
-  Mn--Cr and Hf--Cr date, respectively, measured from the present;
-\item{$\Delta t_{\ast}$} $= t_{\mathit{SS}} - t_{\ast}$, where $\ast
-  \in \{\mathit{Al}, \mathit{Pb}, \mathit{Mn}, \mathit{Hf}\}$;
-\item{$\lambda_{26}$, $\lambda_{53}$:} the decay constant of
+\item{$\tSS$:} the age the solar system, measured backward from the
+  present;
+\item{$t$:} the time elapsed since the start of the solar system,
+  measured forward in time;
+\item{$\tAl$, $\tPb$, $\tMn$, $\tHf$:} the Al--Mg, Pb--Pb, Mn--Cr and
+  Hf--Cr ages, respectively, measured backwards in time from the
+  present;
+\item{$\Delta t_{\rm X}$} $= \tSS - t_{\rm X}$, where $t_{\rm X} \in
+  \{\tAl, \tPb, \tMn, \tHf\}$;
+\item{$\lambda_{26}$, $\lambda_{53}$:} the decay constants of
   \textsuperscript{26}Al and \textsuperscript{53}Mn, respectively;
-\item{$\left[{}^{y}\mbox{X}/^{x}\mbox{X}\right]_{\mathit{SS}}$:} the
-  ${}^{y}\mbox{X}/^{x}\mbox{X}$ (e.g.,
-  ${}^{27}\mbox{Al}/^{26}\mbox{Al}$)-ratio of the solar system at
-  $t_{\mathit{SS}}$;
-\item{$\left[{}^{y}\mbox{X}/^{x}\mbox{X}\right]_{0}$:} the
-  ${}^{y}\mbox{X}/^{x}\mbox{X}$-ratio of a meteorite at the time of
+\item{$\left[{}^{a}\mbox{X}/^{b}\mbox{X}\right]_{\rm SS}$:} the
+  ${}^{a}\mbox{X}/^{b}\mbox{X}$ (e.g.,
+  ${}^{26}\mbox{Al}/^{27}\mbox{Al}$)-ratio of the solar system at
+  $t=0$, a time $\tSS$ ago;
+\item{$\left[{}^{a}\mbox{X}/^{b}\mbox{X}\right]_{0}$:} the
+  ${}^{a}\mbox{X}/^{b}\mbox{X}$-ratio of a meteorite at the time of
   its formation;
 \item{$\sigma[\ast]$:} the analytical uncertainty (estimated standard
   deviation) of $\ast$;
@@ -142,131 +193,134 @@ This paper will use the following definitions:
   $\chi^2/\nu$.
 \end{description}
 
-\section{Approach 1: $t_{\mathit{SS}} \rightarrow t$}
+\subsection{First Approach: $\tSS \rightarrow t$}
 \label{sec:means}
 
-\citet{desch2023a} define $t_{\mathit{SS}}$ as the time when the
-\textsuperscript{26}Al/\textsuperscript{27}Al-ratio of the Solar
-System was
-$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}={5.23}\times{10}^{-5}$,
-assuming isotopic homogeneity. The actual value of $t_{\mathit{SS}}$
-is then estimated by minimising the sum of the squared differences
-between $\Delta{t}_{Al} = \dfrac{1}{\lambda_{26}} \left(
-\ln\left[\dfrac{{}^{26}\mbox{Al}}{{}^{27}\mbox{Al}}\right]_{\mathit{SS}}
-- \ln\left[\dfrac{{}^{26}\mbox{Al}}{{}^{27}\mbox{Al}}\right]_{0}
-\right) $ and $\Delta{t}_{Pb} = t_{\mathit{SS}} - t_{Pb}$ for a
-`basket' of double-dated meteorites that are thought to have achieved
-simultaneous isotopic closure for both systems. Given a set of $n$
-double-dated meteorites, \citet{desch2023a} test the concordance of
-the Al--Mg and Pb--Pb dates by finding the value of $t_{\mathit{SS}}$
-that minimises a chi-square statistic:
+\citet{desch2023a} define $\tSS$ as the Pb--Pb age that would be
+inferred for a sample that isotopically closed at time $t=0$, defined
+to be when the $\alratio$ in the solar system was $(\alratio)_{\rm SS}
+\equiv 5.23 \times 10^{-5}$, the value widely accepted as recorded by
+CAIs \citep{JacobsenEtal2013}.  Because the Pb--Pb system could be
+reset by transient heating events (without resetting the Al--Mg
+system), \citet{desch2023a} did not consider this age to be recorded
+by any CAI.  Therefore they regarded this as a free parameter that
+must be determined, by finding the value of $\tSS$ that minimizes the
+differences between $\Delta t_{\rm Al} = \frac{1}{\lambda_{26}} \left(
+\ln \left[ \frac{{}^{26}{\rm Al}}{{}^{27}{\rm Al}} \right]_{\rm SS}
+-\ln \left[ \frac{{}^{26}{\rm Al}}{{}^{27}{\rm Al}} \right]_{0}
+\right)$ and $\Delta t_{\rm Pb} = t_{\rm SS} - t_{\rm Pb}$, for each
+achondrite.  To be more specific, given a sample of $A$ achondrites
+with both Al--Mg and Pb--Pb dates, \citet{desch2023a} found the value
+that minimizes the chi-squared statistic
 \begin{equation}
-  \chi^2 = \sum\limits_{i=1}^{n}\sum\limits_{\ast\in\{Al,Pb\}}
-  \left(\dfrac{\Delta t_{\ast,i}-\Delta\bar{t}_i}{\sigma\left[t_{\ast,i}\right]}\right)^2
-  \label{eq:chi2}
+\chi^2 = \sum_{i=1}^{A} \, 
+\left( \frac{ \Delta t_{{\rm Al},i} - \Delta t_i }{ \sigma_{{\rm Al},i} } \right)^2 
++\left( \frac{ \Delta t_{{\rm Pb},i} - \Delta t_i}{ \sigma_{{\rm Pb},i} } \right)^2,
+\label{eq:chi2}
 \end{equation}
+where $\Delta t_i$ is the error-weighted mean of $\Delta t_{{\rm
+    Al},i}$ and $\Delta_{{\rm Pb},i}$.  By minimizing $\chi^2$, the
+optimal value of the free parameter $\tSS$ (which shows up in each
+$\Delta t_{{\rm Pb},i}$) is found.\medskip
 
-\noindent where $\bar{t}_i$ is the error-weighted mean of the Al--Mg
-and Pb--Pb dates of the $i$\textsuperscript{th} meteorite. If all $n$
-meteorites are concordant, and if analytical uncertainty is the only
-source of dispersion, then $\chi^2$ is expected to follow a chi-square
-distribution with $\nu$ degrees of freedom. This expectation can be
-used to formally test the concordance of the data: low $\chi^2$-values
-indicate homogeneity, high values ($\chi^2\gg\nu$) indicate
-overdispersion.  \citet{desch2023a} posit that $\nu = 2\,n-1$,
-assuming that $\Delta{t}_{Al,i}$ and $\Delta{t}_{Pb,i}$ are
-statistically independent. This is incorrect. In reality,
-$\Delta{t}_{Al,i}$ and $\Delta{t}_{Pb,i}$ are perfectly
-anti-correlated, so that the correct number of degrees of freedom is
-$\nu = n-1$. This value accounts for the fact that $\chi^2$ comprises
-$n$ weighted means of paired values (each of which represents one
-degree of freedom) minus one degree of freedom because
-$t_{\mathit{SS}}$ is estimated from the data.\medskip
+If the $A$ achondrites are all concordant, and the stated analytical
+uncertainties are the only source of dispersion, then $\chi^2$ should
+follow a chi-square distribution with $\nu$ degrees of freedom: low
+values would be consistent with isotopic homogeneity, but high values
+$\chi^2 \gg \nu$ would indicate overdispersion of some cause.  The
+number of degrees of freedom is $A - 1$.  Essentially, there is one
+comparison to be made for each achondrite, and there is one free
+parameter ($\tSS$).  \citet{desch2023a} incorrectly used $\nu = 2 A -
+1$, assuming that the deviations of $\Delta t_{{\rm Al},i}$ and
+$\Delta t_{{\rm Pb},i}$ from $\Delta t_i$ were statistically
+independent.  In fact, by the definition of $\Delta t_i$, they are
+perfectly anti-correlated, and only one degree of freedom is
+introduced per achondrite, not two.  Another way to look at it is that
+there are $2 A$ variables being fit, with the 1 parameter $\tSS$, but
+also $A$ free parameters that are the weighted mean ages $\Delta t_i$,
+so that $\nu = 2 A - A - 1 = A - 1$.\medskip
 
-Equation~\ref{eq:chi2} can be generalised to more than two
-chronometers.  Suppose that the collection of $n$ meteorites comprises
-of $n_2$ double-dated, $n_3$ triple-dated and $n_4$ quadruple-dated
-meteorites, then \citet{desch2023b} posit that $\nu = 2\,n_2 + 3\,n_3
-+ 4\,n_4 - m$, where $m$ is the number of nuisance parameters to be
-estimated as part of the optimisation among $t_{\mathit{SS}}$,
-$\left[^{53}\mbox{Mn}/^{55}\mbox{Mn}\right]_{\mathit{SS}}$,
-$\left[^{182}\mbox{Hf}/^{180}\mbox{Hf}\right]_{\mathit{SS}}$ and
-$\lambda_{53}$. This is also incorrect, with the correct value being
-$\nu = n_2 + 2\,n_3 + 3\,n_4 - m$. This value accounts for the fact
-that the weighted mean of $N$ values has $N-1$ degrees of freedom, so
-that the sum of the $\chi^2$-values for $n_N$ weighted means has
-$(N-1) \,n_N$ degrees of freedom.
+Equation~\ref{eq:chi2} can be generalized to more than two
+chronometers, as was done by \citet{desch2023b}.  In this case, it is
+not necessary that Al--Mg and Pb--Pb dates both exist for every
+achondrite; \citet{desch2023b} included in their compilation 14
+achondrites that had Pb--Pb ages and data for at least one other
+system (Al--Mg, Mn--Cr, or Hf--W).  Here the fit must also
+simultaneously optimize $\tSS$, $({}^{53}{\rm Mn}/{}^{55}{\rm
+  Mn})_{\rm SS}$, $({}^{182}{\rm Hf}/{}^{180}{\rm Hf})_{\rm SS}$, and
+$\lambda_{53}$.  The error-weighted mean $\Delta t_{i}$ is based on
+whatever formation times are available for each achondrite.  When
+assessing the goodness-of-fit, \citet{desch2023b} assumed $\nu = N-4$,
+based on $N$ formation times across the $A$ achondrites, minus the 4
+free parameters.  However, the same logic about the weighted means as
+an introduced free parameter applies, and the correct number of
+degrees of freedom is $\nu = N-A-4$.
 
-\section{Approach 2: $t \leftarrow \mbox{present}$}
+\subsection{Second Approach: $t \leftarrow \mbox{present}$}
 \label{sec:regression}
 
-Approach~1 defines $t_{\mathit{SS}}$ in terms of an assumed value for
-$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$, and using a basket of
-double-dated meteorites.  Future updates to the basket would result in
-new estimates for $t_{\mathit{SS}}$. However, this is not the only option. A
-mathematically equivalent use of the basket would be to fix $t_{\mathit{SS}}$
-and treat $({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$ as an unknown. In
-fact, the choice of $t_{\mathit{SS}}$ is completely arbitrary and can be
-avoided altogether by expressing the Al/Mg-dates in `Pb/Pb-time', by
-counting time from the present instead of from $t_{\mathit{SS}}$. This can be
-done by finding the offset $A$ that minimises the misfit between
-$t_{Al}$ and $t_{Pb}$, where
+It is worth considering whether a different approach might reduce the
+number of free parameters, and allow a different assessment of whether
+or not the formation times from \citet{desch2023b} are overdispersed.
+The first approach defines $\tSS$ as the Pb--Pb age inferred for a
+sample that isotopically closed at the time the $\alratio$ ratio in
+the solar system (assuming isotopic homogeneity) was a fixed value
+$(\alratio)_{\rm SS} = 5.23 \times 10^{-5}$.  As outlined above, this
+age is determined using a basket of multiply-dated achondrites to
+align the Pb-Pb and Al-Mg chronometers.  Future updates to the basket
+would therefore result in new estimates for $\tSS$.\medskip
+
+A mathematically equivalent use of the basket would be to fix
+$t_{\mathit{SS}}$ and treat
+$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$ as an unknown.
+Alternatively, the two quantities, $t_{\mathit{SS}}$ and
+$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$, can be combined
+into a single free parameter by expressing the Al/Mg-dates in
+`Pb/Pb-time', i.e. by measuring time from the present rather than from
+$t_{\mathit{SS}}$. Applying this method to each achondrite $i$:
 \begin{equation}
-  t_{Al} = A +
-  \frac{1}{\lambda_{26}}\ln\left(\frac{{}^{26}\mbox{Al}}{{}^{27}\mbox{Al}}\right)_{0}
+\tAl_{,i} = \tSS - \frac{1}{\lambda_{26}} \, \ln \left( \frac{ {}^{26}{\rm Al} }{ {}^{27}{\rm Al} } \right)_{\rm SS} 
++ \frac{1}{\lambda_{26}} \, \ln \left( \frac{ {}^{26}{\rm Al} }{ {}^{27}{\rm Al} } \right)_{0,i}
+= 
+{O}_{26} + \frac{1}{\lambda_{26}} \, \ln \left( \frac{ {}^{26}{\rm Al} }{ {}^{27}{\rm Al} } \right)_{0,i}.
   \label{eq:A}
 \end{equation}
-
-\noindent in which $A = t_{\mathit{SS}} -
-\ln\left({}^{26}\mbox{Al}/{}^{27}\mbox{Al}\right)_{\mathit{SS}}/\lambda_{26}$.
-Any change to the basket of double-dated meteorites would change $A$
-and, hence, $t_{Al}$. However, $t_{Pb}$ would remain unaffected,
-unlike \citet{desch2023a}'s $\Delta{t}_{Pb}$ and $\Delta{t}_{Al}$,
-which would both change.\medskip
-
-The offset parameter $A$ can be estimated by weighted least squares
-regression with a fixed unit slope. The dispersion of the data around
-the 1:1 line is quantified by a chi-square statistic with $n-1$
-degrees of freedom, i.e. exactly as under Approach~1. Mn--Cr and Hf--W
-data can be treated in the same way.
+If the two isotopic systems are concordant, then we expect $t_{{\rm
+    Al},i} = t_{{\rm Pb},i}$ for each achondrite, and for a plot of
+$t_{{\rm Al},i}$ vs. $t_{{\rm Pb},i}$ to be a line of slope 1, with
+unknown offset parameter, ${O}_{26}$, which is determined by linear
+regression.  The resultant MSWD can be used to determine the goodness
+of fit.  The number of degrees of freedom would be $\nu = A-1$, as
+before. Any changes to the basket of meteorite dates would change
+${O}_{26}$, and hence $\tAl$, but $\tPb$ would be unchanged.  This
+approach can also be used to compare Pb--Pb ages to Mn--Cr and Hf--W
+formation times, just as they are compared to Al--Mg formation times.
 
 \section{Application to the \citet{desch2023b} database}
 \label{sec:application}
 
-\citet{desch2023a,desch2023b} applied Approach~1 to the compilation of
-meteorites shown in Table~\ref{tab:desch}. In their detailed survey of
-the literature, they adjusted the published results of several studies
-in different three ways. First, they recalculated the Pb--Pb dates of
-some meteorites by retrospectively adjusting the
+\citet{desch2023b} compiled $N = 38$ Al--Mg, Mn--Cr, and Hf--W
+isochrons and Pb--Pb ages across $A = 14$ achondrites.  In their
+detailed survey of the literature, they adjusted Pb--Pb ages as
+follows.  First, they recalculated the Pb--Pb dates of some meteorites
+by retrospectively adjusting the
 ${}^{238}\mbox{U}/{}^{235}\mbox{U}$-ratios by 0.3\textperthousand\ to
-account for possible U-fractionation between pyroxene and whole rock
-\citep{tissot2017}. Second, they recalculated the Pb--Pb isochrons for
-certain meteorites using a different selection of aliquots than
-reported in the original publications. Third, they treated the
-\textsuperscript{53}Mn-decay constant as an unknown and optimised the
-$\lambda_{53}$-value that brought the Mn--Cr data as close as possible
-to concordance with the other chronometers. \medskip
+account for possible U-fractionation between pyroxene and whole rock,
+following \citet{tissot2017}.  This adjustment was deemed necessary
+because ${}^{238}{\rm U}/{}^{235}{\rm U}$ measurements are almost
+always determined from whole-rock samples, whereas the Pb--Pb dating
+requires knowledge of the ${}^{238}{\rm U}/{}^{235}{\rm U}$ ratio in
+the mineral phase contributing the most radiogenic Pb, generally
+pyroxenes.  Second, they recalculated ${}^{207}{\rm Pb}/{}^{206}{\rm
+  Pb}$ vs. ${}^{204}{\rm Pb}/{}^{206}{\rm Pb}$ isochrons for a few
+achondrites for which certain aliquots were excluded from the
+regression without justification.  They showed that equally valid
+alternative choices of which aliquots to include led to similar slopes
+(and ages), but with much greater uncertainty than had been reported.
+After this adjustment, \citet{desch2023a,desch2023b} developed the
+database show in Table~\ref{tab:desch}.
 
-Applying Equation~\ref{eq:chi2} to the corrected data of
-Table~\ref{tab:desch}, \citet{desch2023b} report a $\chi^2$-value of
-47.94 for the 38 meteorite dates, assuming $\nu=37-4=34$ degrees of
-freedom. Under this assumption, the p-value for the chi-square test is
-0.057, which is greater than 0.05 and fails to reject the null
-hypothesis that the meteorite ages are all concordant. However, as
-discussed in Section~\ref{sec:means}, the correct number of degrees of
-freedom is not $34$ but
-$\nu={6}\times{1}+{6}\times{2}+{2}\times{3}-4=20$. Using this correct
-value yields a p-value of 0.00043, resulting in a rejection of the
-null hypothesis.\medskip
-
-\citet{desch2023b} also present a second $\chi^2$-value of 35.97 with
-$\nu=33$ degrees of freedom by removing the Mn--Cr date of NWA~4801.
-This results in a p-value of 0.33, which they deem compatible with the
-basket of meteorites achieving concordant isotopic closure for all
-four isotopic systems. However, combining the same statistic with the
-correct number of degrees of freedom ($\nu=19$) produces a p-value of
-0.011, which contradicts this conclusion.
-
+%----------------------------------------
 \captionof{table}{Summary table for the database of
   \citet{desch2023b}. Headers use the following shorthand notation:
   $\mathit{Al}_0 \equiv
@@ -274,16 +328,16 @@ correct number of degrees of freedom ($\nu=19$) produces a p-value of
   \equiv \left(^{53}\mbox{Mn}/^{55}\mbox{Mn}\right)_0$,
   $\mathit{Hf}_0 \equiv
   \left(^{182}\mbox{Hf}/^{180}\mbox{Hf}\right)_0$;
-  $t_{\mathit{orig}}$ stands for the original Pb--Pb dates extracted
-  from the literature; and $t_{\mathit{adj}}$ represents the adjusted
+  $t_{\rm orig}$ stands for the original Pb--Pb dates extracted
+  from the literature; and $t_{\rm adj}$ represents the adjusted
   values used by \citet{desch2023b}.}
 \label{tab:desch}
 \begin{tabular}{@{}r@{~}|@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}|@{~}c@{~}c@{~}c@{~}c@{}}
   sample & $\mathit{Al}_0$ & $2\sigma(\mathit{Al}_0)$ &
   $\mathit{Mn}_0$ & $2\sigma(\mathit{Mn}_0)$ &
   $\mathit{Hf}_0$ & $2\sigma(\mathit{Hf}_0)$ &
-  $t_{\mathit{orig}}$ & $2\sigma\left(t_{\mathit{orig}}\right)$ &
-  $t_{\mathit{adj}}$ & $2\sigma\left(t_{\mathit{adj}}\right)$ \\ \hline
+  $t_{\rm orig}$ & $2\sigma\left(t_{\rm orig}\right)$ &
+  $t_{\rm adj}$ & $2\sigma\left(t_{\rm adj}\right)$ \\ \hline
   D'Orbigny & 3.93 &  0.39 & 3.23 & 0.03 & 7.15 & 0.17 & 4564.42 & 0.12 & 4563.24 & 0.21 \\
   SAH 99555 & 3.64 & 0.18 & 3.28 & 0.17 & 6.87 & 0.15 & 4564.614 & 0.131 & 4563.51 & 0.24 \\
   NWA 1670 & 5.92 & 0.59 & 2.85 & 0.92 & & & 4565.39 & 0.24 & 4564.02 & 0.66 \\
@@ -291,7 +345,7 @@ correct number of degrees of freedom ($\nu=19$) produces a p-value of
   LEW 86010 & & & 1.35 & 0.05 & 4.8 & 0.42 & 4558.55 & 0.15 & & \\
   NWA 4590 & & & 0.85 & 0.4 & 4.63 & 0.17 & 4557.76 & 0.38 & 4557.57 & 0.38 \\
   NWA 4801 & & & 0.96 & 0.04 & 4.52 & 0.16 & 4556.91 & 0.21 & 4556.63 & 0.28 \\
-  Angra do Reis & & & 1.1 & 0.4 & 4.02 & 0.24 & 4556.45 & 0.29 & 4556.26 & 0.29 \\
+  Angra dos Reis & & & 1.1 & 0.4 & 4.02 & 0.24 & 4556.45 & 0.29 & 4556.26 & 0.29 \\
   NWA 2999 & & & & & 5.43 & 0.34 & 4560.74 & 0.47 & 4560.55 & 0.47 \\
   Asuka 881394 & 13.07 & 0.56 & 3.86 & 0.23 & & & 4564.95 & 0.53 & 4564.76 & 0.53 \\
   Ibitira & & & 1.06 & 0.5 & & & 4556.75 & 0.57 & 4556.56 & 0.57 \\
@@ -299,92 +353,148 @@ correct number of degrees of freedom ($\nu=19$) produces a p-value of
   NWA 2976 & 4.05 & 0.15 & & & & & 4563.16 & 0.57 & 4563.16 & 0.57 \\
   NWA 6704 & 3.15 & 0.38 & 2.59 & 0.34 & & & 4562.76 & 0.26 & 4562.76 & 0.26\\
 \end{tabular}\medskip
+%----------------------------------------
 
-We now proceed to subject Table~\ref{tab:desch} to
-Approach~2. Figure~\ref{fig:regression_original} compares the original
-Pb--Pb dates with the Al--Mg, Mn--Cr and Hf--W dates,
-respectively. For each of the three pairs of measurements, the offset
-$A$ was found by minimising the weighted sum of the square residuals
-around the 1:1 line, using the algorithm of \citet{vermeesch2024}. All
-three cases exhibit high MSWD-values and fail the chi-square test for
-homogeneity. This indicates that the data are overdispersed with
-respect to the analytical uncertainties.\medskip
+\subsection{First approach}
 
-The excess dispersion of the data around the 1:1 line in
-Figure~\ref{fig:regression_original} can be attributed to either (i)
-$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$-heterogeneity
-\citep{krestianinov2023}; (ii) partial resetting of the
-${}^{207}\mbox{Pb}/{}^{206}\mbox{Pb}$-clock during transient heating
-events \citep{desch2023a}; (iii)
-${}^{238}\mbox{U}/{}^{235}\mbox{U}$-fractionation \citep{tissot2017};
-or (iv) inappropriate outlier rejection prior to regression of the
-Al--Mg, Mn--Cr, Hf--W or Pb--Pb data
-\citep{desch2023a,vermeesch2026f}.\medskip
+Applying the first approach to the $A = 7$ achondrites in
+Table~\ref{tab:desch}, \citet{desch2023a} found that a value of $tSS =
+4568.42 \pm 0.24$\,Myr minimizes Equation~\ref{eq:chi2}.  They
+obtained an MSWD-value of $\chi^2 / \nu = 0.98$ for the optimal fit,
+incorrectly using $\nu = 13$.  In fact, $\nu = 6$, so that $\chi^2 /
+\nu = 2.12$.  It is worth noting that 95\% of the time, for 6 degrees
+of freedom, $0.21 < \chi^2 / \nu < 2.41$, so the 7 achondrites still
+can be considered concordant between the Al--Mg and Pb--Pb systems,
+even using the correct $\nu$. \citet{desch2023b} then optimized the
+fit using the full database, finding the values of $\tSS$,
+$({}^{53}{\rm Mn}/{}^{55}{\rm Mn})_{\rm SS}$, $({}^{182}{\rm
+  Hf}/{}^{180}{\rm Hf})_{\rm SS}$ and the half-life of ${}^{53}{\rm
+  Mn}$ that minimize $\chi^2$.\medskip
+
+Applying an extended version of Equation~\ref{eq:chi2} to the
+corrected data of Table~\ref{tab:desch}, \citet{desch2023b} found an
+optimal fit, for which they reported a $\chi^2$-value of 47.94 for the
+38 meteorite dates. This optimization led to essentially the same
+optimal value of $\tSS = 4586.4 \pm 0.2$\,Myr. Assuming $\nu = N-4 =
+34$ degrees of freedom, the $p$-value for the chi-squared test is
+0.057, which is greater than 0.05 and fails to reject the null
+hypothesis that the ages are concordant.  However, as discussed in
+Section~\ref{sec:means}, the actual number of degrees of freedom is
+$\nu = N-A-4 = 19$.  Using this correct value yields a $p$-value of
+0.00043, resulting in a rejection of the null hypothesis.\medskip
+
+Recognizing that the Hf--W date of NWA~4801 was quite divergent, and
+also derived from an achondrite with physical indications of
+disturbance to the Hf--W system, \citet{desch2023b} present a second
+optimization without this point.  Assuming $\nu = 37-4 = 33$, they
+reported $\chi^2 = 35.97$, resulting in a $p$-value of 0.33, which
+would be consistent with concordancy across the four isotopic systems
+and across the 14 achondrites.  However, using the correct $\nu =
+N-A-4 = 19$, the $p$-value is 0.011, which contradicts this
+conclusion.\medskip
+
+\subsection{Second approach}
+
+We now proceed to subject the data in Table~\ref{tab:desch} to the
+second approach.  Figure~\ref{fig:regression_original} compares the
+original Pb--Pb dates with the Al--Mg, Mn--Cr and Hf--W dates,
+respectively.  For each of the three pairs of measurements, the offset
+${O}_{26}$ (or ${O}_{53}$ or ${O}_{183}$) was found by minimizing the
+weighted least squares misfit around the 1:1 line, using the algorithm
+of \citet{vermeesch2024}.  All three cases exhibit high MSWD-values
+and fail the chi-square test for homogeneity.  This indicates that the
+data are overdispersed with respect to the analytical
+uncertainties.\medskip
+
+There are several potential explanations for the excess dispersion of
+the data around the 1:1 line in Figure~\ref{fig:regression_original}:
+(i) heterogeneity of the initial $(\alratio)_{\rm SS}$, $({}^{53}{\rm
+  Mn}/{}^{55}{\rm Mn})_{\rm SS}$, or $({}^{182}{\rm Hf}/{}^{180}{\rm
+  Hf})_{\rm SS}$ in the regions of the nebula sampled by each parent
+body.  \citep[e.g.,][]{BollardEtal2019, krestianinov2023}; (ii)
+failure of the different isotopic systems to close simultaneously, due
+to impacts or other events on the parent bodies that reset especially
+the Hf--W and Pb--Pb systems; or (iii) a variety of analytical
+discrepancies leading to incorrect ages based on the data.  The latter
+could include improper estimation of the isotopic fractionation of
+uranium between different phases, or inappropriate selection of
+aliquots to build the ${}^{207}{\rm Pb}/{}^{206}{\rm Pb}$
+vs. ${}^{204}{\rm Pb}/{}^{206}{\rm Pb}$ isochrons, both of which would
+lead to dispersion in Pb--Pb ages.  It could also include
+inappropriate outlier rejection in the Al--Mg, Mn--Cr or Hf--W
+isochrons, as well as the Pb--Pb isochrons
+\citep{desch2023a,vermeesch2026f}.  Finally, it could be due to
+inconsistent calibrations made during the collection of data to build
+those isochrons.\medskip
 
 \citet{desch2023a,desch2023b} adjusted the Pb--Pb dates in
-Table~\ref{tab:desch} to remove factors (ii) and (iii).  This
-adjustment does indeed lower the MSWD-value considerably
-(Figure~\ref{fig:regression_adjusted}).  Nevertheless, the three
-pairwise comparisons still fail the chi-square test. This either means
-that the dispersion is caused by scenario (i), or that the adjustment
-has not gone far enough. In any case, Approach~2 leads to the same
-conclusion as Approach~1, namely that the different chronometers are
-not concordant.\medskip
+Table~\ref{tab:desch} in an attempt to correct for analytical errors
+(factor iii).  This adjustment does indeed lower the MSWD-value
+considerably (Figure~\ref{fig:regression_adjusted}).  Nevertheless,
+the three pairwise comparisons still fail the chi-square test.
+Therefore the conclusion from the second approach is still that the
+data are overdispersed, and for some reason the different chronometers
+are not concordant. In Section~\ref{sec:discussion} we extend the
+second approach, to treat the various sources of heterogeneity as an
+unknown whose effect can be estimated from the data.
 
-Section~\ref{sec:discussion} will extend Approach~2 to treat the
-various sources of heterogeneity as an unknown, whose effect can be
-estimated from the data.
-
+%------------------------------------------
 \noindent\includegraphics[width=\linewidth]{Desch2_original.pdf}
 \captionof{figure}{Pairwise comparison of the original Pb--Pb dates of
   Table~\ref{tab:desch} with Al--Mg (panel~a), Mn--Cr (panel~b) and
   Hf--W (panel~c) dates for the same, rapidly cooled meteorites. The
-  1:1 lines were obtained using the optimal $A$-values
+  1:1 lines were obtained using the optimal ${O}$-values
   (Equation~\ref{eq:A}). All three datasets are overdispersed around
   this line with respect to the analytical uncertainties
   (MSWD$\,\gg\,1$). $\omega$-values are the estimated standard
   deviations of the excess dispersion, assuming normality
   (Section~\ref{sec:discussion}). This dispersion can either be
   attributed to the Pb--Pb data, or to the initial
-  $({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$,
-  $({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\mathit{SS}}$ or
-  $({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\mathit{SS}}$-values. Uncertainties
+  $({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\rm SS}$,
+  $({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\rm SS}$ or
+  $({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\rm SS}$-values, or a combination. Uncertainties
   are reported as standard errors.}
 \label{fig:regression_original}
+%------------------------------------------
+
+%------------------------------------------
+\noindent\includegraphics[width=\linewidth]{Desch2_adjusted.pdf}
+\captionof{figure}{Same as Figure~\ref{fig:regression_original},
+  but using the adjusted Pb--Pb dates of
+  Table~\ref{tab:desch}.\medskip}
+\label{fig:regression_adjusted}
+%------------------------------------------
 
 \section{Quantifying dispersion}
 \label{sec:discussion}
 
-\noindent\includegraphics[width=\linewidth]{Desch2_adjusted.pdf}
-\captionof{figure}{Similar to Figure~\ref{fig:regression_original},
-  but using the adjusted Pb--Pb dates of
-  Table~\ref{tab:desch}.\medskip}
-\label{fig:regression_adjusted}
-
-The observed overdispersion can be mathematically captured by random
-effects models that attribute the excess dispersion to either the x-
-or the y-variables of Figures~\ref{fig:regression_original} and
-\ref{fig:regression_adjusted}. The problem can be formalised by
+The observed overdispersion can be mathematically captured by
+random-effects models that attribute the excess dispersion to either
+the $x$- or the $y$-variables of Figures~\ref{fig:regression_original}
+and \ref{fig:regression_adjusted}.  The problem can be formalized by
 introducing the following definitions:
 \begin{description}
-  \item{$t_x(m,i)$:} the measured Pb--Pb date of the
-    $i$\textsuperscript{th} aliquot;
-  \item{$t_y(m,i)$:} the measured Al--Mg, Mn--Cr or W--Hf date of the
-    $i$\textsuperscript{th} aliquot;
-  \item{$\delta_x(i)$ and $\delta_y(i)$:} the offset between the true
-    x- and y-value caused by dispersion of the true Pb--Pb age, or by
-    the heterogeneity of $({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$,
-    $({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\mathit{SS}}$ or
-    $({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\mathit{SS}}$, respectively;
+  \item{$t_x(m,i)$:} the `measured' Pb--Pb age of the
+    $i$\textsuperscript{th} achondrite;
+  \item{$t_y(m,i)$:} the `measured' Al--Mg, Mn--Cr or Hf--W age of the
+    $i$\textsuperscript{th} achondrite;
+    \item{$\delta_x(i)$:} the random offset between the measured
+      $x$-value and the true Pb--Pb age, caused by late isotopic
+      closure, or by analytical variations;
+    \item{$\delta_y(i)$:} the random offset between the measured
+      $y$-value and the true age, due to variations in isotopic
+      closure time, or systematic analytical variations, or by
+      heterogeneity of $(\alratio)_{\rm SS}$, $(\mnratio)_{\rm SS}$,
+      or $(\hfratio)_{\rm SS}$, respectively;
   \item{$x(i) (+ \delta_x(i))$:} the true Pb--Pb age of the
-    $i$\textsuperscript{th} aliquot;
+    $i$\textsuperscript{th} achondrite;
   \item{$y(i) (+ \delta_y(i))$:} the true Al--Mg, Mn--Cr or Hf--W age
-    of the $i$\textsuperscript{th} aliquot;
+    of the $i$\textsuperscript{th} achondrite;
   \item{$\epsilon_x(i), \epsilon_y(i)$:} residuals, caused by
     analytical uncertainty.
 \end{description}
 
-Using these definitions, two random effects models can be formulated:
+Using these definitions, we formulate two random-effects models:
 \begin{equation}
   \mbox{Model~3x:~}
   \begin{cases}
@@ -406,7 +516,7 @@ For $\epsilon_x(i)$ and $\epsilon_y(i)$, this assumption is
 reasonable. For $\delta_x(i)$ and $\delta_y(i)$, that is not
 necessarily so. For example, it is possible that there were multiple
 reservoirs with distinctly different
-$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$-values. However,
+$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\rm SS}$-values. However,
 Figure~\ref{fig:regression_adjusted}a) only contains 7 double-dates,
 which is too small to identify such multi-modality. Therefore, the
 simple normal assumption is necessary. The model can easily be
@@ -420,94 +530,115 @@ $\omega_{\mathit{t(Pb)}}$ (units: Myr). For model~3y, we will assume
 that the $\delta_y(i)$-values were drawn from a normal distribution
 with zero mean and standard deviation $\omega_y\lambda_y$ (units:
 none), which captures the dispersion of the
-$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$,
-$({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\mathit{SS}}$ or
-$({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\mathit{SS}}$-values,
+$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\rm SS}$,
+$({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\rm SS}$ or
+$({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\rm SS}$-values,
 depending on the dataset used to solve the problem. Note that model~3x
 can be solved using the combined dataset of Al--Mg, Mn--Cr and Hf--W
 measurements.\medskip
 
-The analysis shows that the overdispersion of the adjusted meteorite
-dataset can either be explained by:
+If all of the overdispersion is attributed to heterogeneities in the
+abundances of short-lived radionuclides, the level of overdisperion is
+explained by:
 \begin{enumerate}
 \item 0.5--7.5\% heterogeneity of the
-  $({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$-ratio (at $2\sigma$,
+  $({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\rm SS}$-ratio (at $2\sigma$,
   i.e. $\exp[\ln(0.019)\pm{2\times0.69}]$;
   Figure~\ref{fig:regression_adjusted}a).
-\item 2--7.5\% heterogeneity of the 
-  $({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\mathit{SS}}$-ratio;
+\item 0.0--7.6\% heterogeneity of the 
+  $({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\rm SS}$-ratio;
 \item 1.4--6.8\% heterogeneity of the
-  $({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\mathit{SS}}$-ratio;
+  $({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\rm SS}$-ratio.
 \end{enumerate}
-
-or by
-
+If one attributed the overdispersions in the Al--Mg, Mn--Cr, or Hf--W
+systems to analytical variations such as differences between groups in
+calibrations, then the same variations would apply. If the
+overdispersion is attributed to variations in the time of isotopic
+closure, of the Pb--Pb system in particular, then the data are
+explained by:
 \begin{enumerate}
   \setcounter{enumi}{3}
-\item 50--380\,ka excess dispersion in the Pb--Pb isochron data,
-  caused by partial resetting during transient heating events
-  \citep{desch2023a} or by possible over-zealous outlier rejection,
-  which unduly promotes precision over accuracy
-  \citep{vermeesch2026f}.
+\item 50--380\,ka excess dispersion in the Pb--Pb data.
 \end{enumerate}
-
-Note that, if the original Pb--Pb data are used, then the dispersion
-increases to 40--130\% for
-$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\mathit{SS}}$, 5--22\% for
-$({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\mathit{SS}}$, 3--10\% for
-$({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\mathit{SS}}$ and
-450--900\,kyr for $t_{\mathit{Pb}}$.
+The same excess dispersion in the Pb--Pb data would apply if the
+variations were attributed to analytical problems, such as improper
+correction for uranium isotopic fractionation, or over-zealous outlier
+rejection, which unduly promotes precision over accuracy
+\citep{vermeesch2026f}.  We note that if the original Pb--Pb data are
+used, then the dispersion increases to 40--130\% for
+$({}^{26}\mbox{Al}/{}^{27}\mbox{Al})_{\rm SS}$, 5--22\% for
+$({}^{53}\mbox{Mn}/{}^{55}\mbox{Mn})_{\rm SS}$, 3--10\% for
+$({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\rm SS}$ and 450--900\,kyr for
+$t_{\rm Pb}$. We also note that all the Hf--W data in
+Table~\ref{tab:desch} were obtained from angrites, which are thought
+to derive from a common parent body. Their overdispersion therefore
+cannot be attributed to nebular heterogeneity, suggesting instead that
+it reflects analytical effects. These effects could apply to the Hf--W
+data, the Pb--Pb data, or both.
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-This paper presented two equivalent approaches to statistical
-chronometry, using an existing compilation of multi-dated meteorites
-originally presented by \citet{desch2023a}. The first approach tracks
-events forward in time from $t_{\mathit{SS}}$, which is treated as an
-unknown parameter, and is estimated assuming an assumed
-$\left(^{26}\mbox{Al}/^{27}\mbox{Al}\right)_{\mathit{SS}}$-value of
-$5.23\times{10}^{-5}$ along with
-$\left(^{53}\mbox{Mn}/^{55}\mbox{Mn}\right)_{\mathit{SS}}$,
-$\left(^{182}\mbox{Hf}/^{180}\mbox{Hf}\right)_{\mathit{SS}}$ and
-(optionally) $\lambda_{53}$. Using the correct number of degrees of
-freedom, this approach reveals statistically significant dispersion
-between the extinct and extant chronometers. The second approach uses
-bivariate linear regression of double-dated meteorites to assess the
-concordance of the meteorite database. It does not treat
-$t_{\mathit{SS}}$,
-$\left(^{53}\mbox{Mn}/^{55}\mbox{Mn}\right)_{\mathit{SS}}$ and
-$\left(^{182}\mbox{Hf}/^{180}\mbox{Hf}\right)_{\mathit{SS}}$ as
-explict unknowns, but instead converts the
+In this paper we have presented two equivalent approaches to
+statistical chronometry, using an existing compilation of multi-dated
+meteorites originally presented by \citet{desch2023b}.  The first
+approach tracks events forward in time from $\tSS$, which is treated
+as an unknown parameter, and is defined to be when $(\alratio)_{\rm
+  SS} = 5.23\times{10}^{-5}$.  Optimal values were found for
+$(\mnratio)_{\rm SS}$ and $(\hfratio)_{\rm SS}$ at $t=0$; the Pb--Pb
+age of $t=0$, $\tSS$; and the decay constant $\lambda_{53}$.  The
+optimal values found by \citet{desch2023b} are unaffected by the
+number of degrees of freedom, but the goodness of the fit is.  After
+using the correct number of degrees of freedom, this approach reveals
+a small but statistically significant dispersion between the extinct
+and extant chronometers, even after adjustment for
+\textsuperscript{238}U/\textsuperscript{235}U fractionation.\medskip
+
+The second approach uses bivariate linear regression of doubly-dated
+meteorites to assess the concordance of the meteorite database. It
+does not treat $\tSS$, $(\mnratio)_{\rm SS}$, and $(\hfratio)_{\rm
+  SS}$ as explict unknowns, but instead converts the
 $\ln\left(^{26}\mbox{Al}/^{27}\mbox{Al}\right)_0$,
 $\ln\left(^{53}\mbox{Mn}/^{55}\mbox{Mn}\right)_0$ and
 $\ln\left(^{182}\mbox{Hf}/^{180}\mbox{Hf}\right)_0$ logratios to
 absolute ages in `Pb--Pb time' using a linear transformation
-(Equation~\ref{eq:A}). Applying the second approach to the
-\citet{desch2023a} leads to the same conclusion as the first approach,
-revealing statistically significant dispersion of the extinct and the
-extant chronometers.\medskip
+(Equation~\ref{eq:A}).  Applying the second approach to
+\citet{desch2023a, desch2023b}'s database leads to the same conclusion
+as the first approach, that there statistically significant dispersion
+of the extinct and the extant chronometers. Adjustment of the Pb--Pb
+dates for \textsuperscript{238}U/\textsuperscript{235}U fractionation
+reduces the overdispersion but does not completely remove it.\medskip
 
 The regression approach marks a step forward in the development of a
 statistical chronometry for meteorites, by going from a simple test
 for statistical homogeneity, to the quantification of heterogeneity.
 This is important because, to paraphrase statistician George Box ``all
-effects are significant (in some decimal place)''. Given a
+effects are significant (in some decimal place)''.  Given a
 sufficiently large or sufficiently precise database of multi-dated
 meteorites, even the smallest degree of heterogeneity eventually
-becomes detectable. The chi-square test cannot determine whether this
-heterogeneity has an astrophysical or analytical cause. Likely, a
-combination of both factors is at play. In order to disentangle the
-relative contributions of these two possibilities, improved analytical
-and statistical approaches are needed.\medskip
+becomes detectable. The chi-square test cannot by itself determine the
+cause of the overdispersion, but is a useful tool.  The overdispersion
+could be physical: the radionuclides could be heterogeneously
+distributed among achondrite parent bodies, or the isotopic systems
+may have closed at different times or been disturbed.  Or the
+overdispersion could be analytical, due to discrepancies between
+groups in how isochrons are built.\medskip
 
-Analytical improvements include the addition of
-\textsuperscript{238}U/\textsuperscript{235}U measurements in the same
-mineral phase as the Pb-isotope measurements. Although this is
-challenging to do in small or U-poor samples, it highly beneficial as
-it removes the need for the nominal 0.3\textperthousand\ correction
-applied by \citet{desch2023a,desch2023b} to many of the meteorites in
-Table~\ref{tab:desch}. Statistical improvements include a more
+Physical causes can be tested by examining the angrites separately,
+because they formed from the same parent body. Assuming that these
+meteorites remained undisturbed after their formation, their extinct
+and extant chronometers should be concordant. However, eight paired
+angrite Hf--W and Pb--Pb dates show that this is not the case.  This
+suggests the presence analytical bias in the isotopic ratio data.
+Further investigation of these conclusions would benefit from improved
+analytical and statistical techniques.  Analytical improvements
+include the addition of \textsuperscript{238}U/\textsuperscript{235}U
+measurements in the same mineral phase as the Pb-isotope
+measurements. Although this is challenging to do in small or U-poor
+samples, it is highly beneficial as it removes the need for the
+nominal 0.3\textperthousand\ correction applied by
+\citet{desch2023a,desch2023b} to many of the meteorites in
+Table~\ref{tab:desch}.  Statistical improvements include a more
 rigorous selection of aliquots to include in Pb--Pb isochrons.  For
 example, \citet{desch2023a} present a detailed discussion of
 \citet{schiller2015}'s Pb--Pb dataset for NWA~1670 and show that there
@@ -517,17 +648,15 @@ problem, it would be useful to abandon the binary notion that aliquots
 fall either `on' or `off' the concordia line. A statistically more
 rigorous approach would be to assign a finite probability to both
 categories for each aliquot, similar to the random effects model of
-Section~\ref{sec:discussion}. Such a `leftmost isochron' algorithm was
-recently implemented in \texttt{IsoplotR} \citep{vermeesch2018c} and
-will be formally discussed in a forthcoming publication.\medskip
+Section~\ref{sec:discussion}.\medskip
 
 The future addition of more multi-dated meteorites to
 \citet{desch2023b}'s compilation will make it possible to replace the
 simple random effects model of Section~\ref{sec:discussion} with more
 realistic alternatives. For example, given a sufficient number of
-multi-dated NN and CC chondrites, it would be possible to quantify the
+multi-dated NC and CC chondrites, it would be possible to quantify the
 within-group and between-group variability of these two meteorite
-classes. Thus, the nascent field of statistical chronometry has the
+classes.  Thus, the nascent field of statistical chronometry has the
 potential to test physics-based predictions of solar-system formation
 and provide new insights into its temporal evolution.
 

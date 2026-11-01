@@ -10,10 +10,10 @@ get_pars <- function(nuclide){
     if (nuclide=='Al26'){
         n <- 26
         t12 <- 0.717
-        ylab <- expression('ln('^26*'Al/'^27*'Mg)')
+        ylab <- expression('ln('^26*'Al/'^27*'Al)')
         ycol <- '(Al26/Al27)_0'
         yerrcol <- '2se (Al26/Al27)_0'
-        ySSlab <- expression(omega * '('^26 * 'Al/'^27 * 'Mg)'[ss])
+        ySSlab <- expression(omega * '('^26 * 'Al/'^27 * 'Al)'[ss])
     } else if (nuclide=='Mn53'){
         n <- 53
         t12 <- 3.7

@@ -1,6 +1,5 @@
 rm(list=ls())
 graphics.off()
-setwd('/home/pvermees/Dropbox/Amelin')
 
 ta <- 4567
 tb <- seq(from=ta-1,to=1,length.out=50)
@@ -33,10 +32,10 @@ labels[length(labels)] <- expression(t[SS])
 axis(side=1,at=xticks,labels=labels)
 mtext(side=1,line=2,text=expression(t~"[Ma]"))
 axis(side=2,col.lab='red',col.axis='red')
-mtext(side=2,line=2,text=expression(sigma(lambda~"|"~t[SS]-t)~"[Myr]"))
+mtext(side=2,line=2,text=expression(sigma(t[SS]-t~"|"~lambda)~"[Myr]"))
 lines(x=tt,y=sta,lty=1,lwd=2,col='blue')
 par(fg='blue')
 axis(side=4,col.lab='blue',col.axis='blue')
-mtext(side=4,line=2,text=expression(sigma(lambda~"|"~t)~"[Myr]"))
+mtext(side=4,line=2,text=expression(sigma(t~"|"~lambda)~"[Myr]"))
 
 dev.copy2pdf(file='lambda_err.pdf',width=4.5,height=4.5)
