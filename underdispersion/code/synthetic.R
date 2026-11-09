@@ -98,7 +98,9 @@ fissiontrack_cherries <- function(seed=1,ng=20){
     plot(1:ng,r,pch=21,bg='black',xlab='j',
          ylab=expression('N'[s]*'/N'[i]))
     points(1:ng,rc,pch=22,bg='black')
-    arrows(x0=1:ng,x1=1:ng,y0=r,y1=rc,length=0.15)
+    zerolength <- (r==rc)
+    arrows(x0=(1:ng)[!zerolength],x1=(1:ng)[!zerolength],
+           y0=r[!zerolength],y1=rc[!zerolength],length=0.15)
     lines(1:ng,avgs[[i]])
 
     par(op)
@@ -218,26 +220,26 @@ isochron_cherries <- function(seed=1,ng=20){
 
     pdf(file='../figures/isochron.pdf',width=9,height=4.5)
 
-    op <- par(mfrow=c(1,2),mgp=c(2,1,0),mar=c(3.5,3.5,2.5,0.5))
+    op <- par(mfrow=c(1,2),mgp=c(2,1,0),mar=c(3.5,3.5,1.5,0.5))
     fit1 <- york(yd)
     xlim <- c(0,-fit1$a[1]/fit1$b[1])
     ylim <- c(0,fit1$a[1]*1.15)
     scatterplot(yd,fit=fit1,xlim=xlim,ylim=ylim,
-                xlab=expression(""^36*"Ar/"^40*"Ar"),
-                ylab=expression(""^39*"Ar/"^40*"Ar"))
-    mtext(line=1,paste0("MSWD = ",signif(fit1$mswd,2),
-                        ", p-value = ",signif(fit1$p.value,2),
-                        " (",nrow(yd),"/",nrow(yd),")"))
+                xlab=expression(""^39*"Ar/"^40*"Ar"),
+                ylab=expression(""^36*"Ar/"^40*"Ar"))
+    mtext(line=0.5,paste0("MSWD = ",signif(fit1$mswd,2),
+                          ", p-value = ",signif(fit1$p.value,2),
+                          " (",nrow(yd),"/",nrow(yd),")"))
     legend('topright','a)',bty='n')
     omit <- pick_cherries_isochron(yd,alpha=0.05)
     fit2 <- york(yd[-omit,])
     scatterplot(yd,fit=fit2,xlim=xlim,ylim=ylim,
                 omit=omit,omit.stroke="black",
-                xlab=expression(""^36*"Ar/"^40*"Ar"),
-                ylab=expression(""^39*"Ar/"^40*"Ar"))
-    mtext(line=1,paste0("MSWD = ",signif(fit2$mswd,2),
-                        ", p-value = ",signif(fit2$p.value,2),
-                        " (",nrow(yd)-length(omit),"/",nrow(yd),")"))
+                xlab=expression(""^39*"Ar/"^40*"Ar"),
+                ylab=expression(""^36*"Ar/"^40*"Ar"))
+    mtext(line=0.5,paste0("MSWD = ",signif(fit2$mswd,2),
+                          ", p-value = ",signif(fit2$p.value,2),
+                          " (",nrow(yd)-length(omit),"/",nrow(yd),")"))
     legend('topright','b)',bty='n')
     par(op)
 
@@ -257,7 +259,7 @@ concordia_cherries <- function(seed=6){
                               mean(Y),sqrt(EXY[2,2]),
                               cov2cor(EXY)[1,2]),
                             nrow=1)
-        dat <- as.UPb(selection)
+        dat <- as.UPb(selection,format=1)
         tt <- tryCatch({
             IsoplotR:::concordia_age(dat)
         }, error = function(e){
