@@ -2,7 +2,8 @@
 
 This repository contains all the data and code needed to reproduce the
 figures of the GChron manuscript entitled
-"Too good to be true: underdispersion in geochronology" (in press).
+"Too good to be true: underdispersion in geochronology",
+*Geochronology*, 8, 723-739, doi: 10.5194/gchron-8-723-2026.
 
 ## Repository structure
 

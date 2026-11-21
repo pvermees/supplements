@@ -1,81 +1,4 @@
-\documentclass{article}
-\usepackage{amsmath,natbib,fullpage,caption,graphicx,lineno}
-\title{Statistical chronometry of meteorites revisited}
-\author{Pieter Vermeesch\\\emph{University College London, UK}\\
-and\\Steven J. Desch\\\emph{Arizona State University, USA}}
-\begin{document}
-\linenumbers
-\maketitle
-
-\newcommand{\tSS}{\mbox{$t_{\rm SS}$}}
-\newcommand{\tAl}{\mbox{$t_{\rm Al}$}}
-\newcommand{\tMn}{\mbox{$t_{\rm Mn}$}}
-\newcommand{\tHf}{\mbox{$t_{\rm Hf}$}}
-\newcommand{\tPb}{\mbox{$t_{\rm Pb}$}}
-\newcommand{\alratio}{\mbox{${}^{26}{\rm Al}/{}^{27}{\rm Al}$}}
-\newcommand{\mnratio}{\mbox{${}^{53}{\rm Mn}/{}^{55}{\rm Mn}$}}
-\newcommand{\hfratio}{\mbox{${}^{182}{\rm Hf}/{}^{180}{\rm Hf}$}}
-
-
-\begin{abstract}
-  The chronology of the early solar system rests on extinct
-  (\textsuperscript{26}Al--\textsuperscript{26}Mg,
-  \textsuperscript{53}Mn--\textsuperscript{53}Cr,
-  \textsuperscript{182}Hf--\textsuperscript{182}W) and extant
-  (\textsuperscript{207}Pb--\textsuperscript{206}Pb) chronometers.
-  These should agree with each other if dating the same events, such
-  as isotopic closure of these systems in a rapidly cooled achondrite.
-  If multiple achondrites formed on different parent bodies, the
-  chronometers should be concordant across them, assuming isotopically
-  homogeneous values of ${}^{26}{\rm Al}/{}^{27}{\rm Al}$,
-  ${}^{53}{\rm Mn}/{}^{55}{\rm Mn}$ and ${}^{182}{\rm Hf}/{}^{180}{\rm
-    Hf}$.  Testing the homogeneity of these short-lived radionuclides
-  (SLRs) is often done by comparing a few samples, but really requires
-  a statistical framework considering many meteorites simultaneously.
-  Here we discuss two similar statistical approaches.  The first is
-  that of Desch et al. (2023a,b: doi:10.1016/j.icarus.2023.115607 and
-  doi:10.1016/j.icarus.2023.115611), which calculates the time of
-  formation of an achondrite after the start of the solar system
-  ($t=0$, which happened a time $t_{\rm SS}$ ago), in different
-  isotopic systems, and takes their weighted mean as the best estimate
-  of the formation time.  This model was applied to 38 dates across 14
-  multiply-dated achondrites, adjusting Pb--Pb ages for ${}^{238}{\rm
-    U}/{}^{235}{\rm U}$ fractionation during mineral formation.  We
-  correct an error in their calculation of the goodness-of-fit
-  parameter and demonstrate that the adjusted formation times show a
-  small but statistically significant degree of overdispersion with
-  respect to their analytical uncertainties.  We also introduce a
-  second approach to statistical chronometry, which is to calculate
-  times of formation before the present, essentially converting dates
-  into `Pb--Pb times', using a single offset parameter per isotopic
-  system, estimated by a weighted regression with a fixed unit slope.
-  Applying the second algorithm to the same data compilation yields
-  the same conclusion of statistically significant overdispersion.
-  Extending the regression to a random-effects model allows the excess
-  scatter to be quantified.  The overdispersion of the Pb--Pb ages
-  relative to the extinct chronometers is greatly reduced after the
-  corrections of Desch et al. (2023) for uranium isotopic
-  fractionation, from 450--900\,kyr to 50--380\,kyr.  Whether this
-  remaining overdispersion is astrophysical or analytical in origin is
-  unresolved.  One explanation for this remaining overdispersion might
-  be variability of SLR abundances.  If all variations are attributed
-  to this, it would require 0.5 to 7.5\% (or 40 to 130\%) variations
-  in the ${}^{26}{\rm Al}/{}^{27}{\rm Al}$ ratio, or 2 to 7.5\% (or 5
-  to 22\%) variations in the ${}^{53}{\rm Mn}/{}^{55}{\rm Mn}$ ratio,
-  or 1.4 to 6.8\% (or 3 to 10\%) variations in the ${}^{182}{\rm
-    Hf}/{}^{180}{\rm Hf}$ ratio (values in parentheses referring to
-  the uncorrected Pb--Pb ages).  These relatively small variations are
-  difficult to rule out on purely astrophysical grounds, but would not
-  explain the persistent overdispersion even among angrites, which
-  derive from the same parent body.  This suggests that systematic
-  variations in analysis are at least partly responsible for the
-  overdispersion of achondrite formation times.  Routine measurement
-  of ${}^{238}{\rm U}/{}^{235}{\rm U}$ in the mineral phases used for
-  Pb--Pb dating, and improvements in development of isochrons, would
-  test this interpretation.
-\end{abstract}
-
-\section{Introduction}
+\section{Introduction} %  % not strictly mandatory but almost universally necessary
 \label{sec:intro}
 
 The chronology of the early solar system can be constrained from the
@@ -108,23 +31,21 @@ ignored, turning the
 chronometer with similar precision as the extinct
 chronometers.\medskip
 
-\noindent\begin{minipage}{.4\linewidth}
-  \includegraphics[width=\linewidth]{lambda_err.pdf}
-\end{minipage}
-\begin{minipage}{.6\linewidth}
-\captionof{figure}{(blue) uncertainty (standard error) in the inferred
-  Pb--Pb age of a sample with true age $t$, due to the uncertainty in
-  the decay constants of ${}^{238}{\rm U}$ and especially
-  ${}^{235}{\rm U}$; (red) uncertainty in the difference between the
-  inferred Pb--Pb age of a sample with true age $t$, and a second
-  sample with age $t_{\rm SS}$, Pb--Pb dated using identical decay
-  constants which are uncertain.  When used as a relative chronometer
-  to date differences in formation times between two objects, the
-  uncertainty is small (roughly 1\% of the age difference); but when
-  used as an absolute chronometer, the $2\,\sigma$ uncertainty is
-  about 9 Myr.}
-\label{fig:lambda_err}
-\end{minipage}
+\begin{figure}[!ht]
+  \includegraphics[width=.6\linewidth]{lambda_err.pdf}
+  \caption{(blue) uncertainty (standard error) in the inferred
+    Pb--Pb age of a sample with true age $t$, due to the uncertainty in
+    the decay constants of ${}^{238}{\rm U}$ and especially
+    ${}^{235}{\rm U}$; (red) uncertainty in the difference between the
+    inferred Pb--Pb age of a sample with true age $t$, and a second
+    sample with age $t_{\rm SS}$, Pb--Pb dated using identical decay
+    constants which are uncertain.  When used as a relative chronometer
+    to date differences in formation times between two objects, the
+    uncertainty is small (roughly 1\% of the age difference); but when
+    used as an absolute chronometer, the $2\,\sigma$ uncertainty is
+    about 9 Myr.}
+  \label{fig:lambda_err}
+\end{figure}
 
 For a rapidly ($\ll 10^5$ yr) cooled achondrite in which all isotopic
 systems reached closure simultaneously, the ages or formation times
@@ -163,8 +84,7 @@ Section~\ref{sec:discussion}, we quantify this overdispersion by
 modifying the linear regression method, and discuss the possible
 causes of the overdispersion.
 
-\section{Methods}
-
+\section{Methods} % not strictly mandatory but almost universally necessary
 Before discussing the methods, we define the following terms.
 \begin{description}
 \item{$\tSS$:} the age the solar system, measured backward from the
@@ -323,8 +243,8 @@ alternative choices of which aliquots to include led to similar slopes
 After these adjustments, \citet{desch2023a,desch2023b} developed the
 database show in Table~\ref{tab:desch}.
 
-%----------------------------------------
-\captionof{table}{Summary table for the database of
+\begin{table}[!ht]
+\caption{Summary table for the database of
   \citet{desch2023b}. Headers use the following shorthand notation:
   $\mathit{Al}_0 \equiv
   \left(^{26}\mbox{Al}/^{27}\mbox{Al}\right)_0$, $\mathit{Mn}_0
@@ -335,6 +255,7 @@ database show in Table~\ref{tab:desch}.
   from the literature; and $t_{\rm adj}$ represents the adjusted
   values used by \citet{desch2023b}.}
 \label{tab:desch}
+\footnotesize
 \begin{tabular}{@{}r@{~}|@{~}c@{~}c@{~}c@{~}c@{~}c@{~}c@{~}|@{~}c@{~}c@{~}c@{~}c@{}}
   sample & $\mathit{Al}_0$ & $2\sigma(\mathit{Al}_0)$ &
   $\mathit{Mn}_0$ & $2\sigma(\mathit{Mn}_0)$ &
@@ -355,8 +276,8 @@ database show in Table~\ref{tab:desch}.
   NWA 7325 & 3.03 & 0.14 & & & & & 4563.9 & 1.7 & 4563.7 & 1.7 \\
   NWA 2976 & 4.05 & 0.15 & & & & & 4563.16 & 0.57 & 4563.16 & 0.57 \\
   NWA 6704 & 3.15 & 0.38 & 2.59 & 0.34 & & & 4562.76 & 0.26 & 4562.76 & 0.26\\
-\end{tabular}\medskip
-%----------------------------------------
+\end{tabular}
+\end{table}
 
 \subsection{First approach}
 
@@ -440,9 +361,9 @@ are not concordant. In Section~\ref{sec:discussion} we extend the
 second approach, to treat the various sources of heterogeneity as an
 unknown whose effect can be estimated from the data.
 
-%------------------------------------------
-\noindent\includegraphics[width=\linewidth]{Desch2_original.pdf}
-\captionof{figure}{Pairwise comparison of the original Pb--Pb dates of
+\begin{figure}[!ht]
+\includegraphics[width=\linewidth]{Desch2_original.pdf}
+\caption{Pairwise comparison of the original Pb--Pb dates of
   Table~\ref{tab:desch} with Al--Mg (panel~a), Mn--Cr (panel~b) and
   Hf--W (panel~c) dates for the same, rapidly cooled meteorites. The
   1:1 lines were obtained using the optimal ${O}$-values
@@ -457,15 +378,15 @@ unknown whose effect can be estimated from the data.
   $({}^{182}\mbox{Hf}/{}^{180}\mbox{Hf})_{\rm SS}$-values, or a
   combination. Uncertainties are reported as standard errors.}
 \label{fig:regression_original}
-%------------------------------------------
+\end{figure}
 
-%------------------------------------------
-\noindent\includegraphics[width=\linewidth]{Desch2_adjusted.pdf}
-\captionof{figure}{Same as Figure~\ref{fig:regression_original},
+\begin{figure}[!ht]
+\includegraphics[width=\linewidth]{Desch2_adjusted.pdf}
+\caption{Same as Figure~\ref{fig:regression_original},
   but using the adjusted Pb--Pb dates of
   Table~\ref{tab:desch}.\medskip}
 \label{fig:regression_adjusted}
-%------------------------------------------
+\end{figure}
 
 \section{Quantifying dispersion}
 \label{sec:discussion}
@@ -502,8 +423,12 @@ Using these definitions, we formulate two random-effects models:
   \begin{cases}
     t_{x}(m,i) = x(i) + \delta_x(i) + \epsilon_x(i) \\
     t_{y}(m,i) = x(i) + \epsilon_y(i)
-  \end{cases}
-  \mbox{,~Model~3y:}
+  \end{cases}\\
+\end{equation}
+
+\noinden and
+\begin{equation}
+  \mbox{Model~3y:}
   \begin{cases}
     t_{x}(m,i) = y(i) + \epsilon_x(i) \\
     t_{y}(m,i) = y(i) + \delta_y(i) + \epsilon_y(i)
@@ -662,98 +587,16 @@ classes.  Thus, the nascent field of statistical chronometry has the
 potential to test physics-based predictions of solar-system formation
 and provide new insights into its temporal evolution.
 
-\section*{Acknowledgments}
+\section{Acknowledgements} % mandatory
 
-This research has been supported by the Natural Environment Research
-Council (grant no. NE/T001518/1), awarded to PV.
+We thank the reviewers for feedback.
 
-\begin{thebibliography}{10}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\section{Data, code, and outputs availability}
 
-\bibitem[{Bollard} et~al.(2019){Bollard}, {Kawasaki}, {Sakamoto}, {Olsen},
-  {Itoh}, {Larsen}, {Wielandt}, {Schiller}, {Connelly}, {Yurimoto}, and
-  {Bizzarro}]{bollard2019}
-{Bollard}, J., {Kawasaki}, N., {Sakamoto}, N., {Olsen}, M., {Itoh}, S.,
-  {Larsen}, K., {Wielandt}, D., {Schiller}, M., {Connelly}, J.~N., {Yurimoto},
-  H., and {Bizzarro}, M.
-\newblock {Combined U-corrected Pb-Pb dating and $^{26}$Al-$^{26}$Mg
-  systematics of individual chondrules - Evidence for a reduced initial
-  abundance of $^{26}$Al amongst inner Solar System chondrules}.
-\newblock \emph{Geochimica et Cosmochimica Acta}, 260:\penalty0 62--83,
-  September 2019.
-\newblock \doi{10.1016/j.gca.2019.06.025}.
+\url{https://github.com/pvermees/supplements} contains all the data
+and code used to reproduce this manuscript.
 
-\bibitem[Desch et~al.(2023{\natexlab{a}})Desch, Dunlap, Dunham, Williams, and
-  Mane]{desch2023a}
-Desch, S.~J., Dunlap, D.~R., Dunham, E.~T., Williams, C.~D., and Mane, P.
-\newblock {Statistical chronometry of meteorites. I. A Test of $^{26}$Al
-  homogeneity and the Pb-Pb age of the solar system's $t=0$}.
-\newblock \emph{Icarus}, 402:\penalty0 115607, 2023{\natexlab{a}}.
+\section{Competing interest}
 
-\bibitem[Desch et~al.(2023{\natexlab{b}})Desch, Dunlap, Williams, Mane, and
-  Dunham]{desch2023b}
-Desch, S.~J., Dunlap, D.~R., Williams, C.~D., Mane, P., and Dunham, E.~T.
-\newblock {Statistical chronometry of Meteorites: II. Initial abundances and
-  homogeneity of short-lived radionuclides}.
-\newblock \emph{Icarus}, 402:\penalty0 115611, 2023{\natexlab{b}}.
-
-\bibitem[{Jacobsen} et~al.(2008){Jacobsen}, {Yin}, {Moynier}, {Amelin}, {Krot},
-  {Nagashima}, {Hutcheon}, and {Palme}]{jacobsen2008}
-{Jacobsen}, B., {Yin}, Q.-z., {Moynier}, F., {Amelin}, Y., {Krot}, A.~N.,
-  {Nagashima}, K., {Hutcheon}, I.~D., and {Palme}, H.
-\newblock {$^{26}$Al- $^{26}$Mg and $^{207}$Pb- $^{206}$Pb systematics of
-  Allende CAIs: Canonical solar initial $^{26}$Al/ $^{27}$Al ratio reinstated}.
-\newblock \emph{Earth and Planetary Science Letters}, 272\penalty0
-  (1-2):\penalty0 353--364, July 2008.
-\newblock \doi{10.1016/j.epsl.2008.05.003}.
-
-\bibitem[Krestianinov et~al.(2023)Krestianinov, Amelin, Yin, Cary, Huyskens,
-  Miller, Dey, Hibiya, Tang, Young, et~al.]{krestianinov2023}
-Krestianinov, E., Amelin, Y., Yin, Q.-Z., Cary, P., Huyskens, M.~H., Miller,
-  A., Dey, S., Hibiya, Y., Tang, H., Young, E.~D., et~al.
-\newblock {Igneous meteorites suggest Aluminium-26 heterogeneity in the early
-  Solar Nebula}.
-\newblock \emph{Nature Communications}, 14\penalty0 (1):\penalty0 4940, 2023.
-
-\bibitem[Ludwig(2000)]{ludwig2000}
-Ludwig, K.~R.
-\newblock {Decay constant errors in U--Pb concordia-intercept ages}.
-\newblock \emph{Chemical Geology}, 166\penalty0 (3):\penalty0 315--318, 2000.
-
-\bibitem[Schiller et~al.(2015)Schiller, Connelly, Glad, Mikouchi, and
-  Bizzarro]{schiller2015}
-Schiller, M., Connelly, J.~N., Glad, A.~C., Mikouchi, T., and Bizzarro, M.
-\newblock {Early accretion of protoplanets inferred from a reduced inner solar
-  system ${}^{26}$Al inventory}.
-\newblock \emph{Earth and Planetary Science Letters}, 420:\penalty0 45--54,
-  2015.
-
-\bibitem[Tissot et~al.(2017)Tissot, Dauphas, and Grove]{tissot2017}
-Tissot, F.~L., Dauphas, N., and Grove, T.~L.
-\newblock {Distinct $^{238}$U/$^{235}$U ratios and REE patterns in plutonic and
-  volcanic angrites: Geochronologic implications and evidence for U isotope
-  fractionation during magmatic processes}.
-\newblock \emph{Geochimica et Cosmochimica Acta}, 213:\penalty0 593--617, 2017.
-
-\bibitem[Vermeesch(2026)]{vermeesch2026f}
-Vermeesch, P.
-\newblock Too good to be true: Underdispersion in geochronology.
-\newblock \emph{EGUsphere}, 2026:\penalty0 1--26, 2026.
-\newblock \doi{10.5194/egusphere-2026-2783}.
-
-\bibitem[Vermeesch(2024)]{vermeesch2024}
-Vermeesch, P.
-\newblock {Errorchrons and anchored isochrons in IsoplotR}.
-\newblock \emph{Geochronology}, 6\penalty0 (3):\penalty0 397--407, 2024.
-
-\end{thebibliography}
-
-
-%\bibliographystyle{/home/pvermees/Dropbox/abbrvplainnat.bst}
-%\bibliography{/home/pvermees/Dropbox/biblio.bib}
-
-\end{document}
+The authors declare no conflicts of interest regarding this
+publication.

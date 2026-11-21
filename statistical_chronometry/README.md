@@ -6,7 +6,7 @@ figures of the GChron manuscript entitled
 
 ## Repository structure
 
-1. `manuscript.tex`: `LaTeX` source code for the manuscript
+1. `AGC_Submission.tex`: `LaTeX` source code for the manuscript
 
 2. `fig1.R`: `R`-script to reproduce figure 1 of the manuscript
 

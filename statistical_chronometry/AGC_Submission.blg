@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2025/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: AGC_Submission.aux
+The style file: erae.bst
+Database file #1: /home/pvermees/Dropbox/biblio.bib
+You've used 10 entries,
+            2920 wiz_defined-function locations,
+            696 strings with 7487 characters,
+and the built_in function-call counts, 7228 in all, are:
+= -- 573
+> -- 428
+< -- 3
++ -- 164
+- -- 153
+* -- 599
+:= -- 1165
+add.period$ -- 30
+call.type$ -- 10
+change.case$ -- 100
+chr.to.int$ -- 9
+cite$ -- 10
+duplicate$ -- 479
+empty$ -- 463
+format.name$ -- 177
+if$ -- 1397
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 121
+newline$ -- 37
+num.names$ -- 40
+pop$ -- 217
+preamble$ -- 1
+purify$ -- 90
+quote$ -- 0
+skip$ -- 129
+stack$ -- 0
+substring$ -- 304
+swap$ -- 272
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 90
+warning$ -- 0
+while$ -- 45
+width$ -- 0
+write$ -- 119

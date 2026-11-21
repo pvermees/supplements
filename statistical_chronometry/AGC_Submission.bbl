@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{{Bollard} et~al.(2019){Bollard}, {Kawasaki}, {Sakamoto}, {Olsen},
+  {Itoh}, {Larsen}, {Wielandt}, {Schiller}, {Connelly}, {Yurimoto} and
+  {Bizzarro}}]{bollard2019}
+{Bollard}, J., {Kawasaki}, N., {Sakamoto}, N., {Olsen}, M., {Itoh}, S.,
+  {Larsen}, K., {Wielandt}, D., {Schiller}, M., {Connelly}, J.~N., {Yurimoto},
+  H. and {Bizzarro}, M. (2019). {Combined U-corrected Pb-Pb dating and
+  $^{26}$Al-$^{26}$Mg systematics of individual chondrules - Evidence for a
+  reduced initial abundance of $^{26}$Al amongst inner Solar System
+  chondrules}. {\em Geochimica et Cosmochimica Acta\/} 260: 62--83,
+  \doi{10.1016/j.gca.2019.06.025}.
+
+\bibitem[{Desch et~al.(2023{\natexlab{a}})Desch, Dunlap, Dunham, Williams and
+  Mane}]{desch2023a}
+Desch, S.~J., Dunlap, D.~R., Dunham, E.~T., Williams, C.~D. and Mane, P.
+  (2023{\natexlab{a}}). {Statistical chronometry of meteorites. I. A Test of
+  $^{26}$Al homogeneity and the Pb-Pb age of the solar system's $t=0$}. {\em
+  Icarus\/} 402: 115607.
+
+\bibitem[{Desch et~al.(2023{\natexlab{b}})Desch, Dunlap, Williams, Mane and
+  Dunham}]{desch2023b}
+Desch, S.~J., Dunlap, D.~R., Williams, C.~D., Mane, P. and Dunham, E.~T.
+  (2023{\natexlab{b}}). {Statistical chronometry of Meteorites: II. Initial
+  abundances and homogeneity of short-lived radionuclides}. {\em Icarus\/} 402:
+  115611.
+
+\bibitem[{{Jacobsen} et~al.(2008){Jacobsen}, {Yin}, {Moynier}, {Amelin},
+  {Krot}, {Nagashima}, {Hutcheon} and {Palme}}]{jacobsen2008}
+{Jacobsen}, B., {Yin}, Q.-z., {Moynier}, F., {Amelin}, Y., {Krot}, A.~N.,
+  {Nagashima}, K., {Hutcheon}, I.~D. and {Palme}, H. (2008). {$^{26}$Al-
+  $^{26}$Mg and $^{207}$Pb- $^{206}$Pb systematics of Allende CAIs: Canonical
+  solar initial $^{26}$Al/ $^{27}$Al ratio reinstated}. {\em Earth and
+  Planetary Science Letters\/} 272: 353--364, \doi{10.1016/j.epsl.2008.05.003}.
+
+\bibitem[{Krestianinov et~al.(2023)Krestianinov, Amelin, Yin, Cary, Huyskens,
+  Miller, Dey, Hibiya, Tang, Young et~al.}]{krestianinov2023}
+Krestianinov, E., Amelin, Y., Yin, Q.-Z., Cary, P., Huyskens, M.~H., Miller,
+  A., Dey, S., Hibiya, Y., Tang, H., Young, E.~D. et~al. (2023). {Igneous
+  meteorites suggest Aluminium-26 heterogeneity in the early Solar Nebula}.
+  {\em Nature Communications\/} 14: 4940.
+
+\bibitem[{Ludwig(2000)}]{ludwig2000}
+Ludwig, K.~R. (2000). {Decay constant errors in U--Pb concordia-intercept
+  ages}. {\em Chemical Geology\/} 166: 315--318.
+
+\bibitem[{Schiller et~al.(2015)Schiller, Connelly, Glad, Mikouchi and
+  Bizzarro}]{schiller2015}
+Schiller, M., Connelly, J.~N., Glad, A.~C., Mikouchi, T. and Bizzarro, M.
+  (2015). {Early accretion of protoplanets inferred from a reduced inner solar
+  system ${}^{26}$Al inventory}. {\em Earth and Planetary Science Letters\/}
+  420: 45--54.
+
+\bibitem[{Tissot et~al.(2017)Tissot, Dauphas and Grove}]{tissot2017}
+Tissot, F.~L., Dauphas, N. and Grove, T.~L. (2017). {Distinct
+  $^{238}$U/$^{235}$U ratios and REE patterns in plutonic and volcanic
+  angrites: Geochronologic implications and evidence for U isotope
+  fractionation during magmatic processes}. {\em Geochimica et Cosmochimica
+  Acta\/} 213: 593--617.
+
+\bibitem[{Vermeesch(2024)}]{vermeesch2024}
+Vermeesch, P. (2024). {Errorchrons and anchored isochrons in IsoplotR}. {\em
+  Geochronology\/} 6: 397--407.
+
+\bibitem[{Vermeesch(2026)}]{vermeesch2026f}
+Vermeesch, P. (2026). Too good to be true: Underdispersion in geochronology.
+  {\em EGUsphere\/} 2026: 1--26, \doi{10.5194/egusphere-2026-2783}.
+
+\end{thebibliography}

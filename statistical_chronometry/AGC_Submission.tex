@@ -1,0 +1,175 @@
+% =========================================================================
+% LaTeX submission template for Advances in Geochemistry and Cosmochemistry
+% =========================================================================
+% October 2025, the AGC copyediting team
+
+% Do not change the contents of this file!
+% This file should only be compiled and will read input from other files.
+% All input must be provided in the following files:
+% abstract.tex
+% authorinfo.tex
+% manuscript.tex
+% bibfile.bib
+% If additional packages are needed for compilation, these must be defined in a file named addpackages.tex
+%
+% If you encounter compilation errors that you are (reasonably) certain are not due to errors in your own code, there might be a problem with the template which may be specific to your particular LaTeX installation. 
+% We recommend using an up-to-date full installation of LaTeX, if possible, and to use pdfTeX as the compilation engine. 
+% If the compilation errors persist, please alert the copyediting team at: copyediting@agcj.org
+% =========================================================================
+
+% -----------------------------------------------
+% General preamble (not to be changed by Authors)
+% -----------------------------------------------
+\RequirePackage{fix-cm} % solves some encoding problems; must be loaded before \documentclass
+\documentclass[12pt, oneside, a4paper]{article}
+\usepackage[utf8]{inputenc} % this may be redundant
+\usepackage[LGR,T1]{fontenc} % font encoding
+\pdfsuppressptexinfo15 % suppress info of imported PDFs
+\usepackage{pdfprivacy} % remove sensitive metadata from PDF
+\usepackage{setspace} % provides \doublespacing for review
+
+% Base packages and settings
+\usepackage{cmbright} % AGC's body typeface
+  \renewcommand{\bfdefault}{sb} % use semi bold instead of bold weight
+\usepackage{amsmath} % math symbols, may cause definition clashes with some fonts
+\usepackage{commath} % provides correctly typeset differential symbols, e.g. \dif 
+\usepackage{amssymb} % more math symbols, may cause definition clashes with some fonts
+\usepackage{gensymb} % enables \micro command
+\usepackage{textcomp} % enables some extra symbols
+\usepackage{marvosym} % some more extra symbols, including \Letter and \Email
+\usepackage[expansion=false]{microtype} % advanced micro formatting, kerning, hyphenation...
+\usepackage[hang, flushmargin]{footmisc} % footnote formatting
+  \renewcommand{\thefootnote}{\arabic{footnote}} % use numbers instead of symbols
+\usepackage{perpage} % pagewise numbering options
+  \MakePerPage{footnote} % from perpage package
+\usepackage{graphicx} % graphics
+\usepackage{booktabs} % more control over table formatting
+\usepackage{siunitx} % SI units
+  \sisetup{mode=match,range-units=single, range-phrase=--} % from siunitx package
+  \DeclareSIUnit{\amu}{amu} % declaring custom units for use with siunitx package
+  \DeclareSIUnit{\annum}{a} % declaring custom units for use with siunitx package
+\usepackage{amsmath} % additional math symbols
+\usepackage{longtable} % multi-page tables
+\usepackage{pgfplots,pgfplotstable} % allows to source table contents from .csv files
+\usepackage[version=4]{mhchem} % for chemical formulas outside Math; not compatible with chemsym!
+\usepackage{lastpage} % provides LastPage reference
+\usepackage[style=iso]{datetime2} % changes date format to ISO 8601
+\usepackage[compact]{titlesec} % title formatting
+  \titlespacing*{\section}{0pt}{*4}{*1.5} % from titlesec package
+  \titlespacing*{\subsection}{0pt}{*2}{*1.0} % from titlesec package
+  \titlespacing*{\subsubsection}{0pt}{*2}{*1.0} % from titlesec package
+  \titleformat*{\section}{\color{AGC1}\large \bfseries} % from titlesec package
+  \titleformat*{\subsection}{\color{AGC1}\bfseries} % from titlesec package
+  \titleformat*{\subsubsection}{\color{AGC1}\fontshape{sl} \selectfont} % from titlesec package
+\usepackage{xcolor} %custom colors
+  \definecolor{AGC1}{HTML}{085766} % defining AGC colors with xcolor package
+  \definecolor{AGC2}{HTML}{EDB776} % defining AGC colors with xcolor package
+  \definecolor{AGC3}{HTML}{21798A} % defining AGC colors with xcolor package
+  \definecolor{AGC4}{HTML}{EAEAEA}   % defining AGC colors with xcolor package
+\usepackage{fancyhdr} % provides fancy header options
+\usepackage{url} % proper line breaking in urls
+  \urlstyle{sf} % set url font to sans serif (default is typewriter)
+\usepackage{doi} % solves some problems with doi formatting
+\usepackage[elide]{natbib} % the old and stable way of handling bibliographies
+  \bibliographystyle{erae} % similar to apalike but with doi (jss2 is more compact but has url and ISSN)
+\usepackage{orcidlink} % requires orcidlink version 1.0.4
+\usepackage[tmargin=25mm, bmargin=20mm, lmargin=30mm, rmargin=30mm, headsep=10mm, footskip=9mm]{geometry} % set geometry of pages
+  \renewcommand{\headrulewidth}{0.5pt} % define width of line under page header
+  \renewcommand{\footrulewidth}{0.5pt} % define width of line above page footer
+  \renewcommand{\footrule}{\color{black}\hrulefill} % color of footrule
+  \renewcommand{\footruleskip}{3mm} % set spacing under footrule
+\usepackage{lineno} % provides line numbering
+\def\labelitemi{\raisebox{0.35ex}{\tiny$\bullet$}} % defines better default bullet points
+\usepackage{enumitem} % format lists
+  \setlist{noitemsep, topsep=0pt, leftmargin=*}
+\usepackage{newfloat} % define additional floating environments
+  \DeclareFloatingEnvironment{fullwidthblock} % use this to place arbitrary content like a float
+\renewcommand{\floatpagefraction}{0.85} % sets minimum proportion of floats on page before page becomes float-only; default is 0.6
+\IfFileExists{./addpackages.tex}{\input{addpackages.tex}}{} % read extra packages from specified file only if it exists
+\usepackage{hyperref} % should be loaded near end of header but before first use, may need to be moved around if it causes problems; to be tested
+  \hypersetup{colorlinks=true, linkcolor=AGC1, anchorcolor=black, citecolor=AGC3, filecolor=black, menucolor=black, runcolor=black, urlcolor=AGC1}
+  \newcommand*{\colorpageref}[2]{\hypersetup{linkcolor=#2}\pageref{#1}\hypersetup{linkcolor=black}} % necessary for colored text with hyperlinks to override the color override of hyperref
+  \renewcommand{\figureautorefname}{Fig.}
+  \renewcommand{\tableautorefname}{Tab.}
+  \renewcommand{\equationautorefname}{Eq.}
+
+
+% --------------------------------
+% Commands for authorinfo.tex file
+% --------------------------------
+%\newcommand*{\Titleformat}{\textbf\LARGE}
+%\newcommand*{\Titletext}{Manuscript title}
+\newcommand*{\Title}[1]{\raggedright\textbf{\LARGE #1}\par \vspace{5mm}} % manuscript title formatting
+%\newcommand*{\Title}[1]{\Titleformat #1}
+\newcommand*{\Author}[3][]{{\ifthenelse{\equal{#1}{}}{\protect\raisebox{1.25ex}{\large#2\textsuperscript{#3}}} {\protect\raisebox{1.25ex}{\large#2\textsuperscript{#3}\orcidlink{#1}}}}\ \ \setlength\parskip{6pt}} % ORCiD link only appears when given as optional argument
+\newcommand*{\CA}{\Letter} % sets the mark for corresponding authors
+\newcommand*{\Affil}[2]{{\vspace{-0.3\baselineskip}\small\begin{itemize}\item[\textsuperscript{#1}]{#2}\end{itemize}}\setlength\parskip{0pt}} % authors affiliation formatting
+\newcommand*{\Corresp}[2]{{\vspace{0.3\baselineskip}\small \textbf{\Letter\ Correspondence to:} #1:\ \href{mailto:#2}{#2}}} % mail link
+\newcommand*{\AltCorresp}[2]{{\small or #1:\ \href{mailto:#2}{#2}}} % mail link
+%\newcommand*{\Supp}{None} % default unless changed with \renewcommand*{\Supp}{} in authorinfo.tex
+\newcommand*{\Credit}[1]{\vspace{0.3\baselineskip}\small \textbf{Author contributions:} #1} % writing credits
+\newcommand*{\Supp}[1]{\vspace{0.3\baselineskip}\small \textbf{Supplementary material:} \url{#1}}
+
+
+% -------------------
+% General page design
+% -------------------
+\pagestyle{fancy} % sets pagestyle to fancy by default
+  \fancyhf{}
+  \fancyhead[C]{\selectlanguage{english}\bf\small\color{black} Manuscript submitted to Advances in Geochemistry and Cosmochemistry for review}
+  \renewcommand{\headrulewidth}{0.5pt} % defines width of headrule, 0pt removes it altogether
+  \renewcommand{\headrule}{\color{black}\hrulefill}
+  \fancyfoot[C]{\selectlanguage{english}\bf\small\color{black} page \thepage\ of {\hypersetup{linkcolor=black}\pageref{LastPage}}}
+  \renewcommand{\footrulewidth}{0.5pt} % defines width of footrule, 0pt removes it altogether
+
+
+% ------------------------------------
+% Definition of title block appearance
+% ------------------------------------
+\newcommand{\AGCtitle}{\begin{@twocolumnfalse}\linespread{1.0}\selectfont
+  \input{authorinfo.tex} % comment this in to use the your own authorinfo file
+  \vspace{\baselineskip}
+  \hrule
+  \vspace{\baselineskip}
+\end{@twocolumnfalse}\linespread{1}\selectfont}
+
+
+% ---------------------
+% Switches and settings
+%----------------------
+\usepackage[english]{babel} % adjust this according choice of languages for abstracts
+\usepackage[figurename=Figure, tablename=Table, skip=0.25\baselineskip]{caption} %formatting options for captions
+\linenumbers % line numbers for proof stage
+\usepackage{draftwatermark}
+  \SetWatermarkScale{0.6}
+  \SetWatermarkColor[gray]{0.96}
+  \SetWatermarkText{FOR REVIEW ONLY}
+\graphicspath{{./figures/}} %save pictures and graphics in folder 'figures' (must provide valid path)
+\clubpenalty10000 % adjusts rigidity or sloppiness of linebreak formatting, 10000=maximum, lower=more sloppy
+\widowpenalty10000 % adjusts rigidity or sloppiness of linebreak formatting, 10000=maximum, lower=more sloppy
+\displaywidowpenalty10000 % adjusts rigidity or sloppiness of linebreak formatting, 10000=maximum, lower=more sloppy
+\tolerance=200 % how much white space is ok at end of line
+\hyphenpenalty=5000 % how much we dislike hyphenation
+
+
+% ---------------------------------------
+% End of preamble, beginning of main body
+% ---------------------------------------
+% ===============================================================
+\begin{document} % nothing above this line will appear in the pdf
+
+
+\AGCtitle % creates the title block
+
+\doublespacing % only affects running text, not text in floats (captions or tables)
+\selectlanguage{english}
+\subsection*{Abstract}
+\input{abstract.tex} % comment this in to use your own abstract file
+\input{manuscript.tex} % comment this in to use your own manuscript file
+
+{\footnotesize
+  \bibliography{bibfile.bib} % comment this out to use your own abstract file
+}
+
+\end{document} % nothing below this line will appear in the pdf
+% =============================================================
