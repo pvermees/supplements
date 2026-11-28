@@ -1,7 +1,7 @@
 # Summary
 
 This repository contains all the data and code needed to reproduce the
-figures of the EPSL manuscript entitled "Unmixing detrital age
+figures of the G-Cubed manuscript entitled "Unmixing detrital age
 distributions: a direct solution".
 
 ## Repository structure
@@ -19,4 +19,4 @@ distributions: a direct solution".
 
 2. [`R`](https://www.r-project.org)
 
-3. [`IsoplotR`](https://CRAN.R-project.org/package=IsoplotR) version 7.1 or higher.
+3. [`IsoplotR`](https://CRAN.R-project.org/package=IsoplotR) version 7.2 or higher.

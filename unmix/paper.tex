@@ -1,44 +1,39 @@
 \documentclass{article}
 \title{Unmixing detrital age distributions: a direct solution}
 \author{Pieter Vermeesch\\University College London\\\texttt{p.vermeesch@ucl.ac.uk}}
-\usepackage{graphicx,caption,fullpage,natbib}
+\usepackage{graphicx,caption,fullpage,natbib,lineno}
 \usepackage[hidelinks]{hyperref}
 \begin{document}
+\linenumbers
 \maketitle
 
 \begin{abstract}
 Detrital geochronology can be used to quantify sediment budgets by
 estimating the proportions in which a set of known sources contribute
 to a sedimentary sink, such as a river downstream of a
-confluence. Existing `top-down' unmixing algorithms solve this inverse
-problem by iterative search, either exhaustively testing all mixing
-proportions in 1\% increments or sampling them at random. Their
-computational cost grows exponentially with the number of
-sources. They also rely on heuristic dissimilarity measures that lack
-a firm theoretical basis and can give inconsistent results depending
-on which measure is chosen. This paper presents a direct solution to
-the top-down unmixing problem. Because mixing of frequency
+confluence. Existing approaches rely on iterative optimisation or
+stochastic search algorithms, which become increasingly inefficient as
+the number of source components increases. Furthermore, they require
+the selection of objective functions that are often heuristic and lack
+a rigorous statistical foundation. This paper presents a direct
+solution to the top-down unmixing problem. Because mixing of frequency
 distributions is a linear operation, the problem can be expressed in
 matrix form using empirical cumulative distribution functions and
 solved by least squares, subject to the constraint that the
 proportions sum to one. The solution is unique and is mathematically
 equivalent to minimising the Cram\'{e}r--von Mises distance between
-the observed and predicted distributions, so no kernel smoothing or
-choice of objective function is needed. Its speed makes bootstrap
-resampling practical, which yields confidence intervals that capture
-sampling uncertainty in both sources and sink. Tests on simulated
-binary mixtures of normal distributions show that the method remains
-accurate even when the sources overlap strongly. Applied to a
-published detrital zircon U–Pb dataset from central California, the
-method gives confidence intervals that encompass the full range of
-results from the exhaustive search under five different dissimilarity
-functions. The Cramér–von Mises statistic also serves as a diagnostic
-for identifying sinks that the specified sources cannot adequately
-explain. As with any top-down approach, the results are only as
-reliable as the assumption that all relevant sources have been
-identified, and they describe the dated mineral phase rather than
-total sediment contributions. The algorithm is implemented in the
-\texttt{R} package \texttt{IsoplotR}.
+the observed and predicted distributions. Tests on simulated binary
+mixtures of normal distributions show that the method remains accurate
+even when the sources overlap strongly. Applied to a published
+detrital zircon U--Pb dataset from central California, the method
+gives bootstrapped confidence intervals that encompass the full range
+of results from existing algorithms. The Cram\'{e}r--von Mises
+statistic also serves as a diagnostic for identifying sinks that the
+specified sources cannot adequately explain. As with any top-down
+approach, the results are only as reliable as the assumption that all
+relevant sources have been identified, and they describe the dated
+mineral phase rather than total sediment contributions. The algorithm
+is implemented in the \texttt{R} package \texttt{IsoplotR}.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -53,28 +48,47 @@ concentrations of both branches are known, these mixing proportions
 can be used to constrain the sediment budget of the river
 network. Solving this inverse problem is of considerable interest to
 sedimentary geologists, as it provides an opportunity to quantify
-sediment budgets using detrital geochronology. \citet{sharman2017}
-distinguish between top-down unmixing, in which the sources are known,
-and bottom-up unmixing, in which they are unknown. This paper focuses
-exclusively on the top-down problem because the bottom-up problem has
-no unique solution \citep{saylor2019}.\medskip
+sediment budgets using detrital geochronology \citep{amidon2005,
+  kimbrough2015, sharman2017, sundell2017, malkowski2019,
+  tipton2022}. \citet{sharman2017} distinguish between top-down
+unmixing, in which the sources are known, and bottom-up unmixing, in
+which they are unknown. This paper focuses exclusively on the top-down
+problem because the bottom-up problem has no unique solution
+\citep{saylor2019}. Existing algorithms solve the top-down problem
+using iterative search strategies to find the mixing proportions that
+minimise the misfit between the observed and predicted age
+distributions. These algorithms are suboptimal in two
+respects.\medskip
 
-Existing algorithms solve the top-down problem using iterative search
-strategies to find the mixing proportions that minimise the misfit
-between the observed and predicted age distributions. These algorithms
-are suboptimal in two respects. First, they are computationally
-inefficient. \citet{sharman2017} exhaustively search all possible
-mixing proportions in 1\% increments, whereas \citet{sundell2017} use
-a Monte Carlo approach without a convergence criterion. Both
-approaches exhibit exponential time complexity: the computational cost
-of estimating the mixing proportions of a $k$-component mixture scales
-with the $(k-1)$\textsuperscript{th} power of the number of possible
-proportions. Second, existing unmixing algorithms quantify the misfit
-between observed and predicted distributions using heuristic measures,
-such as `likeness' and the `cross-correlation of probability density
+First, they suffer from the `curse of dimensionality', whereby the
+size of the search space increases exponentially with the number of
+dimensions. This affects all existing algorithms, including exhaustive
+grid searches \citep{sharman2017}; undirected Monte Carlo sampling
+\citep{sundell2017}; gradient descent methods \citep[as implemented in
+  recent versions of \texttt{detritalPy},][]{sharman2018}; and Markov
+Chain Monte Carlo (MCMC) sampling of Bayesian posteriors
+\citep{tipton2022}. Exhaustive search algorithms become prohibitively
+slow for five or more sources \citep{sundell2017}. Undirected Monte
+Carlo algorithms, meanwhile, sample an increasingly sparse fraction of
+the search space as dimensionality increases. Finally, gradient
+descent and MCMC methods are increasingly susceptible to becoming
+trapped in local minima.\medskip
+
+Second, existing unmixing algorithms quantify the misfit between
+observed and predicted distributions using heuristic measures, such as
+`likeness' and the `cross-correlation of probability density
 plots'. These measures lack a firm theoretical foundation and have
 been shown to be problematic in limiting cases such as the application
-to high precision data \citep{vermeesch2018b}.\medskip
+to high precision data \citep{vermeesch2018b}. However, even
+statistically more rigorous misfit functions such as the
+Kolmogorov-Smirnov (K-S) statistic are not ideally suited for the
+unmixing problem. As \citet{kimbrough2015} point out, ``The K-S test
+was developed only for comparison of single distributions and no
+established protocol exists for comparing distributions consisting of
+pooled data''. \citet{kimbrough2015} address this issue by modifying
+the definition of the K-S statistic, but the theoretical soundness of
+this modification remains unproven.
+\medskip
 
 This paper presents a direct solution to the unmixing problem that
 addresses both limitations. Section~\ref{sec:solution} shows that
@@ -165,7 +179,8 @@ $XW$, subject to the constraint that $\sum_{j=1}^k W_j=1$. Several
 methods can be used to solve Equation~\ref{eq:unmix}, including
 Lagrange multipliers and non-negative least squares algorithms
 \citep{lawson1995}. Unlike non-negative matrix factorisation, this
-least squares problem has a unique solution.\medskip
+least squares problem has a unique solution, provided that the sources
+are distinct.\medskip
 
 Both sides of Equation~\ref{eq:unmix} represent cumulative
 distributions. The sum of the squared differences between two such
@@ -206,15 +221,16 @@ effectiveness of this approach using a simulated example.\medskip
 
 \section{Examples}\label{sec:examples}
 
-As a first example, consider a binary mixture of two normal
-distributions with the same standard deviation $\sigma$
-(Figure~\ref{fig:algorithm}a). Let $\Delta(t)$ denote the lateral
-separation between the two source distributions. When $\Delta(t)$ is
-much larger than $\sigma$, the sink distribution is bimodal, making
-the mixing proportions easy to recover. As $\Delta(t)$ decreases, the
-sink becomes unimodal, making the deconvolution problem more
-difficult. Figure~\ref{fig:bootstrap} shows the bootstrapped 95\%
-confidence intervals for $W_1$ as $\Delta(t)$ varies from 0 to 3
+As a first example, consider a binary mixture of $n=200$ values drawn
+from two normal distributions with the same standard deviation
+$\sigma$ (Figure~\ref{fig:algorithm}a). Let $\Delta(t)$ denote the
+lateral separation between the two source distributions. When
+$\Delta(t)$ is much larger than $\sigma$, the sink distribution is
+bimodal, making the mixing proportions easy to recover. As $\Delta(t)$
+decreases, the sink becomes unimodal, making the deconvolution problem
+more difficult. Figure~\ref{fig:bootstrap} shows the bootstrapped 95\%
+confidence intervals \citep[with $B=500$ iterations per
+  sample;][]{efron1993} for $W_1$ as $\Delta(t)$ varies from 0 to 3
 standard deviations. As expected, the uncertainties decrease with
 increasing separation. Nevertheless, the direct solution remains
 accurate even when $\Delta(t)$ is small.\medskip
@@ -224,10 +240,11 @@ accurate even when $\Delta(t)$ is small.\medskip
 \end{minipage}
 \noindent\begin{minipage}{.6\linewidth}
 \captionof{figure}{Bootstrapped 95\% confidence intervals for the
-  mixing proportion of synthetic samples formed by 1/2 mixtures of two
-  normal distributions with offset $\Delta(t)$, which is expressed as
-  a number of standard deviations. The dashed line shows the true
-  value for the mixing proportion $W_1$.}
+  mixing proportion of synthetic samples of $n=200$ values each,
+  formed by 1:2 mixtures of two normal distributions with offset
+  $\Delta(t)$, which is expressed as a number of standard
+  deviations. The dashed line shows the true value for the mixing
+  proportion $W_1$.}
 \label{fig:bootstrap}
 \end{minipage}
 
@@ -288,11 +305,8 @@ function.
 \section{Implementation in IsoplotR}\label{sec:IsoplotR}
 
 The new algorithm was implemented in the \texttt{R} package
-\texttt{IsoplotR} (version 7.1 and higher) via a new \texttt{unmix}
-function. It uses a modified least squares algorithm that enforces a
-unit sum of the mixing proportions with a Lagrange multiplier. If the
-solution returns any value outside the unit interval, a fallback
-solution uses the non-negative least squares algorithm of
+\texttt{IsoplotR} (version 7.2 and higher) via a new \texttt{unmix}
+function. It uses non-negative least squares regression algorithm of
 \citet{lawson1995} with a penalty applied to the final row to enforce
 the unit sum of the weights. The \texttt{unmix} function can either be
 called from the \texttt{R} console, or from \texttt{IsoplotR}'s
@@ -315,7 +329,10 @@ fit <- unmix(DZ,source_names=c("P1","P2","P3"),boot=TRUE,plot=FALSE)
 
 \noindent which returns a list containing matrices called \texttt{W},
 \texttt{ll} and \texttt{ul}, storing the mixing proportions and the
-lower and upper limits of their confidence intervals, respectively.
+lower and upper limits of their confidence intervals,
+respectively. The number of bootstrap resamples is controlled by an
+optional \texttt{nboot} argument, whose default value is 500, but
+which can be changed to any other value.
 
 \section{Conclusions}\label{sec:conclusions}
 
@@ -358,7 +375,8 @@ not always available in real-world studies.
 
 This work was initiated in response to a request from
 \texttt{IsoplotR} user Estefany Villanueva-Garc\'{i}a. Andy Carter and
-Guido Pastore are thanked for beta-testing the algorithm. This
+Guido Pastore are thanked for beta-testing the algorithm, and Glenn
+Sharman for reviewing an earlier version of the manuscript. This
 research was supported by the Natural Environment Research Council
 (grant no. NE/T001518/1).
 
@@ -369,70 +387,6 @@ available online at \url{https://github.com/pvermees/supplements}.
 
 %\bibliographystyle{/home/pvermees/Dropbox/abbrvplainnat.bst}
 %\bibliography{/home/pvermees/Dropbox/biblio.bib}
-
-\begin{thebibliography}{8}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Lawson and Hanson(1995)]{lawson1995}
-Lawson, C.~L. and Hanson, R.~J.
-\newblock \emph{Solving least squares problems}.
-\newblock SIAM, 1995.
-
-\bibitem[Malus{\`a} et~al.(2016)Malus{\`a}, Resentini, and
-  Garzanti]{malusa2016}
-Malus{\`a}, M., Resentini, A., and Garzanti, E.
-\newblock Hydraulic sorting and mineral fertility bias in detrital
-  geochronology.
-\newblock \emph{Gondwana Research}, 31:\penalty0 1--19, 2016.
-
-\bibitem[Saylor et~al.(2019)Saylor, Sundell, and Sharman]{saylor2019}
-Saylor, J., Sundell, K., and Sharman, G.
-\newblock {Characterizing sediment sources by non-negative matrix factorization
-  of detrital geochronological data}.
-\newblock \emph{Earth and Planetary Science Letters}, 512:\penalty0 46--58,
-  2019.
-\newblock ISSN 0012-821X.
-\newblock \doi{https://doi.org/10.1016/j.epsl.2019.01.044}.
-\newblock URL
-  \url{https://www.sciencedirect.com/science/article/pii/S0012821X19300706}.
-
-\bibitem[Sharman and Johnstone(2017)]{sharman2017}
-Sharman, G.~R. and Johnstone, S.~A.
-\newblock Sediment unmixing using detrital geochronology.
-\newblock \emph{Earth and Planetary Science Letters}, 477:\penalty0 183--194,
-  2017.
-
-\bibitem[Sickmann et~al.(2016)Sickmann, Paull, and Graham]{sickmann2016}
-Sickmann, Z.~T., Paull, C.~K., and Graham, S.~A.
-\newblock {Detrital-zircon mixing and partitioning in fluvial to deep marine
-  systems, central California, USA}.
-\newblock \emph{Journal of Sedimentary Research}, 86\penalty0 (11):\penalty0
-  1298--1307, 2016.
-
-\bibitem[Sundell and Saylor(2017)]{sundell2017}
-Sundell, K. and Saylor, J.~E.
-\newblock {Unmixing detrital geochronology age distributions}.
-\newblock \emph{Geochemistry, Geophysics, Geosystems}, 2017.
-
-\bibitem[Vermeesch(2018{\natexlab{a}})]{vermeesch2018c}
-Vermeesch, P.
-\newblock {\texttt{IsoplotR}: a free and open toolbox for geochronology}.
-\newblock \emph{Geoscience Frontiers}, 9:\penalty0 1479--1493,
-  2018{\natexlab{a}}.
-\newblock \doi{10.1016/j.gsf.2018.04.001}.
-
-\bibitem[Vermeesch(2018{\natexlab{b}})]{vermeesch2018b}
-Vermeesch, P.
-\newblock {Dissimilarity measures in detrital geochronology}.
-\newblock \emph{Earth-Science Reviews}, 178:\penalty0 310--321,
-  2018{\natexlab{b}}.
-\newblock \doi{10.1016/j.earscirev.2017.11.027}.
-
-\end{thebibliography}
-
+\input{paper.bbl}
 
 \end{document}

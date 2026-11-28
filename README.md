@@ -6,6 +6,6 @@
 
 3. ["Too good to be true: underdispersion in geochronology"](underdispersion) by Vermeesch, P. (2026) *Geochronology*, 8, 723-739, doi: 10.5194/gchron-8-723-2026.
 
-4. ["Unmixing detrital age distributions: a direct solution"](unmix) by Vermeesch, P. (2026) *Earth and Planetary Science Letters* (in review).
+4. ["Unmixing detrital age distributions: a direct solution"](unmix) by Vermeesch, P. (2026) *G-cubed* (in review).
 
 5. ["Statistical chronometry of meteorites revisited"](statistical_chronometry) by Vermeesch, P. and Desch, S. (2026) *Advances in Geochemistry and Cosmochemistry* (submitted).

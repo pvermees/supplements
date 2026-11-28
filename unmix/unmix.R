@@ -2,12 +2,12 @@ setwd('/home/pvermees/git/supplements/unmix')
 library(IsoplotR)
 rm(list=ls())
 graphics.off()
-set.seed(1)
+set.seed(0)
 
 synthetic_data <- function(m=c(0,100),
                            s=100,
                            p=1/2,
-                           n=100){
+                           n=200){
     AA <- rnorm(n=n,mean=m[1],sd=s)
     BB <- rnorm(n=n,mean=m[2],sd=s)
     nA <- round(n*p)
@@ -77,7 +77,7 @@ text(x=0.95*c(Mx,Mx),y=c(p/2,p+(1-p)/2),
               expression(W[2] == 1-W[1])),
      pos=NULL,srt=90,cex=0.8)
 legend('topleft',legend='d)',bty='n',adj=c(1,0))
-DZ <- synthetic_data(m=m,s=s,p=p,n=100)
+DZ <- synthetic_data(m=m,s=s,p=p,n=200)
 kde_A <- kde(DZ$A,from=mx,to=Mx,plot=FALSE)
 kde_B <- kde(DZ$B,from=mx,to=Mx,plot=FALSE)
 kde_C <- kde(DZ$C,from=mx,to=Mx,plot=FALSE)
